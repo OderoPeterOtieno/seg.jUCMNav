@@ -2111,13 +2111,40 @@ public interface MapPackage extends EPackage {
     int UC_MMAP__COMMENTS = UrncorePackage.UC_MMODEL_ELEMENT_FEATURE_COUNT + 5;
 
     /**
+	 * The feature id for the '<em><b>Reuses</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UC_MMAP__REUSES = UrncorePackage.UC_MMODEL_ELEMENT_FEATURE_COUNT + 6;
+
+				/**
+	 * The feature id for the '<em><b>Model Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UC_MMAP__MODEL_ELEMENTS = UrncorePackage.UC_MMODEL_ELEMENT_FEATURE_COUNT + 7;
+
+				/**
+	 * The feature id for the '<em><b>Realizes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UC_MMAP__REALIZES = UrncorePackage.UC_MMODEL_ELEMENT_FEATURE_COUNT + 8;
+
+				/**
 	 * The feature id for the '<em><b>Singleton</b></em>' attribute.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-    int UC_MMAP__SINGLETON = UrncorePackage.UC_MMODEL_ELEMENT_FEATURE_COUNT + 6;
+    int UC_MMAP__SINGLETON = UrncorePackage.UC_MMODEL_ELEMENT_FEATURE_COUNT + 9;
 
     /**
 	 * The feature id for the '<em><b>Parent Stub</b></em>' reference list.
@@ -2126,7 +2153,7 @@ public interface MapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-    int UC_MMAP__PARENT_STUB = UrncorePackage.UC_MMODEL_ELEMENT_FEATURE_COUNT + 7;
+    int UC_MMAP__PARENT_STUB = UrncorePackage.UC_MMODEL_ELEMENT_FEATURE_COUNT + 10;
 
     /**
 	 * The number of structural features of the '<em>UC Mmap</em>' class.
@@ -2135,7 +2162,7 @@ public interface MapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-    int UC_MMAP_FEATURE_COUNT = UrncorePackage.UC_MMODEL_ELEMENT_FEATURE_COUNT + 8;
+    int UC_MMAP_FEATURE_COUNT = UrncorePackage.UC_MMODEL_ELEMENT_FEATURE_COUNT + 11;
 
     /**
 	 * The meta object id for the '{@link ucm.map.impl.PluginBindingImpl <em>Plugin Binding</em>}' class.

@@ -6,6 +6,8 @@
  */
 package ucm.map.util;
 
+import core.COREModel;
+import core.CORENamedElement;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
@@ -185,6 +187,12 @@ public class MapAdapterFactory extends AdapterFactoryImpl {
 			}
 			public Object caseIURNDiagram(IURNDiagram object) {
 				return createIURNDiagramAdapter();
+			}
+			public Object caseCORENamedElement(CORENamedElement object) {
+				return createCORENamedElementAdapter();
+			}
+			public Object caseCOREModel(COREModel object) {
+				return createCOREModelAdapter();
 			}
 			public Object caseIURNContainerRef(IURNContainerRef object) {
 				return createIURNContainerRefAdapter();
@@ -614,6 +622,34 @@ public class MapAdapterFactory extends AdapterFactoryImpl {
 	}
 
     /**
+	 * Creates a new adapter for an object of class '{@link core.CORENamedElement <em>CORE Named Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see core.CORENamedElement
+	 * @generated
+	 */
+	public Adapter createCORENamedElementAdapter() {
+		return null;
+	}
+
+				/**
+	 * Creates a new adapter for an object of class '{@link core.COREModel <em>CORE Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see core.COREModel
+	 * @generated
+	 */
+	public Adapter createCOREModelAdapter() {
+		return null;
+	}
+
+				/**
 	 * Creates a new adapter for an object of class '{@link urncore.IURNContainerRef <em>IURN Container Ref</em>}'.
 	 * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;

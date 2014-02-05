@@ -6,6 +6,8 @@
  */
 package urn.impl;
 
+import core.CorePackage;
+import core.impl.CorePackageImpl;
 import grl.GrlPackage;
 import grl.impl.GrlPackageImpl;
 import grl.kpimodel.KpimodelPackage;
@@ -107,6 +109,7 @@ public class UrnPackageImpl extends EPackageImpl implements UrnPackage {
 		PerformancePackageImpl thePerformancePackage = (PerformancePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(PerformancePackage.eNS_URI) instanceof PerformancePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(PerformancePackage.eNS_URI) : PerformancePackage.eINSTANCE);
 		MapPackageImpl theMapPackage = (MapPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MapPackage.eNS_URI) instanceof MapPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MapPackage.eNS_URI) : MapPackage.eINSTANCE);
 		ScenarioPackageImpl theScenarioPackage = (ScenarioPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI) instanceof ScenarioPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI) : ScenarioPackage.eINSTANCE);
+		CorePackageImpl theCorePackage = (CorePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI) instanceof CorePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI) : CorePackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theUrnPackage.createPackageContents();
@@ -117,6 +120,7 @@ public class UrnPackageImpl extends EPackageImpl implements UrnPackage {
 		thePerformancePackage.createPackageContents();
 		theMapPackage.createPackageContents();
 		theScenarioPackage.createPackageContents();
+		theCorePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theUrnPackage.initializePackageContents();
@@ -127,6 +131,7 @@ public class UrnPackageImpl extends EPackageImpl implements UrnPackage {
 		thePerformancePackage.initializePackageContents();
 		theMapPackage.initializePackageContents();
 		theScenarioPackage.initializePackageContents();
+		theCorePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theUrnPackage.freeze();

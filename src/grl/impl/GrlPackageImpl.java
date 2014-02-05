@@ -2,6 +2,8 @@
  */
 package grl.impl;
 
+import core.CorePackage;
+import core.impl.CorePackageImpl;
 import grl.Actor;
 import grl.ActorRef;
 import grl.Belief;
@@ -358,6 +360,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		PerformancePackageImpl thePerformancePackage = (PerformancePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(PerformancePackage.eNS_URI) instanceof PerformancePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(PerformancePackage.eNS_URI) : PerformancePackage.eINSTANCE);
 		MapPackageImpl theMapPackage = (MapPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MapPackage.eNS_URI) instanceof MapPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MapPackage.eNS_URI) : MapPackage.eINSTANCE);
 		ScenarioPackageImpl theScenarioPackage = (ScenarioPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI) instanceof ScenarioPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI) : ScenarioPackage.eINSTANCE);
+		CorePackageImpl theCorePackage = (CorePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI) instanceof CorePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI) : CorePackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theGrlPackage.createPackageContents();
@@ -368,6 +371,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		thePerformancePackage.createPackageContents();
 		theMapPackage.createPackageContents();
 		theScenarioPackage.createPackageContents();
+		theCorePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theGrlPackage.initializePackageContents();
@@ -378,6 +382,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		thePerformancePackage.initializePackageContents();
 		theMapPackage.initializePackageContents();
 		theScenarioPackage.initializePackageContents();
+		theCorePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theGrlPackage.freeze();

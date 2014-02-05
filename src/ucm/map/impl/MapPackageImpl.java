@@ -6,6 +6,8 @@
  */
 package ucm.map.impl;
 
+import core.CorePackage;
+import core.impl.CorePackageImpl;
 import grl.GrlPackage;
 import grl.impl.GrlPackageImpl;
 import grl.kpimodel.KpimodelPackage;
@@ -316,6 +318,7 @@ public class MapPackageImpl extends EPackageImpl implements MapPackage {
 		UcmPackageImpl theUcmPackage = (UcmPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(UcmPackage.eNS_URI) instanceof UcmPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(UcmPackage.eNS_URI) : UcmPackage.eINSTANCE);
 		PerformancePackageImpl thePerformancePackage = (PerformancePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(PerformancePackage.eNS_URI) instanceof PerformancePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(PerformancePackage.eNS_URI) : PerformancePackage.eINSTANCE);
 		ScenarioPackageImpl theScenarioPackage = (ScenarioPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI) instanceof ScenarioPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI) : ScenarioPackage.eINSTANCE);
+		CorePackageImpl theCorePackage = (CorePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI) instanceof CorePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI) : CorePackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theMapPackage.createPackageContents();
@@ -326,6 +329,7 @@ public class MapPackageImpl extends EPackageImpl implements MapPackage {
 		theUcmPackage.createPackageContents();
 		thePerformancePackage.createPackageContents();
 		theScenarioPackage.createPackageContents();
+		theCorePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theMapPackage.initializePackageContents();
@@ -336,6 +340,7 @@ public class MapPackageImpl extends EPackageImpl implements MapPackage {
 		theUcmPackage.initializePackageContents();
 		thePerformancePackage.initializePackageContents();
 		theScenarioPackage.initializePackageContents();
+		theCorePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theMapPackage.freeze();
@@ -1398,6 +1403,7 @@ public class MapPackageImpl extends EPackageImpl implements MapPackage {
 		UrncorePackage theUrncorePackage = (UrncorePackage)EPackage.Registry.INSTANCE.getEPackage(UrncorePackage.eNS_URI);
 		ScenarioPackage theScenarioPackage = (ScenarioPackage)EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI);
 		PerformancePackage thePerformancePackage = (PerformancePackage)EPackage.Registry.INSTANCE.getEPackage(PerformancePackage.eNS_URI);
+		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
 
 		// Add supertypes to classes
 		andJoinEClass.getESuperTypes().add(this.getPathNode());
@@ -1414,6 +1420,7 @@ public class MapPackageImpl extends EPackageImpl implements MapPackage {
 		startPointEClass.getESuperTypes().add(this.getPathNode());
 		ucMmapEClass.getESuperTypes().add(theUrncorePackage.getUCMmodelElement());
 		ucMmapEClass.getESuperTypes().add(theUrncorePackage.getIURNDiagram());
+		ucMmapEClass.getESuperTypes().add(theCorePackage.getCOREModel());
 		componentRefEClass.getESuperTypes().add(theUrncorePackage.getUCMmodelElement());
 		componentRefEClass.getESuperTypes().add(theUrncorePackage.getIURNContainerRef());
 		timerEClass.getESuperTypes().add(this.getWaitingPlace());

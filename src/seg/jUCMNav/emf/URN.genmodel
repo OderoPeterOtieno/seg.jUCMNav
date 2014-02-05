@@ -694,4 +694,59 @@
       </genClasses>
     </nestedGenPackages>
   </genPackages>
+  <genPackages prefix="Core" ecorePackage="CORE.ecore#/">
+    <genClasses image="false" ecoreClass="CORE.ecore#//COREModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CORE.ecore#//COREModel/reuses"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CORE.ecore#//COREModel/modelElements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CORE.ecore#//COREModel/realizes"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="CORE.ecore#//COREImpactModel"/>
+    <genClasses ecoreClass="CORE.ecore#//COREConcern">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CORE.ecore#//COREConcern/models"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CORE.ecore#//COREConcern/interface"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="CORE.ecore#//COREFeature">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CORE.ecore#//COREFeature/realizedBy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CORE.ecore#//COREFeature/strategies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CORE.ecore#//COREFeature/configurations"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="CORE.ecore#//COREBinding">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CORE.ecore#//COREBinding/coreMappings"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="CORE.ecore#//COREModelElement"/>
+    <genClasses image="false" ecoreClass="CORE.ecore#//CORECompositionSpecification">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CORE.ecore#//CORECompositionSpecification/source"/>
+    </genClasses>
+    <genClasses ecoreClass="CORE.ecore#//COREMapping">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CORE.ecore#//COREMapping/mappedTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CORE.ecore#//COREMapping/mappedFrom"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="CORE.ecore#//CORENamedElement">
+      <genOperations ecoreOperation="CORE.ecore#//CORENamedElement/getName"/>
+      <genOperations ecoreOperation="CORE.ecore#//CORENamedElement/setName">
+        <genParameters ecoreParameter="CORE.ecore#//CORENamedElement/setName/value"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="CORE.ecore#//COREStrategy">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CORE.ecore#//COREStrategy/configurations"/>
+    </genClasses>
+    <genClasses ecoreClass="CORE.ecore#//COREInterface">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CORE.ecore#//COREInterface/selectable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CORE.ecore#//COREInterface/customizable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CORE.ecore#//COREInterface/usable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CORE.ecore#//COREInterface/impacted"/>
+    </genClasses>
+    <genClasses ecoreClass="CORE.ecore#//COREReuse">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CORE.ecore#//COREReuse/reusedConcern"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CORE.ecore#//COREReuse/compositions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CORE.ecore#//COREReuse/selected"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="CORE.ecore#//COREPattern"/>
+    <genClasses image="false" ecoreClass="CORE.ecore#//COREImpactModelElement"/>
+    <genClasses image="false" ecoreClass="CORE.ecore#//COREConfiguration">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CORE.ecore#//COREConfiguration/reusedConcern"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CORE.ecore#//COREConfiguration/selected"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="CORE.ecore#//COREFeatureModel"/>
+  </genPackages>
 </genmodel:GenModel>

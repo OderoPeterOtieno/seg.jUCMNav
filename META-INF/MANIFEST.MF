@@ -11,7 +11,10 @@ Bundle-ClassPath: jUCMNav.jar,
 Bundle-Activator: seg.jUCMNav.JUCMNavPlugin
 Bundle-Vendor: UseCaseMaps.org
 Bundle-Localization: plugin
-Export-Package: grl,
+Export-Package: core,
+ core.impl,
+ core.util,
+ grl,
  grl.impl,
  grl.kpimodel,
  grl.kpimodel.impl,

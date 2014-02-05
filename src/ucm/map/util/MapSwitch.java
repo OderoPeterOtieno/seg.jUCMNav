@@ -6,6 +6,8 @@
  */
 package ucm.map.util;
 
+import core.COREModel;
+import core.CORENamedElement;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
@@ -241,7 +243,9 @@ public class MapSwitch {
 				Object result = caseUCMmap(ucMmap);
 				if (result == null) result = caseUCMmodelElement(ucMmap);
 				if (result == null) result = caseIURNDiagram(ucMmap);
+				if (result == null) result = caseCOREModel(ucMmap);
 				if (result == null) result = caseURNmodelElement(ucMmap);
+				if (result == null) result = caseCORENamedElement(ucMmap);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -773,6 +777,36 @@ public class MapSwitch {
 	}
 
     /**
+	 * Returns the result of interpreting the object as an instance of '<em>CORE Named Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>CORE Named Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public Object caseCORENamedElement(CORENamedElement object) {
+		return null;
+	}
+
+				/**
+	 * Returns the result of interpreting the object as an instance of '<em>CORE Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>CORE Model</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public Object caseCOREModel(COREModel object) {
+		return null;
+	}
+
+				/**
 	 * Returns the result of interpreting the object as an instance of '<em>IURN Container Ref</em>'.
 	 * <!-- begin-user-doc -->
      * This implementation returns null;
