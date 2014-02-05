@@ -2,6 +2,7 @@
  */
 package grl;
 
+import core.COREConfiguration;
 import org.eclipse.emf.common.util.EList;
 
 import urncore.GRLmodelElement;
@@ -28,7 +29,7 @@ import urncore.GRLmodelElement;
  * @model
  * @generated
  */
-public interface EvaluationStrategy extends GRLmodelElement {
+public interface EvaluationStrategy extends GRLmodelElement, COREConfiguration {
 	/**
 	 * Returns the value of the '<em><b>Author</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -1636,6 +1636,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		KpimodelPackage theKpimodelPackage = (KpimodelPackage)EPackage.Registry.INSTANCE.getEPackage(KpimodelPackage.eNS_URI);
 		UrnPackage theUrnPackage = (UrnPackage)EPackage.Registry.INSTANCE.getEPackage(UrnPackage.eNS_URI);
 		UrncorePackage theUrncorePackage = (UrncorePackage)EPackage.Registry.INSTANCE.getEPackage(UrncorePackage.eNS_URI);
+		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
 
 		// Add subpackages
 		getESubpackages().add(theKpimodelPackage);
@@ -1647,6 +1648,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		actorEClass.getESuperTypes().add(theUrncorePackage.getIURNContainer());
 		grlGraphEClass.getESuperTypes().add(theUrncorePackage.getGRLmodelElement());
 		grlGraphEClass.getESuperTypes().add(theUrncorePackage.getIURNDiagram());
+		grlGraphEClass.getESuperTypes().add(theCorePackage.getCOREImpactModel());
 		actorRefEClass.getESuperTypes().add(theUrncorePackage.getGRLmodelElement());
 		actorRefEClass.getESuperTypes().add(theUrncorePackage.getIURNContainerRef());
 		intentionalElementRefEClass.getESuperTypes().add(this.getGRLNode());
@@ -1656,10 +1658,12 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		decompositionEClass.getESuperTypes().add(this.getElementLink());
 		dependencyEClass.getESuperTypes().add(this.getElementLink());
 		evaluationStrategyEClass.getESuperTypes().add(theUrncorePackage.getGRLmodelElement());
+		evaluationStrategyEClass.getESuperTypes().add(theCorePackage.getCOREConfiguration());
 		grlNodeEClass.getESuperTypes().add(theUrncorePackage.getGRLmodelElement());
 		grlNodeEClass.getESuperTypes().add(theUrncorePackage.getIURNNode());
 		beliefLinkEClass.getESuperTypes().add(theUrncorePackage.getIURNConnection());
 		strategiesGroupEClass.getESuperTypes().add(theUrncorePackage.getGRLmodelElement());
+		strategiesGroupEClass.getESuperTypes().add(theCorePackage.getCOREStrategy());
 		contributionContextGroupEClass.getESuperTypes().add(theUrncorePackage.getGRLmodelElement());
 		contributionContextEClass.getESuperTypes().add(theUrncorePackage.getGRLmodelElement());
 		grlLinkableElementEClass.getESuperTypes().add(theUrncorePackage.getGRLmodelElement());

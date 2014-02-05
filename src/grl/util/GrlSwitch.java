@@ -2,6 +2,11 @@
  */
 package grl.util;
 
+import core.COREConfiguration;
+import core.COREImpactModel;
+import core.COREModel;
+import core.CORENamedElement;
+import core.COREStrategy;
 import grl.*;
 
 import java.util.List;
@@ -131,7 +136,10 @@ public class GrlSwitch {
 				Object result = caseGRLGraph(grlGraph);
 				if (result == null) result = caseGRLmodelElement(grlGraph);
 				if (result == null) result = caseIURNDiagram(grlGraph);
+				if (result == null) result = caseCOREImpactModel(grlGraph);
 				if (result == null) result = caseURNmodelElement(grlGraph);
+				if (result == null) result = caseCOREModel(grlGraph);
+				if (result == null) result = caseCORENamedElement(grlGraph);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -206,7 +214,9 @@ public class GrlSwitch {
 				EvaluationStrategy evaluationStrategy = (EvaluationStrategy)theEObject;
 				Object result = caseEvaluationStrategy(evaluationStrategy);
 				if (result == null) result = caseGRLmodelElement(evaluationStrategy);
+				if (result == null) result = caseCOREConfiguration(evaluationStrategy);
 				if (result == null) result = caseURNmodelElement(evaluationStrategy);
+				if (result == null) result = caseCORENamedElement(evaluationStrategy);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -236,7 +246,9 @@ public class GrlSwitch {
 				StrategiesGroup strategiesGroup = (StrategiesGroup)theEObject;
 				Object result = caseStrategiesGroup(strategiesGroup);
 				if (result == null) result = caseGRLmodelElement(strategiesGroup);
+				if (result == null) result = caseCOREStrategy(strategiesGroup);
 				if (result == null) result = caseURNmodelElement(strategiesGroup);
+				if (result == null) result = caseCORENamedElement(strategiesGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -747,6 +759,51 @@ public class GrlSwitch {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>CORE Named Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>CORE Named Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public Object caseCORENamedElement(CORENamedElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>CORE Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>CORE Model</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public Object caseCOREModel(COREModel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>CORE Impact Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>CORE Impact Model</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public Object caseCOREImpactModel(COREImpactModel object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>IURN Container Ref</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -773,6 +830,36 @@ public class GrlSwitch {
 	 * @generated
 	 */
 	public Object caseIURNConnection(IURNConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>CORE Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>CORE Configuration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public Object caseCOREConfiguration(COREConfiguration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>CORE Strategy</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>CORE Strategy</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public Object caseCOREStrategy(COREStrategy object) {
 		return null;
 	}
 

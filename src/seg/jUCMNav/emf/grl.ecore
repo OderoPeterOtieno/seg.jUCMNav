@@ -81,7 +81,7 @@
     <eLiterals name="Low" value="2"/>
     <eLiterals name="None" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GRLGraph" eSuperTypes="urncore.ecore#//GRLmodelElement urncore.ecore#//IURNDiagram"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GRLGraph" eSuperTypes="urncore.ecore#//GRLmodelElement urncore.ecore#//IURNDiagram CORE.ecore#//COREImpactModel"/>
   <eClassifiers xsi:type="ecore:EClass" name="ActorRef" eSuperTypes="urncore.ecore#//GRLmodelElement urncore.ecore#//IURNContainerRef"/>
   <eClassifiers xsi:type="ecore:EClass" name="IntentionalElementRef" eSuperTypes="#//GRLNode">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="criticality" eType="#//Criticality"
@@ -151,7 +151,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="EVALUATION_UNDEFINED" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         changeable="false" defaultValueLiteral="-9999"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EvaluationStrategy" eSuperTypes="urncore.ecore#//GRLmodelElement">
+  <eClassifiers xsi:type="ecore:EClass" name="EvaluationStrategy" eSuperTypes="urncore.ecore#//GRLmodelElement CORE.ecore#//COREConfiguration">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="evaluations" upperBound="-1"
         eType="#//Evaluation" containment="true" eOpposite="#//Evaluation/strategies"/>
@@ -174,7 +174,7 @@
         eType="#//LinkRef" transient="true" eOpposite="#//LinkRef/bendpoints"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BeliefLink" eSuperTypes="urncore.ecore#//IURNConnection"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StrategiesGroup" eSuperTypes="urncore.ecore#//GRLmodelElement">
+  <eClassifiers xsi:type="ecore:EClass" name="StrategiesGroup" eSuperTypes="urncore.ecore#//GRLmodelElement CORE.ecore#//COREStrategy">
     <eOperations name="sortStrategies"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="strategies" upperBound="-1"
         eType="#//EvaluationStrategy" eOpposite="#//EvaluationStrategy/group"/>

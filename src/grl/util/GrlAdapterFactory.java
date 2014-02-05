@@ -2,6 +2,11 @@
  */
 package grl.util;
 
+import core.COREConfiguration;
+import core.COREImpactModel;
+import core.COREModel;
+import core.CORENamedElement;
+import core.COREStrategy;
 import grl.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -164,11 +169,26 @@ public class GrlAdapterFactory extends AdapterFactoryImpl {
 			public Object caseIURNDiagram(IURNDiagram object) {
 				return createIURNDiagramAdapter();
 			}
+			public Object caseCORENamedElement(CORENamedElement object) {
+				return createCORENamedElementAdapter();
+			}
+			public Object caseCOREModel(COREModel object) {
+				return createCOREModelAdapter();
+			}
+			public Object caseCOREImpactModel(COREImpactModel object) {
+				return createCOREImpactModelAdapter();
+			}
 			public Object caseIURNContainerRef(IURNContainerRef object) {
 				return createIURNContainerRefAdapter();
 			}
 			public Object caseIURNConnection(IURNConnection object) {
 				return createIURNConnectionAdapter();
+			}
+			public Object caseCOREConfiguration(COREConfiguration object) {
+				return createCOREConfigurationAdapter();
+			}
+			public Object caseCOREStrategy(COREStrategy object) {
+				return createCOREStrategyAdapter();
 			}
 			public Object defaultCase(EObject object) {
 				return createEObjectAdapter();
@@ -609,6 +629,48 @@ public class GrlAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link core.CORENamedElement <em>CORE Named Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see core.CORENamedElement
+	 * @generated
+	 */
+	public Adapter createCORENamedElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link core.COREModel <em>CORE Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see core.COREModel
+	 * @generated
+	 */
+	public Adapter createCOREModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link core.COREImpactModel <em>CORE Impact Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see core.COREImpactModel
+	 * @generated
+	 */
+	public Adapter createCOREImpactModelAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link urncore.IURNContainerRef <em>IURN Container Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -633,6 +695,34 @@ public class GrlAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIURNConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link core.COREConfiguration <em>CORE Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see core.COREConfiguration
+	 * @generated
+	 */
+	public Adapter createCOREConfigurationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link core.COREStrategy <em>CORE Strategy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see core.COREStrategy
+	 * @generated
+	 */
+	public Adapter createCOREStrategyAdapter() {
 		return null;
 	}
 

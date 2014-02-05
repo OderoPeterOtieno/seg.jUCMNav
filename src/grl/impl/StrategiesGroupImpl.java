@@ -2,6 +2,10 @@
  */
 package grl.impl;
 
+import core.COREConfiguration;
+import core.CORENamedElement;
+import core.COREStrategy;
+import core.CorePackage;
 import grl.EvaluationStrategy;
 import grl.GRLspec;
 import grl.GrlPackage;
@@ -19,6 +23,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -32,6 +37,7 @@ import urncore.impl.GRLmodelElementImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link grl.impl.StrategiesGroupImpl#getConfigurations <em>Configurations</em>}</li>
  *   <li>{@link grl.impl.StrategiesGroupImpl#getStrategies <em>Strategies</em>}</li>
  *   <li>{@link grl.impl.StrategiesGroupImpl#getGrlspec <em>Grlspec</em>}</li>
  * </ul>
@@ -40,6 +46,15 @@ import urncore.impl.GRLmodelElementImpl;
  * @generated
  */
 public class StrategiesGroupImpl extends GRLmodelElementImpl implements StrategiesGroup {
+	/**
+	 * The cached value of the '{@link #getConfigurations() <em>Configurations</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConfigurations()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList configurations;
 	/**
 	 * The cached value of the '{@link #getStrategies() <em>Strategies</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -66,6 +81,18 @@ public class StrategiesGroupImpl extends GRLmodelElementImpl implements Strategi
 	 */
 	protected EClass eStaticClass() {
 		return GrlPackage.Literals.STRATEGIES_GROUP;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList getConfigurations() {
+		if (configurations == null) {
+			configurations = new EObjectResolvingEList(COREConfiguration.class, this, GrlPackage.STRATEGIES_GROUP__CONFIGURATIONS);
+		}
+		return configurations;
 	}
 
 	/**
@@ -184,6 +211,8 @@ public class StrategiesGroupImpl extends GRLmodelElementImpl implements Strategi
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case GrlPackage.STRATEGIES_GROUP__CONFIGURATIONS:
+				return getConfigurations();
 			case GrlPackage.STRATEGIES_GROUP__STRATEGIES:
 				return getStrategies();
 			case GrlPackage.STRATEGIES_GROUP__GRLSPEC:
@@ -199,6 +228,10 @@ public class StrategiesGroupImpl extends GRLmodelElementImpl implements Strategi
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case GrlPackage.STRATEGIES_GROUP__CONFIGURATIONS:
+				getConfigurations().clear();
+				getConfigurations().addAll((Collection)newValue);
+				return;
 			case GrlPackage.STRATEGIES_GROUP__STRATEGIES:
 				getStrategies().clear();
 				getStrategies().addAll((Collection)newValue);
@@ -217,6 +250,9 @@ public class StrategiesGroupImpl extends GRLmodelElementImpl implements Strategi
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case GrlPackage.STRATEGIES_GROUP__CONFIGURATIONS:
+				getConfigurations().clear();
+				return;
 			case GrlPackage.STRATEGIES_GROUP__STRATEGIES:
 				getStrategies().clear();
 				return;
@@ -234,12 +270,54 @@ public class StrategiesGroupImpl extends GRLmodelElementImpl implements Strategi
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case GrlPackage.STRATEGIES_GROUP__CONFIGURATIONS:
+				return configurations != null && !configurations.isEmpty();
 			case GrlPackage.STRATEGIES_GROUP__STRATEGIES:
 				return strategies != null && !strategies.isEmpty();
 			case GrlPackage.STRATEGIES_GROUP__GRLSPEC:
 				return getGrlspec() != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
+		if (baseClass == CORENamedElement.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == COREStrategy.class) {
+			switch (derivedFeatureID) {
+				case GrlPackage.STRATEGIES_GROUP__CONFIGURATIONS: return CorePackage.CORE_STRATEGY__CONFIGURATIONS;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
+		if (baseClass == CORENamedElement.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == COREStrategy.class) {
+			switch (baseFeatureID) {
+				case CorePackage.CORE_STRATEGY__CONFIGURATIONS: return GrlPackage.STRATEGIES_GROUP__CONFIGURATIONS;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //StrategiesGroupImpl

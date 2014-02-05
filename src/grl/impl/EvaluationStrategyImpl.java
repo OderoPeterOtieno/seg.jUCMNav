@@ -2,6 +2,11 @@
  */
 package grl.impl;
 
+import core.COREConcern;
+import core.COREConfiguration;
+import core.COREFeature;
+import core.CORENamedElement;
+import core.CorePackage;
 import grl.Evaluation;
 import grl.EvaluationStrategy;
 import grl.GRLspec;
@@ -24,6 +29,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -37,6 +43,8 @@ import urncore.impl.GRLmodelElementImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link grl.impl.EvaluationStrategyImpl#getReusedConcern <em>Reused Concern</em>}</li>
+ *   <li>{@link grl.impl.EvaluationStrategyImpl#getSelected <em>Selected</em>}</li>
  *   <li>{@link grl.impl.EvaluationStrategyImpl#getAuthor <em>Author</em>}</li>
  *   <li>{@link grl.impl.EvaluationStrategyImpl#getEvaluations <em>Evaluations</em>}</li>
  *   <li>{@link grl.impl.EvaluationStrategyImpl#getGroup <em>Group</em>}</li>
@@ -50,6 +58,26 @@ import urncore.impl.GRLmodelElementImpl;
  * @generated
  */
 public class EvaluationStrategyImpl extends GRLmodelElementImpl implements EvaluationStrategy {
+	/**
+	 * The cached value of the '{@link #getReusedConcern() <em>Reused Concern</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReusedConcern()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList reusedConcern;
+
+	/**
+	 * The cached value of the '{@link #getSelected() <em>Selected</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSelected()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList selected;
+
 	/**
 	 * The default value of the '{@link #getAuthor() <em>Author</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -136,6 +164,30 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 	 */
 	protected EClass eStaticClass() {
 		return GrlPackage.Literals.EVALUATION_STRATEGY;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList getReusedConcern() {
+		if (reusedConcern == null) {
+			reusedConcern = new EObjectResolvingEList(COREConcern.class, this, GrlPackage.EVALUATION_STRATEGY__REUSED_CONCERN);
+		}
+		return reusedConcern;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList getSelected() {
+		if (selected == null) {
+			selected = new EObjectResolvingEList(COREFeature.class, this, GrlPackage.EVALUATION_STRATEGY__SELECTED);
+		}
+		return selected;
 	}
 
 	/**
@@ -378,6 +430,10 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case GrlPackage.EVALUATION_STRATEGY__REUSED_CONCERN:
+				return getReusedConcern();
+			case GrlPackage.EVALUATION_STRATEGY__SELECTED:
+				return getSelected();
 			case GrlPackage.EVALUATION_STRATEGY__AUTHOR:
 				return getAuthor();
 			case GrlPackage.EVALUATION_STRATEGY__EVALUATIONS:
@@ -404,6 +460,14 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case GrlPackage.EVALUATION_STRATEGY__REUSED_CONCERN:
+				getReusedConcern().clear();
+				getReusedConcern().addAll((Collection)newValue);
+				return;
+			case GrlPackage.EVALUATION_STRATEGY__SELECTED:
+				getSelected().clear();
+				getSelected().addAll((Collection)newValue);
+				return;
 			case GrlPackage.EVALUATION_STRATEGY__AUTHOR:
 				setAuthor((String)newValue);
 				return;
@@ -440,6 +504,12 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case GrlPackage.EVALUATION_STRATEGY__REUSED_CONCERN:
+				getReusedConcern().clear();
+				return;
+			case GrlPackage.EVALUATION_STRATEGY__SELECTED:
+				getSelected().clear();
+				return;
 			case GrlPackage.EVALUATION_STRATEGY__AUTHOR:
 				setAuthor(AUTHOR_EDEFAULT);
 				return;
@@ -472,6 +542,10 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case GrlPackage.EVALUATION_STRATEGY__REUSED_CONCERN:
+				return reusedConcern != null && !reusedConcern.isEmpty();
+			case GrlPackage.EVALUATION_STRATEGY__SELECTED:
+				return selected != null && !selected.isEmpty();
 			case GrlPackage.EVALUATION_STRATEGY__AUTHOR:
 				return AUTHOR_EDEFAULT == null ? author != null : !AUTHOR_EDEFAULT.equals(author);
 			case GrlPackage.EVALUATION_STRATEGY__EVALUATIONS:
@@ -488,6 +562,48 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 				return kpiInfoConfig != null && !kpiInfoConfig.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
+		if (baseClass == CORENamedElement.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == COREConfiguration.class) {
+			switch (derivedFeatureID) {
+				case GrlPackage.EVALUATION_STRATEGY__REUSED_CONCERN: return CorePackage.CORE_CONFIGURATION__REUSED_CONCERN;
+				case GrlPackage.EVALUATION_STRATEGY__SELECTED: return CorePackage.CORE_CONFIGURATION__SELECTED;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
+		if (baseClass == CORENamedElement.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == COREConfiguration.class) {
+			switch (baseFeatureID) {
+				case CorePackage.CORE_CONFIGURATION__REUSED_CONCERN: return GrlPackage.EVALUATION_STRATEGY__REUSED_CONCERN;
+				case CorePackage.CORE_CONFIGURATION__SELECTED: return GrlPackage.EVALUATION_STRATEGY__SELECTED;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**

@@ -2,6 +2,7 @@
  */
 package grl;
 
+import core.COREStrategy;
 import org.eclipse.emf.common.util.EList;
 
 import urncore.GRLmodelElement;
@@ -23,7 +24,7 @@ import urncore.GRLmodelElement;
  * @model
  * @generated
  */
-public interface StrategiesGroup extends GRLmodelElement {
+public interface StrategiesGroup extends GRLmodelElement, COREStrategy {
 	/**
 	 * Returns the value of the '<em><b>Strategies</b></em>' reference list.
 	 * The list contents are of type {@link grl.EvaluationStrategy}.

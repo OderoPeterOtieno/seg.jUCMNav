@@ -1083,13 +1083,40 @@ public interface GrlPackage extends EPackage {
 	int GRL_GRAPH__COMMENTS = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Reuses</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRL_GRAPH__REUSES = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Model Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRL_GRAPH__MODEL_ELEMENTS = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Realizes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRL_GRAPH__REALIZES = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>GRL Graph</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GRL_GRAPH_FEATURE_COUNT = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 6;
+	int GRL_GRAPH_FEATURE_COUNT = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The meta object id for the '{@link grl.impl.ActorRefImpl <em>Actor Ref</em>}' class.
@@ -2190,13 +2217,31 @@ public interface GrlPackage extends EPackage {
 	int EVALUATION_STRATEGY__INCONCERN = UrncorePackage.GR_LMODEL_ELEMENT__INCONCERN;
 
 	/**
+	 * The feature id for the '<em><b>Reused Concern</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATION_STRATEGY__REUSED_CONCERN = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Selected</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATION_STRATEGY__SELECTED = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Author</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATION_STRATEGY__AUTHOR = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 0;
+	int EVALUATION_STRATEGY__AUTHOR = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Evaluations</b></em>' containment reference list.
@@ -2205,7 +2250,7 @@ public interface GrlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATION_STRATEGY__EVALUATIONS = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 1;
+	int EVALUATION_STRATEGY__EVALUATIONS = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Group</b></em>' reference.
@@ -2214,7 +2259,7 @@ public interface GrlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATION_STRATEGY__GROUP = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 2;
+	int EVALUATION_STRATEGY__GROUP = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Grlspec</b></em>' container reference.
@@ -2223,7 +2268,7 @@ public interface GrlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATION_STRATEGY__GRLSPEC = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 3;
+	int EVALUATION_STRATEGY__GRLSPEC = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Included Strategies</b></em>' reference list.
@@ -2232,7 +2277,7 @@ public interface GrlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATION_STRATEGY__INCLUDED_STRATEGIES = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 4;
+	int EVALUATION_STRATEGY__INCLUDED_STRATEGIES = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Parent Strategies</b></em>' reference list.
@@ -2241,7 +2286,7 @@ public interface GrlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATION_STRATEGY__PARENT_STRATEGIES = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 5;
+	int EVALUATION_STRATEGY__PARENT_STRATEGIES = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Kpi Info Config</b></em>' containment reference list.
@@ -2250,7 +2295,7 @@ public interface GrlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATION_STRATEGY__KPI_INFO_CONFIG = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 6;
+	int EVALUATION_STRATEGY__KPI_INFO_CONFIG = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Evaluation Strategy</em>' class.
@@ -2259,7 +2304,7 @@ public interface GrlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATION_STRATEGY_FEATURE_COUNT = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 7;
+	int EVALUATION_STRATEGY_FEATURE_COUNT = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The meta object id for the '{@link grl.impl.LinkRefBendpointImpl <em>Link Ref Bendpoint</em>}' class.
@@ -2436,13 +2481,22 @@ public interface GrlPackage extends EPackage {
 	int STRATEGIES_GROUP__INCONCERN = UrncorePackage.GR_LMODEL_ELEMENT__INCONCERN;
 
 	/**
+	 * The feature id for the '<em><b>Configurations</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRATEGIES_GROUP__CONFIGURATIONS = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Strategies</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRATEGIES_GROUP__STRATEGIES = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 0;
+	int STRATEGIES_GROUP__STRATEGIES = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Grlspec</b></em>' container reference.
@@ -2451,7 +2505,7 @@ public interface GrlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRATEGIES_GROUP__GRLSPEC = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 1;
+	int STRATEGIES_GROUP__GRLSPEC = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Strategies Group</em>' class.
@@ -2460,7 +2514,7 @@ public interface GrlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRATEGIES_GROUP_FEATURE_COUNT = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 2;
+	int STRATEGIES_GROUP_FEATURE_COUNT = UrncorePackage.GR_LMODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link grl.impl.ContributionContextGroupImpl <em>Contribution Context Group</em>}' class.
