@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="grl"
-    nsURI="http:///grl.ecore" nsPrefix="grl">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="grl" nsURI="http:///grl.ecore" nsPrefix="grl">
   <eClassifiers xsi:type="ecore:EClass" name="GRLspec">
     <eStructuralFeatures xsi:type="ecore:EReference" name="urnspec" lowerBound="1"
         eType="ecore:EClass urn.ecore#//URNspec" transient="true" eOpposite="urn.ecore#//URNspec/grlspec"/>
@@ -150,6 +148,8 @@
         containment="true" eOpposite="#//EvaluationRange/eval"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="kpiNewEvalValue" eType="#//kpimodel/KPINewEvalValue"
         containment="true" eOpposite="#//kpimodel/KPINewEvalValue/eval"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EVALUATION_UNDEFINED" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" defaultValueLiteral="-9999"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EvaluationStrategy" eSuperTypes="urncore.ecore#//GRLmodelElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -175,6 +175,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BeliefLink" eSuperTypes="urncore.ecore#//IURNConnection"/>
   <eClassifiers xsi:type="ecore:EClass" name="StrategiesGroup" eSuperTypes="urncore.ecore#//GRLmodelElement">
+    <eOperations name="sortStrategies"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="strategies" upperBound="-1"
         eType="#//EvaluationStrategy" eOpposite="#//EvaluationStrategy/group"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="grlspec" lowerBound="1"
