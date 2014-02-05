@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -11,6 +7,7 @@ import grl.EvaluationStrategy;
 import grl.GRLspec;
 import grl.GrlPackage;
 import grl.StrategiesGroup;
+
 import grl.kpimodel.KPIInformationConfig;
 import grl.kpimodel.KpimodelPackage;
 
@@ -18,10 +15,14 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -48,48 +49,48 @@ import urncore.impl.GRLmodelElementImpl;
  *
  * @generated
  */
-public class EvaluationStrategyImpl extends GRLmodelElementImpl implements EvaluationStrategy, Comparable <EvaluationStrategy>{
-    /**
+public class EvaluationStrategyImpl extends GRLmodelElementImpl implements EvaluationStrategy {
+	/**
 	 * The default value of the '{@link #getAuthor() <em>Author</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getAuthor()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final String AUTHOR_EDEFAULT = null;
+	protected static final String AUTHOR_EDEFAULT = null;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getAuthor() <em>Author</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getAuthor()
 	 * @generated
 	 * @ordered
 	 */
-    protected String author = AUTHOR_EDEFAULT;
+	protected String author = AUTHOR_EDEFAULT;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getEvaluations() <em>Evaluations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getEvaluations()
 	 * @generated
 	 * @ordered
 	 */
-    protected EList evaluations;
+	protected EList evaluations;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getGroup() <em>Group</em>}' reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getGroup()
 	 * @generated
 	 * @ordered
 	 */
-    protected StrategiesGroup group;
+	protected StrategiesGroup group;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getIncludedStrategies() <em>Included Strategies</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -99,7 +100,7 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 	 */
 	protected EList includedStrategies;
 
-				/**
+	/**
 	 * The cached value of the '{@link #getParentStrategies() <em>Parent Strategies</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -109,73 +110,73 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 	 */
 	protected EList parentStrategies;
 
-				/**
+	/**
 	 * The cached value of the '{@link #getKpiInfoConfig() <em>Kpi Info Config</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getKpiInfoConfig()
 	 * @generated
 	 * @ordered
 	 */
-    protected EList kpiInfoConfig;
+	protected EList kpiInfoConfig;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EvaluationStrategyImpl() {
+	protected EvaluationStrategyImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return GrlPackage.Literals.EVALUATION_STRATEGY;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String getAuthor() {
+	public String getAuthor() {
 		return author;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setAuthor(String newAuthor) {
+	public void setAuthor(String newAuthor) {
 		String oldAuthor = author;
 		author = newAuthor;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.EVALUATION_STRATEGY__AUTHOR, oldAuthor, author));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EList getEvaluations() {
+	public EList getEvaluations() {
 		if (evaluations == null) {
 			evaluations = new EObjectContainmentWithInverseEList(Evaluation.class, this, GrlPackage.EVALUATION_STRATEGY__EVALUATIONS, GrlPackage.EVALUATION__STRATEGIES);
 		}
 		return evaluations;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public StrategiesGroup getGroup() {
+	public StrategiesGroup getGroup() {
 		if (group != null && group.eIsProxy()) {
 			InternalEObject oldGroup = (InternalEObject)group;
 			group = (StrategiesGroup)eResolveProxy(oldGroup);
@@ -187,21 +188,21 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 		return group;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public StrategiesGroup basicGetGroup() {
+	public StrategiesGroup basicGetGroup() {
 		return group;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetGroup(StrategiesGroup newGroup, NotificationChain msgs) {
+	public NotificationChain basicSetGroup(StrategiesGroup newGroup, NotificationChain msgs) {
 		StrategiesGroup oldGroup = group;
 		group = newGroup;
 		if (eNotificationRequired()) {
@@ -211,12 +212,12 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setGroup(StrategiesGroup newGroup) {
+	public void setGroup(StrategiesGroup newGroup) {
 		if (newGroup != group) {
 			NotificationChain msgs = null;
 			if (group != null)
@@ -230,17 +231,17 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.EVALUATION_STRATEGY__GROUP, newGroup, newGroup));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public GRLspec getGrlspec() {
+	public GRLspec getGrlspec() {
 		if (eContainerFeatureID() != GrlPackage.EVALUATION_STRATEGY__GRLSPEC) return null;
-		return (GRLspec)eContainer();
+		return (GRLspec)eInternalContainer();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -250,12 +251,12 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setGrlspec(GRLspec newGrlspec) {
+	public void setGrlspec(GRLspec newGrlspec) {
 		if (newGrlspec != eInternalContainer() || (eContainerFeatureID() != GrlPackage.EVALUATION_STRATEGY__GRLSPEC && newGrlspec != null)) {
 			if (EcoreUtil.isAncestor(this, newGrlspec))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -271,7 +272,7 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.EVALUATION_STRATEGY__GRLSPEC, newGrlspec, newGrlspec));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -283,7 +284,7 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 		return includedStrategies;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -295,19 +296,19 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 		return parentStrategies;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EList getKpiInfoConfig() {
+	public EList getKpiInfoConfig() {
 		if (kpiInfoConfig == null) {
 			kpiInfoConfig = new EObjectContainmentWithInverseEList(KPIInformationConfig.class, this, GrlPackage.EVALUATION_STRATEGY__KPI_INFO_CONFIG, KpimodelPackage.KPI_INFORMATION_CONFIG__STRATEGIES);
 		}
 		return kpiInfoConfig;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -334,7 +335,7 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -357,7 +358,7 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -370,7 +371,7 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -396,7 +397,7 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -432,7 +433,7 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -464,7 +465,7 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -489,12 +490,12 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 		return super.eIsSet(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String toString() {
+	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
@@ -503,9 +504,5 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 		result.append(')');
 		return result.toString();
 	}
-    
-    public int compareTo(EvaluationStrategy strat){
-    	return (this.getName()).compareTo(strat.getName());
-    }
 
 } //EvaluationStrategyImpl

@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -21,21 +17,21 @@ import org.eclipse.emf.ecore.EClass;
  * @generated
  */
 public class DependencyImpl extends ElementLinkImpl implements Dependency {
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected DependencyImpl() {
+	protected DependencyImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return GrlPackage.Literals.DEPENDENCY;
 	}
 

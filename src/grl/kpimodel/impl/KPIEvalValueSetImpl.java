@@ -1,23 +1,23 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.kpimodel.impl;
 
 import grl.Evaluation;
 import grl.GrlPackage;
+
 import grl.kpimodel.KPIConversion;
 import grl.kpimodel.KPIEvalValueSet;
 import grl.kpimodel.KpimodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
@@ -41,107 +41,107 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * @generated
  */
 public class KPIEvalValueSetImpl extends EObjectImpl implements KPIEvalValueSet {
-    /**
+	/**
 	 * The default value of the '{@link #getTargetValue() <em>Target Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getTargetValue()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final double TARGET_VALUE_EDEFAULT = 0.0;
+	protected static final double TARGET_VALUE_EDEFAULT = 0.0;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getTargetValue() <em>Target Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getTargetValue()
 	 * @generated
 	 * @ordered
 	 */
-    protected double targetValue = TARGET_VALUE_EDEFAULT;
+	protected double targetValue = TARGET_VALUE_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #getThresholdValue() <em>Threshold Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getThresholdValue()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final double THRESHOLD_VALUE_EDEFAULT = 0.0;
+	protected static final double THRESHOLD_VALUE_EDEFAULT = 0.0;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getThresholdValue() <em>Threshold Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getThresholdValue()
 	 * @generated
 	 * @ordered
 	 */
-    protected double thresholdValue = THRESHOLD_VALUE_EDEFAULT;
+	protected double thresholdValue = THRESHOLD_VALUE_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #getWorstValue() <em>Worst Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getWorstValue()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final double WORST_VALUE_EDEFAULT = 0.0;
+	protected static final double WORST_VALUE_EDEFAULT = 0.0;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getWorstValue() <em>Worst Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getWorstValue()
 	 * @generated
 	 * @ordered
 	 */
-    protected double worstValue = WORST_VALUE_EDEFAULT;
+	protected double worstValue = WORST_VALUE_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #getEvaluationValue() <em>Evaluation Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getEvaluationValue()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final double EVALUATION_VALUE_EDEFAULT = 0.0;
+	protected static final double EVALUATION_VALUE_EDEFAULT = 0.0;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getEvaluationValue() <em>Evaluation Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getEvaluationValue()
 	 * @generated
 	 * @ordered
 	 */
-    protected double evaluationValue = EVALUATION_VALUE_EDEFAULT;
+	protected double evaluationValue = EVALUATION_VALUE_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #getUnit() <em>Unit</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getUnit()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final String UNIT_EDEFAULT = "";
+	protected static final String UNIT_EDEFAULT = "";
 
-    /**
+	/**
 	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getUnit()
 	 * @generated
 	 * @ordered
 	 */
-    protected String unit = UNIT_EDEFAULT;
+	protected String unit = UNIT_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #getQualitativeEvaluationValue() <em>Qualitative Evaluation Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -151,7 +151,7 @@ public class KPIEvalValueSetImpl extends EObjectImpl implements KPIEvalValueSet 
 	 */
 	protected static final String QUALITATIVE_EVALUATION_VALUE_EDEFAULT = "";
 
-				/**
+	/**
 	 * The cached value of the '{@link #getQualitativeEvaluationValue() <em>Qualitative Evaluation Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -161,7 +161,7 @@ public class KPIEvalValueSetImpl extends EObjectImpl implements KPIEvalValueSet 
 	 */
 	protected String qualitativeEvaluationValue = QUALITATIVE_EVALUATION_VALUE_EDEFAULT;
 
-				/**
+	/**
 	 * The cached value of the '{@link #getKpiConv() <em>Kpi Conv</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -171,130 +171,130 @@ public class KPIEvalValueSetImpl extends EObjectImpl implements KPIEvalValueSet 
 	 */
 	protected KPIConversion kpiConv;
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected KPIEvalValueSetImpl() {
+	protected KPIEvalValueSetImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return KpimodelPackage.Literals.KPI_EVAL_VALUE_SET;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public double getTargetValue() {
+	public double getTargetValue() {
 		return targetValue;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setTargetValue(double newTargetValue) {
+	public void setTargetValue(double newTargetValue) {
 		double oldTargetValue = targetValue;
 		targetValue = newTargetValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, KpimodelPackage.KPI_EVAL_VALUE_SET__TARGET_VALUE, oldTargetValue, targetValue));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public double getThresholdValue() {
+	public double getThresholdValue() {
 		return thresholdValue;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setThresholdValue(double newThresholdValue) {
+	public void setThresholdValue(double newThresholdValue) {
 		double oldThresholdValue = thresholdValue;
 		thresholdValue = newThresholdValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, KpimodelPackage.KPI_EVAL_VALUE_SET__THRESHOLD_VALUE, oldThresholdValue, thresholdValue));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public double getWorstValue() {
+	public double getWorstValue() {
 		return worstValue;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setWorstValue(double newWorstValue) {
+	public void setWorstValue(double newWorstValue) {
 		double oldWorstValue = worstValue;
 		worstValue = newWorstValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, KpimodelPackage.KPI_EVAL_VALUE_SET__WORST_VALUE, oldWorstValue, worstValue));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public double getEvaluationValue() {
+	public double getEvaluationValue() {
 		return evaluationValue;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setEvaluationValue(double newEvaluationValue) {
+	public void setEvaluationValue(double newEvaluationValue) {
 		double oldEvaluationValue = evaluationValue;
 		evaluationValue = newEvaluationValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, KpimodelPackage.KPI_EVAL_VALUE_SET__EVALUATION_VALUE, oldEvaluationValue, evaluationValue));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String getUnit() {
+	public String getUnit() {
 		return unit;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setUnit(String newUnit) {
+	public void setUnit(String newUnit) {
 		String oldUnit = unit;
 		unit = newUnit;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, KpimodelPackage.KPI_EVAL_VALUE_SET__UNIT, oldUnit, unit));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -303,7 +303,7 @@ public class KPIEvalValueSetImpl extends EObjectImpl implements KPIEvalValueSet 
 		return qualitativeEvaluationValue;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -315,32 +315,32 @@ public class KPIEvalValueSetImpl extends EObjectImpl implements KPIEvalValueSet 
 			eNotify(new ENotificationImpl(this, Notification.SET, KpimodelPackage.KPI_EVAL_VALUE_SET__QUALITATIVE_EVALUATION_VALUE, oldQualitativeEvaluationValue, qualitativeEvaluationValue));
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public Evaluation getEval() {
+	public Evaluation getEval() {
 		if (eContainerFeatureID() != KpimodelPackage.KPI_EVAL_VALUE_SET__EVAL) return null;
-		return (Evaluation)eContainer();
+		return (Evaluation)eInternalContainer();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetEval(Evaluation newEval, NotificationChain msgs) {
+	public NotificationChain basicSetEval(Evaluation newEval, NotificationChain msgs) {
 		msgs = eBasicSetContainer((InternalEObject)newEval, KpimodelPackage.KPI_EVAL_VALUE_SET__EVAL, msgs);
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setEval(Evaluation newEval) {
+	public void setEval(Evaluation newEval) {
 		if (newEval != eInternalContainer() || (eContainerFeatureID() != KpimodelPackage.KPI_EVAL_VALUE_SET__EVAL && newEval != null)) {
 			if (EcoreUtil.isAncestor(this, newEval))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -356,7 +356,7 @@ public class KPIEvalValueSetImpl extends EObjectImpl implements KPIEvalValueSet 
 			eNotify(new ENotificationImpl(this, Notification.SET, KpimodelPackage.KPI_EVAL_VALUE_SET__EVAL, newEval, newEval));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -373,7 +373,7 @@ public class KPIEvalValueSetImpl extends EObjectImpl implements KPIEvalValueSet 
 		return kpiConv;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -382,7 +382,7 @@ public class KPIEvalValueSetImpl extends EObjectImpl implements KPIEvalValueSet 
 		return kpiConv;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -397,7 +397,7 @@ public class KPIEvalValueSetImpl extends EObjectImpl implements KPIEvalValueSet 
 		return msgs;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -416,12 +416,12 @@ public class KPIEvalValueSetImpl extends EObjectImpl implements KPIEvalValueSet 
 			eNotify(new ENotificationImpl(this, Notification.SET, KpimodelPackage.KPI_EVAL_VALUE_SET__KPI_CONV, newKpiConv, newKpiConv));
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_EVAL_VALUE_SET__EVAL:
 				if (eInternalContainer() != null)
@@ -435,12 +435,12 @@ public class KPIEvalValueSetImpl extends EObjectImpl implements KPIEvalValueSet 
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_EVAL_VALUE_SET__EVAL:
 				return basicSetEval(null, msgs);
@@ -450,12 +450,12 @@ public class KPIEvalValueSetImpl extends EObjectImpl implements KPIEvalValueSet 
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case KpimodelPackage.KPI_EVAL_VALUE_SET__EVAL:
 				return eInternalContainer().eInverseRemove(this, GrlPackage.EVALUATION__KPI_EVAL_VALUE_SET, Evaluation.class, msgs);
@@ -463,12 +463,12 @@ public class KPIEvalValueSetImpl extends EObjectImpl implements KPIEvalValueSet 
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_EVAL_VALUE_SET__TARGET_VALUE:
 				return new Double(getTargetValue());
@@ -491,12 +491,12 @@ public class KPIEvalValueSetImpl extends EObjectImpl implements KPIEvalValueSet 
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void eSet(int featureID, Object newValue) {
+	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_EVAL_VALUE_SET__TARGET_VALUE:
 				setTargetValue(((Double)newValue).doubleValue());
@@ -526,12 +526,12 @@ public class KPIEvalValueSetImpl extends EObjectImpl implements KPIEvalValueSet 
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void eUnset(int featureID) {
+	public void eUnset(int featureID) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_EVAL_VALUE_SET__TARGET_VALUE:
 				setTargetValue(TARGET_VALUE_EDEFAULT);
@@ -561,12 +561,12 @@ public class KPIEvalValueSetImpl extends EObjectImpl implements KPIEvalValueSet 
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public boolean eIsSet(int featureID) {
+	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_EVAL_VALUE_SET__TARGET_VALUE:
 				return targetValue != TARGET_VALUE_EDEFAULT;
@@ -588,12 +588,12 @@ public class KPIEvalValueSetImpl extends EObjectImpl implements KPIEvalValueSet 
 		return super.eIsSet(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String toString() {
+	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

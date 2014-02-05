@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -13,10 +9,14 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -27,6 +27,7 @@ import urncore.IURNDiagram;
 import urncore.IURNNode;
 import urncore.NodeLabel;
 import urncore.UrncorePackage;
+
 import urncore.impl.GRLmodelElementImpl;
 
 /**
@@ -49,157 +50,157 @@ import urncore.impl.GRLmodelElementImpl;
  * @generated
  */
 public class GRLNodeImpl extends GRLmodelElementImpl implements GRLNode {
-    /**
+	/**
 	 * The default value of the '{@link #getX() <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getX()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final int X_EDEFAULT = 0;
+	protected static final int X_EDEFAULT = 0;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getX() <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getX()
 	 * @generated
 	 * @ordered
 	 */
-    protected int x = X_EDEFAULT;
+	protected int x = X_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #getY() <em>Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getY()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final int Y_EDEFAULT = 0;
+	protected static final int Y_EDEFAULT = 0;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getY() <em>Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getY()
 	 * @generated
 	 * @ordered
 	 */
-    protected int y = Y_EDEFAULT;
+	protected int y = Y_EDEFAULT;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getContRef() <em>Cont Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getContRef()
 	 * @generated
 	 * @ordered
 	 */
-    protected IURNContainerRef contRef;
+	protected IURNContainerRef contRef;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getSucc() <em>Succ</em>}' reference list.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getSucc()
 	 * @generated
 	 * @ordered
 	 */
-    protected EList succ;
+	protected EList succ;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getPred() <em>Pred</em>}' reference list.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPred()
 	 * @generated
 	 * @ordered
 	 */
-    protected EList pred;
+	protected EList pred;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getLabel() <em>Label</em>}' containment reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getLabel()
 	 * @generated
 	 * @ordered
 	 */
-    protected NodeLabel label;
+	protected NodeLabel label;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected GRLNodeImpl() {
+	protected GRLNodeImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return GrlPackage.Literals.GRL_NODE;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public int getX() {
+	public int getX() {
 		return x;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setX(int newX) {
+	public void setX(int newX) {
 		int oldX = x;
 		x = newX;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.GRL_NODE__X, oldX, x));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public int getY() {
+	public int getY() {
 		return y;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setY(int newY) {
+	public void setY(int newY) {
 		int oldY = y;
 		y = newY;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.GRL_NODE__Y, oldY, y));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IURNDiagram getDiagram() {
+	public IURNDiagram getDiagram() {
 		if (eContainerFeatureID() != GrlPackage.GRL_NODE__DIAGRAM) return null;
-		return (IURNDiagram)eContainer();
+		return (IURNDiagram)eInternalContainer();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -209,12 +210,12 @@ public class GRLNodeImpl extends GRLmodelElementImpl implements GRLNode {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setDiagram(IURNDiagram newDiagram) {
+	public void setDiagram(IURNDiagram newDiagram) {
 		if (newDiagram != eInternalContainer() || (eContainerFeatureID() != GrlPackage.GRL_NODE__DIAGRAM && newDiagram != null)) {
 			if (EcoreUtil.isAncestor(this, newDiagram))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -230,12 +231,12 @@ public class GRLNodeImpl extends GRLmodelElementImpl implements GRLNode {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.GRL_NODE__DIAGRAM, newDiagram, newDiagram));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IURNContainerRef getContRef() {
+	public IURNContainerRef getContRef() {
 		if (contRef != null && contRef.eIsProxy()) {
 			InternalEObject oldContRef = (InternalEObject)contRef;
 			contRef = (IURNContainerRef)eResolveProxy(oldContRef);
@@ -247,21 +248,21 @@ public class GRLNodeImpl extends GRLmodelElementImpl implements GRLNode {
 		return contRef;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IURNContainerRef basicGetContRef() {
+	public IURNContainerRef basicGetContRef() {
 		return contRef;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetContRef(IURNContainerRef newContRef, NotificationChain msgs) {
+	public NotificationChain basicSetContRef(IURNContainerRef newContRef, NotificationChain msgs) {
 		IURNContainerRef oldContRef = contRef;
 		contRef = newContRef;
 		if (eNotificationRequired()) {
@@ -271,12 +272,12 @@ public class GRLNodeImpl extends GRLmodelElementImpl implements GRLNode {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setContRef(IURNContainerRef newContRef) {
+	public void setContRef(IURNContainerRef newContRef) {
 		if (newContRef != contRef) {
 			NotificationChain msgs = null;
 			if (contRef != null)
@@ -290,45 +291,45 @@ public class GRLNodeImpl extends GRLmodelElementImpl implements GRLNode {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.GRL_NODE__CONT_REF, newContRef, newContRef));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EList getSucc() {
+	public EList getSucc() {
 		if (succ == null) {
 			succ = new EObjectWithInverseResolvingEList(IURNConnection.class, this, GrlPackage.GRL_NODE__SUCC, UrncorePackage.IURN_CONNECTION__SOURCE);
 		}
 		return succ;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EList getPred() {
+	public EList getPred() {
 		if (pred == null) {
 			pred = new EObjectWithInverseResolvingEList(IURNConnection.class, this, GrlPackage.GRL_NODE__PRED, UrncorePackage.IURN_CONNECTION__TARGET);
 		}
 		return pred;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NodeLabel getLabel() {
+	public NodeLabel getLabel() {
 		return label;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetLabel(NodeLabel newLabel, NotificationChain msgs) {
+	public NotificationChain basicSetLabel(NodeLabel newLabel, NotificationChain msgs) {
 		NodeLabel oldLabel = label;
 		label = newLabel;
 		if (eNotificationRequired()) {
@@ -338,12 +339,12 @@ public class GRLNodeImpl extends GRLmodelElementImpl implements GRLNode {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setLabel(NodeLabel newLabel) {
+	public void setLabel(NodeLabel newLabel) {
 		if (newLabel != label) {
 			NotificationChain msgs = null;
 			if (label != null)
@@ -357,7 +358,7 @@ public class GRLNodeImpl extends GRLmodelElementImpl implements GRLNode {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.GRL_NODE__LABEL, newLabel, newLabel));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -384,7 +385,7 @@ public class GRLNodeImpl extends GRLmodelElementImpl implements GRLNode {
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -405,7 +406,7 @@ public class GRLNodeImpl extends GRLmodelElementImpl implements GRLNode {
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -418,7 +419,7 @@ public class GRLNodeImpl extends GRLmodelElementImpl implements GRLNode {
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -444,7 +445,7 @@ public class GRLNodeImpl extends GRLmodelElementImpl implements GRLNode {
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -478,7 +479,7 @@ public class GRLNodeImpl extends GRLmodelElementImpl implements GRLNode {
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -510,7 +511,7 @@ public class GRLNodeImpl extends GRLmodelElementImpl implements GRLNode {
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -535,12 +536,12 @@ public class GRLNodeImpl extends GRLmodelElementImpl implements GRLNode {
 		return super.eIsSet(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
 		if (baseClass == IURNNode.class) {
 			switch (derivedFeatureID) {
 				case GrlPackage.GRL_NODE__X: return UrncorePackage.IURN_NODE__X;
@@ -556,12 +557,12 @@ public class GRLNodeImpl extends GRLmodelElementImpl implements GRLNode {
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
 		if (baseClass == IURNNode.class) {
 			switch (baseFeatureID) {
 				case UrncorePackage.IURN_NODE__X: return GrlPackage.GRL_NODE__X;
@@ -577,12 +578,12 @@ public class GRLNodeImpl extends GRLmodelElementImpl implements GRLNode {
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String toString() {
+	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

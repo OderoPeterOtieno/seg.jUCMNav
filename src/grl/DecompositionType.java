@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl;
 
@@ -22,37 +18,37 @@ import org.eclipse.emf.common.util.AbstractEnumerator;
  * @generated
  */
 public final class DecompositionType extends AbstractEnumerator {
-    /**
+	/**
 	 * The '<em><b>And</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of '<em><b>And</b></em>' literal object isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>And</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @see #AND_LITERAL
 	 * @model name="And"
 	 * @generated
 	 * @ordered
 	 */
-    public static final int AND = 0;
+	public static final int AND = 0;
 
-    /**
+	/**
 	 * The '<em><b>Or</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of '<em><b>Or</b></em>' literal object isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Or</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @see #OR_LITERAL
 	 * @model name="Or"
 	 * @generated
 	 * @ordered
 	 */
-    public static final int OR = 1;
+	public static final int OR = 1;
 
-    /**
+	/**
 	 * The '<em><b>Xor</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -67,27 +63,27 @@ public final class DecompositionType extends AbstractEnumerator {
 	 */
 	public static final int XOR = 2;
 
-				/**
+	/**
 	 * The '<em><b>And</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #AND
 	 * @generated
 	 * @ordered
 	 */
-    public static final DecompositionType AND_LITERAL = new DecompositionType(AND, "And", "And");
+	public static final DecompositionType AND_LITERAL = new DecompositionType(AND, "And", "And");
 
-    /**
+	/**
 	 * The '<em><b>Or</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #OR
 	 * @generated
 	 * @ordered
 	 */
-    public static final DecompositionType OR_LITERAL = new DecompositionType(OR, "Or", "Or");
+	public static final DecompositionType OR_LITERAL = new DecompositionType(OR, "Or", "Or");
 
-    /**
+	/**
 	 * The '<em><b>Xor</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -97,34 +93,34 @@ public final class DecompositionType extends AbstractEnumerator {
 	 */
 	public static final DecompositionType XOR_LITERAL = new DecompositionType(XOR, "Xor", "Xor");
 
-				/**
+	/**
 	 * An array of all the '<em><b>Decomposition Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private static final DecompositionType[] VALUES_ARRAY =
-        new DecompositionType[] {
+	private static final DecompositionType[] VALUES_ARRAY =
+		new DecompositionType[] {
 			AND_LITERAL,
 			OR_LITERAL,
 			XOR_LITERAL,
 		};
 
-    /**
+	/**
 	 * A public read-only list of all the '<em><b>Decomposition Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public static final List VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
-    /**
+	/**
 	 * Returns the '<em><b>Decomposition Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public static DecompositionType get(String literal) {
+	public static DecompositionType get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
 			DecompositionType result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
@@ -134,7 +130,7 @@ public final class DecompositionType extends AbstractEnumerator {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the '<em><b>Decomposition Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -150,13 +146,13 @@ public final class DecompositionType extends AbstractEnumerator {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the '<em><b>Decomposition Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public static DecompositionType get(int value) {
+	public static DecompositionType get(int value) {
 		switch (value) {
 			case AND: return AND_LITERAL;
 			case OR: return OR_LITERAL;
@@ -165,7 +161,7 @@ public final class DecompositionType extends AbstractEnumerator {
 		return null;
 	}
 
-    /**
+	/**
 	 * Only this class can construct instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

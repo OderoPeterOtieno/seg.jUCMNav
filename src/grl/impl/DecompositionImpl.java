@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -21,21 +17,21 @@ import org.eclipse.emf.ecore.EClass;
  * @generated
  */
 public class DecompositionImpl extends ElementLinkImpl implements Decomposition {
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected DecompositionImpl() {
+	protected DecompositionImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return GrlPackage.Literals.DECOMPOSITION;
 	}
 

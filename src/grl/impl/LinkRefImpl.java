@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -15,11 +11,15 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -48,27 +48,27 @@ import urncore.UrncorePackage;
  * @generated
  */
 public class LinkRefImpl extends EObjectImpl implements LinkRef {
-    /**
+	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getSource()
 	 * @generated
 	 * @ordered
 	 */
-    protected IURNNode source;
+	protected IURNNode source;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getTarget()
 	 * @generated
 	 * @ordered
 	 */
-    protected IURNNode target;
+	protected IURNNode target;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getLabel() <em>Label</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -78,50 +78,50 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 	 */
 	protected ConnectionLabel label;
 
-				/**
+	/**
 	 * The cached value of the '{@link #getLink() <em>Link</em>}' reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getLink()
 	 * @generated
 	 * @ordered
 	 */
-    protected ElementLink link;
+	protected ElementLink link;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getBendpoints() <em>Bendpoints</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getBendpoints()
 	 * @generated
 	 * @ordered
 	 */
-    protected EList bendpoints;
+	protected EList bendpoints;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected LinkRefImpl() {
+	protected LinkRefImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return GrlPackage.Literals.LINK_REF;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IURNNode getSource() {
+	public IURNNode getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject)source;
 			source = (IURNNode)eResolveProxy(oldSource);
@@ -133,21 +133,21 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 		return source;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IURNNode basicGetSource() {
+	public IURNNode basicGetSource() {
 		return source;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetSource(IURNNode newSource, NotificationChain msgs) {
+	public NotificationChain basicSetSource(IURNNode newSource, NotificationChain msgs) {
 		IURNNode oldSource = source;
 		source = newSource;
 		if (eNotificationRequired()) {
@@ -157,12 +157,12 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setSource(IURNNode newSource) {
+	public void setSource(IURNNode newSource) {
 		if (newSource != source) {
 			NotificationChain msgs = null;
 			if (source != null)
@@ -176,12 +176,12 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.LINK_REF__SOURCE, newSource, newSource));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IURNNode getTarget() {
+	public IURNNode getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject)target;
 			target = (IURNNode)eResolveProxy(oldTarget);
@@ -193,21 +193,21 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 		return target;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IURNNode basicGetTarget() {
+	public IURNNode basicGetTarget() {
 		return target;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetTarget(IURNNode newTarget, NotificationChain msgs) {
+	public NotificationChain basicSetTarget(IURNNode newTarget, NotificationChain msgs) {
 		IURNNode oldTarget = target;
 		target = newTarget;
 		if (eNotificationRequired()) {
@@ -217,12 +217,12 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setTarget(IURNNode newTarget) {
+	public void setTarget(IURNNode newTarget) {
 		if (newTarget != target) {
 			NotificationChain msgs = null;
 			if (target != null)
@@ -236,17 +236,17 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.LINK_REF__TARGET, newTarget, newTarget));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IURNDiagram getDiagram() {
+	public IURNDiagram getDiagram() {
 		if (eContainerFeatureID() != GrlPackage.LINK_REF__DIAGRAM) return null;
-		return (IURNDiagram)eContainer();
+		return (IURNDiagram)eInternalContainer();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -256,12 +256,12 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setDiagram(IURNDiagram newDiagram) {
+	public void setDiagram(IURNDiagram newDiagram) {
 		if (newDiagram != eInternalContainer() || (eContainerFeatureID() != GrlPackage.LINK_REF__DIAGRAM && newDiagram != null)) {
 			if (EcoreUtil.isAncestor(this, newDiagram))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -277,7 +277,7 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.LINK_REF__DIAGRAM, newDiagram, newDiagram));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -286,7 +286,7 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 		return label;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -301,7 +301,7 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 		return msgs;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -320,12 +320,12 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.LINK_REF__LABEL, newLabel, newLabel));
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public ElementLink getLink() {
+	public ElementLink getLink() {
 		if (link != null && link.eIsProxy()) {
 			InternalEObject oldLink = (InternalEObject)link;
 			link = (ElementLink)eResolveProxy(oldLink);
@@ -337,21 +337,21 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 		return link;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public ElementLink basicGetLink() {
+	public ElementLink basicGetLink() {
 		return link;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetLink(ElementLink newLink, NotificationChain msgs) {
+	public NotificationChain basicSetLink(ElementLink newLink, NotificationChain msgs) {
 		ElementLink oldLink = link;
 		link = newLink;
 		if (eNotificationRequired()) {
@@ -361,12 +361,12 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setLink(ElementLink newLink) {
+	public void setLink(ElementLink newLink) {
 		if (newLink != link) {
 			NotificationChain msgs = null;
 			if (link != null)
@@ -380,19 +380,19 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.LINK_REF__LINK, newLink, newLink));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EList getBendpoints() {
+	public EList getBendpoints() {
 		if (bendpoints == null) {
 			bendpoints = new EObjectContainmentWithInverseEList(LinkRefBendpoint.class, this, GrlPackage.LINK_REF__BENDPOINTS, GrlPackage.LINK_REF_BENDPOINT__LINKREF);
 		}
 		return bendpoints;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -425,7 +425,7 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -448,7 +448,7 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -461,7 +461,7 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -487,7 +487,7 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -517,7 +517,7 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -546,7 +546,7 @@ public class LinkRefImpl extends EObjectImpl implements LinkRef {
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

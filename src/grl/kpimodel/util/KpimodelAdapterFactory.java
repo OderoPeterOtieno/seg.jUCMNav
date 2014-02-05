@@ -1,28 +1,18 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.kpimodel.util;
 
 import grl.GRLLinkableElement;
 import grl.GRLNode;
 import grl.IntentionalElement;
+
 import grl.kpimodel.*;
-import grl.kpimodel.Indicator;
-import grl.kpimodel.IndicatorGroup;
-import grl.kpimodel.KPIEvalValueSet;
-import grl.kpimodel.KPIInformationConfig;
-import grl.kpimodel.KPIInformationElement;
-import grl.kpimodel.KPIInformationElementRef;
-import grl.kpimodel.KPIModelLink;
-import grl.kpimodel.KPIModelLinkRef;
-import grl.kpimodel.KpimodelPackage;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
+
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
 import org.eclipse.emf.ecore.EObject;
 
 import urncore.GRLmodelElement;
@@ -39,35 +29,35 @@ import urncore.URNmodelElement;
  * @generated
  */
 public class KpimodelAdapterFactory extends AdapterFactoryImpl {
-    /**
+	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected static KpimodelPackage modelPackage;
+	protected static KpimodelPackage modelPackage;
 
-    /**
+	/**
 	 * Creates an instance of the adapter factory.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KpimodelAdapterFactory() {
+	public KpimodelAdapterFactory() {
 		if (modelPackage == null) {
 			modelPackage = KpimodelPackage.eINSTANCE;
 		}
 	}
 
-    /**
+	/**
 	 * Returns whether this factory is applicable for the type of the object.
 	 * <!-- begin-user-doc -->
-     * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
-     * <!-- end-user-doc -->
+	 * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
+	 * <!-- end-user-doc -->
 	 * @return whether this factory is applicable for the type of the object.
 	 * @generated
 	 */
-    public boolean isFactoryForType(Object object) {
+	public boolean isFactoryForType(Object object) {
 		if (object == modelPackage) {
 			return true;
 		}
@@ -77,14 +67,14 @@ public class KpimodelAdapterFactory extends AdapterFactoryImpl {
 		return false;
 	}
 
-    /**
+	/**
 	 * The switch that delegates to the <code>createXXX</code> methods.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected KpimodelSwitch modelSwitch =
-        new KpimodelSwitch() {
+	protected KpimodelSwitch modelSwitch =
+		new KpimodelSwitch() {
 			public Object caseIndicatorGroup(IndicatorGroup object) {
 				return createIndicatorGroupAdapter();
 			}
@@ -147,132 +137,132 @@ public class KpimodelAdapterFactory extends AdapterFactoryImpl {
 			}
 		};
 
-    /**
+	/**
 	 * Creates an adapter for the <code>target</code>.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param target the object to adapt.
 	 * @return the adapter for the <code>target</code>.
 	 * @generated
 	 */
-    public Adapter createAdapter(Notifier target) {
+	public Adapter createAdapter(Notifier target) {
 		return (Adapter)modelSwitch.doSwitch((EObject)target);
 	}
 
 
-    /**
+	/**
 	 * Creates a new adapter for an object of class '{@link grl.kpimodel.IndicatorGroup <em>Indicator Group</em>}'.
 	 * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
 	 * @see grl.kpimodel.IndicatorGroup
 	 * @generated
 	 */
-    public Adapter createIndicatorGroupAdapter() {
+	public Adapter createIndicatorGroupAdapter() {
 		return null;
 	}
 
-    /**
+	/**
 	 * Creates a new adapter for an object of class '{@link grl.kpimodel.Indicator <em>Indicator</em>}'.
 	 * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
 	 * @see grl.kpimodel.Indicator
 	 * @generated
 	 */
-    public Adapter createIndicatorAdapter() {
+	public Adapter createIndicatorAdapter() {
 		return null;
 	}
 
-    /**
+	/**
 	 * Creates a new adapter for an object of class '{@link grl.kpimodel.KPIInformationElement <em>KPI Information Element</em>}'.
 	 * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
 	 * @see grl.kpimodel.KPIInformationElement
 	 * @generated
 	 */
-    public Adapter createKPIInformationElementAdapter() {
+	public Adapter createKPIInformationElementAdapter() {
 		return null;
 	}
 
-    /**
+	/**
 	 * Creates a new adapter for an object of class '{@link grl.kpimodel.KPIInformationElementRef <em>KPI Information Element Ref</em>}'.
 	 * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
 	 * @see grl.kpimodel.KPIInformationElementRef
 	 * @generated
 	 */
-    public Adapter createKPIInformationElementRefAdapter() {
+	public Adapter createKPIInformationElementRefAdapter() {
 		return null;
 	}
 
-    /**
+	/**
 	 * Creates a new adapter for an object of class '{@link grl.kpimodel.KPIModelLink <em>KPI Model Link</em>}'.
 	 * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
 	 * @see grl.kpimodel.KPIModelLink
 	 * @generated
 	 */
-    public Adapter createKPIModelLinkAdapter() {
+	public Adapter createKPIModelLinkAdapter() {
 		return null;
 	}
 
-    /**
+	/**
 	 * Creates a new adapter for an object of class '{@link grl.kpimodel.KPIModelLinkRef <em>KPI Model Link Ref</em>}'.
 	 * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
 	 * @see grl.kpimodel.KPIModelLinkRef
 	 * @generated
 	 */
-    public Adapter createKPIModelLinkRefAdapter() {
+	public Adapter createKPIModelLinkRefAdapter() {
 		return null;
 	}
 
-    /**
+	/**
 	 * Creates a new adapter for an object of class '{@link grl.kpimodel.KPIEvalValueSet <em>KPI Eval Value Set</em>}'.
 	 * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
 	 * @see grl.kpimodel.KPIEvalValueSet
 	 * @generated
 	 */
-    public Adapter createKPIEvalValueSetAdapter() {
+	public Adapter createKPIEvalValueSetAdapter() {
 		return null;
 	}
 
-    /**
+	/**
 	 * Creates a new adapter for an object of class '{@link grl.kpimodel.KPIInformationConfig <em>KPI Information Config</em>}'.
 	 * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
 	 * @see grl.kpimodel.KPIInformationConfig
 	 * @generated
 	 */
-    public Adapter createKPIInformationConfigAdapter() {
+	public Adapter createKPIInformationConfigAdapter() {
 		return null;
 	}
 
-    /**
+	/**
 	 * Creates a new adapter for an object of class '{@link grl.kpimodel.KPINewEvalValue <em>KPI New Eval Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -286,7 +276,7 @@ public class KpimodelAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-				/**
+	/**
 	 * Creates a new adapter for an object of class '{@link grl.kpimodel.KPIConversion <em>KPI Conversion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -300,7 +290,7 @@ public class KpimodelAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-				/**
+	/**
 	 * Creates a new adapter for an object of class '{@link grl.kpimodel.QualitativeMappings <em>Qualitative Mappings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -314,7 +304,7 @@ public class KpimodelAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-				/**
+	/**
 	 * Creates a new adapter for an object of class '{@link grl.kpimodel.QualitativeMapping <em>Qualitative Mapping</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -328,35 +318,35 @@ public class KpimodelAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-				/**
+	/**
 	 * Creates a new adapter for an object of class '{@link urncore.URNmodelElement <em>UR Nmodel Element</em>}'.
 	 * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
 	 * @see urncore.URNmodelElement
 	 * @generated
 	 */
-    public Adapter createURNmodelElementAdapter() {
+	public Adapter createURNmodelElementAdapter() {
 		return null;
 	}
 
-    /**
+	/**
 	 * Creates a new adapter for an object of class '{@link urncore.GRLmodelElement <em>GR Lmodel Element</em>}'.
 	 * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
 	 * @see urncore.GRLmodelElement
 	 * @generated
 	 */
-    public Adapter createGRLmodelElementAdapter() {
+	public Adapter createGRLmodelElementAdapter() {
 		return null;
 	}
 
-    /**
+	/**
 	 * Creates a new adapter for an object of class '{@link grl.GRLLinkableElement <em>GRL Linkable Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -370,71 +360,71 @@ public class KpimodelAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-				/**
+	/**
 	 * Creates a new adapter for an object of class '{@link grl.IntentionalElement <em>Intentional Element</em>}'.
 	 * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
 	 * @see grl.IntentionalElement
 	 * @generated
 	 */
-    public Adapter createIntentionalElementAdapter() {
+	public Adapter createIntentionalElementAdapter() {
 		return null;
 	}
 
-    /**
+	/**
 	 * Creates a new adapter for an object of class '{@link urncore.IURNNode <em>IURN Node</em>}'.
 	 * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
 	 * @see urncore.IURNNode
 	 * @generated
 	 */
-    public Adapter createIURNNodeAdapter() {
+	public Adapter createIURNNodeAdapter() {
 		return null;
 	}
 
-    /**
+	/**
 	 * Creates a new adapter for an object of class '{@link grl.GRLNode <em>GRL Node</em>}'.
 	 * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
 	 * @see grl.GRLNode
 	 * @generated
 	 */
-    public Adapter createGRLNodeAdapter() {
+	public Adapter createGRLNodeAdapter() {
 		return null;
 	}
 
-    /**
+	/**
 	 * Creates a new adapter for an object of class '{@link urncore.IURNConnection <em>IURN Connection</em>}'.
 	 * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
 	 * @see urncore.IURNConnection
 	 * @generated
 	 */
-    public Adapter createIURNConnectionAdapter() {
+	public Adapter createIURNConnectionAdapter() {
 		return null;
 	}
 
-    /**
+	/**
 	 * Creates a new adapter for the default case.
 	 * <!-- begin-user-doc -->
-     * This default implementation returns null.
-     * <!-- end-user-doc -->
+	 * This default implementation returns null.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
 	 * @generated
 	 */
-    public Adapter createEObjectAdapter() {
+	public Adapter createEObjectAdapter() {
 		return null;
 	}
 

@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -13,10 +9,14 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -27,6 +27,7 @@ import urncore.IURNContainerRef;
 import urncore.IURNDiagram;
 import urncore.IURNNode;
 import urncore.UrncorePackage;
+
 import urncore.impl.GRLmodelElementImpl;
 
 /**
@@ -53,290 +54,290 @@ import urncore.impl.GRLmodelElementImpl;
  * @generated
  */
 public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
-    /**
+	/**
 	 * The default value of the '{@link #getX() <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getX()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final int X_EDEFAULT = 0;
+	protected static final int X_EDEFAULT = 0;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getX() <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getX()
 	 * @generated
 	 * @ordered
 	 */
-    protected int x = X_EDEFAULT;
+	protected int x = X_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #getY() <em>Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getY()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final int Y_EDEFAULT = 0;
+	protected static final int Y_EDEFAULT = 0;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getY() <em>Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getY()
 	 * @generated
 	 * @ordered
 	 */
-    protected int y = Y_EDEFAULT;
+	protected int y = Y_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getWidth()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final int WIDTH_EDEFAULT = 0;
+	protected static final int WIDTH_EDEFAULT = 0;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getWidth()
 	 * @generated
 	 * @ordered
 	 */
-    protected int width = WIDTH_EDEFAULT;
+	protected int width = WIDTH_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getHeight()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final int HEIGHT_EDEFAULT = 0;
+	protected static final int HEIGHT_EDEFAULT = 0;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getHeight()
 	 * @generated
 	 * @ordered
 	 */
-    protected int height = HEIGHT_EDEFAULT;
+	protected int height = HEIGHT_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #isFixed() <em>Fixed</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #isFixed()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final boolean FIXED_EDEFAULT = false;
+	protected static final boolean FIXED_EDEFAULT = false;
 
-    /**
+	/**
 	 * The cached value of the '{@link #isFixed() <em>Fixed</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #isFixed()
 	 * @generated
 	 * @ordered
 	 */
-    protected boolean fixed = FIXED_EDEFAULT;
+	protected boolean fixed = FIXED_EDEFAULT;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getContDef() <em>Cont Def</em>}' reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getContDef()
 	 * @generated
 	 * @ordered
 	 */
-    protected IURNContainer contDef;
+	protected IURNContainer contDef;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getNodes() <em>Nodes</em>}' reference list.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getNodes()
 	 * @generated
 	 * @ordered
 	 */
-    protected EList nodes;
+	protected EList nodes;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getLabel() <em>Label</em>}' containment reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getLabel()
 	 * @generated
 	 * @ordered
 	 */
-    protected ComponentLabel label;
+	protected ComponentLabel label;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getParent() <em>Parent</em>}' reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getParent()
 	 * @generated
 	 * @ordered
 	 */
-    protected IURNContainerRef parent;
+	protected IURNContainerRef parent;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getChildren() <em>Children</em>}' reference list.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getChildren()
 	 * @generated
 	 * @ordered
 	 */
-    protected EList children;
+	protected EList children;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected ActorRefImpl() {
+	protected ActorRefImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return GrlPackage.Literals.ACTOR_REF;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public int getX() {
+	public int getX() {
 		return x;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setX(int newX) {
+	public void setX(int newX) {
 		int oldX = x;
 		x = newX;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ACTOR_REF__X, oldX, x));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public int getY() {
+	public int getY() {
 		return y;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setY(int newY) {
+	public void setY(int newY) {
 		int oldY = y;
 		y = newY;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ACTOR_REF__Y, oldY, y));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public int getWidth() {
+	public int getWidth() {
 		return width;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setWidth(int newWidth) {
+	public void setWidth(int newWidth) {
 		int oldWidth = width;
 		width = newWidth;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ACTOR_REF__WIDTH, oldWidth, width));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public int getHeight() {
+	public int getHeight() {
 		return height;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setHeight(int newHeight) {
+	public void setHeight(int newHeight) {
 		int oldHeight = height;
 		height = newHeight;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ACTOR_REF__HEIGHT, oldHeight, height));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public boolean isFixed() {
+	public boolean isFixed() {
 		return fixed;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setFixed(boolean newFixed) {
+	public void setFixed(boolean newFixed) {
 		boolean oldFixed = fixed;
 		fixed = newFixed;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ACTOR_REF__FIXED, oldFixed, fixed));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IURNDiagram getDiagram() {
+	public IURNDiagram getDiagram() {
 		if (eContainerFeatureID() != GrlPackage.ACTOR_REF__DIAGRAM) return null;
-		return (IURNDiagram)eContainer();
+		return (IURNDiagram)eInternalContainer();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -346,12 +347,12 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setDiagram(IURNDiagram newDiagram) {
+	public void setDiagram(IURNDiagram newDiagram) {
 		if (newDiagram != eInternalContainer() || (eContainerFeatureID() != GrlPackage.ACTOR_REF__DIAGRAM && newDiagram != null)) {
 			if (EcoreUtil.isAncestor(this, newDiagram))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -367,12 +368,12 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ACTOR_REF__DIAGRAM, newDiagram, newDiagram));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IURNContainer getContDef() {
+	public IURNContainer getContDef() {
 		if (contDef != null && contDef.eIsProxy()) {
 			InternalEObject oldContDef = (InternalEObject)contDef;
 			contDef = (IURNContainer)eResolveProxy(oldContDef);
@@ -384,21 +385,21 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 		return contDef;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IURNContainer basicGetContDef() {
+	public IURNContainer basicGetContDef() {
 		return contDef;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetContDef(IURNContainer newContDef, NotificationChain msgs) {
+	public NotificationChain basicSetContDef(IURNContainer newContDef, NotificationChain msgs) {
 		IURNContainer oldContDef = contDef;
 		contDef = newContDef;
 		if (eNotificationRequired()) {
@@ -408,12 +409,12 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setContDef(IURNContainer newContDef) {
+	public void setContDef(IURNContainer newContDef) {
 		if (newContDef != contDef) {
 			NotificationChain msgs = null;
 			if (contDef != null)
@@ -427,33 +428,33 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ACTOR_REF__CONT_DEF, newContDef, newContDef));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EList getNodes() {
+	public EList getNodes() {
 		if (nodes == null) {
 			nodes = new EObjectWithInverseResolvingEList(IURNNode.class, this, GrlPackage.ACTOR_REF__NODES, UrncorePackage.IURN_NODE__CONT_REF);
 		}
 		return nodes;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public ComponentLabel getLabel() {
+	public ComponentLabel getLabel() {
 		return label;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetLabel(ComponentLabel newLabel, NotificationChain msgs) {
+	public NotificationChain basicSetLabel(ComponentLabel newLabel, NotificationChain msgs) {
 		ComponentLabel oldLabel = label;
 		label = newLabel;
 		if (eNotificationRequired()) {
@@ -463,12 +464,12 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setLabel(ComponentLabel newLabel) {
+	public void setLabel(ComponentLabel newLabel) {
 		if (newLabel != label) {
 			NotificationChain msgs = null;
 			if (label != null)
@@ -482,12 +483,12 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ACTOR_REF__LABEL, newLabel, newLabel));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IURNContainerRef getParent() {
+	public IURNContainerRef getParent() {
 		if (parent != null && parent.eIsProxy()) {
 			InternalEObject oldParent = (InternalEObject)parent;
 			parent = (IURNContainerRef)eResolveProxy(oldParent);
@@ -499,21 +500,21 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 		return parent;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IURNContainerRef basicGetParent() {
+	public IURNContainerRef basicGetParent() {
 		return parent;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetParent(IURNContainerRef newParent, NotificationChain msgs) {
+	public NotificationChain basicSetParent(IURNContainerRef newParent, NotificationChain msgs) {
 		IURNContainerRef oldParent = parent;
 		parent = newParent;
 		if (eNotificationRequired()) {
@@ -523,12 +524,12 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setParent(IURNContainerRef newParent) {
+	public void setParent(IURNContainerRef newParent) {
 		if (newParent != parent) {
 			NotificationChain msgs = null;
 			if (parent != null)
@@ -542,19 +543,19 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ACTOR_REF__PARENT, newParent, newParent));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EList getChildren() {
+	public EList getChildren() {
 		if (children == null) {
 			children = new EObjectWithInverseResolvingEList(IURNContainerRef.class, this, GrlPackage.ACTOR_REF__CHILDREN, UrncorePackage.IURN_CONTAINER_REF__PARENT);
 		}
 		return children;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -585,7 +586,7 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -608,7 +609,7 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -621,7 +622,7 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -656,7 +657,7 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -702,7 +703,7 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -746,7 +747,7 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -779,12 +780,12 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 		return super.eIsSet(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
 		if (baseClass == IURNContainerRef.class) {
 			switch (derivedFeatureID) {
 				case GrlPackage.ACTOR_REF__X: return UrncorePackage.IURN_CONTAINER_REF__X;
@@ -804,12 +805,12 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
 		if (baseClass == IURNContainerRef.class) {
 			switch (baseFeatureID) {
 				case UrncorePackage.IURN_CONTAINER_REF__X: return GrlPackage.ACTOR_REF__X;
@@ -829,12 +830,12 @@ public class ActorRefImpl extends GRLmodelElementImpl implements ActorRef {
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String toString() {
+	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

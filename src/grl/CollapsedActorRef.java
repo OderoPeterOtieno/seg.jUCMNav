@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl;
 
@@ -24,7 +20,6 @@ package grl;
  * @generated
  */
 public interface CollapsedActorRef extends GRLNode {
-
 	/**
 	 * Returns the value of the '<em><b>Actor</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link grl.Actor#getCollapsedRefs <em>Collapsed Refs</em>}'.
@@ -52,4 +47,5 @@ public interface CollapsedActorRef extends GRLNode {
 	 * @generated
 	 */
 	void setActor(Actor value);
+
 } // CollapsedActorRef

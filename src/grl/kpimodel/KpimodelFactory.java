@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.kpimodel;
 
@@ -17,87 +13,87 @@ import org.eclipse.emf.ecore.EFactory;
  * @generated
  */
 public interface KpimodelFactory extends EFactory {
-    /**
+	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    KpimodelFactory eINSTANCE = grl.kpimodel.impl.KpimodelFactoryImpl.init();
+	KpimodelFactory eINSTANCE = grl.kpimodel.impl.KpimodelFactoryImpl.init();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>Indicator Group</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Indicator Group</em>'.
 	 * @generated
 	 */
-    IndicatorGroup createIndicatorGroup();
+	IndicatorGroup createIndicatorGroup();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>Indicator</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Indicator</em>'.
 	 * @generated
 	 */
-    Indicator createIndicator();
+	Indicator createIndicator();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>KPI Information Element</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>KPI Information Element</em>'.
 	 * @generated
 	 */
-    KPIInformationElement createKPIInformationElement();
+	KPIInformationElement createKPIInformationElement();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>KPI Information Element Ref</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>KPI Information Element Ref</em>'.
 	 * @generated
 	 */
-    KPIInformationElementRef createKPIInformationElementRef();
+	KPIInformationElementRef createKPIInformationElementRef();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>KPI Model Link</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>KPI Model Link</em>'.
 	 * @generated
 	 */
-    KPIModelLink createKPIModelLink();
+	KPIModelLink createKPIModelLink();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>KPI Model Link Ref</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>KPI Model Link Ref</em>'.
 	 * @generated
 	 */
-    KPIModelLinkRef createKPIModelLinkRef();
+	KPIModelLinkRef createKPIModelLinkRef();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>KPI Eval Value Set</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>KPI Eval Value Set</em>'.
 	 * @generated
 	 */
-    KPIEvalValueSet createKPIEvalValueSet();
+	KPIEvalValueSet createKPIEvalValueSet();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>KPI Information Config</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>KPI Information Config</em>'.
 	 * @generated
 	 */
-    KPIInformationConfig createKPIInformationConfig();
+	KPIInformationConfig createKPIInformationConfig();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>KPI New Eval Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -106,7 +102,7 @@ public interface KpimodelFactory extends EFactory {
 	 */
 	KPINewEvalValue createKPINewEvalValue();
 
-				/**
+	/**
 	 * Returns a new object of class '<em>Qualitative Mappings</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -115,7 +111,7 @@ public interface KpimodelFactory extends EFactory {
 	 */
 	QualitativeMappings createQualitativeMappings();
 
-				/**
+	/**
 	 * Returns a new object of class '<em>Qualitative Mapping</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -124,13 +120,13 @@ public interface KpimodelFactory extends EFactory {
 	 */
 	QualitativeMapping createQualitativeMapping();
 
-				/**
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-    KpimodelPackage getKpimodelPackage();
+	KpimodelPackage getKpimodelPackage();
 
 } //KpimodelFactory

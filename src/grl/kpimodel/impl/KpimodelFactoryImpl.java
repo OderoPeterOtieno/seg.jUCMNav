@@ -1,27 +1,15 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.kpimodel.impl;
 
 import grl.kpimodel.*;
-import grl.kpimodel.Indicator;
-import grl.kpimodel.IndicatorGroup;
-import grl.kpimodel.KPIEvalValueSet;
-import grl.kpimodel.KPIInformationConfig;
-import grl.kpimodel.KPIInformationElement;
-import grl.kpimodel.KPIInformationElementRef;
-import grl.kpimodel.KPIModelLink;
-import grl.kpimodel.KPIModelLinkRef;
-import grl.kpimodel.KpimodelFactory;
-import grl.kpimodel.KpimodelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
@@ -31,15 +19,15 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * @generated
  */
 public class KpimodelFactoryImpl extends EFactoryImpl implements KpimodelFactory {
-    /**
+	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public static KpimodelFactory init() {
+	public static KpimodelFactory init() {
 		try {
-			KpimodelFactory theKpimodelFactory = (KpimodelFactory)EPackage.Registry.INSTANCE.getEFactory("http:///grl/kpimodel.ecore"); 
+			KpimodelFactory theKpimodelFactory = (KpimodelFactory)EPackage.Registry.INSTANCE.getEFactory(KpimodelPackage.eNS_URI);
 			if (theKpimodelFactory != null) {
 				return theKpimodelFactory;
 			}
@@ -50,22 +38,22 @@ public class KpimodelFactoryImpl extends EFactoryImpl implements KpimodelFactory
 		return new KpimodelFactoryImpl();
 	}
 
-    /**
+	/**
 	 * Creates an instance of the factory.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KpimodelFactoryImpl() {
+	public KpimodelFactoryImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EObject create(EClass eClass) {
+	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case KpimodelPackage.INDICATOR_GROUP: return createIndicatorGroup();
 			case KpimodelPackage.INDICATOR: return createIndicator();
@@ -83,87 +71,87 @@ public class KpimodelFactoryImpl extends EFactoryImpl implements KpimodelFactory
 		}
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IndicatorGroup createIndicatorGroup() {
+	public IndicatorGroup createIndicatorGroup() {
 		IndicatorGroupImpl indicatorGroup = new IndicatorGroupImpl();
 		return indicatorGroup;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public Indicator createIndicator() {
+	public Indicator createIndicator() {
 		IndicatorImpl indicator = new IndicatorImpl();
 		return indicator;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KPIInformationElement createKPIInformationElement() {
+	public KPIInformationElement createKPIInformationElement() {
 		KPIInformationElementImpl kpiInformationElement = new KPIInformationElementImpl();
 		return kpiInformationElement;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KPIInformationElementRef createKPIInformationElementRef() {
+	public KPIInformationElementRef createKPIInformationElementRef() {
 		KPIInformationElementRefImpl kpiInformationElementRef = new KPIInformationElementRefImpl();
 		return kpiInformationElementRef;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KPIModelLink createKPIModelLink() {
+	public KPIModelLink createKPIModelLink() {
 		KPIModelLinkImpl kpiModelLink = new KPIModelLinkImpl();
 		return kpiModelLink;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KPIModelLinkRef createKPIModelLinkRef() {
+	public KPIModelLinkRef createKPIModelLinkRef() {
 		KPIModelLinkRefImpl kpiModelLinkRef = new KPIModelLinkRefImpl();
 		return kpiModelLinkRef;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KPIEvalValueSet createKPIEvalValueSet() {
+	public KPIEvalValueSet createKPIEvalValueSet() {
 		KPIEvalValueSetImpl kpiEvalValueSet = new KPIEvalValueSetImpl();
 		return kpiEvalValueSet;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KPIInformationConfig createKPIInformationConfig() {
+	public KPIInformationConfig createKPIInformationConfig() {
 		KPIInformationConfigImpl kpiInformationConfig = new KPIInformationConfigImpl();
 		return kpiInformationConfig;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -173,7 +161,7 @@ public class KpimodelFactoryImpl extends EFactoryImpl implements KpimodelFactory
 		return kpiNewEvalValue;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -183,7 +171,7 @@ public class KpimodelFactoryImpl extends EFactoryImpl implements KpimodelFactory
 		return qualitativeMappings;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -193,22 +181,22 @@ public class KpimodelFactoryImpl extends EFactoryImpl implements KpimodelFactory
 		return qualitativeMapping;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KpimodelPackage getKpimodelPackage() {
+	public KpimodelPackage getKpimodelPackage() {
 		return (KpimodelPackage)getEPackage();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @deprecated
 	 * @generated
 	 */
-    public static KpimodelPackage getPackage() {
+	public static KpimodelPackage getPackage() {
 		return KpimodelPackage.eINSTANCE;
 	}
 

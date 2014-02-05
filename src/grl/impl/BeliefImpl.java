@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -10,7 +6,9 @@ import grl.Belief;
 import grl.GrlPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -27,66 +25,66 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class BeliefImpl extends GRLNodeImpl implements Belief {
-    /**
+	/**
 	 * The default value of the '{@link #getAuthor() <em>Author</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getAuthor()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final String AUTHOR_EDEFAULT = null;
+	protected static final String AUTHOR_EDEFAULT = null;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getAuthor() <em>Author</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getAuthor()
 	 * @generated
 	 * @ordered
 	 */
-    protected String author = AUTHOR_EDEFAULT;
+	protected String author = AUTHOR_EDEFAULT;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected BeliefImpl() {
+	protected BeliefImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return GrlPackage.Literals.BELIEF;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String getAuthor() {
+	public String getAuthor() {
 		return author;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setAuthor(String newAuthor) {
+	public void setAuthor(String newAuthor) {
 		String oldAuthor = author;
 		author = newAuthor;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.BELIEF__AUTHOR, oldAuthor, author));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -99,7 +97,7 @@ public class BeliefImpl extends GRLNodeImpl implements Belief {
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -113,7 +111,7 @@ public class BeliefImpl extends GRLNodeImpl implements Belief {
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -127,7 +125,7 @@ public class BeliefImpl extends GRLNodeImpl implements Belief {
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -140,12 +138,12 @@ public class BeliefImpl extends GRLNodeImpl implements Belief {
 		return super.eIsSet(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String toString() {
+	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

@@ -1,23 +1,23 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.kpimodel.impl;
 
 import grl.EvaluationStrategy;
 import grl.GrlPackage;
+
 import grl.kpimodel.KPIInformationConfig;
 import grl.kpimodel.KPIInformationElement;
 import grl.kpimodel.KpimodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
@@ -37,142 +37,142 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * @generated
  */
 public class KPIInformationConfigImpl extends EObjectImpl implements KPIInformationConfig {
-    /**
+	/**
 	 * The default value of the '{@link #getLevelOfDimension() <em>Level Of Dimension</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getLevelOfDimension()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final String LEVEL_OF_DIMENSION_EDEFAULT = null;
+	protected static final String LEVEL_OF_DIMENSION_EDEFAULT = null;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getLevelOfDimension() <em>Level Of Dimension</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getLevelOfDimension()
 	 * @generated
 	 * @ordered
 	 */
-    protected String levelOfDimension = LEVEL_OF_DIMENSION_EDEFAULT;
+	protected String levelOfDimension = LEVEL_OF_DIMENSION_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #getValueOfDimension() <em>Value Of Dimension</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getValueOfDimension()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final String VALUE_OF_DIMENSION_EDEFAULT = null;
+	protected static final String VALUE_OF_DIMENSION_EDEFAULT = null;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getValueOfDimension() <em>Value Of Dimension</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getValueOfDimension()
 	 * @generated
 	 * @ordered
 	 */
-    protected String valueOfDimension = VALUE_OF_DIMENSION_EDEFAULT;
+	protected String valueOfDimension = VALUE_OF_DIMENSION_EDEFAULT;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getKpiInfoElement() <em>Kpi Info Element</em>}' reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getKpiInfoElement()
 	 * @generated
 	 * @ordered
 	 */
-    protected KPIInformationElement kpiInfoElement;
+	protected KPIInformationElement kpiInfoElement;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected KPIInformationConfigImpl() {
+	protected KPIInformationConfigImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return KpimodelPackage.Literals.KPI_INFORMATION_CONFIG;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String getLevelOfDimension() {
+	public String getLevelOfDimension() {
 		return levelOfDimension;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setLevelOfDimension(String newLevelOfDimension) {
+	public void setLevelOfDimension(String newLevelOfDimension) {
 		String oldLevelOfDimension = levelOfDimension;
 		levelOfDimension = newLevelOfDimension;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, KpimodelPackage.KPI_INFORMATION_CONFIG__LEVEL_OF_DIMENSION, oldLevelOfDimension, levelOfDimension));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String getValueOfDimension() {
+	public String getValueOfDimension() {
 		return valueOfDimension;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setValueOfDimension(String newValueOfDimension) {
+	public void setValueOfDimension(String newValueOfDimension) {
 		String oldValueOfDimension = valueOfDimension;
 		valueOfDimension = newValueOfDimension;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, KpimodelPackage.KPI_INFORMATION_CONFIG__VALUE_OF_DIMENSION, oldValueOfDimension, valueOfDimension));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EvaluationStrategy getStrategies() {
+	public EvaluationStrategy getStrategies() {
 		if (eContainerFeatureID() != KpimodelPackage.KPI_INFORMATION_CONFIG__STRATEGIES) return null;
-		return (EvaluationStrategy)eContainer();
+		return (EvaluationStrategy)eInternalContainer();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetStrategies(EvaluationStrategy newStrategies, NotificationChain msgs) {
+	public NotificationChain basicSetStrategies(EvaluationStrategy newStrategies, NotificationChain msgs) {
 		msgs = eBasicSetContainer((InternalEObject)newStrategies, KpimodelPackage.KPI_INFORMATION_CONFIG__STRATEGIES, msgs);
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setStrategies(EvaluationStrategy newStrategies) {
+	public void setStrategies(EvaluationStrategy newStrategies) {
 		if (newStrategies != eInternalContainer() || (eContainerFeatureID() != KpimodelPackage.KPI_INFORMATION_CONFIG__STRATEGIES && newStrategies != null)) {
 			if (EcoreUtil.isAncestor(this, newStrategies))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -188,12 +188,12 @@ public class KPIInformationConfigImpl extends EObjectImpl implements KPIInformat
 			eNotify(new ENotificationImpl(this, Notification.SET, KpimodelPackage.KPI_INFORMATION_CONFIG__STRATEGIES, newStrategies, newStrategies));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KPIInformationElement getKpiInfoElement() {
+	public KPIInformationElement getKpiInfoElement() {
 		if (kpiInfoElement != null && kpiInfoElement.eIsProxy()) {
 			InternalEObject oldKpiInfoElement = (InternalEObject)kpiInfoElement;
 			kpiInfoElement = (KPIInformationElement)eResolveProxy(oldKpiInfoElement);
@@ -205,33 +205,33 @@ public class KPIInformationConfigImpl extends EObjectImpl implements KPIInformat
 		return kpiInfoElement;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KPIInformationElement basicGetKpiInfoElement() {
+	public KPIInformationElement basicGetKpiInfoElement() {
 		return kpiInfoElement;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setKpiInfoElement(KPIInformationElement newKpiInfoElement) {
+	public void setKpiInfoElement(KPIInformationElement newKpiInfoElement) {
 		KPIInformationElement oldKpiInfoElement = kpiInfoElement;
 		kpiInfoElement = newKpiInfoElement;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, KpimodelPackage.KPI_INFORMATION_CONFIG__KPI_INFO_ELEMENT, oldKpiInfoElement, kpiInfoElement));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_INFORMATION_CONFIG__STRATEGIES:
 				if (eInternalContainer() != null)
@@ -241,12 +241,12 @@ public class KPIInformationConfigImpl extends EObjectImpl implements KPIInformat
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_INFORMATION_CONFIG__STRATEGIES:
 				return basicSetStrategies(null, msgs);
@@ -254,12 +254,12 @@ public class KPIInformationConfigImpl extends EObjectImpl implements KPIInformat
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case KpimodelPackage.KPI_INFORMATION_CONFIG__STRATEGIES:
 				return eInternalContainer().eInverseRemove(this, GrlPackage.EVALUATION_STRATEGY__KPI_INFO_CONFIG, EvaluationStrategy.class, msgs);
@@ -267,12 +267,12 @@ public class KPIInformationConfigImpl extends EObjectImpl implements KPIInformat
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_INFORMATION_CONFIG__LEVEL_OF_DIMENSION:
 				return getLevelOfDimension();
@@ -287,12 +287,12 @@ public class KPIInformationConfigImpl extends EObjectImpl implements KPIInformat
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void eSet(int featureID, Object newValue) {
+	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_INFORMATION_CONFIG__LEVEL_OF_DIMENSION:
 				setLevelOfDimension((String)newValue);
@@ -310,12 +310,12 @@ public class KPIInformationConfigImpl extends EObjectImpl implements KPIInformat
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void eUnset(int featureID) {
+	public void eUnset(int featureID) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_INFORMATION_CONFIG__LEVEL_OF_DIMENSION:
 				setLevelOfDimension(LEVEL_OF_DIMENSION_EDEFAULT);
@@ -333,12 +333,12 @@ public class KPIInformationConfigImpl extends EObjectImpl implements KPIInformat
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public boolean eIsSet(int featureID) {
+	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_INFORMATION_CONFIG__LEVEL_OF_DIMENSION:
 				return LEVEL_OF_DIMENSION_EDEFAULT == null ? levelOfDimension != null : !LEVEL_OF_DIMENSION_EDEFAULT.equals(levelOfDimension);
@@ -352,12 +352,12 @@ public class KPIInformationConfigImpl extends EObjectImpl implements KPIInformat
 		return super.eIsSet(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String toString() {
+	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

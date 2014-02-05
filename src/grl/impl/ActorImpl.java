@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -10,16 +6,20 @@ import grl.Actor;
 import grl.CollapsedActorRef;
 import grl.GRLspec;
 import grl.GrlPackage;
-
 import grl.ImportanceType;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -51,77 +51,77 @@ import urncore.UrncorePackage;
  * @generated
  */
 public class ActorImpl extends GRLLinkableElementImpl implements Actor {
-    /**
+	/**
 	 * The default value of the '{@link #getLineColor() <em>Line Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getLineColor()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final String LINE_COLOR_EDEFAULT = null;
+	protected static final String LINE_COLOR_EDEFAULT = null;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getLineColor() <em>Line Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getLineColor()
 	 * @generated
 	 * @ordered
 	 */
-    protected String lineColor = LINE_COLOR_EDEFAULT;
+	protected String lineColor = LINE_COLOR_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #getFillColor() <em>Fill Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getFillColor()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final String FILL_COLOR_EDEFAULT = null;
+	protected static final String FILL_COLOR_EDEFAULT = null;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getFillColor() <em>Fill Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getFillColor()
 	 * @generated
 	 * @ordered
 	 */
-    protected String fillColor = FILL_COLOR_EDEFAULT;
+	protected String fillColor = FILL_COLOR_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #isFilled() <em>Filled</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #isFilled()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final boolean FILLED_EDEFAULT = false;
+	protected static final boolean FILLED_EDEFAULT = false;
 
-    /**
+	/**
 	 * The cached value of the '{@link #isFilled() <em>Filled</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #isFilled()
 	 * @generated
 	 * @ordered
 	 */
-    protected boolean filled = FILLED_EDEFAULT;
+	protected boolean filled = FILLED_EDEFAULT;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getContRefs() <em>Cont Refs</em>}' reference list.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getContRefs()
 	 * @generated
 	 * @ordered
 	 */
-    protected EList contRefs;
+	protected EList contRefs;
 
-    /**
+	/**
 	 * The default value of the '{@link #getImportance() <em>Importance</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -131,7 +131,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 	 */
 	protected static final ImportanceType IMPORTANCE_EDEFAULT = ImportanceType.NONE_LITERAL;
 
-				/**
+	/**
 	 * The cached value of the '{@link #getImportance() <em>Importance</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -141,7 +141,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 	 */
 	protected ImportanceType importance = IMPORTANCE_EDEFAULT;
 
-				/**
+	/**
 	 * The default value of the '{@link #getImportanceQuantitative() <em>Importance Quantitative</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -151,7 +151,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 	 */
 	protected static final int IMPORTANCE_QUANTITATIVE_EDEFAULT = 0;
 
-				/**
+	/**
 	 * The cached value of the '{@link #getImportanceQuantitative() <em>Importance Quantitative</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -161,7 +161,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 	 */
 	protected int importanceQuantitative = IMPORTANCE_QUANTITATIVE_EDEFAULT;
 
-				/**
+	/**
 	 * The cached value of the '{@link #getIncludedActors() <em>Included Actors</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -171,7 +171,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 	 */
 	protected EList includedActors;
 
-				/**
+	/**
 	 * The cached value of the '{@link #getIncludingActor() <em>Including Actor</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -181,7 +181,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 	 */
 	protected Actor includingActor;
 
-				/**
+	/**
 	 * The cached value of the '{@link #getCollapsedRefs() <em>Collapsed Refs</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -191,100 +191,100 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 	 */
 	protected EList collapsedRefs;
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected ActorImpl() {
+	protected ActorImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return GrlPackage.Literals.ACTOR;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String getLineColor() {
+	public String getLineColor() {
 		return lineColor;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setLineColor(String newLineColor) {
+	public void setLineColor(String newLineColor) {
 		String oldLineColor = lineColor;
 		lineColor = newLineColor;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ACTOR__LINE_COLOR, oldLineColor, lineColor));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String getFillColor() {
+	public String getFillColor() {
 		return fillColor;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setFillColor(String newFillColor) {
+	public void setFillColor(String newFillColor) {
 		String oldFillColor = fillColor;
 		fillColor = newFillColor;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ACTOR__FILL_COLOR, oldFillColor, fillColor));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public boolean isFilled() {
+	public boolean isFilled() {
 		return filled;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setFilled(boolean newFilled) {
+	public void setFilled(boolean newFilled) {
 		boolean oldFilled = filled;
 		filled = newFilled;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ACTOR__FILLED, oldFilled, filled));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EList getContRefs() {
+	public EList getContRefs() {
 		if (contRefs == null) {
 			contRefs = new EObjectWithInverseResolvingEList(IURNContainerRef.class, this, GrlPackage.ACTOR__CONT_REFS, UrncorePackage.IURN_CONTAINER_REF__CONT_DEF);
 		}
 		return contRefs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -293,7 +293,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 		return importance;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -305,7 +305,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ACTOR__IMPORTANCE, oldImportance, importance));
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -314,7 +314,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 		return importanceQuantitative;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -326,17 +326,17 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ACTOR__IMPORTANCE_QUANTITATIVE, oldImportanceQuantitative, importanceQuantitative));
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public GRLspec getGrlspec() {
+	public GRLspec getGrlspec() {
 		if (eContainerFeatureID() != GrlPackage.ACTOR__GRLSPEC) return null;
-		return (GRLspec)eContainer();
+		return (GRLspec)eInternalContainer();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -346,12 +346,12 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setGrlspec(GRLspec newGrlspec) {
+	public void setGrlspec(GRLspec newGrlspec) {
 		if (newGrlspec != eInternalContainer() || (eContainerFeatureID() != GrlPackage.ACTOR__GRLSPEC && newGrlspec != null)) {
 			if (EcoreUtil.isAncestor(this, newGrlspec))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -367,7 +367,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ACTOR__GRLSPEC, newGrlspec, newGrlspec));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -379,7 +379,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 		return includedActors;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -396,7 +396,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 		return includingActor;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -405,7 +405,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 		return includingActor;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -420,7 +420,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 		return msgs;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -439,7 +439,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ACTOR__INCLUDING_ACTOR, newIncludingActor, newIncludingActor));
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -451,7 +451,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 		return collapsedRefs;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -476,7 +476,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -497,7 +497,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -510,7 +510,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -542,7 +542,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -586,7 +586,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -627,7 +627,7 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -658,12 +658,12 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 		return super.eIsSet(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
 		if (baseClass == IURNContainer.class) {
 			switch (derivedFeatureID) {
 				case GrlPackage.ACTOR__LINE_COLOR: return UrncorePackage.IURN_CONTAINER__LINE_COLOR;
@@ -676,12 +676,12 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
 		if (baseClass == IURNContainer.class) {
 			switch (baseFeatureID) {
 				case UrncorePackage.IURN_CONTAINER__LINE_COLOR: return GrlPackage.ACTOR__LINE_COLOR;
@@ -694,12 +694,12 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor {
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String toString() {
+	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

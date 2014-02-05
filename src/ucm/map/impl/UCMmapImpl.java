@@ -158,7 +158,7 @@ public class UCMmapImpl extends UCMmodelElementImpl implements UCMmap {
 	 */
     public URNdefinition getUrndefinition() {
 		if (eContainerFeatureID() != MapPackage.UC_MMAP__URNDEFINITION) return null;
-		return (URNdefinition)eContainer();
+		return (URNdefinition)eInternalContainer();
 	}
 
     /**

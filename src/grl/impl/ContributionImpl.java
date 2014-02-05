@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -11,7 +7,9 @@ import grl.ContributionType;
 import grl.GrlPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -30,27 +28,27 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class ContributionImpl extends ElementLinkImpl implements Contribution {
-    /**
+	/**
 	 * The default value of the '{@link #getContribution() <em>Contribution</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getContribution()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final ContributionType CONTRIBUTION_EDEFAULT = ContributionType.HELP_LITERAL;
+	protected static final ContributionType CONTRIBUTION_EDEFAULT = ContributionType.HELP_LITERAL;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getContribution() <em>Contribution</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getContribution()
 	 * @generated
 	 * @ordered
 	 */
-    protected ContributionType contribution = CONTRIBUTION_EDEFAULT;
+	protected ContributionType contribution = CONTRIBUTION_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #getQuantitativeContribution() <em>Quantitative Contribution</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -60,7 +58,7 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution {
 	 */
 	protected static final int QUANTITATIVE_CONTRIBUTION_EDEFAULT = 25;
 
-				/**
+	/**
 	 * The cached value of the '{@link #getQuantitativeContribution() <em>Quantitative Contribution</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -70,65 +68,66 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution {
 	 */
 	protected int quantitativeContribution = QUANTITATIVE_CONTRIBUTION_EDEFAULT;
 
-				/**
+	/**
 	 * The default value of the '{@link #isCorrelation() <em>Correlation</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #isCorrelation()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final boolean CORRELATION_EDEFAULT = false;
+	protected static final boolean CORRELATION_EDEFAULT = false;
 
-    /**
+	/**
 	 * The cached value of the '{@link #isCorrelation() <em>Correlation</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #isCorrelation()
 	 * @generated
 	 * @ordered
 	 */
-    protected boolean correlation = CORRELATION_EDEFAULT;
+	protected boolean correlation = CORRELATION_EDEFAULT;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected ContributionImpl() {
+	protected ContributionImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return GrlPackage.Literals.CONTRIBUTION;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public ContributionType getContribution() {
+	public ContributionType getContribution() {
 		return contribution;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setContribution(ContributionType newContribution) {
+	public void setContribution(ContributionType newContribution) {
 		ContributionType oldContribution = contribution;
 		contribution = newContribution == null ? CONTRIBUTION_EDEFAULT : newContribution;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.CONTRIBUTION__CONTRIBUTION, oldContribution, contribution));
-	}		
-    /**
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -137,7 +136,7 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution {
 		return quantitativeContribution;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -148,29 +147,29 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution {
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.CONTRIBUTION__QUANTITATIVE_CONTRIBUTION, oldQuantitativeContribution, quantitativeContribution));
 	}
-	
-				/**
+
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public boolean isCorrelation() {
+	public boolean isCorrelation() {
 		return correlation;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setCorrelation(boolean newCorrelation) {
+	public void setCorrelation(boolean newCorrelation) {
 		boolean oldCorrelation = correlation;
 		correlation = newCorrelation;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.CONTRIBUTION__CORRELATION, oldCorrelation, correlation));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -187,7 +186,7 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution {
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -207,7 +206,7 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution {
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -227,7 +226,7 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution {
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -244,12 +243,12 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution {
 		return super.eIsSet(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String toString() {
+	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

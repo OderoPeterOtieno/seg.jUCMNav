@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -15,17 +11,18 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.ECollections;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.swt.widgets.Display;
 
-import seg.jUCMNav.strategies.BatchEvaluationUtil;
 import urncore.impl.GRLmodelElementImpl;
 
 /**
@@ -43,66 +40,57 @@ import urncore.impl.GRLmodelElementImpl;
  * @generated
  */
 public class StrategiesGroupImpl extends GRLmodelElementImpl implements StrategiesGroup {
-    /**
+	/**
 	 * The cached value of the '{@link #getStrategies() <em>Strategies</em>}' reference list.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getStrategies()
 	 * @generated
 	 * @ordered
 	 */
-    protected EList strategies;
+	protected EList strategies;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected StrategiesGroupImpl() {
+	protected StrategiesGroupImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return GrlPackage.Literals.STRATEGIES_GROUP;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EList getStrategies() {
+	public EList getStrategies() {
 		if (strategies == null) {
 			strategies = new EObjectWithInverseResolvingEList(EvaluationStrategy.class, this, GrlPackage.STRATEGIES_GROUP__STRATEGIES, GrlPackage.EVALUATION_STRATEGY__GROUP);
 		}
 		return strategies;
 	}
-    
-    public void sortStrategies() {
-    	
-    	Display.getDefault().syncExec(new Runnable() {
-			public void run() {
-				ECollections.sort(strategies);
-			}
-		});
-	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public GRLspec getGrlspec() {
+	public GRLspec getGrlspec() {
 		if (eContainerFeatureID() != GrlPackage.STRATEGIES_GROUP__GRLSPEC) return null;
-		return (GRLspec)eContainer();
+		return (GRLspec)eInternalContainer();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -112,12 +100,12 @@ public class StrategiesGroupImpl extends GRLmodelElementImpl implements Strategi
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setGrlspec(GRLspec newGrlspec) {
+	public void setGrlspec(GRLspec newGrlspec) {
 		if (newGrlspec != eInternalContainer() || (eContainerFeatureID() != GrlPackage.STRATEGIES_GROUP__GRLSPEC && newGrlspec != null)) {
 			if (EcoreUtil.isAncestor(this, newGrlspec))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -133,7 +121,18 @@ public class StrategiesGroupImpl extends GRLmodelElementImpl implements Strategi
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.STRATEGIES_GROUP__GRLSPEC, newGrlspec, newGrlspec));
 	}
 
-    /**
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void sortStrategies() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -150,7 +149,7 @@ public class StrategiesGroupImpl extends GRLmodelElementImpl implements Strategi
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -165,7 +164,7 @@ public class StrategiesGroupImpl extends GRLmodelElementImpl implements Strategi
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -178,7 +177,7 @@ public class StrategiesGroupImpl extends GRLmodelElementImpl implements Strategi
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -193,7 +192,7 @@ public class StrategiesGroupImpl extends GRLmodelElementImpl implements Strategi
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -211,7 +210,7 @@ public class StrategiesGroupImpl extends GRLmodelElementImpl implements Strategi
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -228,7 +227,7 @@ public class StrategiesGroupImpl extends GRLmodelElementImpl implements Strategi
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

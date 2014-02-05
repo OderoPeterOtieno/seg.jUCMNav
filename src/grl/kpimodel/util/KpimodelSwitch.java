@@ -1,24 +1,12 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.kpimodel.util;
 
 import grl.GRLLinkableElement;
 import grl.GRLNode;
 import grl.IntentionalElement;
+
 import grl.kpimodel.*;
-import grl.kpimodel.Indicator;
-import grl.kpimodel.IndicatorGroup;
-import grl.kpimodel.KPIEvalValueSet;
-import grl.kpimodel.KPIInformationConfig;
-import grl.kpimodel.KPIInformationElement;
-import grl.kpimodel.KPIInformationElementRef;
-import grl.kpimodel.KPIModelLink;
-import grl.kpimodel.KPIModelLinkRef;
-import grl.kpimodel.KpimodelPackage;
 
 import java.util.List;
 
@@ -44,45 +32,45 @@ import urncore.URNmodelElement;
  * @generated
  */
 public class KpimodelSwitch {
-    /**
+	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected static KpimodelPackage modelPackage;
+	protected static KpimodelPackage modelPackage;
 
-    /**
+	/**
 	 * Creates an instance of the switch.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KpimodelSwitch() {
+	public KpimodelSwitch() {
 		if (modelPackage == null) {
 			modelPackage = KpimodelPackage.eINSTANCE;
 		}
 	}
 
-    /**
+	/**
 	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the first non-null result returned by a <code>caseXXX</code> call.
 	 * @generated
 	 */
-    public Object doSwitch(EObject theEObject) {
+	public Object doSwitch(EObject theEObject) {
 		return doSwitch(theEObject.eClass(), theEObject);
 	}
 
-    /**
+	/**
 	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the first non-null result returned by a <code>caseXXX</code> call.
 	 * @generated
 	 */
-    protected Object doSwitch(EClass theEClass, EObject theEObject) {
+	protected Object doSwitch(EClass theEClass, EObject theEObject) {
 		if (theEClass.eContainer() == modelPackage) {
 			return doSwitch(theEClass.getClassifierID(), theEObject);
 		}
@@ -95,14 +83,14 @@ public class KpimodelSwitch {
 		}
 	}
 
-    /**
+	/**
 	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the first non-null result returned by a <code>caseXXX</code> call.
 	 * @generated
 	 */
-    protected Object doSwitch(int classifierID, EObject theEObject) {
+	protected Object doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case KpimodelPackage.INDICATOR_GROUP: {
 				IndicatorGroup indicatorGroup = (IndicatorGroup)theEObject;
@@ -200,127 +188,127 @@ public class KpimodelSwitch {
 		}
 	}
 
-    /**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Indicator Group</em>'.
 	 * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Indicator Group</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-    public Object caseIndicatorGroup(IndicatorGroup object) {
+	public Object caseIndicatorGroup(IndicatorGroup object) {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Indicator</em>'.
 	 * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Indicator</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-    public Object caseIndicator(Indicator object) {
+	public Object caseIndicator(Indicator object) {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>KPI Information Element</em>'.
 	 * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>KPI Information Element</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-    public Object caseKPIInformationElement(KPIInformationElement object) {
+	public Object caseKPIInformationElement(KPIInformationElement object) {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>KPI Information Element Ref</em>'.
 	 * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>KPI Information Element Ref</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-    public Object caseKPIInformationElementRef(KPIInformationElementRef object) {
+	public Object caseKPIInformationElementRef(KPIInformationElementRef object) {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>KPI Model Link</em>'.
 	 * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>KPI Model Link</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-    public Object caseKPIModelLink(KPIModelLink object) {
+	public Object caseKPIModelLink(KPIModelLink object) {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>KPI Model Link Ref</em>'.
 	 * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>KPI Model Link Ref</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-    public Object caseKPIModelLinkRef(KPIModelLinkRef object) {
+	public Object caseKPIModelLinkRef(KPIModelLinkRef object) {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>KPI Eval Value Set</em>'.
 	 * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>KPI Eval Value Set</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-    public Object caseKPIEvalValueSet(KPIEvalValueSet object) {
+	public Object caseKPIEvalValueSet(KPIEvalValueSet object) {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>KPI Information Config</em>'.
 	 * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>KPI Information Config</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-    public Object caseKPIInformationConfig(KPIInformationConfig object) {
+	public Object caseKPIInformationConfig(KPIInformationConfig object) {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>KPI New Eval Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -335,7 +323,7 @@ public class KpimodelSwitch {
 		return null;
 	}
 
-				/**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>KPI Conversion</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -350,7 +338,7 @@ public class KpimodelSwitch {
 		return null;
 	}
 
-				/**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Qualitative Mappings</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -365,7 +353,7 @@ public class KpimodelSwitch {
 		return null;
 	}
 
-				/**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Qualitative Mapping</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -380,37 +368,37 @@ public class KpimodelSwitch {
 		return null;
 	}
 
-				/**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>UR Nmodel Element</em>'.
 	 * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>UR Nmodel Element</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-    public Object caseURNmodelElement(URNmodelElement object) {
+	public Object caseURNmodelElement(URNmodelElement object) {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>GR Lmodel Element</em>'.
 	 * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>GR Lmodel Element</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-    public Object caseGRLmodelElement(GRLmodelElement object) {
+	public Object caseGRLmodelElement(GRLmodelElement object) {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>GRL Linkable Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -425,78 +413,78 @@ public class KpimodelSwitch {
 		return null;
 	}
 
-				/**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Intentional Element</em>'.
 	 * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Intentional Element</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-    public Object caseIntentionalElement(IntentionalElement object) {
+	public Object caseIntentionalElement(IntentionalElement object) {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>IURN Node</em>'.
 	 * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>IURN Node</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-    public Object caseIURNNode(IURNNode object) {
+	public Object caseIURNNode(IURNNode object) {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>GRL Node</em>'.
 	 * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>GRL Node</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-    public Object caseGRLNode(GRLNode object) {
+	public Object caseGRLNode(GRLNode object) {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>IURN Connection</em>'.
 	 * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch.
-     * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>IURN Connection</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-    public Object caseIURNConnection(IURNConnection object) {
+	public Object caseIURNConnection(IURNConnection object) {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
 	 * <!-- begin-user-doc -->
-     * This implementation returns null;
-     * returning a non-null result will terminate the switch, but this is the last case anyway.
-     * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch, but this is the last case anyway.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>EObject</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */
-    public Object defaultCase(EObject object) {
+	public Object defaultCase(EObject object) {
 		return null;
 	}
 

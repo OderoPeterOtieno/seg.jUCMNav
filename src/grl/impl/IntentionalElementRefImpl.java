@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -14,8 +10,10 @@ import grl.Priority;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -34,122 +32,122 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class IntentionalElementRefImpl extends GRLNodeImpl implements IntentionalElementRef {
-    /**
+	/**
 	 * The default value of the '{@link #getCriticality() <em>Criticality</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getCriticality()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final Criticality CRITICALITY_EDEFAULT = Criticality.NONE_LITERAL;
+	protected static final Criticality CRITICALITY_EDEFAULT = Criticality.NONE_LITERAL;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getCriticality() <em>Criticality</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getCriticality()
 	 * @generated
 	 * @ordered
 	 */
-    protected Criticality criticality = CRITICALITY_EDEFAULT;
+	protected Criticality criticality = CRITICALITY_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #getPriority() <em>Priority</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPriority()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final Priority PRIORITY_EDEFAULT = Priority.NONE_LITERAL;
+	protected static final Priority PRIORITY_EDEFAULT = Priority.NONE_LITERAL;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getPriority() <em>Priority</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPriority()
 	 * @generated
 	 * @ordered
 	 */
-    protected Priority priority = PRIORITY_EDEFAULT;
+	protected Priority priority = PRIORITY_EDEFAULT;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getDef() <em>Def</em>}' reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getDef()
 	 * @generated
 	 * @ordered
 	 */
-    protected IntentionalElement def;
+	protected IntentionalElement def;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected IntentionalElementRefImpl() {
+	protected IntentionalElementRefImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return GrlPackage.Literals.INTENTIONAL_ELEMENT_REF;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public Criticality getCriticality() {
+	public Criticality getCriticality() {
 		return criticality;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setCriticality(Criticality newCriticality) {
+	public void setCriticality(Criticality newCriticality) {
 		Criticality oldCriticality = criticality;
 		criticality = newCriticality == null ? CRITICALITY_EDEFAULT : newCriticality;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.INTENTIONAL_ELEMENT_REF__CRITICALITY, oldCriticality, criticality));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public Priority getPriority() {
+	public Priority getPriority() {
 		return priority;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setPriority(Priority newPriority) {
+	public void setPriority(Priority newPriority) {
 		Priority oldPriority = priority;
 		priority = newPriority == null ? PRIORITY_EDEFAULT : newPriority;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.INTENTIONAL_ELEMENT_REF__PRIORITY, oldPriority, priority));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IntentionalElement getDef() {
+	public IntentionalElement getDef() {
 		if (def != null && def.eIsProxy()) {
 			InternalEObject oldDef = (InternalEObject)def;
 			def = (IntentionalElement)eResolveProxy(oldDef);
@@ -161,21 +159,21 @@ public class IntentionalElementRefImpl extends GRLNodeImpl implements Intentiona
 		return def;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IntentionalElement basicGetDef() {
+	public IntentionalElement basicGetDef() {
 		return def;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetDef(IntentionalElement newDef, NotificationChain msgs) {
+	public NotificationChain basicSetDef(IntentionalElement newDef, NotificationChain msgs) {
 		IntentionalElement oldDef = def;
 		def = newDef;
 		if (eNotificationRequired()) {
@@ -185,12 +183,12 @@ public class IntentionalElementRefImpl extends GRLNodeImpl implements Intentiona
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setDef(IntentionalElement newDef) {
+	public void setDef(IntentionalElement newDef) {
 		if (newDef != def) {
 			NotificationChain msgs = null;
 			if (def != null)
@@ -204,7 +202,7 @@ public class IntentionalElementRefImpl extends GRLNodeImpl implements Intentiona
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.INTENTIONAL_ELEMENT_REF__DEF, newDef, newDef));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -219,7 +217,7 @@ public class IntentionalElementRefImpl extends GRLNodeImpl implements Intentiona
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -232,7 +230,7 @@ public class IntentionalElementRefImpl extends GRLNodeImpl implements Intentiona
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -250,7 +248,7 @@ public class IntentionalElementRefImpl extends GRLNodeImpl implements Intentiona
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -270,7 +268,7 @@ public class IntentionalElementRefImpl extends GRLNodeImpl implements Intentiona
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -290,7 +288,7 @@ public class IntentionalElementRefImpl extends GRLNodeImpl implements Intentiona
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -307,12 +305,12 @@ public class IntentionalElementRefImpl extends GRLNodeImpl implements Intentiona
 		return super.eIsSet(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String toString() {
+	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

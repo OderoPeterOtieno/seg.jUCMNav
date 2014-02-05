@@ -1,20 +1,19 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.kpimodel.impl;
 
 import grl.impl.GRLNodeImpl;
+
 import grl.kpimodel.KPIInformationElement;
 import grl.kpimodel.KPIInformationElementRef;
 import grl.kpimodel.KpimodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -31,40 +30,40 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class KPIInformationElementRefImpl extends GRLNodeImpl implements KPIInformationElementRef {
-    /**
+	/**
 	 * The cached value of the '{@link #getDef() <em>Def</em>}' reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getDef()
 	 * @generated
 	 * @ordered
 	 */
-    protected KPIInformationElement def;
+	protected KPIInformationElement def;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected KPIInformationElementRefImpl() {
+	protected KPIInformationElementRefImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return KpimodelPackage.Literals.KPI_INFORMATION_ELEMENT_REF;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KPIInformationElement getDef() {
+	public KPIInformationElement getDef() {
 		if (def != null && def.eIsProxy()) {
 			InternalEObject oldDef = (InternalEObject)def;
 			def = (KPIInformationElement)eResolveProxy(oldDef);
@@ -76,21 +75,21 @@ public class KPIInformationElementRefImpl extends GRLNodeImpl implements KPIInfo
 		return def;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KPIInformationElement basicGetDef() {
+	public KPIInformationElement basicGetDef() {
 		return def;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetDef(KPIInformationElement newDef, NotificationChain msgs) {
+	public NotificationChain basicSetDef(KPIInformationElement newDef, NotificationChain msgs) {
 		KPIInformationElement oldDef = def;
 		def = newDef;
 		if (eNotificationRequired()) {
@@ -100,12 +99,12 @@ public class KPIInformationElementRefImpl extends GRLNodeImpl implements KPIInfo
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setDef(KPIInformationElement newDef) {
+	public void setDef(KPIInformationElement newDef) {
 		if (newDef != def) {
 			NotificationChain msgs = null;
 			if (def != null)
@@ -119,12 +118,12 @@ public class KPIInformationElementRefImpl extends GRLNodeImpl implements KPIInfo
 			eNotify(new ENotificationImpl(this, Notification.SET, KpimodelPackage.KPI_INFORMATION_ELEMENT_REF__DEF, newDef, newDef));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_INFORMATION_ELEMENT_REF__DEF:
 				if (def != null)
@@ -134,12 +133,12 @@ public class KPIInformationElementRefImpl extends GRLNodeImpl implements KPIInfo
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_INFORMATION_ELEMENT_REF__DEF:
 				return basicSetDef(null, msgs);
@@ -147,12 +146,12 @@ public class KPIInformationElementRefImpl extends GRLNodeImpl implements KPIInfo
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_INFORMATION_ELEMENT_REF__DEF:
 				if (resolve) return getDef();
@@ -161,12 +160,12 @@ public class KPIInformationElementRefImpl extends GRLNodeImpl implements KPIInfo
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void eSet(int featureID, Object newValue) {
+	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_INFORMATION_ELEMENT_REF__DEF:
 				setDef((KPIInformationElement)newValue);
@@ -175,12 +174,12 @@ public class KPIInformationElementRefImpl extends GRLNodeImpl implements KPIInfo
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void eUnset(int featureID) {
+	public void eUnset(int featureID) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_INFORMATION_ELEMENT_REF__DEF:
 				setDef((KPIInformationElement)null);
@@ -189,12 +188,12 @@ public class KPIInformationElementRefImpl extends GRLNodeImpl implements KPIInfo
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public boolean eIsSet(int featureID) {
+	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_INFORMATION_ELEMENT_REF__DEF:
 				return def != null;

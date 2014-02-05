@@ -1,14 +1,10 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl;
 
 import grl.kpimodel.KPIEvalValueSet;
-
 import grl.kpimodel.KPINewEvalValue;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -27,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link grl.Evaluation#getKpiEvalValueSet <em>Kpi Eval Value Set</em>}</li>
  *   <li>{@link grl.Evaluation#getEvalRange <em>Eval Range</em>}</li>
  *   <li>{@link grl.Evaluation#getKpiNewEvalValue <em>Kpi New Eval Value</em>}</li>
+ *   <li>{@link grl.Evaluation#getEVALUATION_UNDEFINED <em>EVALUATION UNDEFINED</em>}</li>
  * </ul>
  * </p>
  *
@@ -35,34 +32,34 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Evaluation extends EObject {
-    /**
+	/**
 	 * Returns the value of the '<em><b>Evaluation</b></em>' attribute.
 	 * The default value is <code>"0"</code>.
 	 * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Evaluation</em>' attribute isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Evaluation</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Evaluation</em>' attribute.
 	 * @see #setEvaluation(int)
 	 * @see grl.GrlPackage#getEvaluation_Evaluation()
 	 * @model default="0"
 	 * @generated
 	 */
-    int getEvaluation();
+	int getEvaluation();
 
-    /**
+	/**
 	 * Sets the value of the '{@link grl.Evaluation#getEvaluation <em>Evaluation</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Evaluation</em>' attribute.
 	 * @see #getEvaluation()
 	 * @generated
 	 */
-    void setEvaluation(int value);
+	void setEvaluation(int value);
 
-    /**
+	/**
 	 * Returns the value of the '<em><b>Qualitative Evaluation</b></em>' attribute.
 	 * The default value is <code>"None"</code>.
 	 * The literals are from the enumeration {@link grl.QualitativeLabel}.
@@ -81,7 +78,7 @@ public interface Evaluation extends EObject {
 	 */
 	QualitativeLabel getQualitativeEvaluation();
 
-				/**
+	/**
 	 * Sets the value of the '{@link grl.Evaluation#getQualitativeEvaluation <em>Qualitative Evaluation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,7 +89,7 @@ public interface Evaluation extends EObject {
 	 */
 	void setQualitativeEvaluation(QualitativeLabel value);
 
-				/**
+	/**
 	 * Returns the value of the '<em><b>Exceeds</b></em>' attribute.
 	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
@@ -109,7 +106,7 @@ public interface Evaluation extends EObject {
 	 */
 	boolean isExceeds();
 
-				/**
+	/**
 	 * Sets the value of the '{@link grl.Evaluation#isExceeds <em>Exceeds</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -119,41 +116,41 @@ public interface Evaluation extends EObject {
 	 */
 	void setExceeds(boolean value);
 
-				/**
+	/**
 	 * Returns the value of the '<em><b>Int Element</b></em>' reference.
 	 * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Int Element</em>' reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Int Element</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Int Element</em>' reference.
 	 * @see #setIntElement(IntentionalElement)
 	 * @see grl.GrlPackage#getEvaluation_IntElement()
 	 * @model required="true"
 	 * @generated
 	 */
-    IntentionalElement getIntElement();
+	IntentionalElement getIntElement();
 
-    /**
+	/**
 	 * Sets the value of the '{@link grl.Evaluation#getIntElement <em>Int Element</em>}' reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Int Element</em>' reference.
 	 * @see #getIntElement()
 	 * @generated
 	 */
-    void setIntElement(IntentionalElement value);
+	void setIntElement(IntentionalElement value);
 
-    /**
+	/**
 	 * Returns the value of the '<em><b>Strategies</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link grl.EvaluationStrategy#getEvaluations <em>Evaluations</em>}'.
 	 * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Strategies</em>' container reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Strategies</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Strategies</em>' container reference.
 	 * @see #setStrategies(EvaluationStrategy)
 	 * @see grl.GrlPackage#getEvaluation_Strategies()
@@ -161,27 +158,27 @@ public interface Evaluation extends EObject {
 	 * @model opposite="evaluations" required="true"
 	 * @generated
 	 */
-    EvaluationStrategy getStrategies();
+	EvaluationStrategy getStrategies();
 
-    /**
+	/**
 	 * Sets the value of the '{@link grl.Evaluation#getStrategies <em>Strategies</em>}' container reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Strategies</em>' container reference.
 	 * @see #getStrategies()
 	 * @generated
 	 */
-    void setStrategies(EvaluationStrategy value);
+	void setStrategies(EvaluationStrategy value);
 
-    /**
+	/**
 	 * Returns the value of the '<em><b>Kpi Eval Value Set</b></em>' containment reference.
 	 * It is bidirectional and its opposite is '{@link grl.kpimodel.KPIEvalValueSet#getEval <em>Eval</em>}'.
 	 * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Kpi Eval Value Set</em>' containment reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Kpi Eval Value Set</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Kpi Eval Value Set</em>' containment reference.
 	 * @see #setKpiEvalValueSet(KPIEvalValueSet)
 	 * @see grl.GrlPackage#getEvaluation_KpiEvalValueSet()
@@ -189,19 +186,19 @@ public interface Evaluation extends EObject {
 	 * @model opposite="eval" containment="true"
 	 * @generated
 	 */
-    KPIEvalValueSet getKpiEvalValueSet();
+	KPIEvalValueSet getKpiEvalValueSet();
 
-    /**
+	/**
 	 * Sets the value of the '{@link grl.Evaluation#getKpiEvalValueSet <em>Kpi Eval Value Set</em>}' containment reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Kpi Eval Value Set</em>' containment reference.
 	 * @see #getKpiEvalValueSet()
 	 * @generated
 	 */
-    void setKpiEvalValueSet(KPIEvalValueSet value);
-    
-    /**
+	void setKpiEvalValueSet(KPIEvalValueSet value);
+
+	/**
 	 * Returns the value of the '<em><b>Eval Range</b></em>' containment reference.
 	 * It is bidirectional and its opposite is '{@link grl.EvaluationRange#getEval <em>Eval</em>}'.
 	 * <!-- begin-user-doc -->
@@ -219,7 +216,7 @@ public interface Evaluation extends EObject {
 	 */
 	EvaluationRange getEvalRange();
 
-				/**
+	/**
 	 * Sets the value of the '{@link grl.Evaluation#getEvalRange <em>Eval Range</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -229,7 +226,7 @@ public interface Evaluation extends EObject {
 	 */
 	void setEvalRange(EvaluationRange value);
 
-				/**
+	/**
 	 * Returns the value of the '<em><b>Kpi New Eval Value</b></em>' containment reference.
 	 * It is bidirectional and its opposite is '{@link grl.kpimodel.KPINewEvalValue#getEval <em>Eval</em>}'.
 	 * <!-- begin-user-doc -->
@@ -247,7 +244,7 @@ public interface Evaluation extends EObject {
 	 */
 	KPINewEvalValue getKpiNewEvalValue();
 
-				/**
+	/**
 	 * Sets the value of the '{@link grl.Evaluation#getKpiNewEvalValue <em>Kpi New Eval Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -257,6 +254,20 @@ public interface Evaluation extends EObject {
 	 */
 	void setKpiNewEvalValue(KPINewEvalValue value);
 
-	public final static int EVALUATION_UNDEFINED = -9999;
-    
+	/**
+	 * Returns the value of the '<em><b>EVALUATION UNDEFINED</b></em>' attribute.
+	 * The default value is <code>"-9999"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>EVALUATION UNDEFINED</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>EVALUATION UNDEFINED</em>' attribute.
+	 * @see grl.GrlPackage#getEvaluation_EVALUATION_UNDEFINED()
+	 * @model default="-9999" changeable="false"
+	 * @generated
+	 */
+	int getEVALUATION_UNDEFINED();
+
 } // Evaluation

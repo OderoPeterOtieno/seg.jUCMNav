@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl;
 
@@ -22,139 +18,139 @@ import org.eclipse.emf.common.util.AbstractEnumerator;
  * @generated
  */
 public final class IntentionalElementType extends AbstractEnumerator {
-    /**
+	/**
 	 * The '<em><b>Softgoal</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of '<em><b>Softgoal</b></em>' literal object isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Softgoal</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @see #SOFTGOAL_LITERAL
 	 * @model name="Softgoal"
 	 * @generated
 	 * @ordered
 	 */
-    public static final int SOFTGOAL = 0;
+	public static final int SOFTGOAL = 0;
 
-    /**
+	/**
 	 * The '<em><b>Goal</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of '<em><b>Goal</b></em>' literal object isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Goal</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @see #GOAL_LITERAL
 	 * @model name="Goal"
 	 * @generated
 	 * @ordered
 	 */
-    public static final int GOAL = 1;
+	public static final int GOAL = 1;
 
-    /**
+	/**
 	 * The '<em><b>Task</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of '<em><b>Task</b></em>' literal object isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Task</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @see #TASK_LITERAL
 	 * @model name="Task"
 	 * @generated
 	 * @ordered
 	 */
-    public static final int TASK = 2;
+	public static final int TASK = 2;
 
-    /**
+	/**
 	 * The '<em><b>Ressource</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of '<em><b>Ressource</b></em>' literal object isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Ressource</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @see #RESSOURCE_LITERAL
 	 * @model name="Ressource"
 	 * @generated
 	 * @ordered
 	 */
-    public static final int RESSOURCE = 3;
+	public static final int RESSOURCE = 3;
 
-    /**
+	/**
 	 * The '<em><b>Indicator</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of '<em><b>Indicator</b></em>' literal object isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Indicator</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @see #INDICATOR_LITERAL
 	 * @model name="Indicator"
 	 * @generated
 	 * @ordered
 	 */
-    public static final int INDICATOR = 4;
+	public static final int INDICATOR = 4;
 
-    /**
+	/**
 	 * The '<em><b>Softgoal</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #SOFTGOAL
 	 * @generated
 	 * @ordered
 	 */
-    public static final IntentionalElementType SOFTGOAL_LITERAL = new IntentionalElementType(SOFTGOAL, "Softgoal", "Softgoal");
+	public static final IntentionalElementType SOFTGOAL_LITERAL = new IntentionalElementType(SOFTGOAL, "Softgoal", "Softgoal");
 
-    /**
+	/**
 	 * The '<em><b>Goal</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #GOAL
 	 * @generated
 	 * @ordered
 	 */
-    public static final IntentionalElementType GOAL_LITERAL = new IntentionalElementType(GOAL, "Goal", "Goal");
+	public static final IntentionalElementType GOAL_LITERAL = new IntentionalElementType(GOAL, "Goal", "Goal");
 
-    /**
+	/**
 	 * The '<em><b>Task</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #TASK
 	 * @generated
 	 * @ordered
 	 */
-    public static final IntentionalElementType TASK_LITERAL = new IntentionalElementType(TASK, "Task", "Task");
+	public static final IntentionalElementType TASK_LITERAL = new IntentionalElementType(TASK, "Task", "Task");
 
-    /**
+	/**
 	 * The '<em><b>Ressource</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #RESSOURCE
 	 * @generated
 	 * @ordered
 	 */
-    public static final IntentionalElementType RESSOURCE_LITERAL = new IntentionalElementType(RESSOURCE, "Ressource", "Ressource");
+	public static final IntentionalElementType RESSOURCE_LITERAL = new IntentionalElementType(RESSOURCE, "Ressource", "Ressource");
 
-    /**
+	/**
 	 * The '<em><b>Indicator</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #INDICATOR
 	 * @generated
 	 * @ordered
 	 */
-    public static final IntentionalElementType INDICATOR_LITERAL = new IntentionalElementType(INDICATOR, "Indicator", "Indicator");
+	public static final IntentionalElementType INDICATOR_LITERAL = new IntentionalElementType(INDICATOR, "Indicator", "Indicator");
 
-    /**
+	/**
 	 * An array of all the '<em><b>Intentional Element Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private static final IntentionalElementType[] VALUES_ARRAY =
-        new IntentionalElementType[] {
+	private static final IntentionalElementType[] VALUES_ARRAY =
+		new IntentionalElementType[] {
 			SOFTGOAL_LITERAL,
 			GOAL_LITERAL,
 			TASK_LITERAL,
@@ -162,21 +158,21 @@ public final class IntentionalElementType extends AbstractEnumerator {
 			INDICATOR_LITERAL,
 		};
 
-    /**
+	/**
 	 * A public read-only list of all the '<em><b>Intentional Element Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public static final List VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
-    /**
+	/**
 	 * Returns the '<em><b>Intentional Element Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public static IntentionalElementType get(String literal) {
+	public static IntentionalElementType get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
 			IntentionalElementType result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
@@ -186,7 +182,7 @@ public final class IntentionalElementType extends AbstractEnumerator {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the '<em><b>Intentional Element Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -202,13 +198,13 @@ public final class IntentionalElementType extends AbstractEnumerator {
 		return null;
 	}
 
-    /**
+	/**
 	 * Returns the '<em><b>Intentional Element Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public static IntentionalElementType get(int value) {
+	public static IntentionalElementType get(int value) {
 		switch (value) {
 			case SOFTGOAL: return SOFTGOAL_LITERAL;
 			case GOAL: return GOAL_LITERAL;
@@ -219,7 +215,7 @@ public final class IntentionalElementType extends AbstractEnumerator {
 		return null;
 	}
 
-    /**
+	/**
 	 * Only this class can construct instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

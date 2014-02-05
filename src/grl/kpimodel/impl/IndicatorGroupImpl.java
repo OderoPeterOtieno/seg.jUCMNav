@@ -1,13 +1,10 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.kpimodel.impl;
 
 import grl.GRLspec;
 import grl.GrlPackage;
+
 import grl.kpimodel.Indicator;
 import grl.kpimodel.IndicatorGroup;
 import grl.kpimodel.KpimodelPackage;
@@ -16,10 +13,14 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -42,101 +43,101 @@ import urncore.impl.GRLmodelElementImpl;
  * @generated
  */
 public class IndicatorGroupImpl extends GRLmodelElementImpl implements IndicatorGroup {
-    /**
+	/**
 	 * The default value of the '{@link #isIsRedesignCategory() <em>Is Redesign Category</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #isIsRedesignCategory()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final boolean IS_REDESIGN_CATEGORY_EDEFAULT = false;
+	protected static final boolean IS_REDESIGN_CATEGORY_EDEFAULT = false;
 
-    /**
+	/**
 	 * The cached value of the '{@link #isIsRedesignCategory() <em>Is Redesign Category</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #isIsRedesignCategory()
 	 * @generated
 	 * @ordered
 	 */
-    protected boolean isRedesignCategory = IS_REDESIGN_CATEGORY_EDEFAULT;
+	protected boolean isRedesignCategory = IS_REDESIGN_CATEGORY_EDEFAULT;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getIndicators() <em>Indicators</em>}' reference list.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getIndicators()
 	 * @generated
 	 * @ordered
 	 */
-    protected EList indicators;
+	protected EList indicators;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected IndicatorGroupImpl() {
+	protected IndicatorGroupImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return KpimodelPackage.Literals.INDICATOR_GROUP;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public boolean isIsRedesignCategory() {
+	public boolean isIsRedesignCategory() {
 		return isRedesignCategory;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setIsRedesignCategory(boolean newIsRedesignCategory) {
+	public void setIsRedesignCategory(boolean newIsRedesignCategory) {
 		boolean oldIsRedesignCategory = isRedesignCategory;
 		isRedesignCategory = newIsRedesignCategory;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, KpimodelPackage.INDICATOR_GROUP__IS_REDESIGN_CATEGORY, oldIsRedesignCategory, isRedesignCategory));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public GRLspec getGrlspec() {
+	public GRLspec getGrlspec() {
 		if (eContainerFeatureID() != KpimodelPackage.INDICATOR_GROUP__GRLSPEC) return null;
-		return (GRLspec)eContainer();
+		return (GRLspec)eInternalContainer();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetGrlspec(GRLspec newGrlspec, NotificationChain msgs) {
+	public NotificationChain basicSetGrlspec(GRLspec newGrlspec, NotificationChain msgs) {
 		msgs = eBasicSetContainer((InternalEObject)newGrlspec, KpimodelPackage.INDICATOR_GROUP__GRLSPEC, msgs);
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setGrlspec(GRLspec newGrlspec) {
+	public void setGrlspec(GRLspec newGrlspec) {
 		if (newGrlspec != eInternalContainer() || (eContainerFeatureID() != KpimodelPackage.INDICATOR_GROUP__GRLSPEC && newGrlspec != null)) {
 			if (EcoreUtil.isAncestor(this, newGrlspec))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -152,24 +153,24 @@ public class IndicatorGroupImpl extends GRLmodelElementImpl implements Indicator
 			eNotify(new ENotificationImpl(this, Notification.SET, KpimodelPackage.INDICATOR_GROUP__GRLSPEC, newGrlspec, newGrlspec));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EList getIndicators() {
+	public EList getIndicators() {
 		if (indicators == null) {
 			indicators = new EObjectWithInverseResolvingEList.ManyInverse(Indicator.class, this, KpimodelPackage.INDICATOR_GROUP__INDICATORS, KpimodelPackage.INDICATOR__GROUPS);
 		}
 		return indicators;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case KpimodelPackage.INDICATOR_GROUP__GRLSPEC:
 				if (eInternalContainer() != null)
@@ -181,12 +182,12 @@ public class IndicatorGroupImpl extends GRLmodelElementImpl implements Indicator
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case KpimodelPackage.INDICATOR_GROUP__GRLSPEC:
 				return basicSetGrlspec(null, msgs);
@@ -196,12 +197,12 @@ public class IndicatorGroupImpl extends GRLmodelElementImpl implements Indicator
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case KpimodelPackage.INDICATOR_GROUP__GRLSPEC:
 				return eInternalContainer().eInverseRemove(this, GrlPackage.GR_LSPEC__INDICATOR_GROUP, GRLspec.class, msgs);
@@ -209,12 +210,12 @@ public class IndicatorGroupImpl extends GRLmodelElementImpl implements Indicator
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case KpimodelPackage.INDICATOR_GROUP__IS_REDESIGN_CATEGORY:
 				return isIsRedesignCategory() ? Boolean.TRUE : Boolean.FALSE;
@@ -226,12 +227,12 @@ public class IndicatorGroupImpl extends GRLmodelElementImpl implements Indicator
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void eSet(int featureID, Object newValue) {
+	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case KpimodelPackage.INDICATOR_GROUP__IS_REDESIGN_CATEGORY:
 				setIsRedesignCategory(((Boolean)newValue).booleanValue());
@@ -247,12 +248,12 @@ public class IndicatorGroupImpl extends GRLmodelElementImpl implements Indicator
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void eUnset(int featureID) {
+	public void eUnset(int featureID) {
 		switch (featureID) {
 			case KpimodelPackage.INDICATOR_GROUP__IS_REDESIGN_CATEGORY:
 				setIsRedesignCategory(IS_REDESIGN_CATEGORY_EDEFAULT);
@@ -267,12 +268,12 @@ public class IndicatorGroupImpl extends GRLmodelElementImpl implements Indicator
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public boolean eIsSet(int featureID) {
+	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case KpimodelPackage.INDICATOR_GROUP__IS_REDESIGN_CATEGORY:
 				return isRedesignCategory != IS_REDESIGN_CATEGORY_EDEFAULT;
@@ -284,12 +285,12 @@ public class IndicatorGroupImpl extends GRLmodelElementImpl implements Indicator
 		return super.eIsSet(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String toString() {
+	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

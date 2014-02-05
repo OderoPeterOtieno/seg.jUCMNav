@@ -14,6 +14,8 @@ Bundle-Localization: plugin
 Export-Package: grl,
  grl.impl,
  grl.kpimodel,
+ grl.kpimodel.impl,
+ grl.kpimodel.util,
  grl.util,
  seg.jUCMNav,
  seg.jUCMNav.actions,
@@ -136,4 +138,5 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.ui.views.properties.tabbed,
  org.eclipse.jface.text
 Eclipse-LazyStart: true
+Bundle-ActivationPolicy: lazy
 Import-Package: org.eclipse.e4.core.contexts

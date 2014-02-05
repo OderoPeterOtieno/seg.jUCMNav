@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -12,16 +8,20 @@ import grl.EvaluationStrategy;
 import grl.GrlPackage;
 import grl.IntentionalElement;
 import grl.QualitativeLabel;
+
 import grl.kpimodel.KPIEvalValueSet;
 import grl.kpimodel.KPINewEvalValue;
 import grl.kpimodel.KpimodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
@@ -39,33 +39,34 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link grl.impl.EvaluationImpl#getKpiEvalValueSet <em>Kpi Eval Value Set</em>}</li>
  *   <li>{@link grl.impl.EvaluationImpl#getEvalRange <em>Eval Range</em>}</li>
  *   <li>{@link grl.impl.EvaluationImpl#getKpiNewEvalValue <em>Kpi New Eval Value</em>}</li>
+ *   <li>{@link grl.impl.EvaluationImpl#getEVALUATION_UNDEFINED <em>EVALUATION UNDEFINED</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class EvaluationImpl extends EObjectImpl implements Evaluation {
-    /**
+	/**
 	 * The default value of the '{@link #getEvaluation() <em>Evaluation</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getEvaluation()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final int EVALUATION_EDEFAULT = 0;
+	protected static final int EVALUATION_EDEFAULT = 0;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getEvaluation() <em>Evaluation</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getEvaluation()
 	 * @generated
 	 * @ordered
 	 */
-    protected int evaluation = EVALUATION_EDEFAULT;
+	protected int evaluation = EVALUATION_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #getQualitativeEvaluation() <em>Qualitative Evaluation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -75,7 +76,7 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 	 */
 	protected static final QualitativeLabel QUALITATIVE_EVALUATION_EDEFAULT = QualitativeLabel.NONE_LITERAL;
 
-				/**
+	/**
 	 * The cached value of the '{@link #getQualitativeEvaluation() <em>Qualitative Evaluation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -85,7 +86,7 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 	 */
 	protected QualitativeLabel qualitativeEvaluation = QUALITATIVE_EVALUATION_EDEFAULT;
 
-				/**
+	/**
 	 * The default value of the '{@link #isExceeds() <em>Exceeds</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -95,7 +96,7 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 	 */
 	protected static final boolean EXCEEDS_EDEFAULT = false;
 
-				/**
+	/**
 	 * The cached value of the '{@link #isExceeds() <em>Exceeds</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -105,27 +106,27 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 	 */
 	protected boolean exceeds = EXCEEDS_EDEFAULT;
 
-				/**
+	/**
 	 * The cached value of the '{@link #getIntElement() <em>Int Element</em>}' reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getIntElement()
 	 * @generated
 	 * @ordered
 	 */
-    protected IntentionalElement intElement;
+	protected IntentionalElement intElement;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getKpiEvalValueSet() <em>Kpi Eval Value Set</em>}' containment reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getKpiEvalValueSet()
 	 * @generated
 	 * @ordered
 	 */
-    protected KPIEvalValueSet kpiEvalValueSet;
+	protected KPIEvalValueSet kpiEvalValueSet;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getEvalRange() <em>Eval Range</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -135,7 +136,7 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 	 */
 	protected EvaluationRange evalRange;
 
-				/**
+	/**
 	 * The cached value of the '{@link #getKpiNewEvalValue() <em>Kpi New Eval Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -145,46 +146,66 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 	 */
 	protected KPINewEvalValue kpiNewEvalValue;
 
-				/**
+	/**
+	 * The default value of the '{@link #getEVALUATION_UNDEFINED() <em>EVALUATION UNDEFINED</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEVALUATION_UNDEFINED()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int EVALUATION_UNDEFINED_EDEFAULT = -9999;
+
+	/**
+	 * The cached value of the '{@link #getEVALUATION_UNDEFINED() <em>EVALUATION UNDEFINED</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEVALUATION_UNDEFINED()
+	 * @generated
+	 * @ordered
+	 */
+	protected int evaluatioN_UNDEFINED = EVALUATION_UNDEFINED_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EvaluationImpl() {
+	protected EvaluationImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return GrlPackage.Literals.EVALUATION;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public int getEvaluation() {
+	public int getEvaluation() {
 		return evaluation;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setEvaluation(int newEvaluation) {
+	public void setEvaluation(int newEvaluation) {
 		int oldEvaluation = evaluation;
 		evaluation = newEvaluation;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.EVALUATION__EVALUATION, oldEvaluation, evaluation));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -193,7 +214,7 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 		return qualitativeEvaluation;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -205,7 +226,7 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.EVALUATION__QUALITATIVE_EVALUATION, oldQualitativeEvaluation, qualitativeEvaluation));
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -214,7 +235,7 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 		return exceeds;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -226,12 +247,12 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.EVALUATION__EXCEEDS, oldExceeds, exceeds));
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IntentionalElement getIntElement() {
+	public IntentionalElement getIntElement() {
 		if (intElement != null && intElement.eIsProxy()) {
 			InternalEObject oldIntElement = (InternalEObject)intElement;
 			intElement = (IntentionalElement)eResolveProxy(oldIntElement);
@@ -243,38 +264,38 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 		return intElement;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IntentionalElement basicGetIntElement() {
+	public IntentionalElement basicGetIntElement() {
 		return intElement;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setIntElement(IntentionalElement newIntElement) {
+	public void setIntElement(IntentionalElement newIntElement) {
 		IntentionalElement oldIntElement = intElement;
 		intElement = newIntElement;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.EVALUATION__INT_ELEMENT, oldIntElement, intElement));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EvaluationStrategy getStrategies() {
+	public EvaluationStrategy getStrategies() {
 		if (eContainerFeatureID() != GrlPackage.EVALUATION__STRATEGIES) return null;
-		return (EvaluationStrategy)eContainer();
+		return (EvaluationStrategy)eInternalContainer();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -284,12 +305,12 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setStrategies(EvaluationStrategy newStrategies) {
+	public void setStrategies(EvaluationStrategy newStrategies) {
 		if (newStrategies != eInternalContainer() || (eContainerFeatureID() != GrlPackage.EVALUATION__STRATEGIES && newStrategies != null)) {
 			if (EcoreUtil.isAncestor(this, newStrategies))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -305,21 +326,21 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.EVALUATION__STRATEGIES, newStrategies, newStrategies));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KPIEvalValueSet getKpiEvalValueSet() {
+	public KPIEvalValueSet getKpiEvalValueSet() {
 		return kpiEvalValueSet;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetKpiEvalValueSet(KPIEvalValueSet newKpiEvalValueSet, NotificationChain msgs) {
+	public NotificationChain basicSetKpiEvalValueSet(KPIEvalValueSet newKpiEvalValueSet, NotificationChain msgs) {
 		KPIEvalValueSet oldKpiEvalValueSet = kpiEvalValueSet;
 		kpiEvalValueSet = newKpiEvalValueSet;
 		if (eNotificationRequired()) {
@@ -329,12 +350,12 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setKpiEvalValueSet(KPIEvalValueSet newKpiEvalValueSet) {
+	public void setKpiEvalValueSet(KPIEvalValueSet newKpiEvalValueSet) {
 		if (newKpiEvalValueSet != kpiEvalValueSet) {
 			NotificationChain msgs = null;
 			if (kpiEvalValueSet != null)
@@ -348,7 +369,7 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.EVALUATION__KPI_EVAL_VALUE_SET, newKpiEvalValueSet, newKpiEvalValueSet));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -357,7 +378,7 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 		return evalRange;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -372,7 +393,7 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 		return msgs;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -391,7 +412,7 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.EVALUATION__EVAL_RANGE, newEvalRange, newEvalRange));
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -400,7 +421,7 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 		return kpiNewEvalValue;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -415,7 +436,7 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 		return msgs;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -434,7 +455,16 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.EVALUATION__KPI_NEW_EVAL_VALUE, newKpiNewEvalValue, newKpiNewEvalValue));
 	}
 
-				/**
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getEVALUATION_UNDEFINED() {
+		return evaluatioN_UNDEFINED;
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -461,7 +491,7 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -480,7 +510,7 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -493,7 +523,7 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -517,11 +547,13 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 				return getEvalRange();
 			case GrlPackage.EVALUATION__KPI_NEW_EVAL_VALUE:
 				return getKpiNewEvalValue();
+			case GrlPackage.EVALUATION__EVALUATION_UNDEFINED:
+				return new Integer(getEVALUATION_UNDEFINED());
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -556,7 +588,7 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -591,7 +623,7 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -614,16 +646,18 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 				return evalRange != null;
 			case GrlPackage.EVALUATION__KPI_NEW_EVAL_VALUE:
 				return kpiNewEvalValue != null;
+			case GrlPackage.EVALUATION__EVALUATION_UNDEFINED:
+				return evaluatioN_UNDEFINED != EVALUATION_UNDEFINED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String toString() {
+	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
@@ -633,6 +667,8 @@ public class EvaluationImpl extends EObjectImpl implements Evaluation {
 		result.append(qualitativeEvaluation);
 		result.append(", exceeds: ");
 		result.append(exceeds);
+		result.append(", EVALUATION_UNDEFINED: ");
+		result.append(evaluatioN_UNDEFINED);
 		result.append(')');
 		return result.toString();
 	}

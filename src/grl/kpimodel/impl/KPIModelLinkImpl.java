@@ -1,13 +1,10 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.kpimodel.impl;
 
 import grl.GRLspec;
 import grl.GrlPackage;
+
 import grl.kpimodel.Indicator;
 import grl.kpimodel.KPIInformationElement;
 import grl.kpimodel.KPIModelLink;
@@ -18,10 +15,14 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -45,60 +46,60 @@ import urncore.impl.GRLmodelElementImpl;
  * @generated
  */
 public class KPIModelLinkImpl extends GRLmodelElementImpl implements KPIModelLink {
-    /**
+	/**
 	 * The cached value of the '{@link #getKpiInformationElementSrc() <em>Kpi Information Element Src</em>}' reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getKpiInformationElementSrc()
 	 * @generated
 	 * @ordered
 	 */
-    protected KPIInformationElement kpiInformationElementSrc;
+	protected KPIInformationElement kpiInformationElementSrc;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getRefs() <em>Refs</em>}' reference list.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getRefs()
 	 * @generated
 	 * @ordered
 	 */
-    protected EList refs;
+	protected EList refs;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getIndDest() <em>Ind Dest</em>}' reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getIndDest()
 	 * @generated
 	 * @ordered
 	 */
-    protected Indicator indDest;
+	protected Indicator indDest;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected KPIModelLinkImpl() {
+	protected KPIModelLinkImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return KpimodelPackage.Literals.KPI_MODEL_LINK;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KPIInformationElement getKpiInformationElementSrc() {
+	public KPIInformationElement getKpiInformationElementSrc() {
 		if (kpiInformationElementSrc != null && kpiInformationElementSrc.eIsProxy()) {
 			InternalEObject oldKpiInformationElementSrc = (InternalEObject)kpiInformationElementSrc;
 			kpiInformationElementSrc = (KPIInformationElement)eResolveProxy(oldKpiInformationElementSrc);
@@ -110,21 +111,21 @@ public class KPIModelLinkImpl extends GRLmodelElementImpl implements KPIModelLin
 		return kpiInformationElementSrc;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KPIInformationElement basicGetKpiInformationElementSrc() {
+	public KPIInformationElement basicGetKpiInformationElementSrc() {
 		return kpiInformationElementSrc;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetKpiInformationElementSrc(KPIInformationElement newKpiInformationElementSrc, NotificationChain msgs) {
+	public NotificationChain basicSetKpiInformationElementSrc(KPIInformationElement newKpiInformationElementSrc, NotificationChain msgs) {
 		KPIInformationElement oldKpiInformationElementSrc = kpiInformationElementSrc;
 		kpiInformationElementSrc = newKpiInformationElementSrc;
 		if (eNotificationRequired()) {
@@ -134,12 +135,12 @@ public class KPIModelLinkImpl extends GRLmodelElementImpl implements KPIModelLin
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setKpiInformationElementSrc(KPIInformationElement newKpiInformationElementSrc) {
+	public void setKpiInformationElementSrc(KPIInformationElement newKpiInformationElementSrc) {
 		if (newKpiInformationElementSrc != kpiInformationElementSrc) {
 			NotificationChain msgs = null;
 			if (kpiInformationElementSrc != null)
@@ -153,44 +154,44 @@ public class KPIModelLinkImpl extends GRLmodelElementImpl implements KPIModelLin
 			eNotify(new ENotificationImpl(this, Notification.SET, KpimodelPackage.KPI_MODEL_LINK__KPI_INFORMATION_ELEMENT_SRC, newKpiInformationElementSrc, newKpiInformationElementSrc));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EList getRefs() {
+	public EList getRefs() {
 		if (refs == null) {
 			refs = new EObjectWithInverseResolvingEList(KPIModelLinkRef.class, this, KpimodelPackage.KPI_MODEL_LINK__REFS, KpimodelPackage.KPI_MODEL_LINK_REF__LINK);
 		}
 		return refs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public GRLspec getGrlspec() {
+	public GRLspec getGrlspec() {
 		if (eContainerFeatureID() != KpimodelPackage.KPI_MODEL_LINK__GRLSPEC) return null;
-		return (GRLspec)eContainer();
+		return (GRLspec)eInternalContainer();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetGrlspec(GRLspec newGrlspec, NotificationChain msgs) {
+	public NotificationChain basicSetGrlspec(GRLspec newGrlspec, NotificationChain msgs) {
 		msgs = eBasicSetContainer((InternalEObject)newGrlspec, KpimodelPackage.KPI_MODEL_LINK__GRLSPEC, msgs);
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setGrlspec(GRLspec newGrlspec) {
+	public void setGrlspec(GRLspec newGrlspec) {
 		if (newGrlspec != eInternalContainer() || (eContainerFeatureID() != KpimodelPackage.KPI_MODEL_LINK__GRLSPEC && newGrlspec != null)) {
 			if (EcoreUtil.isAncestor(this, newGrlspec))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -206,12 +207,12 @@ public class KPIModelLinkImpl extends GRLmodelElementImpl implements KPIModelLin
 			eNotify(new ENotificationImpl(this, Notification.SET, KpimodelPackage.KPI_MODEL_LINK__GRLSPEC, newGrlspec, newGrlspec));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public Indicator getIndDest() {
+	public Indicator getIndDest() {
 		if (indDest != null && indDest.eIsProxy()) {
 			InternalEObject oldIndDest = (InternalEObject)indDest;
 			indDest = (Indicator)eResolveProxy(oldIndDest);
@@ -223,21 +224,21 @@ public class KPIModelLinkImpl extends GRLmodelElementImpl implements KPIModelLin
 		return indDest;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public Indicator basicGetIndDest() {
+	public Indicator basicGetIndDest() {
 		return indDest;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetIndDest(Indicator newIndDest, NotificationChain msgs) {
+	public NotificationChain basicSetIndDest(Indicator newIndDest, NotificationChain msgs) {
 		Indicator oldIndDest = indDest;
 		indDest = newIndDest;
 		if (eNotificationRequired()) {
@@ -247,12 +248,12 @@ public class KPIModelLinkImpl extends GRLmodelElementImpl implements KPIModelLin
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setIndDest(Indicator newIndDest) {
+	public void setIndDest(Indicator newIndDest) {
 		if (newIndDest != indDest) {
 			NotificationChain msgs = null;
 			if (indDest != null)
@@ -266,12 +267,12 @@ public class KPIModelLinkImpl extends GRLmodelElementImpl implements KPIModelLin
 			eNotify(new ENotificationImpl(this, Notification.SET, KpimodelPackage.KPI_MODEL_LINK__IND_DEST, newIndDest, newIndDest));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_MODEL_LINK__KPI_INFORMATION_ELEMENT_SRC:
 				if (kpiInformationElementSrc != null)
@@ -291,12 +292,12 @@ public class KPIModelLinkImpl extends GRLmodelElementImpl implements KPIModelLin
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_MODEL_LINK__KPI_INFORMATION_ELEMENT_SRC:
 				return basicSetKpiInformationElementSrc(null, msgs);
@@ -310,12 +311,12 @@ public class KPIModelLinkImpl extends GRLmodelElementImpl implements KPIModelLin
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case KpimodelPackage.KPI_MODEL_LINK__GRLSPEC:
 				return eInternalContainer().eInverseRemove(this, GrlPackage.GR_LSPEC__KPI_MODEL_LINKS, GRLspec.class, msgs);
@@ -323,12 +324,12 @@ public class KPIModelLinkImpl extends GRLmodelElementImpl implements KPIModelLin
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_MODEL_LINK__KPI_INFORMATION_ELEMENT_SRC:
 				if (resolve) return getKpiInformationElementSrc();
@@ -344,12 +345,12 @@ public class KPIModelLinkImpl extends GRLmodelElementImpl implements KPIModelLin
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void eSet(int featureID, Object newValue) {
+	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_MODEL_LINK__KPI_INFORMATION_ELEMENT_SRC:
 				setKpiInformationElementSrc((KPIInformationElement)newValue);
@@ -368,12 +369,12 @@ public class KPIModelLinkImpl extends GRLmodelElementImpl implements KPIModelLin
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void eUnset(int featureID) {
+	public void eUnset(int featureID) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_MODEL_LINK__KPI_INFORMATION_ELEMENT_SRC:
 				setKpiInformationElementSrc((KPIInformationElement)null);
@@ -391,12 +392,12 @@ public class KPIModelLinkImpl extends GRLmodelElementImpl implements KPIModelLin
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public boolean eIsSet(int featureID) {
+	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case KpimodelPackage.KPI_MODEL_LINK__KPI_INFORMATION_ELEMENT_SRC:
 				return kpiInformationElementSrc != null;

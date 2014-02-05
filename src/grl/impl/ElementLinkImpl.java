@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -16,10 +12,14 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -43,77 +43,77 @@ import urncore.impl.GRLmodelElementImpl;
  * @generated
  */
 public class ElementLinkImpl extends GRLmodelElementImpl implements ElementLink {
-    /**
+	/**
 	 * The cached value of the '{@link #getRefs() <em>Refs</em>}' reference list.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getRefs()
 	 * @generated
 	 * @ordered
 	 */
-    protected EList refs;
+	protected EList refs;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getDest() <em>Dest</em>}' reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getDest()
 	 * @generated
 	 * @ordered
 	 */
-    protected GRLLinkableElement dest;
+	protected GRLLinkableElement dest;
 
-				/**
+	/**
 	 * The cached value of the '{@link #getSrc() <em>Src</em>}' reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getSrc()
 	 * @generated
 	 * @ordered
 	 */
-    protected GRLLinkableElement src;
+	protected GRLLinkableElement src;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected ElementLinkImpl() {
+	protected ElementLinkImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return GrlPackage.Literals.ELEMENT_LINK;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EList getRefs() {
+	public EList getRefs() {
 		if (refs == null) {
 			refs = new EObjectWithInverseResolvingEList(LinkRef.class, this, GrlPackage.ELEMENT_LINK__REFS, GrlPackage.LINK_REF__LINK);
 		}
 		return refs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public GRLspec getGrlspec() {
+	public GRLspec getGrlspec() {
 		if (eContainerFeatureID() != GrlPackage.ELEMENT_LINK__GRLSPEC) return null;
-		return (GRLspec)eContainer();
+		return (GRLspec)eInternalContainer();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -123,12 +123,12 @@ public class ElementLinkImpl extends GRLmodelElementImpl implements ElementLink 
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setGrlspec(GRLspec newGrlspec) {
+	public void setGrlspec(GRLspec newGrlspec) {
 		if (newGrlspec != eInternalContainer() || (eContainerFeatureID() != GrlPackage.ELEMENT_LINK__GRLSPEC && newGrlspec != null)) {
 			if (EcoreUtil.isAncestor(this, newGrlspec))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -144,72 +144,12 @@ public class ElementLinkImpl extends GRLmodelElementImpl implements ElementLink 
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ELEMENT_LINK__GRLSPEC, newGrlspec, newGrlspec));
 	}
 
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public GRLLinkableElement getSrc() {
-		if (src != null && src.eIsProxy()) {
-			InternalEObject oldSrc = (InternalEObject)src;
-			src = (GRLLinkableElement)eResolveProxy(oldSrc);
-			if (src != oldSrc) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GrlPackage.ELEMENT_LINK__SRC, oldSrc, src));
-			}
-		}
-		return src;
-	}
-
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public GRLLinkableElement basicGetSrc() {
-		return src;
-	}
-
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSrc(GRLLinkableElement newSrc, NotificationChain msgs) {
-		GRLLinkableElement oldSrc = src;
-		src = newSrc;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GrlPackage.ELEMENT_LINK__SRC, oldSrc, newSrc);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSrc(GRLLinkableElement newSrc) {
-		if (newSrc != src) {
-			NotificationChain msgs = null;
-			if (src != null)
-				msgs = ((InternalEObject)src).eInverseRemove(this, GrlPackage.GRL_LINKABLE_ELEMENT__LINKS_SRC, GRLLinkableElement.class, msgs);
-			if (newSrc != null)
-				msgs = ((InternalEObject)newSrc).eInverseAdd(this, GrlPackage.GRL_LINKABLE_ELEMENT__LINKS_SRC, GRLLinkableElement.class, msgs);
-			msgs = basicSetSrc(newSrc, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ELEMENT_LINK__SRC, newSrc, newSrc));
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public GRLLinkableElement getDest() {
+	public GRLLinkableElement getDest() {
 		if (dest != null && dest.eIsProxy()) {
 			InternalEObject oldDest = (InternalEObject)dest;
 			dest = (GRLLinkableElement)eResolveProxy(oldDest);
@@ -221,16 +161,16 @@ public class ElementLinkImpl extends GRLmodelElementImpl implements ElementLink 
 		return dest;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public GRLLinkableElement basicGetDest() {
+	public GRLLinkableElement basicGetDest() {
 		return dest;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -245,7 +185,7 @@ public class ElementLinkImpl extends GRLmodelElementImpl implements ElementLink 
 		return msgs;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -264,7 +204,67 @@ public class ElementLinkImpl extends GRLmodelElementImpl implements ElementLink 
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ELEMENT_LINK__DEST, newDest, newDest));
 	}
 
-				/**
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GRLLinkableElement getSrc() {
+		if (src != null && src.eIsProxy()) {
+			InternalEObject oldSrc = (InternalEObject)src;
+			src = (GRLLinkableElement)eResolveProxy(oldSrc);
+			if (src != oldSrc) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GrlPackage.ELEMENT_LINK__SRC, oldSrc, src));
+			}
+		}
+		return src;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GRLLinkableElement basicGetSrc() {
+		return src;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSrc(GRLLinkableElement newSrc, NotificationChain msgs) {
+		GRLLinkableElement oldSrc = src;
+		src = newSrc;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GrlPackage.ELEMENT_LINK__SRC, oldSrc, newSrc);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSrc(GRLLinkableElement newSrc) {
+		if (newSrc != src) {
+			NotificationChain msgs = null;
+			if (src != null)
+				msgs = ((InternalEObject)src).eInverseRemove(this, GrlPackage.GRL_LINKABLE_ELEMENT__LINKS_SRC, GRLLinkableElement.class, msgs);
+			if (newSrc != null)
+				msgs = ((InternalEObject)newSrc).eInverseAdd(this, GrlPackage.GRL_LINKABLE_ELEMENT__LINKS_SRC, GRLLinkableElement.class, msgs);
+			msgs = basicSetSrc(newSrc, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.ELEMENT_LINK__SRC, newSrc, newSrc));
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -289,7 +289,7 @@ public class ElementLinkImpl extends GRLmodelElementImpl implements ElementLink 
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -308,7 +308,7 @@ public class ElementLinkImpl extends GRLmodelElementImpl implements ElementLink 
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -321,7 +321,7 @@ public class ElementLinkImpl extends GRLmodelElementImpl implements ElementLink 
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -342,7 +342,7 @@ public class ElementLinkImpl extends GRLmodelElementImpl implements ElementLink 
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -366,7 +366,7 @@ public class ElementLinkImpl extends GRLmodelElementImpl implements ElementLink 
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -389,7 +389,7 @@ public class ElementLinkImpl extends GRLmodelElementImpl implements ElementLink 
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

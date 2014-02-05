@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -186,7 +182,7 @@ public class ContributionRangeImpl extends EObjectImpl implements ContributionRa
 	 */
 	public ContributionChange getChange() {
 		if (eContainerFeatureID() != GrlPackage.CONTRIBUTION_RANGE__CHANGE) return null;
-		return (ContributionChange)eContainer();
+		return (ContributionChange)eInternalContainer();
 	}
 
 	/**

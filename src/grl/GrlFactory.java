@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl;
 
@@ -17,177 +13,177 @@ import org.eclipse.emf.ecore.EFactory;
  * @generated
  */
 public interface GrlFactory extends EFactory {
-    /**
+	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    GrlFactory eINSTANCE = grl.impl.GrlFactoryImpl.init();
+	GrlFactory eINSTANCE = grl.impl.GrlFactoryImpl.init();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>GR Lspec</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>GR Lspec</em>'.
 	 * @generated
 	 */
-    GRLspec createGRLspec();
+	GRLspec createGRLspec();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>Belief</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Belief</em>'.
 	 * @generated
 	 */
-    Belief createBelief();
+	Belief createBelief();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>Intentional Element</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Intentional Element</em>'.
 	 * @generated
 	 */
-    IntentionalElement createIntentionalElement();
+	IntentionalElement createIntentionalElement();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>Actor</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Actor</em>'.
 	 * @generated
 	 */
-    Actor createActor();
+	Actor createActor();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>GRL Graph</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>GRL Graph</em>'.
 	 * @generated
 	 */
-    GRLGraph createGRLGraph();
+	GRLGraph createGRLGraph();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>Actor Ref</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Actor Ref</em>'.
 	 * @generated
 	 */
-    ActorRef createActorRef();
+	ActorRef createActorRef();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>Intentional Element Ref</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Intentional Element Ref</em>'.
 	 * @generated
 	 */
-    IntentionalElementRef createIntentionalElementRef();
+	IntentionalElementRef createIntentionalElementRef();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>Contribution</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Contribution</em>'.
 	 * @generated
 	 */
-    Contribution createContribution();
+	Contribution createContribution();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>Link Ref</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Link Ref</em>'.
 	 * @generated
 	 */
-    LinkRef createLinkRef();
+	LinkRef createLinkRef();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>Element Link</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Element Link</em>'.
 	 * @generated
 	 */
-    ElementLink createElementLink();
+	ElementLink createElementLink();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>Decomposition</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Decomposition</em>'.
 	 * @generated
 	 */
-    Decomposition createDecomposition();
+	Decomposition createDecomposition();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>Dependency</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Dependency</em>'.
 	 * @generated
 	 */
-    Dependency createDependency();
+	Dependency createDependency();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>Evaluation</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Evaluation</em>'.
 	 * @generated
 	 */
-    Evaluation createEvaluation();
+	Evaluation createEvaluation();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>Evaluation Strategy</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Evaluation Strategy</em>'.
 	 * @generated
 	 */
-    EvaluationStrategy createEvaluationStrategy();
+	EvaluationStrategy createEvaluationStrategy();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>GRL Node</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>GRL Node</em>'.
 	 * @generated
 	 */
-    GRLNode createGRLNode();
+	GRLNode createGRLNode();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>Link Ref Bendpoint</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Link Ref Bendpoint</em>'.
 	 * @generated
 	 */
-    LinkRefBendpoint createLinkRefBendpoint();
+	LinkRefBendpoint createLinkRefBendpoint();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>Belief Link</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Belief Link</em>'.
 	 * @generated
 	 */
-    BeliefLink createBeliefLink();
+	BeliefLink createBeliefLink();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>Strategies Group</em>'.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Strategies Group</em>'.
 	 * @generated
 	 */
-    StrategiesGroup createStrategiesGroup();
+	StrategiesGroup createStrategiesGroup();
 
-    /**
+	/**
 	 * Returns a new object of class '<em>Contribution Context Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -196,7 +192,7 @@ public interface GrlFactory extends EFactory {
 	 */
 	ContributionContextGroup createContributionContextGroup();
 
-				/**
+	/**
 	 * Returns a new object of class '<em>Contribution Context</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -205,7 +201,7 @@ public interface GrlFactory extends EFactory {
 	 */
 	ContributionContext createContributionContext();
 
-				/**
+	/**
 	 * Returns a new object of class '<em>Contribution Change</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -214,7 +210,7 @@ public interface GrlFactory extends EFactory {
 	 */
 	ContributionChange createContributionChange();
 
-				/**
+	/**
 	 * Returns a new object of class '<em>Collapsed Actor Ref</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -223,7 +219,7 @@ public interface GrlFactory extends EFactory {
 	 */
 	CollapsedActorRef createCollapsedActorRef();
 
-				/**
+	/**
 	 * Returns a new object of class '<em>Evaluation Range</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -232,7 +228,7 @@ public interface GrlFactory extends EFactory {
 	 */
 	EvaluationRange createEvaluationRange();
 
-				/**
+	/**
 	 * Returns a new object of class '<em>Contribution Range</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -241,13 +237,13 @@ public interface GrlFactory extends EFactory {
 	 */
 	ContributionRange createContributionRange();
 
-				/**
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-    GrlPackage getGrlPackage();
+	GrlPackage getGrlPackage();
 
 } //GrlFactory

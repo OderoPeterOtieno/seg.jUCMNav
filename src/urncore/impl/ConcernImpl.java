@@ -97,7 +97,7 @@ public class ConcernImpl extends URNmodelElementImpl implements Concern {
 	 */
 	public URNdefinition getUrndefinition() {
 		if (eContainerFeatureID() != UrncorePackage.CONCERN__URNDEFINITION) return null;
-		return (URNdefinition)eContainer();
+		return (URNdefinition)eInternalContainer();
 	}
 
     /**

@@ -382,7 +382,7 @@ public class EvaluationStrategyManager {
         } else if (temp != null) {
             return temp.getEvaluation();
         } else
-            return Evaluation.EVALUATION_UNDEFINED;
+            return temp.getEVALUATION_UNDEFINED();
 
     }
 

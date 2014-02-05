@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -11,10 +7,13 @@ import grl.GrlPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import urncore.ConnectionLabel;
@@ -39,27 +38,27 @@ import urncore.UrncorePackage;
  * @generated
  */
 public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
-    /**
+	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getSource()
 	 * @generated
 	 * @ordered
 	 */
-    protected IURNNode source;
+	protected IURNNode source;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getTarget()
 	 * @generated
 	 * @ordered
 	 */
-    protected IURNNode target;
+	protected IURNNode target;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getLabel() <em>Label</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -69,30 +68,30 @@ public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
 	 */
 	protected ConnectionLabel label;
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected BeliefLinkImpl() {
+	protected BeliefLinkImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return GrlPackage.Literals.BELIEF_LINK;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IURNNode getSource() {
+	public IURNNode getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject)source;
 			source = (IURNNode)eResolveProxy(oldSource);
@@ -104,21 +103,21 @@ public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
 		return source;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IURNNode basicGetSource() {
+	public IURNNode basicGetSource() {
 		return source;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetSource(IURNNode newSource, NotificationChain msgs) {
+	public NotificationChain basicSetSource(IURNNode newSource, NotificationChain msgs) {
 		IURNNode oldSource = source;
 		source = newSource;
 		if (eNotificationRequired()) {
@@ -128,12 +127,12 @@ public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setSource(IURNNode newSource) {
+	public void setSource(IURNNode newSource) {
 		if (newSource != source) {
 			NotificationChain msgs = null;
 			if (source != null)
@@ -147,12 +146,12 @@ public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.BELIEF_LINK__SOURCE, newSource, newSource));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IURNNode getTarget() {
+	public IURNNode getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject)target;
 			target = (IURNNode)eResolveProxy(oldTarget);
@@ -164,21 +163,21 @@ public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
 		return target;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IURNNode basicGetTarget() {
+	public IURNNode basicGetTarget() {
 		return target;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public NotificationChain basicSetTarget(IURNNode newTarget, NotificationChain msgs) {
+	public NotificationChain basicSetTarget(IURNNode newTarget, NotificationChain msgs) {
 		IURNNode oldTarget = target;
 		target = newTarget;
 		if (eNotificationRequired()) {
@@ -188,12 +187,12 @@ public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setTarget(IURNNode newTarget) {
+	public void setTarget(IURNNode newTarget) {
 		if (newTarget != target) {
 			NotificationChain msgs = null;
 			if (target != null)
@@ -207,17 +206,17 @@ public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.BELIEF_LINK__TARGET, newTarget, newTarget));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IURNDiagram getDiagram() {
+	public IURNDiagram getDiagram() {
 		if (eContainerFeatureID() != GrlPackage.BELIEF_LINK__DIAGRAM) return null;
-		return (IURNDiagram)eContainer();
+		return (IURNDiagram)eInternalContainer();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -227,12 +226,12 @@ public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setDiagram(IURNDiagram newDiagram) {
+	public void setDiagram(IURNDiagram newDiagram) {
 		if (newDiagram != eInternalContainer() || (eContainerFeatureID() != GrlPackage.BELIEF_LINK__DIAGRAM && newDiagram != null)) {
 			if (EcoreUtil.isAncestor(this, newDiagram))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -248,7 +247,7 @@ public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.BELIEF_LINK__DIAGRAM, newDiagram, newDiagram));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -257,7 +256,7 @@ public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
 		return label;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -272,7 +271,7 @@ public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
 		return msgs;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -291,7 +290,7 @@ public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.BELIEF_LINK__LABEL, newLabel, newLabel));
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -318,7 +317,7 @@ public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -337,7 +336,7 @@ public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -350,7 +349,7 @@ public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -371,7 +370,7 @@ public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -394,7 +393,7 @@ public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -417,7 +416,7 @@ public class BeliefLinkImpl extends EObjectImpl implements BeliefLink {
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

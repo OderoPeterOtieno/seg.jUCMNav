@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -18,10 +14,14 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -48,47 +48,47 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class IntentionalElementImpl extends GRLLinkableElementImpl implements IntentionalElement {
-    /**
+	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final IntentionalElementType TYPE_EDEFAULT = IntentionalElementType.SOFTGOAL_LITERAL;
+	protected static final IntentionalElementType TYPE_EDEFAULT = IntentionalElementType.SOFTGOAL_LITERAL;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-    protected IntentionalElementType type = TYPE_EDEFAULT;
+	protected IntentionalElementType type = TYPE_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #getDecompositionType() <em>Decomposition Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getDecompositionType()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final DecompositionType DECOMPOSITION_TYPE_EDEFAULT = DecompositionType.AND_LITERAL;
+	protected static final DecompositionType DECOMPOSITION_TYPE_EDEFAULT = DecompositionType.AND_LITERAL;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getDecompositionType() <em>Decomposition Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getDecompositionType()
 	 * @generated
 	 * @ordered
 	 */
-    protected DecompositionType decompositionType = DECOMPOSITION_TYPE_EDEFAULT;
+	protected DecompositionType decompositionType = DECOMPOSITION_TYPE_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #getImportance() <em>Importance</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -98,7 +98,7 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
 	 */
 	protected static final ImportanceType IMPORTANCE_EDEFAULT = ImportanceType.NONE_LITERAL;
 
-				/**
+	/**
 	 * The cached value of the '{@link #getImportance() <em>Importance</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -108,7 +108,7 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
 	 */
 	protected ImportanceType importance = IMPORTANCE_EDEFAULT;
 
-				/**
+	/**
 	 * The default value of the '{@link #getImportanceQuantitative() <em>Importance Quantitative</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -118,7 +118,7 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
 	 */
 	protected static final int IMPORTANCE_QUANTITATIVE_EDEFAULT = 0;
 
-				/**
+	/**
 	 * The cached value of the '{@link #getImportanceQuantitative() <em>Importance Quantitative</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128,137 +128,137 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
 	 */
 	protected int importanceQuantitative = IMPORTANCE_QUANTITATIVE_EDEFAULT;
 
-				/**
+	/**
 	 * The default value of the '{@link #getLineColor() <em>Line Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getLineColor()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final String LINE_COLOR_EDEFAULT = null;
+	protected static final String LINE_COLOR_EDEFAULT = null;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getLineColor() <em>Line Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getLineColor()
 	 * @generated
 	 * @ordered
 	 */
-    protected String lineColor = LINE_COLOR_EDEFAULT;
+	protected String lineColor = LINE_COLOR_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #getFillColor() <em>Fill Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getFillColor()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final String FILL_COLOR_EDEFAULT = null;
+	protected static final String FILL_COLOR_EDEFAULT = null;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getFillColor() <em>Fill Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getFillColor()
 	 * @generated
 	 * @ordered
 	 */
-    protected String fillColor = FILL_COLOR_EDEFAULT;
+	protected String fillColor = FILL_COLOR_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #isFilled() <em>Filled</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #isFilled()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final boolean FILLED_EDEFAULT = false;
+	protected static final boolean FILLED_EDEFAULT = false;
 
-    /**
+	/**
 	 * The cached value of the '{@link #isFilled() <em>Filled</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #isFilled()
 	 * @generated
 	 * @ordered
 	 */
-    protected boolean filled = FILLED_EDEFAULT;
+	protected boolean filled = FILLED_EDEFAULT;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getRefs() <em>Refs</em>}' reference list.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getRefs()
 	 * @generated
 	 * @ordered
 	 */
-    protected EList refs;
+	protected EList refs;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected IntentionalElementImpl() {
+	protected IntentionalElementImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return GrlPackage.Literals.INTENTIONAL_ELEMENT;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public IntentionalElementType getType() {
+	public IntentionalElementType getType() {
 		return type;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setType(IntentionalElementType newType) {
+	public void setType(IntentionalElementType newType) {
 		IntentionalElementType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.INTENTIONAL_ELEMENT__TYPE, oldType, type));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public DecompositionType getDecompositionType() {
+	public DecompositionType getDecompositionType() {
 		return decompositionType;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setDecompositionType(DecompositionType newDecompositionType) {
+	public void setDecompositionType(DecompositionType newDecompositionType) {
 		DecompositionType oldDecompositionType = decompositionType;
 		decompositionType = newDecompositionType == null ? DECOMPOSITION_TYPE_EDEFAULT : newDecompositionType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.INTENTIONAL_ELEMENT__DECOMPOSITION_TYPE, oldDecompositionType, decompositionType));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -267,7 +267,7 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
 		return importance;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -279,7 +279,7 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.INTENTIONAL_ELEMENT__IMPORTANCE, oldImportance, importance));
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -288,7 +288,7 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
 		return importanceQuantitative;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -300,80 +300,80 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.INTENTIONAL_ELEMENT__IMPORTANCE_QUANTITATIVE, oldImportanceQuantitative, importanceQuantitative));
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String getLineColor() {
+	public String getLineColor() {
 		return lineColor;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setLineColor(String newLineColor) {
+	public void setLineColor(String newLineColor) {
 		String oldLineColor = lineColor;
 		lineColor = newLineColor;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.INTENTIONAL_ELEMENT__LINE_COLOR, oldLineColor, lineColor));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String getFillColor() {
+	public String getFillColor() {
 		return fillColor;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setFillColor(String newFillColor) {
+	public void setFillColor(String newFillColor) {
 		String oldFillColor = fillColor;
 		fillColor = newFillColor;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.INTENTIONAL_ELEMENT__FILL_COLOR, oldFillColor, fillColor));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public boolean isFilled() {
+	public boolean isFilled() {
 		return filled;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setFilled(boolean newFilled) {
+	public void setFilled(boolean newFilled) {
 		boolean oldFilled = filled;
 		filled = newFilled;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.INTENTIONAL_ELEMENT__FILLED, oldFilled, filled));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public GRLspec getGrlspec() {
+	public GRLspec getGrlspec() {
 		if (eContainerFeatureID() != GrlPackage.INTENTIONAL_ELEMENT__GRLSPEC) return null;
-		return (GRLspec)eContainer();
+		return (GRLspec)eInternalContainer();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -383,12 +383,12 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setGrlspec(GRLspec newGrlspec) {
+	public void setGrlspec(GRLspec newGrlspec) {
 		if (newGrlspec != eInternalContainer() || (eContainerFeatureID() != GrlPackage.INTENTIONAL_ELEMENT__GRLSPEC && newGrlspec != null)) {
 			if (EcoreUtil.isAncestor(this, newGrlspec))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -404,19 +404,19 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.INTENTIONAL_ELEMENT__GRLSPEC, newGrlspec, newGrlspec));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EList getRefs() {
+	public EList getRefs() {
 		if (refs == null) {
 			refs = new EObjectWithInverseResolvingEList(IntentionalElementRef.class, this, GrlPackage.INTENTIONAL_ELEMENT__REFS, GrlPackage.INTENTIONAL_ELEMENT_REF__DEF);
 		}
 		return refs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -433,7 +433,7 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -448,7 +448,7 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -461,7 +461,7 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -490,7 +490,7 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -529,7 +529,7 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -567,7 +567,7 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -596,12 +596,12 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
 		return super.eIsSet(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String toString() {
+	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

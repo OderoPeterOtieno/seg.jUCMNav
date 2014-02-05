@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -12,10 +8,13 @@ import grl.LinkRefBendpoint;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
@@ -34,117 +33,117 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * @generated
  */
 public class LinkRefBendpointImpl extends EObjectImpl implements LinkRefBendpoint {
-    /**
+	/**
 	 * The default value of the '{@link #getX() <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getX()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final int X_EDEFAULT = 0;
+	protected static final int X_EDEFAULT = 0;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getX() <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getX()
 	 * @generated
 	 * @ordered
 	 */
-    protected int x = X_EDEFAULT;
+	protected int x = X_EDEFAULT;
 
-    /**
+	/**
 	 * The default value of the '{@link #getY() <em>Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getY()
 	 * @generated
 	 * @ordered
 	 */
-    protected static final int Y_EDEFAULT = 0;
+	protected static final int Y_EDEFAULT = 0;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getY() <em>Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getY()
 	 * @generated
 	 * @ordered
 	 */
-    protected int y = Y_EDEFAULT;
+	protected int y = Y_EDEFAULT;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected LinkRefBendpointImpl() {
+	protected LinkRefBendpointImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return GrlPackage.Literals.LINK_REF_BENDPOINT;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public int getX() {
+	public int getX() {
 		return x;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setX(int newX) {
+	public void setX(int newX) {
 		int oldX = x;
 		x = newX;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.LINK_REF_BENDPOINT__X, oldX, x));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public int getY() {
+	public int getY() {
 		return y;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setY(int newY) {
+	public void setY(int newY) {
 		int oldY = y;
 		y = newY;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.LINK_REF_BENDPOINT__Y, oldY, y));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public LinkRef getLinkref() {
+	public LinkRef getLinkref() {
 		if (eContainerFeatureID() != GrlPackage.LINK_REF_BENDPOINT__LINKREF) return null;
-		return (LinkRef)eContainer();
+		return (LinkRef)eInternalContainer();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -154,12 +153,12 @@ public class LinkRefBendpointImpl extends EObjectImpl implements LinkRefBendpoin
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setLinkref(LinkRef newLinkref) {
+	public void setLinkref(LinkRef newLinkref) {
 		if (newLinkref != eInternalContainer() || (eContainerFeatureID() != GrlPackage.LINK_REF_BENDPOINT__LINKREF && newLinkref != null)) {
 			if (EcoreUtil.isAncestor(this, newLinkref))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -175,7 +174,7 @@ public class LinkRefBendpointImpl extends EObjectImpl implements LinkRefBendpoin
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.LINK_REF_BENDPOINT__LINKREF, newLinkref, newLinkref));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -190,7 +189,7 @@ public class LinkRefBendpointImpl extends EObjectImpl implements LinkRefBendpoin
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -203,7 +202,7 @@ public class LinkRefBendpointImpl extends EObjectImpl implements LinkRefBendpoin
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -216,7 +215,7 @@ public class LinkRefBendpointImpl extends EObjectImpl implements LinkRefBendpoin
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -233,7 +232,7 @@ public class LinkRefBendpointImpl extends EObjectImpl implements LinkRefBendpoin
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -253,7 +252,7 @@ public class LinkRefBendpointImpl extends EObjectImpl implements LinkRefBendpoin
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -273,7 +272,7 @@ public class LinkRefBendpointImpl extends EObjectImpl implements LinkRefBendpoin
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -290,12 +289,12 @@ public class LinkRefBendpointImpl extends EObjectImpl implements LinkRefBendpoin
 		return super.eIsSet(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public String toString() {
+	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

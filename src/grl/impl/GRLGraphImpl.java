@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -13,10 +9,14 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -29,6 +29,7 @@ import urncore.IURNDiagram;
 import urncore.IURNNode;
 import urncore.URNdefinition;
 import urncore.UrncorePackage;
+
 import urncore.impl.GRLmodelElementImpl;
 
 /**
@@ -50,37 +51,37 @@ import urncore.impl.GRLmodelElementImpl;
  * @generated
  */
 public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
-    /**
+	/**
 	 * The cached value of the '{@link #getNodes() <em>Nodes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getNodes()
 	 * @generated
 	 * @ordered
 	 */
-    protected EList nodes;
+	protected EList nodes;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getContRefs() <em>Cont Refs</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getContRefs()
 	 * @generated
 	 * @ordered
 	 */
-    protected EList contRefs;
+	protected EList contRefs;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getConnections() <em>Connections</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getConnections()
 	 * @generated
 	 * @ordered
 	 */
-    protected EList connections;
+	protected EList connections;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getConcern() <em>Concern</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -90,7 +91,7 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 	 */
 	protected Concern concern;
 
-    /**
+	/**
 	 * The cached value of the '{@link #getComments() <em>Comments</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -100,35 +101,35 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 	 */
 	protected EList comments;
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected GRLGraphImpl() {
+	protected GRLGraphImpl() {
 		super();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    protected EClass eStaticClass() {
+	protected EClass eStaticClass() {
 		return GrlPackage.Literals.GRL_GRAPH;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public URNdefinition getUrndefinition() {
+	public URNdefinition getUrndefinition() {
 		if (eContainerFeatureID() != GrlPackage.GRL_GRAPH__URNDEFINITION) return null;
-		return (URNdefinition)eContainer();
+		return (URNdefinition)eInternalContainer();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -138,12 +139,12 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void setUrndefinition(URNdefinition newUrndefinition) {
+	public void setUrndefinition(URNdefinition newUrndefinition) {
 		if (newUrndefinition != eInternalContainer() || (eContainerFeatureID() != GrlPackage.GRL_GRAPH__URNDEFINITION && newUrndefinition != null)) {
 			if (EcoreUtil.isAncestor(this, newUrndefinition))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -159,43 +160,43 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.GRL_GRAPH__URNDEFINITION, newUrndefinition, newUrndefinition));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EList getNodes() {
+	public EList getNodes() {
 		if (nodes == null) {
 			nodes = new EObjectContainmentWithInverseEList(IURNNode.class, this, GrlPackage.GRL_GRAPH__NODES, UrncorePackage.IURN_NODE__DIAGRAM);
 		}
 		return nodes;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EList getContRefs() {
+	public EList getContRefs() {
 		if (contRefs == null) {
 			contRefs = new EObjectContainmentWithInverseEList(IURNContainerRef.class, this, GrlPackage.GRL_GRAPH__CONT_REFS, UrncorePackage.IURN_CONTAINER_REF__DIAGRAM);
 		}
 		return contRefs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EList getConnections() {
+	public EList getConnections() {
 		if (connections == null) {
 			connections = new EObjectContainmentWithInverseEList(IURNConnection.class, this, GrlPackage.GRL_GRAPH__CONNECTIONS, UrncorePackage.IURN_CONNECTION__DIAGRAM);
 		}
 		return connections;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -212,7 +213,7 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 		return concern;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -221,7 +222,7 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 		return concern;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -236,7 +237,7 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 		return msgs;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -255,7 +256,7 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.GRL_GRAPH__CONCERN, newConcern, newConcern));
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -267,7 +268,7 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 		return comments;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -294,7 +295,7 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -317,7 +318,7 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -330,7 +331,7 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -354,7 +355,7 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -387,7 +388,7 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 		super.eSet(featureID, newValue);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -416,7 +417,7 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 		super.eUnset(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -439,12 +440,12 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 		return super.eIsSet(featureID);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
 		if (baseClass == IURNDiagram.class) {
 			switch (derivedFeatureID) {
 				case GrlPackage.GRL_GRAPH__URNDEFINITION: return UrncorePackage.IURN_DIAGRAM__URNDEFINITION;
@@ -459,12 +460,12 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
 		if (baseClass == IURNDiagram.class) {
 			switch (baseFeatureID) {
 				case UrncorePackage.IURN_DIAGRAM__URNDEFINITION: return GrlPackage.GRL_GRAPH__URNDEFINITION;

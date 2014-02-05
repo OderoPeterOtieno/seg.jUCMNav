@@ -1,13 +1,11 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.kpimodel.impl;
 
 import grl.GrlPackage;
+
 import grl.impl.GrlPackageImpl;
+
 import grl.kpimodel.Indicator;
 import grl.kpimodel.IndicatorGroup;
 import grl.kpimodel.KPIConversion;
@@ -20,26 +18,38 @@ import grl.kpimodel.KPIModelLinkRef;
 import grl.kpimodel.KPINewEvalValue;
 import grl.kpimodel.KpimodelFactory;
 import grl.kpimodel.KpimodelPackage;
-
 import grl.kpimodel.QualitativeMapping;
 import grl.kpimodel.QualitativeMappings;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import ucm.UcmPackage;
+
 import ucm.impl.UcmPackageImpl;
+
 import ucm.map.MapPackage;
+
 import ucm.map.impl.MapPackageImpl;
+
 import ucm.performance.PerformancePackage;
+
 import ucm.performance.impl.PerformancePackageImpl;
+
 import ucm.scenario.ScenarioPackage;
+
 import ucm.scenario.impl.ScenarioPackageImpl;
+
 import urn.UrnPackage;
+
 import urn.impl.UrnPackageImpl;
+
 import urncore.UrncorePackage;
+
 import urncore.impl.UrncorePackageImpl;
 
 /**
@@ -49,91 +59,91 @@ import urncore.impl.UrncorePackageImpl;
  * @generated
  */
 public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage {
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass indicatorGroupEClass = null;
+	private EClass indicatorGroupEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass indicatorEClass = null;
+	private EClass indicatorEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass kpiInformationElementEClass = null;
+	private EClass kpiInformationElementEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass kpiInformationElementRefEClass = null;
+	private EClass kpiInformationElementRefEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass kpiModelLinkEClass = null;
+	private EClass kpiModelLinkEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass kpiModelLinkRefEClass = null;
+	private EClass kpiModelLinkRefEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass kpiEvalValueSetEClass = null;
+	private EClass kpiEvalValueSetEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass kpiInformationConfigEClass = null;
+	private EClass kpiInformationConfigEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass kpiNewEvalValueEClass = null;
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass kpiConversionEClass = null;
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass qualitativeMappingsEClass = null;
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass qualitativeMappingEClass = null;
 
-				/**
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -142,36 +152,36 @@ public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage
 	 * initialization of the package, or returns the registered package,
 	 * if one already exists.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
 	 * @see grl.kpimodel.KpimodelPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-    private KpimodelPackageImpl() {
+	private KpimodelPackageImpl() {
 		super(eNS_URI, KpimodelFactory.eINSTANCE);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private static boolean isInited = false;
+	private static boolean isInited = false;
 
-    /**
+	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
 	 * <p>This method is used to initialize {@link KpimodelPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #eNS_URI
 	 * @see #createPackageContents()
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-    public static KpimodelPackage init() {
+	public static KpimodelPackage init() {
 		if (isInited) return (KpimodelPackage)EPackage.Registry.INSTANCE.getEPackage(KpimodelPackage.eNS_URI);
 
 		// Obtain or create and register package
@@ -217,241 +227,241 @@ public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage
 		return theKpimodelPackage;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getIndicatorGroup() {
+	public EClass getIndicatorGroup() {
 		return indicatorGroupEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getIndicatorGroup_IsRedesignCategory() {
+	public EAttribute getIndicatorGroup_IsRedesignCategory() {
 		return (EAttribute)indicatorGroupEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getIndicatorGroup_Grlspec() {
+	public EReference getIndicatorGroup_Grlspec() {
 		return (EReference)indicatorGroupEClass.getEStructuralFeatures().get(1);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getIndicatorGroup_Indicators() {
+	public EReference getIndicatorGroup_Indicators() {
 		return (EReference)indicatorGroupEClass.getEStructuralFeatures().get(2);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getIndicator() {
+	public EClass getIndicator() {
 		return indicatorEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getIndicator_KpiModelLinksDest() {
+	public EReference getIndicator_KpiModelLinksDest() {
 		return (EReference)indicatorEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getIndicator_Groups() {
+	public EReference getIndicator_Groups() {
 		return (EReference)indicatorEClass.getEStructuralFeatures().get(1);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getKPIInformationElement() {
+	public EClass getKPIInformationElement() {
 		return kpiInformationElementEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getKPIInformationElement_Refs() {
+	public EReference getKPIInformationElement_Refs() {
 		return (EReference)kpiInformationElementEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getKPIInformationElement_Grlspec() {
+	public EReference getKPIInformationElement_Grlspec() {
 		return (EReference)kpiInformationElementEClass.getEStructuralFeatures().get(1);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getKPIInformationElement_KpiModelLinksSrc() {
+	public EReference getKPIInformationElement_KpiModelLinksSrc() {
 		return (EReference)kpiInformationElementEClass.getEStructuralFeatures().get(2);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getKPIInformationElementRef() {
+	public EClass getKPIInformationElementRef() {
 		return kpiInformationElementRefEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getKPIInformationElementRef_Def() {
+	public EReference getKPIInformationElementRef_Def() {
 		return (EReference)kpiInformationElementRefEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getKPIModelLink() {
+	public EClass getKPIModelLink() {
 		return kpiModelLinkEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getKPIModelLink_KpiInformationElementSrc() {
+	public EReference getKPIModelLink_KpiInformationElementSrc() {
 		return (EReference)kpiModelLinkEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getKPIModelLink_Refs() {
+	public EReference getKPIModelLink_Refs() {
 		return (EReference)kpiModelLinkEClass.getEStructuralFeatures().get(1);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getKPIModelLink_Grlspec() {
+	public EReference getKPIModelLink_Grlspec() {
 		return (EReference)kpiModelLinkEClass.getEStructuralFeatures().get(2);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getKPIModelLink_IndDest() {
+	public EReference getKPIModelLink_IndDest() {
 		return (EReference)kpiModelLinkEClass.getEStructuralFeatures().get(3);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getKPIModelLinkRef() {
+	public EClass getKPIModelLinkRef() {
 		return kpiModelLinkRefEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getKPIModelLinkRef_Link() {
+	public EReference getKPIModelLinkRef_Link() {
 		return (EReference)kpiModelLinkRefEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getKPIEvalValueSet() {
+	public EClass getKPIEvalValueSet() {
 		return kpiEvalValueSetEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getKPIEvalValueSet_TargetValue() {
+	public EAttribute getKPIEvalValueSet_TargetValue() {
 		return (EAttribute)kpiEvalValueSetEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getKPIEvalValueSet_ThresholdValue() {
+	public EAttribute getKPIEvalValueSet_ThresholdValue() {
 		return (EAttribute)kpiEvalValueSetEClass.getEStructuralFeatures().get(1);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getKPIEvalValueSet_WorstValue() {
+	public EAttribute getKPIEvalValueSet_WorstValue() {
 		return (EAttribute)kpiEvalValueSetEClass.getEStructuralFeatures().get(2);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getKPIEvalValueSet_EvaluationValue() {
+	public EAttribute getKPIEvalValueSet_EvaluationValue() {
 		return (EAttribute)kpiEvalValueSetEClass.getEStructuralFeatures().get(3);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getKPIEvalValueSet_Unit() {
+	public EAttribute getKPIEvalValueSet_Unit() {
 		return (EAttribute)kpiEvalValueSetEClass.getEStructuralFeatures().get(4);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -460,16 +470,16 @@ public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage
 		return (EAttribute)kpiEvalValueSetEClass.getEStructuralFeatures().get(5);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getKPIEvalValueSet_Eval() {
+	public EReference getKPIEvalValueSet_Eval() {
 		return (EReference)kpiEvalValueSetEClass.getEStructuralFeatures().get(6);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -478,52 +488,52 @@ public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage
 		return (EReference)kpiEvalValueSetEClass.getEStructuralFeatures().get(7);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getKPIInformationConfig() {
+	public EClass getKPIInformationConfig() {
 		return kpiInformationConfigEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getKPIInformationConfig_LevelOfDimension() {
+	public EAttribute getKPIInformationConfig_LevelOfDimension() {
 		return (EAttribute)kpiInformationConfigEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getKPIInformationConfig_ValueOfDimension() {
+	public EAttribute getKPIInformationConfig_ValueOfDimension() {
 		return (EAttribute)kpiInformationConfigEClass.getEStructuralFeatures().get(1);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getKPIInformationConfig_Strategies() {
+	public EReference getKPIInformationConfig_Strategies() {
 		return (EReference)kpiInformationConfigEClass.getEStructuralFeatures().get(2);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getKPIInformationConfig_KpiInfoElement() {
+	public EReference getKPIInformationConfig_KpiInfoElement() {
 		return (EReference)kpiInformationConfigEClass.getEStructuralFeatures().get(3);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -532,7 +542,7 @@ public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage
 		return kpiNewEvalValueEClass;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -541,7 +551,7 @@ public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage
 		return (EAttribute)kpiNewEvalValueEClass.getEStructuralFeatures().get(0);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -550,7 +560,7 @@ public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage
 		return (EReference)kpiNewEvalValueEClass.getEStructuralFeatures().get(1);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -559,7 +569,7 @@ public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage
 		return kpiConversionEClass;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -568,7 +578,7 @@ public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage
 		return (EReference)kpiConversionEClass.getEStructuralFeatures().get(0);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -577,7 +587,7 @@ public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage
 		return (EReference)kpiConversionEClass.getEStructuralFeatures().get(1);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -586,7 +596,7 @@ public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage
 		return qualitativeMappingsEClass;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -595,7 +605,7 @@ public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage
 		return (EReference)qualitativeMappingsEClass.getEStructuralFeatures().get(0);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -604,7 +614,7 @@ public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage
 		return qualitativeMappingEClass;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -613,7 +623,7 @@ public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage
 		return (EAttribute)qualitativeMappingEClass.getEStructuralFeatures().get(0);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -622,7 +632,7 @@ public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage
 		return (EAttribute)qualitativeMappingEClass.getEStructuralFeatures().get(1);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -631,7 +641,7 @@ public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage
 		return (EAttribute)qualitativeMappingEClass.getEStructuralFeatures().get(2);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -640,30 +650,30 @@ public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage
 		return (EAttribute)qualitativeMappingEClass.getEStructuralFeatures().get(3);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public KpimodelFactory getKpimodelFactory() {
+	public KpimodelFactory getKpimodelFactory() {
 		return (KpimodelFactory)getEFactoryInstance();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private boolean isCreated = false;
+	private boolean isCreated = false;
 
-    /**
+	/**
 	 * Creates the meta-model objects for the package.  This method is
 	 * guarded to have no affect on any invocation but its first.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void createPackageContents() {
+	public void createPackageContents() {
 		if (isCreated) return;
 		isCreated = true;
 
@@ -728,21 +738,21 @@ public class KpimodelPackageImpl extends EPackageImpl implements KpimodelPackage
 		createEAttribute(qualitativeMappingEClass, QUALITATIVE_MAPPING__EXCEEDS);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private boolean isInitialized = false;
+	private boolean isInitialized = false;
 
-    /**
+	/**
 	 * Complete the initialization of the package and its meta-model.  This
 	 * method is guarded to have no affect on any invocation but its first.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void initializePackageContents() {
+	public void initializePackageContents() {
 		if (isInitialized) return;
 		isInitialized = true;
 

@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package grl.impl;
 
@@ -40,7 +36,9 @@ import grl.LinkRefBendpoint;
 import grl.Priority;
 import grl.QualitativeLabel;
 import grl.StrategiesGroup;
+
 import grl.kpimodel.KpimodelPackage;
+
 import grl.kpimodel.impl.KpimodelPackageImpl;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -48,19 +46,31 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import ucm.UcmPackage;
+
 import ucm.impl.UcmPackageImpl;
+
 import ucm.map.MapPackage;
+
 import ucm.map.impl.MapPackageImpl;
+
 import ucm.performance.PerformancePackage;
+
 import ucm.performance.impl.PerformancePackageImpl;
+
 import ucm.scenario.ScenarioPackage;
+
 import ucm.scenario.impl.ScenarioPackageImpl;
+
 import urn.UrnPackage;
+
 import urn.impl.UrnPackageImpl;
+
 import urncore.UrncorePackage;
+
 import urncore.impl.UrncorePackageImpl;
 
 /**
@@ -70,231 +80,231 @@ import urncore.impl.UrncorePackageImpl;
  * @generated
  */
 public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass grLspecEClass = null;
+	private EClass grLspecEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass beliefEClass = null;
+	private EClass beliefEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass intentionalElementEClass = null;
+	private EClass intentionalElementEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass actorEClass = null;
+	private EClass actorEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass grlGraphEClass = null;
+	private EClass grlGraphEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass actorRefEClass = null;
+	private EClass actorRefEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass intentionalElementRefEClass = null;
+	private EClass intentionalElementRefEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass contributionEClass = null;
+	private EClass contributionEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass linkRefEClass = null;
+	private EClass linkRefEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass elementLinkEClass = null;
+	private EClass elementLinkEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass decompositionEClass = null;
+	private EClass decompositionEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass dependencyEClass = null;
+	private EClass dependencyEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass evaluationEClass = null;
+	private EClass evaluationEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass evaluationStrategyEClass = null;
+	private EClass evaluationStrategyEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass grlNodeEClass = null;
+	private EClass grlNodeEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass linkRefBendpointEClass = null;
+	private EClass linkRefBendpointEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass beliefLinkEClass = null;
+	private EClass beliefLinkEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EClass strategiesGroupEClass = null;
+	private EClass strategiesGroupEClass = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass contributionContextGroupEClass = null;
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass contributionContextEClass = null;
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass contributionChangeEClass = null;
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass grlLinkableElementEClass = null;
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass collapsedActorRefEClass = null;
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass evaluationRangeEClass = null;
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass contributionRangeEClass = null;
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EEnum criticalityEEnum = null;
+	private EEnum criticalityEEnum = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EEnum intentionalElementTypeEEnum = null;
+	private EEnum intentionalElementTypeEEnum = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EEnum priorityEEnum = null;
+	private EEnum priorityEEnum = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EEnum contributionTypeEEnum = null;
+	private EEnum contributionTypeEEnum = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private EEnum decompositionTypeEEnum = null;
+	private EEnum decompositionTypeEEnum = null;
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EEnum qualitativeLabelEEnum = null;
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EEnum importanceTypeEEnum = null;
 
-				/**
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -303,36 +313,36 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 	 * initialization of the package, or returns the registered package,
 	 * if one already exists.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
 	 * @see grl.GrlPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-    private GrlPackageImpl() {
+	private GrlPackageImpl() {
 		super(eNS_URI, GrlFactory.eINSTANCE);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private static boolean isInited = false;
+	private static boolean isInited = false;
 
-    /**
+	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
 	 * <p>This method is used to initialize {@link GrlPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #eNS_URI
 	 * @see #createPackageContents()
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-    public static GrlPackage init() {
+	public static GrlPackage init() {
 		if (isInited) return (GrlPackage)EPackage.Registry.INSTANCE.getEPackage(GrlPackage.eNS_URI);
 
 		// Obtain or create and register package
@@ -378,70 +388,70 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return theGrlPackage;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getGRLspec() {
+	public EClass getGRLspec() {
 		return grLspecEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getGRLspec_Urnspec() {
+	public EReference getGRLspec_Urnspec() {
 		return (EReference)grLspecEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getGRLspec_IntElements() {
+	public EReference getGRLspec_IntElements() {
 		return (EReference)grLspecEClass.getEStructuralFeatures().get(1);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getGRLspec_Actors() {
+	public EReference getGRLspec_Actors() {
 		return (EReference)grLspecEClass.getEStructuralFeatures().get(2);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getGRLspec_Links() {
+	public EReference getGRLspec_Links() {
 		return (EReference)grLspecEClass.getEStructuralFeatures().get(3);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getGRLspec_Groups() {
+	public EReference getGRLspec_Groups() {
 		return (EReference)grLspecEClass.getEStructuralFeatures().get(4);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getGRLspec_Strategies() {
+	public EReference getGRLspec_Strategies() {
 		return (EReference)grLspecEClass.getEStructuralFeatures().get(5);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -450,7 +460,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)grLspecEClass.getEStructuralFeatures().get(6);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -459,34 +469,34 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)grLspecEClass.getEStructuralFeatures().get(7);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getGRLspec_KpiInformationElements() {
+	public EReference getGRLspec_KpiInformationElements() {
 		return (EReference)grLspecEClass.getEStructuralFeatures().get(8);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getGRLspec_KpiModelLinks() {
+	public EReference getGRLspec_KpiModelLinks() {
 		return (EReference)grLspecEClass.getEStructuralFeatures().get(9);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getGRLspec_IndicatorGroup() {
+	public EReference getGRLspec_IndicatorGroup() {
 		return (EReference)grLspecEClass.getEStructuralFeatures().get(10);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -495,52 +505,52 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)grLspecEClass.getEStructuralFeatures().get(11);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getBelief() {
+	public EClass getBelief() {
 		return beliefEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getBelief_Author() {
+	public EAttribute getBelief_Author() {
 		return (EAttribute)beliefEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getIntentionalElement() {
+	public EClass getIntentionalElement() {
 		return intentionalElementEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getIntentionalElement_Type() {
+	public EAttribute getIntentionalElement_Type() {
 		return (EAttribute)intentionalElementEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getIntentionalElement_DecompositionType() {
+	public EAttribute getIntentionalElement_DecompositionType() {
 		return (EAttribute)intentionalElementEClass.getEStructuralFeatures().get(1);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -549,7 +559,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EAttribute)intentionalElementEClass.getEStructuralFeatures().get(2);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -558,61 +568,61 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EAttribute)intentionalElementEClass.getEStructuralFeatures().get(3);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getIntentionalElement_LineColor() {
+	public EAttribute getIntentionalElement_LineColor() {
 		return (EAttribute)intentionalElementEClass.getEStructuralFeatures().get(4);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getIntentionalElement_FillColor() {
+	public EAttribute getIntentionalElement_FillColor() {
 		return (EAttribute)intentionalElementEClass.getEStructuralFeatures().get(5);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getIntentionalElement_Filled() {
+	public EAttribute getIntentionalElement_Filled() {
 		return (EAttribute)intentionalElementEClass.getEStructuralFeatures().get(6);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getIntentionalElement_Grlspec() {
+	public EReference getIntentionalElement_Grlspec() {
 		return (EReference)intentionalElementEClass.getEStructuralFeatures().get(7);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getIntentionalElement_Refs() {
+	public EReference getIntentionalElement_Refs() {
 		return (EReference)intentionalElementEClass.getEStructuralFeatures().get(8);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getActor() {
+	public EClass getActor() {
 		return actorEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -621,7 +631,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EAttribute)actorEClass.getEStructuralFeatures().get(0);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -630,16 +640,16 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EAttribute)actorEClass.getEStructuralFeatures().get(1);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getActor_Grlspec() {
+	public EReference getActor_Grlspec() {
 		return (EReference)actorEClass.getEStructuralFeatures().get(2);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -648,7 +658,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)actorEClass.getEStructuralFeatures().get(3);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -657,7 +667,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)actorEClass.getEStructuralFeatures().get(4);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -666,79 +676,79 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)actorEClass.getEStructuralFeatures().get(5);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getGRLGraph() {
+	public EClass getGRLGraph() {
 		return grlGraphEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getActorRef() {
+	public EClass getActorRef() {
 		return actorRefEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getIntentionalElementRef() {
+	public EClass getIntentionalElementRef() {
 		return intentionalElementRefEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getIntentionalElementRef_Criticality() {
+	public EAttribute getIntentionalElementRef_Criticality() {
 		return (EAttribute)intentionalElementRefEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getIntentionalElementRef_Priority() {
+	public EAttribute getIntentionalElementRef_Priority() {
 		return (EAttribute)intentionalElementRefEClass.getEStructuralFeatures().get(1);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getIntentionalElementRef_Def() {
+	public EReference getIntentionalElementRef_Def() {
 		return (EReference)intentionalElementRefEClass.getEStructuralFeatures().get(2);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getContribution() {
+	public EClass getContribution() {
 		return contributionEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getContribution_Contribution() {
+	public EAttribute getContribution_Contribution() {
 		return (EAttribute)contributionEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -747,124 +757,124 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EAttribute)contributionEClass.getEStructuralFeatures().get(1);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getContribution_Correlation() {
+	public EAttribute getContribution_Correlation() {
 		return (EAttribute)contributionEClass.getEStructuralFeatures().get(2);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getLinkRef() {
+	public EClass getLinkRef() {
 		return linkRefEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getLinkRef_Link() {
+	public EReference getLinkRef_Link() {
 		return (EReference)linkRefEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getLinkRef_Bendpoints() {
+	public EReference getLinkRef_Bendpoints() {
 		return (EReference)linkRefEClass.getEStructuralFeatures().get(1);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getElementLink() {
+	public EClass getElementLink() {
 		return elementLinkEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getElementLink_Refs() {
+	public EReference getElementLink_Refs() {
 		return (EReference)elementLinkEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getElementLink_Grlspec() {
+	public EReference getElementLink_Grlspec() {
 		return (EReference)elementLinkEClass.getEStructuralFeatures().get(1);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getElementLink_Src() {
-		return (EReference)elementLinkEClass.getEStructuralFeatures().get(3);
-	}
-
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
-    public EReference getElementLink_Dest() {
+	public EReference getElementLink_Dest() {
 		return (EReference)elementLinkEClass.getEStructuralFeatures().get(2);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getDecomposition() {
+	public EReference getElementLink_Src() {
+		return (EReference)elementLinkEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDecomposition() {
 		return decompositionEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getDependency() {
+	public EClass getDependency() {
 		return dependencyEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getEvaluation() {
+	public EClass getEvaluation() {
 		return evaluationEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getEvaluation_Evaluation() {
+	public EAttribute getEvaluation_Evaluation() {
 		return (EAttribute)evaluationEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -873,7 +883,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EAttribute)evaluationEClass.getEStructuralFeatures().get(1);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -882,34 +892,34 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EAttribute)evaluationEClass.getEStructuralFeatures().get(2);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getEvaluation_IntElement() {
+	public EReference getEvaluation_IntElement() {
 		return (EReference)evaluationEClass.getEStructuralFeatures().get(3);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getEvaluation_Strategies() {
+	public EReference getEvaluation_Strategies() {
 		return (EReference)evaluationEClass.getEStructuralFeatures().get(4);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getEvaluation_KpiEvalValueSet() {
+	public EReference getEvaluation_KpiEvalValueSet() {
 		return (EReference)evaluationEClass.getEStructuralFeatures().get(5);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -918,7 +928,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)evaluationEClass.getEStructuralFeatures().get(6);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -927,52 +937,61 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)evaluationEClass.getEStructuralFeatures().get(7);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getEvaluationStrategy() {
+	public EAttribute getEvaluation_EVALUATION_UNDEFINED() {
+		return (EAttribute)evaluationEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEvaluationStrategy() {
 		return evaluationStrategyEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getEvaluationStrategy_Author() {
+	public EAttribute getEvaluationStrategy_Author() {
 		return (EAttribute)evaluationStrategyEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getEvaluationStrategy_Evaluations() {
+	public EReference getEvaluationStrategy_Evaluations() {
 		return (EReference)evaluationStrategyEClass.getEStructuralFeatures().get(1);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getEvaluationStrategy_Group() {
+	public EReference getEvaluationStrategy_Group() {
 		return (EReference)evaluationStrategyEClass.getEStructuralFeatures().get(2);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getEvaluationStrategy_Grlspec() {
+	public EReference getEvaluationStrategy_Grlspec() {
 		return (EReference)evaluationStrategyEClass.getEStructuralFeatures().get(3);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -981,7 +1000,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)evaluationStrategyEClass.getEStructuralFeatures().get(4);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -990,97 +1009,97 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)evaluationStrategyEClass.getEStructuralFeatures().get(5);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getEvaluationStrategy_KpiInfoConfig() {
+	public EReference getEvaluationStrategy_KpiInfoConfig() {
 		return (EReference)evaluationStrategyEClass.getEStructuralFeatures().get(6);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getGRLNode() {
+	public EClass getGRLNode() {
 		return grlNodeEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getLinkRefBendpoint() {
+	public EClass getLinkRefBendpoint() {
 		return linkRefBendpointEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getLinkRefBendpoint_X() {
+	public EAttribute getLinkRefBendpoint_X() {
 		return (EAttribute)linkRefBendpointEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getLinkRefBendpoint_Y() {
+	public EAttribute getLinkRefBendpoint_Y() {
 		return (EAttribute)linkRefBendpointEClass.getEStructuralFeatures().get(1);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getLinkRefBendpoint_Linkref() {
+	public EReference getLinkRefBendpoint_Linkref() {
 		return (EReference)linkRefBendpointEClass.getEStructuralFeatures().get(2);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getBeliefLink() {
+	public EClass getBeliefLink() {
 		return beliefLinkEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EClass getStrategiesGroup() {
+	public EClass getStrategiesGroup() {
 		return strategiesGroupEClass;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getStrategiesGroup_Strategies() {
+	public EReference getStrategiesGroup_Strategies() {
 		return (EReference)strategiesGroupEClass.getEStructuralFeatures().get(0);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EReference getStrategiesGroup_Grlspec() {
+	public EReference getStrategiesGroup_Grlspec() {
 		return (EReference)strategiesGroupEClass.getEStructuralFeatures().get(1);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1089,7 +1108,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return contributionContextGroupEClass;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1098,7 +1117,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)contributionContextGroupEClass.getEStructuralFeatures().get(0);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1107,7 +1126,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)contributionContextGroupEClass.getEStructuralFeatures().get(1);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1116,7 +1135,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return contributionContextEClass;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1125,7 +1144,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)contributionContextEClass.getEStructuralFeatures().get(0);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1134,7 +1153,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)contributionContextEClass.getEStructuralFeatures().get(1);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1143,7 +1162,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)contributionContextEClass.getEStructuralFeatures().get(2);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1152,7 +1171,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)contributionContextEClass.getEStructuralFeatures().get(3);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1161,7 +1180,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)contributionContextEClass.getEStructuralFeatures().get(4);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1170,7 +1189,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return contributionChangeEClass;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1179,7 +1198,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EAttribute)contributionChangeEClass.getEStructuralFeatures().get(0);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1188,7 +1207,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EAttribute)contributionChangeEClass.getEStructuralFeatures().get(1);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1197,7 +1216,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)contributionChangeEClass.getEStructuralFeatures().get(2);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1206,7 +1225,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)contributionChangeEClass.getEStructuralFeatures().get(3);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1215,7 +1234,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)contributionChangeEClass.getEStructuralFeatures().get(4);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1224,7 +1243,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return grlLinkableElementEClass;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1233,7 +1252,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)grlLinkableElementEClass.getEStructuralFeatures().get(0);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1242,7 +1261,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)grlLinkableElementEClass.getEStructuralFeatures().get(1);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1251,7 +1270,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return collapsedActorRefEClass;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1260,7 +1279,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)collapsedActorRefEClass.getEStructuralFeatures().get(0);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1269,7 +1288,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return evaluationRangeEClass;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1278,7 +1297,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EAttribute)evaluationRangeEClass.getEStructuralFeatures().get(0);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1287,7 +1306,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EAttribute)evaluationRangeEClass.getEStructuralFeatures().get(1);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1296,7 +1315,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EAttribute)evaluationRangeEClass.getEStructuralFeatures().get(2);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1305,7 +1324,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)evaluationRangeEClass.getEStructuralFeatures().get(3);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1314,7 +1333,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return contributionRangeEClass;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1323,7 +1342,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EAttribute)contributionRangeEClass.getEStructuralFeatures().get(0);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1332,7 +1351,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EAttribute)contributionRangeEClass.getEStructuralFeatures().get(1);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1341,7 +1360,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EAttribute)contributionRangeEClass.getEStructuralFeatures().get(2);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1350,52 +1369,52 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return (EReference)contributionRangeEClass.getEStructuralFeatures().get(3);
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EEnum getCriticality() {
+	public EEnum getCriticality() {
 		return criticalityEEnum;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EEnum getIntentionalElementType() {
+	public EEnum getIntentionalElementType() {
 		return intentionalElementTypeEEnum;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EEnum getPriority() {
+	public EEnum getPriority() {
 		return priorityEEnum;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EEnum getContributionType() {
+	public EEnum getContributionType() {
 		return contributionTypeEEnum;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EEnum getDecompositionType() {
+	public EEnum getDecompositionType() {
 		return decompositionTypeEEnum;
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1404,7 +1423,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return qualitativeLabelEEnum;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1413,30 +1432,30 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		return importanceTypeEEnum;
 	}
 
-				/**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public GrlFactory getGrlFactory() {
+	public GrlFactory getGrlFactory() {
 		return (GrlFactory)getEFactoryInstance();
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private boolean isCreated = false;
+	private boolean isCreated = false;
 
-    /**
+	/**
 	 * Creates the meta-model objects for the package.  This method is
 	 * guarded to have no affect on any invocation but its first.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void createPackageContents() {
+	public void createPackageContents() {
 		if (isCreated) return;
 		isCreated = true;
 
@@ -1514,6 +1533,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		createEReference(evaluationEClass, EVALUATION__KPI_EVAL_VALUE_SET);
 		createEReference(evaluationEClass, EVALUATION__EVAL_RANGE);
 		createEReference(evaluationEClass, EVALUATION__KPI_NEW_EVAL_VALUE);
+		createEAttribute(evaluationEClass, EVALUATION__EVALUATION_UNDEFINED);
 
 		evaluationStrategyEClass = createEClass(EVALUATION_STRATEGY);
 		createEAttribute(evaluationStrategyEClass, EVALUATION_STRATEGY__AUTHOR);
@@ -1584,21 +1604,21 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		importanceTypeEEnum = createEEnum(IMPORTANCE_TYPE);
 	}
 
-    /**
+	/**
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    private boolean isInitialized = false;
+	private boolean isInitialized = false;
 
-    /**
+	/**
 	 * Complete the initialization of the package and its meta-model.  This
 	 * method is guarded to have no affect on any invocation but its first.
 	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public void initializePackageContents() {
+	public void initializePackageContents() {
 		if (isInitialized) return;
 		isInitialized = true;
 
@@ -1714,6 +1734,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		initEReference(getEvaluation_KpiEvalValueSet(), theKpimodelPackage.getKPIEvalValueSet(), theKpimodelPackage.getKPIEvalValueSet_Eval(), "kpiEvalValueSet", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEvaluation_EvalRange(), this.getEvaluationRange(), this.getEvaluationRange_Eval(), "evalRange", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEvaluation_KpiNewEvalValue(), theKpimodelPackage.getKPINewEvalValue(), theKpimodelPackage.getKPINewEvalValue_Eval(), "kpiNewEvalValue", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEvaluation_EVALUATION_UNDEFINED(), ecorePackage.getEInt(), "EVALUATION_UNDEFINED", "-9999", 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(evaluationStrategyEClass, EvaluationStrategy.class, "EvaluationStrategy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEvaluationStrategy_Author(), ecorePackage.getEString(), "author", null, 0, 1, EvaluationStrategy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1736,6 +1757,8 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		initEClass(strategiesGroupEClass, StrategiesGroup.class, "StrategiesGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStrategiesGroup_Strategies(), this.getEvaluationStrategy(), this.getEvaluationStrategy_Group(), "strategies", null, 0, -1, StrategiesGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getStrategiesGroup_Grlspec(), this.getGRLspec(), this.getGRLspec_Groups(), "grlspec", null, 1, 1, StrategiesGroup.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(strategiesGroupEClass, null, "sortStrategies");
 
 		initEClass(contributionContextGroupEClass, ContributionContextGroup.class, "ContributionContextGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getContributionContextGroup_Grlspec(), this.getGRLspec(), this.getGRLspec_ContributionGroups(), "grlspec", null, 1, 1, ContributionContextGroup.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
