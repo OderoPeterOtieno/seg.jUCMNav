@@ -83,6 +83,8 @@ public class UrncoreFactoryImpl extends EFactoryImpl implements UrncoreFactory {
 			case UrncorePackage.CONCERN: return createConcern();
 			case UrncorePackage.CONNECTION_LABEL: return createConnectionLabel();
 			case UrncorePackage.COMMENT: return createComment();
+			case UrncorePackage.FEATURE_MODEL: return createFeatureModel();
+			case UrncorePackage.FEATURE: return createFeature();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -224,6 +226,26 @@ public class UrncoreFactoryImpl extends EFactoryImpl implements UrncoreFactory {
 	public Comment createComment() {
 		CommentImpl comment = new CommentImpl();
 		return comment;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FeatureModel createFeatureModel() {
+		FeatureModelImpl featureModel = new FeatureModelImpl();
+		return featureModel;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Feature createFeature() {
+		FeatureImpl feature = new FeatureImpl();
+		return feature;
 	}
 
 				/**
