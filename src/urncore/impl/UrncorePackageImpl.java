@@ -38,8 +38,6 @@ import urncore.ComponentType;
 import urncore.Concern;
 import urncore.Condition;
 import urncore.ConnectionLabel;
-import urncore.Feature;
-import urncore.FeatureModel;
 import urncore.GRLmodelElement;
 import urncore.IURNConnection;
 import urncore.IURNContainer;
@@ -202,20 +200,6 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
 	 * @generated
 	 */
 	private EClass commentEClass = null;
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass featureModelEClass = null;
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass featureEClass = null;
 
 				/**
 	 * <!-- begin-user-doc -->
@@ -1321,24 +1305,6 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
 
 				/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getFeatureModel() {
-		return featureModelEClass;
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getFeature() {
-		return featureEClass;
-	}
-
-				/**
-	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1506,10 +1472,6 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
 		createEAttribute(commentEClass, COMMENT__FILL_COLOR);
 		createEReference(commentEClass, COMMENT__DIAGRAM);
 
-		featureModelEClass = createEClass(FEATURE_MODEL);
-
-		featureEClass = createEClass(FEATURE);
-
 		// Create enums
 		componentKindEEnum = createEEnum(COMPONENT_KIND);
 	}
@@ -1542,8 +1504,6 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
 		PerformancePackage thePerformancePackage = (PerformancePackage)EPackage.Registry.INSTANCE.getEPackage(PerformancePackage.eNS_URI);
 		MapPackage theMapPackage = (MapPackage)EPackage.Registry.INSTANCE.getEPackage(MapPackage.eNS_URI);
 		ScenarioPackage theScenarioPackage = (ScenarioPackage)EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI);
-		GrlPackage theGrlPackage = (GrlPackage)EPackage.Registry.INSTANCE.getEPackage(GrlPackage.eNS_URI);
-		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
 
 		// Add supertypes to classes
 		responsibilityEClass.getESuperTypes().add(this.getUCMmodelElement());
@@ -1557,10 +1517,6 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
 		conditionEClass.getESuperTypes().add(this.getLabel());
 		concernEClass.getESuperTypes().add(this.getURNmodelElement());
 		connectionLabelEClass.getESuperTypes().add(this.getLabel());
-		featureModelEClass.getESuperTypes().add(theGrlPackage.getGRLGraph());
-		featureModelEClass.getESuperTypes().add(theCorePackage.getCOREFeatureModel());
-		featureEClass.getESuperTypes().add(theGrlPackage.getIntentionalElement());
-		featureEClass.getESuperTypes().add(theCorePackage.getCOREFeature());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(urNdefinitionEClass, URNdefinition.class, "URNdefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1694,10 +1650,6 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
 		initEAttribute(getComment_Height(), ecorePackage.getEInt(), "height", null, 0, 1, Comment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComment_FillColor(), ecorePackage.getEString(), "fillColor", null, 0, 1, Comment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComment_Diagram(), this.getIURNDiagram(), this.getIURNDiagram_Comments(), "diagram", null, 0, 1, Comment.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(featureModelEClass, FeatureModel.class, "FeatureModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(featureEClass, Feature.class, "Feature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(componentKindEEnum, ComponentKind.class, "ComponentKind");

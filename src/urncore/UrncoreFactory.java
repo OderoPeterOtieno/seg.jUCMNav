@@ -125,24 +125,6 @@ public interface UrncoreFactory extends EFactory {
 	Comment createComment();
 
 				/**
-	 * Returns a new object of class '<em>Feature Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Feature Model</em>'.
-	 * @generated
-	 */
-	FeatureModel createFeatureModel();
-
-				/**
-	 * Returns a new object of class '<em>Feature</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Feature</em>'.
-	 * @generated
-	 */
-	Feature createFeature();
-
-				/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

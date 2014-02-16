@@ -171,8 +171,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute urncore.ecore#//Comment/fillColor"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference urncore.ecore#//Comment/diagram"/>
     </genClasses>
-    <genClasses ecoreClass="urncore.ecore#//FeatureModel"/>
-    <genClasses ecoreClass="urncore.ecore#//Feature"/>
   </genPackages>
   <genPackages prefix="Grl" ecorePackage="grl.ecore#/">
     <genEnums ecoreEnum="grl.ecore#//Criticality">

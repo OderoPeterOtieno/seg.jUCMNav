@@ -214,6 +214,4 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="diagram" eType="#//IURNDiagram"
         transient="true" eOpposite="#//IURNDiagram/comments"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FeatureModel" eSuperTypes="grl.ecore#//GRLGraph CORE.ecore#//COREFeatureModel"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Feature" eSuperTypes="grl.ecore#//IntentionalElement CORE.ecore#//COREFeature"/>
 </ecore:EPackage>
