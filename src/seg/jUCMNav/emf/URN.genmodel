@@ -350,6 +350,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute grl.ecore#//ContributionRange/step"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference grl.ecore#//ContributionRange/change"/>
     </genClasses>
+    <genClasses ecoreClass="grl.ecore#//FeatureModel"/>
+    <genClasses ecoreClass="grl.ecore#//Feature"/>
     <nestedGenPackages prefix="Kpimodel" basePackage="grl" disposableProviderFactory="true"
         ecorePackage="grl.ecore#//kpimodel">
       <genClasses ecoreClass="grl.ecore#//kpimodel/IndicatorGroup">

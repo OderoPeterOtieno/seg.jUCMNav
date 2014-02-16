@@ -23,6 +23,8 @@ import grl.ElementLink;
 import grl.Evaluation;
 import grl.EvaluationRange;
 import grl.EvaluationStrategy;
+import grl.Feature;
+import grl.FeatureModel;
 import grl.GRLGraph;
 import grl.GRLLinkableElement;
 import grl.GRLNode;
@@ -256,6 +258,20 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 	 * @generated
 	 */
 	private EClass contributionRangeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass featureModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass featureEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1379,6 +1395,24 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFeatureModel() {
+		return featureModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFeature() {
+		return featureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getCriticality() {
 		return criticalityEEnum;
 	}
@@ -1599,6 +1633,10 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		createEAttribute(contributionRangeEClass, CONTRIBUTION_RANGE__STEP);
 		createEReference(contributionRangeEClass, CONTRIBUTION_RANGE__CHANGE);
 
+		featureModelEClass = createEClass(FEATURE_MODEL);
+
+		featureEClass = createEClass(FEATURE);
+
 		// Create enums
 		criticalityEEnum = createEEnum(CRITICALITY);
 		intentionalElementTypeEEnum = createEEnum(INTENTIONAL_ELEMENT_TYPE);
@@ -1668,6 +1706,10 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		contributionContextEClass.getESuperTypes().add(theUrncorePackage.getGRLmodelElement());
 		grlLinkableElementEClass.getESuperTypes().add(theUrncorePackage.getGRLmodelElement());
 		collapsedActorRefEClass.getESuperTypes().add(this.getGRLNode());
+		featureModelEClass.getESuperTypes().add(this.getGRLGraph());
+		featureModelEClass.getESuperTypes().add(theCorePackage.getCOREFeatureModel());
+		featureEClass.getESuperTypes().add(this.getIntentionalElement());
+		featureEClass.getESuperTypes().add(theCorePackage.getCOREFeature());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(grLspecEClass, GRLspec.class, "GRLspec", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1805,6 +1847,10 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		initEAttribute(getContributionRange_End(), ecorePackage.getEInt(), "end", null, 0, 1, ContributionRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getContributionRange_Step(), ecorePackage.getEInt(), "step", "1", 0, 1, ContributionRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContributionRange_Change(), this.getContributionChange(), this.getContributionChange_ContribRange(), "change", null, 1, 1, ContributionRange.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(featureModelEClass, FeatureModel.class, "FeatureModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(featureEClass, Feature.class, "Feature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(criticalityEEnum, Criticality.class, "Criticality");

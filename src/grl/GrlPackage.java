@@ -3072,6 +3072,377 @@ public interface GrlPackage extends EPackage {
 	int CONTRIBUTION_RANGE_FEATURE_COUNT = 4;
 
 	/**
+	 * The meta object id for the '{@link grl.impl.FeatureModelImpl <em>Feature Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see grl.impl.FeatureModelImpl
+	 * @see grl.impl.GrlPackageImpl#getFeatureModel()
+	 * @generated
+	 */
+	int FEATURE_MODEL = 25;
+
+	/**
+	 * The feature id for the '<em><b>From Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL__FROM_LINKS = GRL_GRAPH__FROM_LINKS;
+
+	/**
+	 * The feature id for the '<em><b>To Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL__TO_LINKS = GRL_GRAPH__TO_LINKS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL__ID = GRL_GRAPH__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL__NAME = GRL_GRAPH__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL__DESCRIPTION = GRL_GRAPH__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL__METADATA = GRL_GRAPH__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Inconcern</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL__INCONCERN = GRL_GRAPH__INCONCERN;
+
+	/**
+	 * The feature id for the '<em><b>Urndefinition</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL__URNDEFINITION = GRL_GRAPH__URNDEFINITION;
+
+	/**
+	 * The feature id for the '<em><b>Nodes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL__NODES = GRL_GRAPH__NODES;
+
+	/**
+	 * The feature id for the '<em><b>Cont Refs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL__CONT_REFS = GRL_GRAPH__CONT_REFS;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL__CONNECTIONS = GRL_GRAPH__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Concern</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL__CONCERN = GRL_GRAPH__CONCERN;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL__COMMENTS = GRL_GRAPH__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Reuses</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL__REUSES = GRL_GRAPH__REUSES;
+
+	/**
+	 * The feature id for the '<em><b>Model Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL__MODEL_ELEMENTS = GRL_GRAPH__MODEL_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Realizes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL__REALIZES = GRL_GRAPH__REALIZES;
+
+	/**
+	 * The number of structural features of the '<em>Feature Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL_FEATURE_COUNT = GRL_GRAPH_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link grl.impl.FeatureImpl <em>Feature</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see grl.impl.FeatureImpl
+	 * @see grl.impl.GrlPackageImpl#getFeature()
+	 * @generated
+	 */
+	int FEATURE = 26;
+
+	/**
+	 * The feature id for the '<em><b>From Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__FROM_LINKS = INTENTIONAL_ELEMENT__FROM_LINKS;
+
+	/**
+	 * The feature id for the '<em><b>To Links</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__TO_LINKS = INTENTIONAL_ELEMENT__TO_LINKS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__ID = INTENTIONAL_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__NAME = INTENTIONAL_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__DESCRIPTION = INTENTIONAL_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__METADATA = INTENTIONAL_ELEMENT__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Inconcern</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__INCONCERN = INTENTIONAL_ELEMENT__INCONCERN;
+
+	/**
+	 * The feature id for the '<em><b>Links Dest</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__LINKS_DEST = INTENTIONAL_ELEMENT__LINKS_DEST;
+
+	/**
+	 * The feature id for the '<em><b>Links Src</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__LINKS_SRC = INTENTIONAL_ELEMENT__LINKS_SRC;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__TYPE = INTENTIONAL_ELEMENT__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Decomposition Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__DECOMPOSITION_TYPE = INTENTIONAL_ELEMENT__DECOMPOSITION_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Importance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__IMPORTANCE = INTENTIONAL_ELEMENT__IMPORTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Importance Quantitative</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__IMPORTANCE_QUANTITATIVE = INTENTIONAL_ELEMENT__IMPORTANCE_QUANTITATIVE;
+
+	/**
+	 * The feature id for the '<em><b>Line Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__LINE_COLOR = INTENTIONAL_ELEMENT__LINE_COLOR;
+
+	/**
+	 * The feature id for the '<em><b>Fill Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__FILL_COLOR = INTENTIONAL_ELEMENT__FILL_COLOR;
+
+	/**
+	 * The feature id for the '<em><b>Filled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__FILLED = INTENTIONAL_ELEMENT__FILLED;
+
+	/**
+	 * The feature id for the '<em><b>Grlspec</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__GRLSPEC = INTENTIONAL_ELEMENT__GRLSPEC;
+
+	/**
+	 * The feature id for the '<em><b>Refs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__REFS = INTENTIONAL_ELEMENT__REFS;
+
+	/**
+	 * The feature id for the '<em><b>Realized By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__REALIZED_BY = INTENTIONAL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Strategies</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__STRATEGIES = INTENTIONAL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Configurations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__CONFIGURATIONS = INTENTIONAL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Feature</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_FEATURE_COUNT = INTENTIONAL_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The meta object id for the '{@link grl.Criticality <em>Criticality</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3079,7 +3450,7 @@ public interface GrlPackage extends EPackage {
 	 * @see grl.impl.GrlPackageImpl#getCriticality()
 	 * @generated
 	 */
-	int CRITICALITY = 25;
+	int CRITICALITY = 27;
 
 	/**
 	 * The meta object id for the '{@link grl.IntentionalElementType <em>Intentional Element Type</em>}' enum.
@@ -3089,7 +3460,7 @@ public interface GrlPackage extends EPackage {
 	 * @see grl.impl.GrlPackageImpl#getIntentionalElementType()
 	 * @generated
 	 */
-	int INTENTIONAL_ELEMENT_TYPE = 26;
+	int INTENTIONAL_ELEMENT_TYPE = 28;
 
 	/**
 	 * The meta object id for the '{@link grl.Priority <em>Priority</em>}' enum.
@@ -3099,7 +3470,7 @@ public interface GrlPackage extends EPackage {
 	 * @see grl.impl.GrlPackageImpl#getPriority()
 	 * @generated
 	 */
-	int PRIORITY = 27;
+	int PRIORITY = 29;
 
 	/**
 	 * The meta object id for the '{@link grl.ContributionType <em>Contribution Type</em>}' enum.
@@ -3109,7 +3480,7 @@ public interface GrlPackage extends EPackage {
 	 * @see grl.impl.GrlPackageImpl#getContributionType()
 	 * @generated
 	 */
-	int CONTRIBUTION_TYPE = 28;
+	int CONTRIBUTION_TYPE = 30;
 
 	/**
 	 * The meta object id for the '{@link grl.DecompositionType <em>Decomposition Type</em>}' enum.
@@ -3119,7 +3490,7 @@ public interface GrlPackage extends EPackage {
 	 * @see grl.impl.GrlPackageImpl#getDecompositionType()
 	 * @generated
 	 */
-	int DECOMPOSITION_TYPE = 29;
+	int DECOMPOSITION_TYPE = 31;
 
 	/**
 	 * The meta object id for the '{@link grl.QualitativeLabel <em>Qualitative Label</em>}' enum.
@@ -3129,7 +3500,7 @@ public interface GrlPackage extends EPackage {
 	 * @see grl.impl.GrlPackageImpl#getQualitativeLabel()
 	 * @generated
 	 */
-	int QUALITATIVE_LABEL = 30;
+	int QUALITATIVE_LABEL = 32;
 
 	/**
 	 * The meta object id for the '{@link grl.ImportanceType <em>Importance Type</em>}' enum.
@@ -3139,7 +3510,7 @@ public interface GrlPackage extends EPackage {
 	 * @see grl.impl.GrlPackageImpl#getImportanceType()
 	 * @generated
 	 */
-	int IMPORTANCE_TYPE = 31;
+	int IMPORTANCE_TYPE = 33;
 
 
 	/**
@@ -4317,6 +4688,26 @@ public interface GrlPackage extends EPackage {
 	EReference getContributionRange_Change();
 
 	/**
+	 * Returns the meta object for class '{@link grl.FeatureModel <em>Feature Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Feature Model</em>'.
+	 * @see grl.FeatureModel
+	 * @generated
+	 */
+	EClass getFeatureModel();
+
+	/**
+	 * Returns the meta object for class '{@link grl.Feature <em>Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Feature</em>'.
+	 * @see grl.Feature
+	 * @generated
+	 */
+	EClass getFeature();
+
+	/**
 	 * Returns the meta object for enum '{@link grl.Criticality <em>Criticality</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5329,6 +5720,26 @@ public interface GrlPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONTRIBUTION_RANGE__CHANGE = eINSTANCE.getContributionRange_Change();
+
+		/**
+		 * The meta object literal for the '{@link grl.impl.FeatureModelImpl <em>Feature Model</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see grl.impl.FeatureModelImpl
+		 * @see grl.impl.GrlPackageImpl#getFeatureModel()
+		 * @generated
+		 */
+		EClass FEATURE_MODEL = eINSTANCE.getFeatureModel();
+
+		/**
+		 * The meta object literal for the '{@link grl.impl.FeatureImpl <em>Feature</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see grl.impl.FeatureImpl
+		 * @see grl.impl.GrlPackageImpl#getFeature()
+		 * @generated
+		 */
+		EClass FEATURE = eINSTANCE.getFeature();
 
 		/**
 		 * The meta object literal for the '{@link grl.Criticality <em>Criticality</em>}' enum.

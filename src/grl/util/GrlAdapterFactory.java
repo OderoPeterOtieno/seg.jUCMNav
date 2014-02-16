@@ -3,8 +3,11 @@
 package grl.util;
 
 import core.COREConfiguration;
+import core.COREFeature;
+import core.COREFeatureModel;
 import core.COREImpactModel;
 import core.COREModel;
+import core.COREModelElement;
 import core.CORENamedElement;
 import core.COREStrategy;
 import grl.*;
@@ -154,6 +157,12 @@ public class GrlAdapterFactory extends AdapterFactoryImpl {
 			public Object caseContributionRange(ContributionRange object) {
 				return createContributionRangeAdapter();
 			}
+			public Object caseFeatureModel(FeatureModel object) {
+				return createFeatureModelAdapter();
+			}
+			public Object caseFeature(Feature object) {
+				return createFeatureAdapter();
+			}
 			public Object caseURNmodelElement(URNmodelElement object) {
 				return createURNmodelElementAdapter();
 			}
@@ -189,6 +198,15 @@ public class GrlAdapterFactory extends AdapterFactoryImpl {
 			}
 			public Object caseCOREStrategy(COREStrategy object) {
 				return createCOREStrategyAdapter();
+			}
+			public Object caseCOREFeatureModel(COREFeatureModel object) {
+				return createCOREFeatureModelAdapter();
+			}
+			public Object caseCOREModelElement(COREModelElement object) {
+				return createCOREModelElementAdapter();
+			}
+			public Object caseCOREFeature(COREFeature object) {
+				return createCOREFeatureAdapter();
 			}
 			public Object defaultCase(EObject object) {
 				return createEObjectAdapter();
@@ -559,6 +577,34 @@ public class GrlAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link grl.FeatureModel <em>Feature Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see grl.FeatureModel
+	 * @generated
+	 */
+	public Adapter createFeatureModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link grl.Feature <em>Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see grl.Feature
+	 * @generated
+	 */
+	public Adapter createFeatureAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link urncore.URNmodelElement <em>UR Nmodel Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -723,6 +769,48 @@ public class GrlAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCOREStrategyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link core.COREFeatureModel <em>CORE Feature Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see core.COREFeatureModel
+	 * @generated
+	 */
+	public Adapter createCOREFeatureModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link core.COREModelElement <em>CORE Model Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see core.COREModelElement
+	 * @generated
+	 */
+	public Adapter createCOREModelElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link core.COREFeature <em>CORE Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see core.COREFeature
+	 * @generated
+	 */
+	public Adapter createCOREFeatureAdapter() {
 		return null;
 	}
 

@@ -3,8 +3,11 @@
 package grl.util;
 
 import core.COREConfiguration;
+import core.COREFeature;
+import core.COREFeatureModel;
 import core.COREImpactModel;
 import core.COREModel;
+import core.COREModelElement;
 import core.CORENamedElement;
 import core.COREStrategy;
 import grl.*;
@@ -301,6 +304,33 @@ public class GrlSwitch {
 			case GrlPackage.CONTRIBUTION_RANGE: {
 				ContributionRange contributionRange = (ContributionRange)theEObject;
 				Object result = caseContributionRange(contributionRange);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GrlPackage.FEATURE_MODEL: {
+				FeatureModel featureModel = (FeatureModel)theEObject;
+				Object result = caseFeatureModel(featureModel);
+				if (result == null) result = caseGRLGraph(featureModel);
+				if (result == null) result = caseCOREFeatureModel(featureModel);
+				if (result == null) result = caseGRLmodelElement(featureModel);
+				if (result == null) result = caseIURNDiagram(featureModel);
+				if (result == null) result = caseCOREImpactModel(featureModel);
+				if (result == null) result = caseURNmodelElement(featureModel);
+				if (result == null) result = caseCOREModel(featureModel);
+				if (result == null) result = caseCORENamedElement(featureModel);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GrlPackage.FEATURE: {
+				Feature feature = (Feature)theEObject;
+				Object result = caseFeature(feature);
+				if (result == null) result = caseIntentionalElement(feature);
+				if (result == null) result = caseCOREFeature(feature);
+				if (result == null) result = caseGRLLinkableElement(feature);
+				if (result == null) result = caseCOREModelElement(feature);
+				if (result == null) result = caseGRLmodelElement(feature);
+				if (result == null) result = caseCORENamedElement(feature);
+				if (result == null) result = caseURNmodelElement(feature);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -684,6 +714,36 @@ public class GrlSwitch {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Feature Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Feature Model</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public Object caseFeatureModel(FeatureModel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Feature</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public Object caseFeature(Feature object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>UR Nmodel Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -860,6 +920,51 @@ public class GrlSwitch {
 	 * @generated
 	 */
 	public Object caseCOREStrategy(COREStrategy object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>CORE Feature Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>CORE Feature Model</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public Object caseCOREFeatureModel(COREFeatureModel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>CORE Model Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>CORE Model Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public Object caseCOREModelElement(COREModelElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>CORE Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>CORE Feature</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public Object caseCOREFeature(COREFeature object) {
 		return null;
 	}
 
