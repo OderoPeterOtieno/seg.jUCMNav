@@ -646,7 +646,11 @@ public class ModelCreationFactory implements CreationFactory {
                     } else {
                         if (type == IntentionalElementType.INDICATOR) {
                             elementdef = kpiFactory.createIndicator();
-                        } else {
+                        } else if (type == IntentionalElementType.FEATURE)
+                        {
+                            elementdef = grlfactory.createFeature();
+                        }
+                        else {
                             elementdef = grlfactory.createIntentionalElement();
                         }
                     }

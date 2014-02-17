@@ -170,6 +170,8 @@ public class ElementListViewer extends StructuredViewer implements Adapter, ISel
                 respItem.setElementImg("/seg/jUCMNav/icons/Resource16.gif"); //$NON-NLS-1$
             } else if (intentional.getDef().getType().getValue() == IntentionalElementType.TASK) {
                 respItem.setElementImg("/seg/jUCMNav/icons/Task16.gif"); //$NON-NLS-1$
+            } else if (intentional.getDef().getType().getValue() == IntentionalElementType.FEATURE) {
+                respItem.setElementImg("/seg/jUCMNav/icons/Feature16.gif"); //$NON-NLS-1$
             } else if (intentional.getDef().getType().getValue() == IntentionalElementType.INDICATOR) {
                 respItem.setElementImg("/seg/jUCMNav/icons/Indicator16.gif"); //$NON-NLS-1$
             }

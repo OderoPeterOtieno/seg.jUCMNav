@@ -12,7 +12,7 @@ import seg.jUCMNav.figures.anchors.DecompositionAnchor;
 
 /**
  * Rectangle figure that represent intentional elements: - Softgoal = Cloud - Goal = Ellipse - Resource = Rectangle - Task = Triangular Rectangle - Indicator =
- * Triangular Rectangle with two lines
+ * Triangular Rectangle with two lines - Feature = Triangular Rectangle
  * 
  * @author Jean-Fran�ois Roy, pchen
  * 
@@ -63,6 +63,11 @@ public class IntentionalElementFigure extends GrlNodeFigure {
             graphics.drawRoundRectangle(r, 50, 50);
             break;
         case IntentionalElementType.TASK:
+            points = new PointList();
+            fillTaskPoints(r, points);
+            graphics.drawPolygon(points);
+            break;
+        case IntentionalElementType.FEATURE:
             points = new PointList();
             fillTaskPoints(r, points);
             graphics.drawPolygon(points);
@@ -143,6 +148,11 @@ public class IntentionalElementFigure extends GrlNodeFigure {
             graphics.fillRoundRectangle(r, 50, 50);
             break;
         case IntentionalElementType.TASK:
+            points = new PointList();
+            fillTaskPoints(r, points);
+            graphics.fillPolygon(points);
+            break;
+        case IntentionalElementType.FEATURE:
             points = new PointList();
             fillTaskPoints(r, points);
             graphics.fillPolygon(points);

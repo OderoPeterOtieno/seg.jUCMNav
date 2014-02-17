@@ -75,6 +75,8 @@ public class IntentionalElementRefTreeEditPart extends UrnModelElementTreeEditPa
                 setImage((JUCMNavPlugin.getImage("icons/Softgoal16.gif"))); //$NON-NLS-1$
             else if (element.getDef().getType().getValue() == IntentionalElementType.TASK)
                 setImage((JUCMNavPlugin.getImage("icons/Task16.gif"))); //$NON-NLS-1$
+            else if (element.getDef().getType().getValue() == IntentionalElementType.FEATURE)
+                setImage((JUCMNavPlugin.getImage("icons/Feature16.gif"))); //$NON-NLS-1$
             else if (element.getDef().getType().getValue() == IntentionalElementType.RESSOURCE)
                 setImage((JUCMNavPlugin.getImage("icons/Resource16.gif"))); //$NON-NLS-1$
             else if (element.getDef().getType().getValue() == IntentionalElementType.INDICATOR)
