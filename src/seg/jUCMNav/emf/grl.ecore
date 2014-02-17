@@ -74,6 +74,7 @@
     <eLiterals name="Task" value="2"/>
     <eLiterals name="Ressource" value="3"/>
     <eLiterals name="Indicator" value="4"/>
+    <eLiterals name="Feature" value="5" literal="Feature"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Priority">
     <eLiterals name="High"/>

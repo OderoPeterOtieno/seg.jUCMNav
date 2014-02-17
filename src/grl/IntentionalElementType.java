@@ -94,6 +94,21 @@ public final class IntentionalElementType extends AbstractEnumerator {
 	public static final int INDICATOR = 4;
 
 	/**
+	 * The '<em><b>Feature</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Feature</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #FEATURE_LITERAL
+	 * @model name="Feature"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int FEATURE = 5;
+
+	/**
 	 * The '<em><b>Softgoal</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -144,6 +159,16 @@ public final class IntentionalElementType extends AbstractEnumerator {
 	public static final IntentionalElementType INDICATOR_LITERAL = new IntentionalElementType(INDICATOR, "Indicator", "Indicator");
 
 	/**
+	 * The '<em><b>Feature</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #FEATURE
+	 * @generated
+	 * @ordered
+	 */
+	public static final IntentionalElementType FEATURE_LITERAL = new IntentionalElementType(FEATURE, "Feature", "Feature");
+
+	/**
 	 * An array of all the '<em><b>Intentional Element Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -156,6 +181,7 @@ public final class IntentionalElementType extends AbstractEnumerator {
 			TASK_LITERAL,
 			RESSOURCE_LITERAL,
 			INDICATOR_LITERAL,
+			FEATURE_LITERAL,
 		};
 
 	/**
@@ -211,6 +237,7 @@ public final class IntentionalElementType extends AbstractEnumerator {
 			case TASK: return TASK_LITERAL;
 			case RESSOURCE: return RESSOURCE_LITERAL;
 			case INDICATOR: return INDICATOR_LITERAL;
+			case FEATURE: return FEATURE_LITERAL;
 		}
 		return null;
 	}

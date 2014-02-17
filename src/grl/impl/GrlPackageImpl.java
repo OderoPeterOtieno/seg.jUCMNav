@@ -1865,6 +1865,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		addEEnumLiteral(intentionalElementTypeEEnum, IntentionalElementType.TASK_LITERAL);
 		addEEnumLiteral(intentionalElementTypeEEnum, IntentionalElementType.RESSOURCE_LITERAL);
 		addEEnumLiteral(intentionalElementTypeEEnum, IntentionalElementType.INDICATOR_LITERAL);
+		addEEnumLiteral(intentionalElementTypeEEnum, IntentionalElementType.FEATURE_LITERAL);
 
 		initEEnum(priorityEEnum, Priority.class, "Priority");
 		addEEnumLiteral(priorityEEnum, Priority.HIGH_LITERAL);

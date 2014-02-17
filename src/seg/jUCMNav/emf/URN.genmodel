@@ -185,6 +185,7 @@
       <genEnumLiterals ecoreEnumLiteral="grl.ecore#//IntentionalElementType/Task"/>
       <genEnumLiterals ecoreEnumLiteral="grl.ecore#//IntentionalElementType/Ressource"/>
       <genEnumLiterals ecoreEnumLiteral="grl.ecore#//IntentionalElementType/Indicator"/>
+      <genEnumLiterals ecoreEnumLiteral="grl.ecore#//IntentionalElementType/Feature"/>
     </genEnums>
     <genEnums ecoreEnum="grl.ecore#//Priority">
       <genEnumLiterals ecoreEnumLiteral="grl.ecore#//Priority/High"/>
