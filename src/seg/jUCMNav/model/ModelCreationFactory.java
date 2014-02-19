@@ -14,6 +14,7 @@ import grl.Dependency;
 import grl.Evaluation;
 import grl.EvaluationRange;
 import grl.EvaluationStrategy;
+import grl.FeatureModel;
 import grl.GRLGraph;
 import grl.GRLspec;
 import grl.GrlFactory;
@@ -635,7 +636,11 @@ public class ModelCreationFactory implements CreationFactory {
                     // create a map
                     result = grlfactory.createGRLGraph();
                     URNNamingHelper.setElementNameAndID(urn, result);
-                } else if (targetClass.equals(IntentionalElementRef.class)) {
+                } else if (targetClass.equals(FeatureModel.class)) {
+                    // create a map
+                    result = grlfactory.createFeatureModel();
+                    URNNamingHelper.setElementNameAndID(urn, result);
+                }else if (targetClass.equals(IntentionalElementRef.class)) {
                     // create the intentional Element ref
                     result = grlfactory.createIntentionalElementRef();
 
@@ -814,9 +819,8 @@ public class ModelCreationFactory implements CreationFactory {
         }
         
         // add a new FMD diagram to the FMDspec, if desired.
-        //TODO: currently it will create a grl graph instead of FMD, after implemented FDM, correct this one.
         if (createFmd) {
-        	GRLGraph newFmdGraph = (GRLGraph) getNewObject(urnspec, GRLGraph.class);
+            GRLGraph newFmdGraph = (GRLGraph) getNewObject(urnspec, FeatureModel.class);
         	newFmdGraph.setName("featureModelGraph");
         	newFmdGraph.getMetadata().add(getFeatureModelGraphMetadata());
         	urnspec.getUrndef().getSpecDiagrams().add(newFmdGraph);
