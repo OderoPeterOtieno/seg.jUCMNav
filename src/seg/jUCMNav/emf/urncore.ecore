@@ -191,6 +191,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Concern" eSuperTypes="#//URNmodelElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="coreConcern" lowerBound="1"
+        eType="ecore:EClass CORE.ecore#//COREConcern"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="urndefinition" lowerBound="1"
         eType="#//URNdefinition" transient="true" eOpposite="#//URNdefinition/concerns"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="specDiagrams" upperBound="-1"

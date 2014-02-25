@@ -1582,13 +1582,22 @@ public interface UrncorePackage extends EPackage {
     int CONCERN__INCONCERN = UR_NMODEL_ELEMENT__INCONCERN;
 
     /**
+	 * The feature id for the '<em><b>Core Concern</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCERN__CORE_CONCERN = UR_NMODEL_ELEMENT_FEATURE_COUNT + 0;
+
+				/**
 	 * The feature id for the '<em><b>Urndefinition</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONCERN__URNDEFINITION = UR_NMODEL_ELEMENT_FEATURE_COUNT + 0;
+	int CONCERN__URNDEFINITION = UR_NMODEL_ELEMENT_FEATURE_COUNT + 1;
 
     /**
 	 * The feature id for the '<em><b>Spec Diagrams</b></em>' reference list.
@@ -1597,7 +1606,7 @@ public interface UrncorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONCERN__SPEC_DIAGRAMS = UR_NMODEL_ELEMENT_FEATURE_COUNT + 1;
+	int CONCERN__SPEC_DIAGRAMS = UR_NMODEL_ELEMENT_FEATURE_COUNT + 2;
 
     /**
 	 * The feature id for the '<em><b>Elements</b></em>' reference list.
@@ -1606,7 +1615,7 @@ public interface UrncorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-    int CONCERN__ELEMENTS = UR_NMODEL_ELEMENT_FEATURE_COUNT + 2;
+    int CONCERN__ELEMENTS = UR_NMODEL_ELEMENT_FEATURE_COUNT + 3;
 
     /**
 	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -1615,7 +1624,7 @@ public interface UrncorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONCERN__CONDITION = UR_NMODEL_ELEMENT_FEATURE_COUNT + 3;
+	int CONCERN__CONDITION = UR_NMODEL_ELEMENT_FEATURE_COUNT + 4;
 
 				/**
 	 * The number of structural features of the '<em>Concern</em>' class.
@@ -1624,7 +1633,7 @@ public interface UrncorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONCERN_FEATURE_COUNT = UR_NMODEL_ELEMENT_FEATURE_COUNT + 4;
+	int CONCERN_FEATURE_COUNT = UR_NMODEL_ELEMENT_FEATURE_COUNT + 5;
 
     /**
 	 * The meta object id for the '{@link urncore.impl.ConnectionLabelImpl <em>Connection Label</em>}' class.
@@ -2825,6 +2834,17 @@ public interface UrncorePackage extends EPackage {
 	EClass getConcern();
 
     /**
+	 * Returns the meta object for the reference '{@link urncore.Concern#getCoreConcern <em>Core Concern</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Core Concern</em>'.
+	 * @see urncore.Concern#getCoreConcern()
+	 * @see #getConcern()
+	 * @generated
+	 */
+	EReference getConcern_CoreConcern();
+
+				/**
 	 * Returns the meta object for the container reference '{@link urncore.Concern#getUrndefinition <em>Urndefinition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3829,6 +3849,14 @@ public interface UrncorePackage extends EPackage {
 		EClass CONCERN = eINSTANCE.getConcern();
 
         /**
+		 * The meta object literal for the '<em><b>Core Concern</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONCERN__CORE_CONCERN = eINSTANCE.getConcern_CoreConcern();
+
+								/**
 		 * The meta object literal for the '<em><b>Urndefinition</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->

@@ -1182,8 +1182,17 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConcern_Urndefinition() {
+	public EReference getConcern_CoreConcern() {
 		return (EReference)concernEClass.getEStructuralFeatures().get(0);
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConcern_Urndefinition() {
+		return (EReference)concernEClass.getEStructuralFeatures().get(1);
 	}
 
     /**
@@ -1192,7 +1201,7 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
 	 * @generated
 	 */
 	public EReference getConcern_SpecDiagrams() {
-		return (EReference)concernEClass.getEStructuralFeatures().get(1);
+		return (EReference)concernEClass.getEStructuralFeatures().get(2);
 	}
 
     /**
@@ -1201,7 +1210,7 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
 	 * @generated
 	 */
     public EReference getConcern_Elements() {
-		return (EReference)concernEClass.getEStructuralFeatures().get(2);
+		return (EReference)concernEClass.getEStructuralFeatures().get(3);
 	}
 
     /**
@@ -1210,7 +1219,7 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
 	 * @generated
 	 */
 	public EReference getConcern_Condition() {
-		return (EReference)concernEClass.getEStructuralFeatures().get(3);
+		return (EReference)concernEClass.getEStructuralFeatures().get(4);
 	}
 
 				/**
@@ -1455,6 +1464,7 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
 		createEAttribute(metadataEClass, METADATA__VALUE);
 
 		concernEClass = createEClass(CONCERN);
+		createEReference(concernEClass, CONCERN__CORE_CONCERN);
 		createEReference(concernEClass, CONCERN__URNDEFINITION);
 		createEReference(concernEClass, CONCERN__SPEC_DIAGRAMS);
 		createEReference(concernEClass, CONCERN__ELEMENTS);
@@ -1504,6 +1514,7 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
 		PerformancePackage thePerformancePackage = (PerformancePackage)EPackage.Registry.INSTANCE.getEPackage(PerformancePackage.eNS_URI);
 		MapPackage theMapPackage = (MapPackage)EPackage.Registry.INSTANCE.getEPackage(MapPackage.eNS_URI);
 		ScenarioPackage theScenarioPackage = (ScenarioPackage)EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI);
+		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
 
 		// Add supertypes to classes
 		responsibilityEClass.getESuperTypes().add(this.getUCMmodelElement());
@@ -1634,6 +1645,7 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
 		initEAttribute(getMetadata_Value(), ecorePackage.getEString(), "value", null, 0, 1, Metadata.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(concernEClass, Concern.class, "Concern", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConcern_CoreConcern(), theCorePackage.getCOREConcern(), null, "coreConcern", null, 1, 1, Concern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConcern_Urndefinition(), this.getURNdefinition(), this.getURNdefinition_Concerns(), "urndefinition", null, 1, 1, Concern.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConcern_SpecDiagrams(), this.getIURNDiagram(), this.getIURNDiagram_Concern(), "specDiagrams", null, 0, -1, Concern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConcern_Elements(), this.getURNmodelElement(), this.getURNmodelElement_Inconcern(), "elements", null, 0, -1, Concern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -6,6 +6,7 @@
  */
 package urncore;
 
+import core.COREConcern;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -16,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link urncore.Concern#getCoreConcern <em>Core Concern</em>}</li>
  *   <li>{@link urncore.Concern#getUrndefinition <em>Urndefinition</em>}</li>
  *   <li>{@link urncore.Concern#getSpecDiagrams <em>Spec Diagrams</em>}</li>
  *   <li>{@link urncore.Concern#getElements <em>Elements</em>}</li>
@@ -29,6 +31,32 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Concern extends URNmodelElement {
     /**
+	 * Returns the value of the '<em><b>Core Concern</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Core Concern</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Core Concern</em>' reference.
+	 * @see #setCoreConcern(COREConcern)
+	 * @see urncore.UrncorePackage#getConcern_CoreConcern()
+	 * @model required="true"
+	 * @generated
+	 */
+	COREConcern getCoreConcern();
+
+	/**
+	 * Sets the value of the '{@link urncore.Concern#getCoreConcern <em>Core Concern</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Core Concern</em>' reference.
+	 * @see #getCoreConcern()
+	 * @generated
+	 */
+	void setCoreConcern(COREConcern value);
+
+				/**
 	 * Returns the value of the '<em><b>Urndefinition</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link urncore.URNdefinition#getConcerns <em>Concerns</em>}'.
 	 * <!-- begin-user-doc -->

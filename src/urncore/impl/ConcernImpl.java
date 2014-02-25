@@ -6,6 +6,7 @@
  */
 package urncore.impl;
 
+import core.COREConcern;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -32,6 +33,7 @@ import urncore.UrncorePackage;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link urncore.impl.ConcernImpl#getCoreConcern <em>Core Concern</em>}</li>
  *   <li>{@link urncore.impl.ConcernImpl#getUrndefinition <em>Urndefinition</em>}</li>
  *   <li>{@link urncore.impl.ConcernImpl#getSpecDiagrams <em>Spec Diagrams</em>}</li>
  *   <li>{@link urncore.impl.ConcernImpl#getElements <em>Elements</em>}</li>
@@ -43,6 +45,16 @@ import urncore.UrncorePackage;
  */
 public class ConcernImpl extends URNmodelElementImpl implements Concern {
     /**
+	 * The cached value of the '{@link #getCoreConcern() <em>Core Concern</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCoreConcern()
+	 * @generated
+	 * @ordered
+	 */
+	protected COREConcern coreConcern;
+
+				/**
 	 * The cached value of the '{@link #getSpecDiagrams() <em>Spec Diagrams</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -91,6 +103,44 @@ public class ConcernImpl extends URNmodelElementImpl implements Concern {
 	}
 
     /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public COREConcern getCoreConcern() {
+		if (coreConcern != null && coreConcern.eIsProxy()) {
+			InternalEObject oldCoreConcern = (InternalEObject)coreConcern;
+			coreConcern = (COREConcern)eResolveProxy(oldCoreConcern);
+			if (coreConcern != oldCoreConcern) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UrncorePackage.CONCERN__CORE_CONCERN, oldCoreConcern, coreConcern));
+			}
+		}
+		return coreConcern;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public COREConcern basicGetCoreConcern() {
+		return coreConcern;
+	}
+
+				/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCoreConcern(COREConcern newCoreConcern) {
+		COREConcern oldCoreConcern = coreConcern;
+		coreConcern = newCoreConcern;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UrncorePackage.CONCERN__CORE_CONCERN, oldCoreConcern, coreConcern));
+	}
+
+				/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -260,6 +310,9 @@ public class ConcernImpl extends URNmodelElementImpl implements Concern {
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case UrncorePackage.CONCERN__CORE_CONCERN:
+				if (resolve) return getCoreConcern();
+				return basicGetCoreConcern();
 			case UrncorePackage.CONCERN__URNDEFINITION:
 				return getUrndefinition();
 			case UrncorePackage.CONCERN__SPEC_DIAGRAMS:
@@ -279,6 +332,9 @@ public class ConcernImpl extends URNmodelElementImpl implements Concern {
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case UrncorePackage.CONCERN__CORE_CONCERN:
+				setCoreConcern((COREConcern)newValue);
+				return;
 			case UrncorePackage.CONCERN__URNDEFINITION:
 				setUrndefinition((URNdefinition)newValue);
 				return;
@@ -304,6 +360,9 @@ public class ConcernImpl extends URNmodelElementImpl implements Concern {
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case UrncorePackage.CONCERN__CORE_CONCERN:
+				setCoreConcern((COREConcern)null);
+				return;
 			case UrncorePackage.CONCERN__URNDEFINITION:
 				setUrndefinition((URNdefinition)null);
 				return;
@@ -327,6 +386,8 @@ public class ConcernImpl extends URNmodelElementImpl implements Concern {
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case UrncorePackage.CONCERN__CORE_CONCERN:
+				return coreConcern != null;
 			case UrncorePackage.CONCERN__URNDEFINITION:
 				return getUrndefinition() != null;
 			case UrncorePackage.CONCERN__SPEC_DIAGRAMS:
