@@ -1,5 +1,6 @@
 package seg.jUCMNav.model.commands.concerns;
 
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.gef.commands.Command;
 
 import seg.jUCMNav.model.ModelCreationFactory;
@@ -35,6 +36,7 @@ public class InternalCreateConcernCommand extends Command implements JUCMNavComm
         concern = (Concern) ModelCreationFactory.getNewObject(urn, Concern.class);
         concern.setName(name);
         concern.setDescription(description);
+        concern.getCoreConcern().setName(name);
         setLabel("InternalCreateConcern"); //$NON-NLS-1$
     }
 
@@ -70,6 +72,7 @@ public class InternalCreateConcernCommand extends Command implements JUCMNavComm
         testPreConditions();
         // add the concern to the model
         urn.getUrndef().getConcerns().add(concern);
+        urn.eResource().getContents().add(concern.getCoreConcern());
         testPostConditions();
     }
 
@@ -80,6 +83,7 @@ public class InternalCreateConcernCommand extends Command implements JUCMNavComm
         testPostConditions();
         // remove the concern from the model
         urn.getUrndef().getConcerns().remove(concern);
+        urn.eResource().getContents().remove(concern.getCoreConcern());
         testPreConditions();
     }
 

@@ -2,24 +2,21 @@ package seg.jUCMNav.model.commands.concerns;
 
 import org.eclipse.gef.commands.Command;
 
+import core.COREConcern;
 import seg.jUCMNav.Messages;
 import seg.jUCMNav.model.commands.JUCMNavCommand;
-import urncore.Concern;
 import urncore.IURNDiagram;
 
 /**
- * Command to assign a concern to a diagram or to remove a concern from a diagram
- * 
- * @author gunterm
+ * Command to remove a diagram from a core concern
  */
-public class AssignConcernDiagramCommand extends Command implements JUCMNavCommand {
+public class removeCoreConcernDiagramCommand extends Command implements JUCMNavCommand {
 
-    // the diagram to which to assign the concern
+    // the diagram to which to be removed from the concern
     private IURNDiagram diagram;
-    // the concern to assign (can be null in which case the existing concern is removed)
-    private Concern concern;
-    // undo information
-    private Concern oldConcern;
+    // the concern
+    private COREConcern coreConcern;
+
 
     /**
      * @param diagram
@@ -27,10 +24,10 @@ public class AssignConcernDiagramCommand extends Command implements JUCMNavComma
      * @param concern
      *            to assign (can be null in which case the existing concern is removed)
      */
-    public AssignConcernDiagramCommand(IURNDiagram diagram, Concern concern) {
+    public removeCoreConcernDiagramCommand(IURNDiagram diagram, COREConcern coreConcern) {
         this.diagram = diagram;
-        this.concern = concern;
-        setLabel(Messages.getString("AssignConcernDiagramCommand.AssignConcernDiagramCommand")); //$NON-NLS-1$
+        this.coreConcern = coreConcern;
+        setLabel(Messages.getString("RemoveCoreConcernDiagramCommand.RemoveCoreConcernDiagramCommand")); //$NON-NLS-1$
     }
 
     /**
@@ -46,8 +43,6 @@ public class AssignConcernDiagramCommand extends Command implements JUCMNavComma
      * @see org.eclipse.gef.commands.Command#execute()
      */
     public void execute() {
-        // remember for undo
-        oldConcern = diagram.getConcern();
         redo();
     }
 
@@ -56,11 +51,7 @@ public class AssignConcernDiagramCommand extends Command implements JUCMNavComma
      */
     public void redo() {
         testPreConditions();
-        // assign the concern
-        diagram.setConcern(concern);
-        if (concern != null && diagram != null) {
-        	concern.getCoreConcern().getModels().add(diagram);
-        }
+        coreConcern.getModels().remove(diagram);
         testPostConditions();
     }
 
@@ -69,11 +60,7 @@ public class AssignConcernDiagramCommand extends Command implements JUCMNavComma
      */
     public void undo() {
         testPostConditions();
-        // re-assign old concern to the diagram
-        diagram.setConcern(oldConcern);
-        if (concern != null && diagram != null) {
-        	concern.getCoreConcern().getModels().remove(diagram);
-        }
+        coreConcern.getModels().add(diagram);
         testPreConditions();
     }
 
@@ -82,7 +69,7 @@ public class AssignConcernDiagramCommand extends Command implements JUCMNavComma
      */
     public void testPostConditions() {
         assert testConditionNotNull() : "post diagram not null "; //$NON-NLS-1$
-        assert diagram.getConcern() == concern : "post concern was assigned"; //$NON-NLS-1$
+        assert !coreConcern.getModels().contains(diagram) : "diagram was removed"; //$NON-NLS-1$
     }
 
     /**
@@ -90,7 +77,7 @@ public class AssignConcernDiagramCommand extends Command implements JUCMNavComma
      */
     public void testPreConditions() {
         assert testConditionNotNull() : "pre diagram not null"; //$NON-NLS-1$
-        assert diagram.getConcern() == oldConcern : "pre concern is original"; //$NON-NLS-1$
+        assert coreConcern.getModels().contains(diagram) : "pre concern is original"; //$NON-NLS-1$
     }
 
     /**

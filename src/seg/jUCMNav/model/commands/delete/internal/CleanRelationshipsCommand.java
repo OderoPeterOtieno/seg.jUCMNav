@@ -14,6 +14,7 @@ import org.eclipse.gef.commands.CompoundCommand;
 
 import seg.jUCMNav.model.commands.changeConstraints.ContainerRefUnbindChildCommand;
 import seg.jUCMNav.model.commands.concerns.AssignConcernDiagramCommand;
+import seg.jUCMNav.model.commands.concerns.removeCoreConcernDiagramCommand;
 import seg.jUCMNav.model.commands.delete.DeleteBindingsCommand;
 import seg.jUCMNav.model.commands.delete.DeleteDemandCommand;
 import seg.jUCMNav.model.commands.delete.DeleteScenarioPathNodeCommand;
@@ -199,6 +200,7 @@ public class CleanRelationshipsCommand extends CompoundCommand {
         for (Iterator it = concern.getSpecDiagrams().iterator(); it.hasNext();) {
             IURNDiagram diagram = (IURNDiagram) it.next();
             add(new AssignConcernDiagramCommand(diagram, null));
+            add(new removeCoreConcernDiagramCommand(diagram, concern.getCoreConcern()));
         }
         // Delete URNLinks
         for (Iterator it = concern.getToLinks().iterator(); it.hasNext();) {

@@ -43,9 +43,12 @@ import java.util.Date;
 import java.util.Locale;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.gef.requests.CreationFactory;
 import org.eclipse.jface.resource.StringConverter;
 
+import core.COREConcern;
+import core.CoreFactory;
 import seg.jUCMNav.Messages;
 import seg.jUCMNav.figures.ColorManager;
 import seg.jUCMNav.model.util.StrategyEvaluationRangeHelper;
@@ -335,6 +338,7 @@ public class ModelCreationFactory implements CreationFactory {
         UcmFactory ucmfactory = UcmFactory.eINSTANCE;
         ScenarioFactory ucmscenariofactory = ScenarioFactory.eINSTANCE;
         UrncoreFactory urncorefactory = UrncoreFactory.eINSTANCE;
+        CoreFactory coreFactory = CoreFactory.eINSTANCE;
         PerformanceFactory performancefactory = PerformanceFactory.eINSTANCE;
         GrlFactory grlfactory = GrlFactory.eINSTANCE;
         UrnFactory urnmainfactory = UrnFactory.eINSTANCE;
@@ -721,7 +725,10 @@ public class ModelCreationFactory implements CreationFactory {
                     ((Belief) result).setDescription(""); //$NON-NLS-1$
                 } else if (targetClass.equals(Concern.class)) {
                     // create a concern
-                    result = urncorefactory.createConcern();
+                    Concern urnConcern = urncorefactory.createConcern();
+                    COREConcern coreConcern = coreFactory.createCOREConcern();
+                    urnConcern.setCoreConcern(coreConcern);
+                    result = urnConcern;
                     URNNamingHelper.setElementNameAndID(urn, result);
                 } else {
                     System.out.println("Unknown class passed to ModelCreationFactory"); //$NON-NLS-1$
