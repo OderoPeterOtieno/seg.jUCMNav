@@ -227,28 +227,6 @@ public class ModelCreationFactory implements CreationFactory {
     }
     
     /**
-     * @return the Metadata tag of feature model graph 
-     */
-    public static Metadata getFeatureModelGraphMetadata() {
-    	Metadata featureModelGraphMetadata;
-    	featureModelGraphMetadata = UrncoreFactory.eINSTANCE.createMetadata();
-    	featureModelGraphMetadata.setName("ModelType"); //$NON-NLS-1$
-    	featureModelGraphMetadata.setValue("FeatureModel"); //$NON-NLS-1$
-    	return featureModelGraphMetadata;
-    }
-    
-    /**
-     * @return the Metadata tag of feature model feature element 
-     */
-    public static Metadata getFeatureModelFeatureMetadata() {
-    	Metadata featureModelFeatureElementMetadata;
-    	featureModelFeatureElementMetadata = UrncoreFactory.eINSTANCE.createMetadata();
-    	featureModelFeatureElementMetadata.setName("FeatureModel"); //$NON-NLS-1$
-    	featureModelFeatureElementMetadata.setValue("Feature"); //$NON-NLS-1$
-    	return featureModelFeatureElementMetadata;
-    }
-    
-    /**
      * @return the Metadata tag of feature model decopositon link
      */
     public static Metadata getFeatureModelDecompositionLinkMetadata() {
@@ -827,9 +805,8 @@ public class ModelCreationFactory implements CreationFactory {
         
         // add a new FMD diagram to the FMDspec, if desired.
         if (createFmd) {
-            GRLGraph newFmdGraph = (GRLGraph) getNewObject(urnspec, FeatureModel.class);
+            GRLGraph newFmdGraph = (FeatureModel) getNewObject(urnspec, FeatureModel.class);
         	newFmdGraph.setName("featureModelGraph");
-        	newFmdGraph.getMetadata().add(getFeatureModelGraphMetadata());
         	urnspec.getUrndef().getSpecDiagrams().add(newFmdGraph);
         }
 

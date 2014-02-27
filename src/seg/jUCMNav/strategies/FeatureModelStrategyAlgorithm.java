@@ -6,6 +6,7 @@ import grl.Dependency;
 import grl.ElementLink;
 import grl.Evaluation;
 import grl.EvaluationStrategy;
+import grl.Feature;
 import grl.GRLLinkableElement;
 import grl.IntentionalElement;
 
@@ -130,7 +131,7 @@ public class FeatureModelStrategyAlgorithm extends FormulaBasedGRLStrategyAlgori
         int mandatoryLinksIndex = 0;
         boolean onlyOptionalLinks = true;
 
-        if(ModelCreationFactory.containsMetadata(element.getMetadata(), ModelCreationFactory.getFeatureModelFeatureMetadata()))
+        if(element instanceof Feature)
         {
             mandatoryLinksIndex = IntentionalElementUtil.getNumberOfMandatoryDestLinks(element);
         	onlyOptionalLinks = IntentionalElementUtil.containsOnlyOptionalDestLink(element);
@@ -166,7 +167,7 @@ public class FeatureModelStrategyAlgorithm extends FormulaBasedGRLStrategyAlgori
 
                 int quantitativeContrib = EvaluationStrategyManager.getInstance().getActiveQuantitativeContribution(contrib);
                 // if Feature Model Diagram
-                if(ModelCreationFactory.containsMetadata(element.getMetadata(), ModelCreationFactory.getFeatureModelFeatureMetadata()))
+                if(element instanceof Feature)
                 {
                 	if(onlyOptionalLinks)
                 		//The case that the element contains only optional links

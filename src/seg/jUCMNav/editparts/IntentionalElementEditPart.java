@@ -5,6 +5,7 @@ import grl.Decomposition;
 import grl.DecompositionType;
 import grl.ElementLink;
 import grl.Evaluation;
+import grl.Feature;
 import grl.GRLLinkableElement;
 import grl.GrlPackage;
 import grl.ImportanceType;
@@ -404,7 +405,7 @@ public class IntentionalElementEditPart extends GrlNodeEditPart implements NodeE
                             
                             // if FMD and self is 0, check if need to set gray
                             if (evalType == IGRLStrategyAlgorithm.EVAL_FEATURE_MODEL){
-                                if (ModelCreationFactory.containsMetadata(elem.getMetadata(), ModelCreationFactory.getFeatureModelFeatureMetadata())) { 
+                                if (elem instanceof Feature) { 
                                     if (IntentionalElementUtil.hasNumericalValue(elem, 0)) {
                                         // set to gray if all contributions are optional
                                         if (IntentionalElementUtil.containsOnlyOptionalSrcLink(elem)) color = "169,169,169";
@@ -426,7 +427,7 @@ public class IntentionalElementEditPart extends GrlNodeEditPart implements NodeE
                                 // This initial evaluation potentially overrides computed ones
                                 // Highlight in a different color, dark red.
                             	// there is an exception case which is in FMD, when self num value is 100, and all children links are optional
-                            	boolean isException = (evalType == IGRLStrategyAlgorithm.EVAL_FEATURE_MODEL) && (ModelCreationFactory.containsMetadata(elem.getMetadata(), ModelCreationFactory.getFeatureModelFeatureMetadata())) && IntentionalElementUtil.containsOnlyOptionalDestLink(elem) && IntentionalElementUtil.hasNumericalValue(elem, 100);
+                            	boolean isException = (evalType == IGRLStrategyAlgorithm.EVAL_FEATURE_MODEL) && (elem instanceof Feature) && IntentionalElementUtil.containsOnlyOptionalDestLink(elem) && IntentionalElementUtil.hasNumericalValue(elem, 100);
                             	if (!isException) {
                                 	lineColor = "160,0,0"; //$NON-NLS-1$
                                 }
@@ -446,7 +447,7 @@ public class IntentionalElementEditPart extends GrlNodeEditPart implements NodeE
                             ((IntentionalElementFigure) figure).setLineStyle(SWT.LINE_DOT);
                             evaluationLabel.setForegroundColor(ColorManager.GRAY);
                         } else if (evalType == IGRLStrategyAlgorithm.EVAL_FEATURE_MODEL) {
-                            if (ModelCreationFactory.containsMetadata(elem.getMetadata(), ModelCreationFactory.getFeatureModelFeatureMetadata())) { 
+                            if (elem instanceof Feature) { 
                                 // else for FMD, if 100
                                 if (IntentionalElementUtil.hasNumericalValue(elem, 100)) {
                                     if (IntentionalElementUtil.hasFullXorBrother(elem)) {

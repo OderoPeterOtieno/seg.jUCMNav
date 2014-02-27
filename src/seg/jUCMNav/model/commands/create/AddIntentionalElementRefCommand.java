@@ -3,6 +3,8 @@
  */
 package seg.jUCMNav.model.commands.create;
 
+import grl.Feature;
+import grl.FeatureModel;
 import grl.GRLGraph;
 import grl.IntentionalElement;
 import grl.IntentionalElementRef;
@@ -52,12 +54,6 @@ public class AddIntentionalElementRefCommand extends Command implements JUCMNavC
 
         existingDef = elementRef.getDef();
         bDefAlreadyExists = graph.getUrndefinition().getUrnspec().getGrlspec().getIntElements().contains(existingDef);
-        boolean isFeatureModel = ModelCreationFactory.containsMetadata(graph.getMetadata(),
-        		ModelCreationFactory.getFeatureModelGraphMetadata());
-    	if (isFeatureModel &&  //add metadata if element is a feature in feature model diagram
-    			(! ModelCreationFactory.containsMetadata(existingDef.getMetadata(),ModelCreationFactory.getFeatureModelFeatureMetadata()))) {
-    		existingDef.getMetadata().add(ModelCreationFactory.getFeatureModelFeatureMetadata());
-    	}
         redo();
     }
 
