@@ -45,6 +45,7 @@ import seg.jUCMNav.editparts.URNRootEditPart;
 import seg.jUCMNav.editparts.kpiTreeEditparts.KPIRootEditPart;
 import seg.jUCMNav.editparts.kpiViewEditparts.AbstractKPIViewEditPart;
 import seg.jUCMNav.extensionpoints.IGRLStrategyAlgorithm;
+import seg.jUCMNav.featureModel.util.DetermineSelectableFeatureCommand;
 import seg.jUCMNav.model.ModelCreationFactory;
 import seg.jUCMNav.model.commands.create.AddEvaluationCommand;
 import seg.jUCMNav.model.commands.create.AddKPIInformationConfigCommand;

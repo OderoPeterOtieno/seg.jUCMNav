@@ -843,7 +843,7 @@ public class ScenarioUtils {
     }
 
     /**
-     * Traverse the active secenario.
+     * Traverse the active scenario.
      * 
      * @param scenario
      *            the {@link ScenarioDef}, {@link ScenarioGroup}, or {@link UCMspec}
