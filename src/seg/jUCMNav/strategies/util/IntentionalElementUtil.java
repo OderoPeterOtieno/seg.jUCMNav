@@ -13,6 +13,12 @@ import seg.jUCMNav.model.util.MetadataHelper;
 import seg.jUCMNav.strategies.EvaluationStrategyManager;
 import urncore.Metadata;
 
+/**
+ * This class is used when we need to find out more about an IntentionalElement, especially the parent and children links
+ * it is mainly used as conditions for evaluation and coloring strategy
+ * @author Yanji Liu
+ *
+ */
 public class IntentionalElementUtil {
     /**
      * Returns true if the element only contains optional destination links, returns false otherwise
@@ -54,6 +60,41 @@ public class IntentionalElementUtil {
             if (link instanceof Contribution) {
                 if (!ModelCreationFactory.containsMetadata(link.getMetadata(), ModelCreationFactory.getFeatureModelOptionalLinkMetadata())) {
                     return false;
+                }
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    /**
+     * Returns true if the element contains only optional src links or OR links, returns false otherwise
+     * Note: when no src link, return false
+     * @param elem
+     * @return
+     */
+    public static boolean containsOnlyOptionalOrORSrcLink(IntentionalElement elem){
+        Iterator it = elem.getLinksSrc().iterator();
+        // if no parent link, return false
+        if (!it.hasNext()) {
+            return false;
+        }
+        while (it.hasNext()) {
+            ElementLink link = (ElementLink) it.next();
+            if (link instanceof Contribution) {
+            	// if contribution link but not optional
+                if (!ModelCreationFactory.containsMetadata(link.getMetadata(), ModelCreationFactory.getFeatureModelOptionalLinkMetadata())) {
+                	return false;
+                }
+            } else if (link instanceof Decomposition) {
+                // for each source
+                IntentionalElement srcElem = (IntentionalElement)link.getDest();
+                // if decomposition type is XOR
+                if (srcElem != null) {
+                    if (srcElem.getDecompositionType() != DecompositionType.OR_LITERAL && srcElem.getDecompositionType() != DecompositionType.XOR_LITERAL) {
+                        return false;
+                    }
                 }
             } else {
                 return false;

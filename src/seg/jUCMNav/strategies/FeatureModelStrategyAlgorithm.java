@@ -16,6 +16,7 @@ import java.util.List;
 
 import seg.jUCMNav.Messages;
 import seg.jUCMNav.extensionpoints.IGRLStrategyAlgorithm;
+import seg.jUCMNav.featureModel.util.DetermineSelectableFeatureCommand;
 import seg.jUCMNav.model.ModelCreationFactory;
 import seg.jUCMNav.model.util.MetadataHelper;
 import seg.jUCMNav.strategies.util.IntentionalElementUtil;
@@ -49,7 +50,7 @@ public class FeatureModelStrategyAlgorithm extends FormulaBasedGRLStrategyAlgori
                 acceptStereotypes.put(acceptStereotype.getValue().toUpperCase(), acceptStereotype.getValue());
             }
         }
-
+        
         super.init(strategy, evaluations);
     }
 
