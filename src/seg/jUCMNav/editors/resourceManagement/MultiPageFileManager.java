@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.Locale;
 
 import org.eclipse.core.resources.IFile;
@@ -17,6 +18,7 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.SubProgressMonitor;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.jface.dialogs.ErrorDialog;
 import org.eclipse.jface.dialogs.MessageDialog;
@@ -28,11 +30,13 @@ import org.eclipse.ui.dialogs.SaveAsDialog;
 import org.eclipse.ui.part.FileEditorInput;
 import org.xml.sax.SAXParseException;
 
+import core.COREConcern;
 import seg.jUCMNav.JUCMNavPlugin;
 import seg.jUCMNav.Messages;
 import seg.jUCMNav.editors.UCMNavMultiPageEditor;
 import seg.jUCMNav.model.ModelCreationFactory;
 import urn.URNspec;
+import urncore.Concern;
 
 /**
  * Originally included in the UCMNavMultiPageEditor, this code was factored out.
@@ -249,9 +253,25 @@ public class MultiPageFileManager {
             IStatus status = new Status(IStatus.ERROR, JUCMNavPlugin.PLUGIN_ID, 0, Messages.getString("MultiPageFileManager.noModelManagerFound"), null); //$NON-NLS-1$
             throw new CoreException(status);
         }
+        
+        URNspec urnSpec = modelManager.getModel();
+        EList<Concern> concernList = urnSpec.getUrndef().getConcerns();
+        Iterator<Concern> concernIt = concernList.iterator();
+        IPath coreConcernPath = file.getFullPath();
+        coreConcernPath.removeFileExtension();
+        coreConcernPath.addFileExtension(Messages.getString("CoreModelManager.CoreExtention"));
 
         // save URNspec to file
         try {
+            while (concernIt.hasNext()) {
+            	COREConcern coreConcern = concernIt.next().getCoreConcern();
+            	if (coreConcern != null) {
+            		CoreModelManager coreModelManager = new CoreModelManager();
+            		coreModelManager.createCOREConcern(coreConcernPath, coreConcern);
+            		coreModelManager.save(coreConcernPath);
+            		System.out.println("save here");
+            	}
+            }
             modelManager.save(file.getFullPath());
             progressMonitor.worked(1);
             file.refreshLocal(IResource.DEPTH_ZERO, new SubProgressMonitor(progressMonitor, 1));

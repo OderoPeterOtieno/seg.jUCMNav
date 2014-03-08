@@ -704,7 +704,7 @@ public class ModelCreationFactory implements CreationFactory {
                 } else if (targetClass.equals(Concern.class)) {
                     // create a concern
                     Concern urnConcern = urncorefactory.createConcern();
-                    COREConcern coreConcern = coreFactory.createCOREConcern();
+                    COREConcern coreConcern = getNewCoreConcern();
                     urnConcern.setCoreConcern(coreConcern);
                     result = urnConcern;
                     URNNamingHelper.setElementNameAndID(urn, result);
@@ -733,6 +733,14 @@ public class ModelCreationFactory implements CreationFactory {
 
         return result;
 
+    }
+    
+    /**
+     * Create a new COREConcern object
+     * @return a new COREConcern
+     */
+    public static COREConcern getNewCoreConcern() {
+    	return CoreFactory.eINSTANCE.createCOREConcern();
     }
 
     /**
