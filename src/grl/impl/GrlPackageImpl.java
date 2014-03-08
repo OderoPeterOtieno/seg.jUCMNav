@@ -1413,6 +1413,15 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFeature_Selectable() {
+		return (EAttribute)featureEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getCriticality() {
 		return criticalityEEnum;
 	}
@@ -1636,6 +1645,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		featureModelEClass = createEClass(FEATURE_MODEL);
 
 		featureEClass = createEClass(FEATURE);
+		createEAttribute(featureEClass, FEATURE__SELECTABLE);
 
 		// Create enums
 		criticalityEEnum = createEEnum(CRITICALITY);
@@ -1851,6 +1861,7 @@ public class GrlPackageImpl extends EPackageImpl implements GrlPackage {
 		initEClass(featureModelEClass, FeatureModel.class, "FeatureModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(featureEClass, Feature.class, "Feature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFeature_Selectable(), ecorePackage.getEBoolean(), "selectable", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(criticalityEEnum, Criticality.class, "Criticality");

@@ -3434,13 +3434,22 @@ public interface GrlPackage extends EPackage {
 	int FEATURE__CONFIGURATIONS = INTENTIONAL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Selectable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE__SELECTABLE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Feature</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_FEATURE_COUNT = INTENTIONAL_ELEMENT_FEATURE_COUNT + 3;
+	int FEATURE_FEATURE_COUNT = INTENTIONAL_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link grl.Criticality <em>Criticality</em>}' enum.
@@ -4708,6 +4717,17 @@ public interface GrlPackage extends EPackage {
 	EClass getFeature();
 
 	/**
+	 * Returns the meta object for the attribute '{@link grl.Feature#isSelectable <em>Selectable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Selectable</em>'.
+	 * @see grl.Feature#isSelectable()
+	 * @see #getFeature()
+	 * @generated
+	 */
+	EAttribute getFeature_Selectable();
+
+	/**
 	 * Returns the meta object for enum '{@link grl.Criticality <em>Criticality</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5740,6 +5760,14 @@ public interface GrlPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FEATURE = eINSTANCE.getFeature();
+
+		/**
+		 * The meta object literal for the '<em><b>Selectable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FEATURE__SELECTABLE = eINSTANCE.getFeature_Selectable();
 
 		/**
 		 * The meta object literal for the '{@link grl.Criticality <em>Criticality</em>}' enum.

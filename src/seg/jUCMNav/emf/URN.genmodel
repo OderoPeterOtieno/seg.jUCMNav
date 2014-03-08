@@ -353,7 +353,9 @@
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference grl.ecore#//ContributionRange/change"/>
     </genClasses>
     <genClasses ecoreClass="grl.ecore#//FeatureModel"/>
-    <genClasses ecoreClass="grl.ecore#//Feature"/>
+    <genClasses ecoreClass="grl.ecore#//Feature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute grl.ecore#//Feature/selectable"/>
+    </genClasses>
     <nestedGenPackages prefix="Kpimodel" basePackage="grl" disposableProviderFactory="true"
         ecorePackage="grl.ecore#//kpimodel">
       <genClasses ecoreClass="grl.ecore#//kpimodel/IndicatorGroup">

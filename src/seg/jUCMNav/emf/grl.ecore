@@ -255,7 +255,9 @@
         eType="#//ContributionChange" transient="true" eOpposite="#//ContributionChange/contribRange"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FeatureModel" eSuperTypes="#//GRLGraph CORE.ecore#//COREFeatureModel"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Feature" eSuperTypes="#//IntentionalElement CORE.ecore#//COREFeature"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Feature" eSuperTypes="#//IntentionalElement CORE.ecore#//COREFeature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="selectable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
   <eSubpackages name="kpimodel" nsURI="http:///grl/kpimodel.ecore" nsPrefix="grl.kpimodel">
     <eClassifiers xsi:type="ecore:EClass" name="IndicatorGroup" eSuperTypes="urncore.ecore#//GRLmodelElement">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

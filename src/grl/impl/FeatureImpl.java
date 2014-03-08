@@ -15,6 +15,7 @@ import grl.GrlPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -22,6 +23,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -36,6 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link grl.impl.FeatureImpl#getRealizedBy <em>Realized By</em>}</li>
  *   <li>{@link grl.impl.FeatureImpl#getStrategies <em>Strategies</em>}</li>
  *   <li>{@link grl.impl.FeatureImpl#getConfigurations <em>Configurations</em>}</li>
+ *   <li>{@link grl.impl.FeatureImpl#isSelectable <em>Selectable</em>}</li>
  * </ul>
  * </p>
  *
@@ -71,6 +74,26 @@ public class FeatureImpl extends IntentionalElementImpl implements Feature {
 	 * @ordered
 	 */
 	protected EList configurations;
+
+	/**
+	 * The default value of the '{@link #isSelectable() <em>Selectable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSelectable()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean SELECTABLE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isSelectable() <em>Selectable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSelectable()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean selectable = SELECTABLE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,6 +154,27 @@ public class FeatureImpl extends IntentionalElementImpl implements Feature {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isSelectable() {
+		return selectable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSelectable(boolean newSelectable) {
+		boolean oldSelectable = selectable;
+		selectable = newSelectable;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GrlPackage.FEATURE__SELECTABLE, oldSelectable, selectable));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case GrlPackage.FEATURE__REALIZED_BY:
@@ -169,6 +213,8 @@ public class FeatureImpl extends IntentionalElementImpl implements Feature {
 				return getStrategies();
 			case GrlPackage.FEATURE__CONFIGURATIONS:
 				return getConfigurations();
+			case GrlPackage.FEATURE__SELECTABLE:
+				return isSelectable() ? Boolean.TRUE : Boolean.FALSE;
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -192,6 +238,9 @@ public class FeatureImpl extends IntentionalElementImpl implements Feature {
 				getConfigurations().clear();
 				getConfigurations().addAll((Collection)newValue);
 				return;
+			case GrlPackage.FEATURE__SELECTABLE:
+				setSelectable(((Boolean)newValue).booleanValue());
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -212,6 +261,9 @@ public class FeatureImpl extends IntentionalElementImpl implements Feature {
 			case GrlPackage.FEATURE__CONFIGURATIONS:
 				getConfigurations().clear();
 				return;
+			case GrlPackage.FEATURE__SELECTABLE:
+				setSelectable(SELECTABLE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -229,6 +281,8 @@ public class FeatureImpl extends IntentionalElementImpl implements Feature {
 				return strategies != null && !strategies.isEmpty();
 			case GrlPackage.FEATURE__CONFIGURATIONS:
 				return configurations != null && !configurations.isEmpty();
+			case GrlPackage.FEATURE__SELECTABLE:
+				return selectable != SELECTABLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -285,6 +339,21 @@ public class FeatureImpl extends IntentionalElementImpl implements Feature {
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (selectable: ");
+		result.append(selectable);
+		result.append(')');
+		return result.toString();
 	}
 
 } //FeatureImpl
