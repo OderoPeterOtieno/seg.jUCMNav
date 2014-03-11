@@ -1,10 +1,14 @@
 package seg.jUCMNav.editors.resourceManagement;
 
+import grl.Feature;
+
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Locale;
 
 import org.eclipse.core.resources.IFile;
@@ -31,9 +35,12 @@ import org.eclipse.ui.part.FileEditorInput;
 import org.xml.sax.SAXParseException;
 
 import core.COREConcern;
+import core.COREInterface;
+import core.CoreFactory;
 import seg.jUCMNav.JUCMNavPlugin;
 import seg.jUCMNav.Messages;
 import seg.jUCMNav.editors.UCMNavMultiPageEditor;
+import seg.jUCMNav.featureModel.util.DetermineSelectableFeatureCommand;
 import seg.jUCMNav.model.ModelCreationFactory;
 import urn.URNspec;
 import urncore.Concern;
@@ -242,7 +249,8 @@ public class MultiPageFileManager {
      *            is the object used to show the progress of the save.
      * @throws CoreException
      */
-    private void save(IFile file, IProgressMonitor progressMonitor) throws CoreException {
+    @SuppressWarnings("unchecked")
+	private void save(IFile file, IProgressMonitor progressMonitor) throws CoreException {
 
         if (null == progressMonitor)
             progressMonitor = new NullProgressMonitor();
@@ -257,19 +265,31 @@ public class MultiPageFileManager {
         URNspec urnSpec = modelManager.getModel();
         EList<Concern> concernList = urnSpec.getUrndef().getConcerns();
         Iterator<Concern> concernIt = concernList.iterator();
-        IPath coreConcernPath = file.getFullPath();
-        coreConcernPath.removeFileExtension();
-        coreConcernPath.addFileExtension(Messages.getString("CoreModelManager.CoreExtention"));
+        String coreConcernPath = file.getFullPath().removeFileExtension().toString();
+        coreConcernPath = coreConcernPath + "." + Messages.getString("CoreModelManager.CoreExtention");
 
         // save URNspec to file
         try {
             while (concernIt.hasNext()) {
             	COREConcern coreConcern = concernIt.next().getCoreConcern();
             	if (coreConcern != null) {
+            		List<Feature> selectableFeatures = 
+            				DetermineSelectableFeatureCommand.determineSelectableForAllFeatures(urnSpec); 
+            		Iterator<Feature> it = selectableFeatures.iterator();
+            		COREInterface coreInterface = coreConcern.getInterface();
+            		if (coreInterface == null) {
+            			coreInterface = CoreFactory.eINSTANCE.createCOREInterface();
+            			coreConcern.setInterface(coreInterface);
+            		}
+            		while (it.hasNext()) {
+            			Feature feature = (Feature) it.next();
+            			coreInterface.getSelectable().add(feature);
+            		}
             		CoreModelManager coreModelManager = new CoreModelManager();
-            		coreModelManager.createCOREConcern(coreConcernPath, coreConcern);
-            		coreModelManager.save(coreConcernPath);
-            		System.out.println("save here");
+            		File coreFire = new File(coreConcernPath);
+            		coreModelManager.createCOREConcern(coreFire, coreConcern);
+            		coreModelManager.save(coreFire);
+            		//System.out.println("Core file is saved here:" +  coreConcernPath);
             	}
             }
             modelManager.save(file.getFullPath());
