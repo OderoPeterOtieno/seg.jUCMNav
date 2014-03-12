@@ -281,6 +281,7 @@ public class MultiPageFileManager {
             			coreInterface = CoreFactory.eINSTANCE.createCOREInterface();
             			coreConcern.setInterface(coreInterface);
             		}
+            		coreInterface.getSelectable().clear();
             		while (it.hasNext()) {
             			Feature feature = (Feature) it.next();
             			coreInterface.getSelectable().add(feature);
