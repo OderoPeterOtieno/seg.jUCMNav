@@ -265,9 +265,8 @@ public class MultiPageFileManager {
         URNspec urnSpec = modelManager.getModel();
         EList<Concern> concernList = urnSpec.getUrndef().getConcerns();
         Iterator<Concern> concernIt = concernList.iterator();
-        String coreConcernPath = file.getFullPath().removeFileExtension().toString();
+        String coreConcernPath = file.getFullPath().makeRelative().removeFileExtension().toString();
         coreConcernPath = coreConcernPath + "." + Messages.getString("CoreModelManager.CoreExtention");
-
         // save URNspec to file
         try {
             while (concernIt.hasNext()) {
@@ -286,11 +285,11 @@ public class MultiPageFileManager {
             			Feature feature = (Feature) it.next();
             			coreInterface.getSelectable().add(feature);
             		}
+            		//System.out.println("Core file is saved here:" +  coreConcernPath);
             		CoreModelManager coreModelManager = new CoreModelManager();
             		File coreFire = new File(coreConcernPath);
             		coreModelManager.createCOREConcern(coreFire, coreConcern);
             		coreModelManager.save(coreFire);
-            		//System.out.println("Core file is saved here:" +  coreConcernPath);
             	}
             }
             modelManager.save(file.getFullPath());
