@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <core:COREConcern xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://cs.mcgill.ca/sel/core/1.0" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore">
-  <models xsi:type="ucm.map:UCMmap" href="platform:/resource/modelExamples/selectableFeatures.jucm#3"/>
-  <models xsi:type="grl:FeatureModel" href="platform:/resource/modelExamples/selectableFeatures.jucm#4"/>
+  <models xsi:type="ucm.map:UCMmap" href="selectableFeatures.jucm#3"/>
+  <models xsi:type="grl:FeatureModel" href="selectableFeatures.jucm#4"/>
   <interface>
-    <selectable xsi:type="grl:Feature" href="platform:/resource/modelExamples/selectableFeatures.jucm#21"/>
-    <selectable xsi:type="grl:Feature" href="platform:/resource/modelExamples/selectableFeatures.jucm#23"/>
-    <selectable xsi:type="grl:Feature" href="platform:/resource/modelExamples/selectableFeatures.jucm#25"/>
-    <selectable xsi:type="grl:Feature" href="platform:/resource/modelExamples/selectableFeatures.jucm#27"/>
-    <selectable xsi:type="grl:Feature" href="platform:/resource/modelExamples/selectableFeatures.jucm#29"/>
+    <selectable xsi:type="grl:Feature" href="selectableFeatures.jucm#21"/>
+    <selectable xsi:type="grl:Feature" href="selectableFeatures.jucm#23"/>
+    <selectable xsi:type="grl:Feature" href="selectableFeatures.jucm#25"/>
+    <selectable xsi:type="grl:Feature" href="selectableFeatures.jucm#27"/>
+    <selectable xsi:type="grl:Feature" href="selectableFeatures.jucm#29"/>
   </interface>
 </core:COREConcern>

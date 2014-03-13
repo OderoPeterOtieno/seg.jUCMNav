@@ -14,12 +14,14 @@ import java.util.Locale;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspace;
+import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.SubProgressMonitor;
 import org.eclipse.emf.common.util.EList;
@@ -265,9 +267,9 @@ public class MultiPageFileManager {
         URNspec urnSpec = modelManager.getModel();
         EList<Concern> concernList = urnSpec.getUrndef().getConcerns();
         Iterator<Concern> concernIt = concernList.iterator();
-        String coreConcernPath = file.getFullPath().makeRelative().removeFileExtension().toString();
-        coreConcernPath = coreConcernPath + "." + Messages.getString("CoreModelManager.CoreExtention");
-        // save URNspec to file
+        String coreConcernPathString = file.getFullPath().removeFileExtension().toString();
+        coreConcernPathString = coreConcernPathString + "." + Messages.getString("CoreModelManager.CoreExtention");
+        IPath coreConcernPath = new Path(coreConcernPathString);
         try {
             while (concernIt.hasNext()) {
             	COREConcern coreConcern = concernIt.next().getCoreConcern();
@@ -285,11 +287,10 @@ public class MultiPageFileManager {
             			Feature feature = (Feature) it.next();
             			coreInterface.getSelectable().add(feature);
             		}
-            		//System.out.println("Core file is saved here:" +  coreConcernPath);
             		CoreModelManager coreModelManager = new CoreModelManager();
-            		File coreFire = new File(coreConcernPath);
-            		coreModelManager.createCOREConcern(coreFire, coreConcern);
-            		coreModelManager.save(coreFire);
+            		//System.out.println("Core file is saved here:" +  coreConcernPath);
+            		coreModelManager.createCOREConcern(coreConcernPath, coreConcern);
+            		coreModelManager.save(coreConcernPath);
             	}
             }
             modelManager.save(file.getFullPath());
