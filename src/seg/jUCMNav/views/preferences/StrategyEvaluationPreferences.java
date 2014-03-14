@@ -18,6 +18,7 @@ public class StrategyEvaluationPreferences {
     public final static int DEFAULT_TOLERANCE = 10;
     public final static boolean DEFAULT_EVALFILLED = true;
     public final static boolean DEFAULT_VISUALIZEASPOSITIVERANGE = false;
+    public final static boolean DEFAULT_AUTOSELECTMANDATORYFEATURES = false;
 
     public final static int QUANTITATIVE_ALGORITHM = 0;
     public final static int QUALITATIVE_ALGORITHM = 1;
@@ -35,6 +36,7 @@ public class StrategyEvaluationPreferences {
     public static final String PREF_TOLERANCE = "PREF_TOLERANCE"; //$NON-NLS-1$
     public static final String PREF_EVALFILLED = "PREF_EVALFILLED"; //$NON-NLS-1$
     public static final String PREF_VISUALIZEASPOSITIVERANGE = "PREF_VISUALIZEASPOSITIVERANGE"; //$NON-NLS-1$
+    public static final String PREF_AUTOSELECTMANDATORYFEATURES = "PREF_AUTOSELECTMANDATORYFEATURES"; //$NON-NLS-1$
     
 	
 	
@@ -55,6 +57,7 @@ public class StrategyEvaluationPreferences {
         getPreferenceStore().setDefault(StrategyEvaluationPreferences.PREF_TOLERANCE, StrategyEvaluationPreferences.DEFAULT_TOLERANCE);
         getPreferenceStore().setDefault(StrategyEvaluationPreferences.PREF_EVALFILLED, StrategyEvaluationPreferences.DEFAULT_EVALFILLED);
         getPreferenceStore().setDefault(StrategyEvaluationPreferences.PREF_VISUALIZEASPOSITIVERANGE, StrategyEvaluationPreferences.DEFAULT_VISUALIZEASPOSITIVERANGE);
+        getPreferenceStore().setDefault(StrategyEvaluationPreferences.PREF_AUTOSELECTMANDATORYFEATURES, StrategyEvaluationPreferences.DEFAULT_AUTOSELECTMANDATORYFEATURES);
     }
 
     /**

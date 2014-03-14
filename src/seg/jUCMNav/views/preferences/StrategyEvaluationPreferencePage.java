@@ -2,9 +2,11 @@ package seg.jUCMNav.views.preferences;
 
 import org.eclipse.jface.preference.BooleanFieldEditor;
 import org.eclipse.jface.preference.ComboFieldEditor;
+import org.eclipse.jface.preference.FieldEditor;
 import org.eclipse.jface.preference.FieldEditorPreferencePage;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.IntegerFieldEditor;
+import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
@@ -18,6 +20,8 @@ import seg.jUCMNav.Messages;
  * 
  */
 public class StrategyEvaluationPreferencePage extends FieldEditorPreferencePage implements IWorkbenchPreferencePage {
+	
+	private BooleanFieldEditor auto_select_mandatory_features;
 
     public StrategyEvaluationPreferencePage() {
         super(FieldEditorPreferencePage.GRID);
@@ -62,14 +66,46 @@ public class StrategyEvaluationPreferencePage extends FieldEditorPreferencePage 
         BooleanFieldEditor eval_filled = new BooleanFieldEditor(StrategyEvaluationPreferences.PREF_EVALFILLED, Messages
                 .getString("GeneralPreferencePage.GrlStrategiesElementFilled"), getFieldEditorParent()); //$NON-NLS-1$
         addField(eval_filled);
-        
+
         BooleanFieldEditor visualize_as_positive = new BooleanFieldEditor(StrategyEvaluationPreferences.PREF_VISUALIZEASPOSITIVERANGE, Messages.getString("StrategyEvaluationPreferencePage.VisualizeAsZeroToHundred"), getFieldEditorParent());  //$NON-NLS-1$
         addField(visualize_as_positive);
+        
+        auto_select_mandatory_features = new BooleanFieldEditor(StrategyEvaluationPreferences.PREF_AUTOSELECTMANDATORYFEATURES, 
+        		Messages.getString("StrategyEvaluationPreferencePage.AutoSelectMandatoryFeatures"), getFieldEditorParent()); //$NON-NLS-1$
+        addField(auto_select_mandatory_features);
+        
+    	String algoChoice = StrategyEvaluationPreferences.getAlgorithm();
+		if (algoChoice.equals(Integer.toString(StrategyEvaluationPreferences.FEATURE_MODEL_ALGORITHM))) {
+			auto_select_mandatory_features.setEnabled(true, getFieldEditorParent());
+		} else {
+			auto_select_mandatory_features.setEnabled(false, getFieldEditorParent());
+		}
 
     }
 
     public void init(IWorkbench workbench) {
 
+    }
+    
+    /**
+     * overwrite parent method
+     * The field editor preference page implementation of this <code>IPreferencePage</code>
+     * (and <code>IPropertyChangeListener</code>) method intercepts <code>IS_VALID</code> 
+     * events but passes other events on to its superclass.
+     */
+    public void propertyChange(PropertyChangeEvent event) {
+    	super.propertyChange(event);
+    	if (event.getSource() instanceof FieldEditor) {
+    		FieldEditor fieldEditor = (FieldEditor) event.getSource();
+    		//user change strategy event
+    		if (fieldEditor.getPreferenceName().equals(StrategyEvaluationPreferences.PREF_ALGORITHM)) {
+    			if (event.getNewValue().equals(Integer.toString(StrategyEvaluationPreferences.FEATURE_MODEL_ALGORITHM))) {
+    				auto_select_mandatory_features.setEnabled(true, getFieldEditorParent());
+    			} else {
+    				auto_select_mandatory_features.setEnabled(false, getFieldEditorParent());
+    			}
+    		}
+    	}
     }
 
 }
