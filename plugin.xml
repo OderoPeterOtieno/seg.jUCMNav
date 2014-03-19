@@ -116,6 +116,16 @@
                menubarPath="seg.jUCMnav/ext"
                style="push"
                tooltip="%AddGrlDiagram"/>
+         <action
+               actionID="seg.jUCMNav.actions.AddFMDAction"
+               class="seg.jUCMNav.actions.UCMActionDelegate"
+               icon="icons/fmd16.gif"
+               id="seg.jUCMNav.AddFMD"
+               label="%AddFMD"
+               menubarPath="seg.jUCMnav/ext"
+               style="push"
+               tooltip="%AddFMD">
+         </action>
    <action
          actionID="seg.jUCMNav.actions.GeneralPreferencesActionDelegate"
          class="seg.jUCMNav.actions.GeneralPreferencesActionDelegate"

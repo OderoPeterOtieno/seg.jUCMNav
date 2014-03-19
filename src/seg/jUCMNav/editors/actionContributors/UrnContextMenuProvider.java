@@ -21,6 +21,7 @@ import seg.jUCMNav.actions.AddConditionLabelAction;
 import seg.jUCMNav.actions.AddContainerRefAction;
 import seg.jUCMNav.actions.AddDirectionArrow;
 import seg.jUCMNav.actions.AddEmptyPoint;
+import seg.jUCMNav.actions.AddFMDAction;
 import seg.jUCMNav.actions.AddFailurePointAction;
 import seg.jUCMNav.actions.AddGrlGraphAction;
 import seg.jUCMNav.actions.AddLabelAction;
@@ -396,6 +397,10 @@ public class UrnContextMenuProvider extends ContextMenuProvider {
             manager.appendToGroup(GEFActionConstants.GROUP_REST, action);
 
         action = getActionRegistry().getAction(AddGrlGraphAction.ADDGRLGRAPH);
+        if (action.isEnabled())
+            manager.appendToGroup(GEFActionConstants.GROUP_REST, action);
+        
+        action = getActionRegistry().getAction(AddFMDAction.ADDFMD);
         if (action.isEnabled())
             manager.appendToGroup(GEFActionConstants.GROUP_REST, action);
 

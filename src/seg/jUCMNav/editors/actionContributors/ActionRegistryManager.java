@@ -37,6 +37,7 @@ import seg.jUCMNav.actions.AddConditionLabelAction;
 import seg.jUCMNav.actions.AddContainerRefAction;
 import seg.jUCMNav.actions.AddDirectionArrow;
 import seg.jUCMNav.actions.AddEmptyPoint;
+import seg.jUCMNav.actions.AddFMDAction;
 import seg.jUCMNav.actions.AddFailurePointAction;
 import seg.jUCMNav.actions.AddGrlGraphAction;
 import seg.jUCMNav.actions.AddLabelAction;
@@ -571,6 +572,10 @@ public class ActionRegistryManager implements IDisposable {
 
         action = new AddGrlGraphAction(editor);
         action.setText(Messages.getString("ActionRegistryManager.addGRLGraph")); //$NON-NLS-1$
+        addEditPartAction((SelectionAction) action);
+        
+        action = new AddFMDAction(editor);
+        action.setText(Messages.getString("ActionRegistryManager.addFMD")); //$NON-NLS-1$
         addEditPartAction((SelectionAction) action);
 
         action = new AddStrategiesGroupAction(editor);
