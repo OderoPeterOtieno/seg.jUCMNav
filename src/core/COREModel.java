@@ -51,7 +51,7 @@ public interface COREModel extends CORENamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Model Elements</em>' reference list.
 	 * @see core.CorePackage#getCOREModel_ModelElements()
-	 * @model type="core.COREModelElement" derived="true"
+	 * @model type="core.COREModelElement" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
 	EList getModelElements();

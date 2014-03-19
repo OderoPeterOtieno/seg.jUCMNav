@@ -840,17 +840,8 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
      * <!-- end-user-doc -->
 	 * @generated
 	 */
-    public EAttribute getURNmodelElement_Name() {
-		return (EAttribute)urNmodelElementEClass.getEStructuralFeatures().get(3);
-	}
-
-    /**
-	 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-	 * @generated
-	 */
     public EAttribute getURNmodelElement_Description() {
-		return (EAttribute)urNmodelElementEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)urNmodelElementEClass.getEStructuralFeatures().get(3);
 	}
 
     /**
@@ -859,7 +850,7 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
 	 * @generated
 	 */
 	public EReference getURNmodelElement_Metadata() {
-		return (EReference)urNmodelElementEClass.getEStructuralFeatures().get(5);
+		return (EReference)urNmodelElementEClass.getEStructuralFeatures().get(4);
 	}
 
     /**
@@ -868,7 +859,7 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
 	 * @generated
 	 */
     public EReference getURNmodelElement_Inconcern() {
-		return (EReference)urNmodelElementEClass.getEStructuralFeatures().get(6);
+		return (EReference)urNmodelElementEClass.getEStructuralFeatures().get(5);
 	}
 
     /**
@@ -1420,7 +1411,6 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
 		createEReference(urNmodelElementEClass, UR_NMODEL_ELEMENT__FROM_LINKS);
 		createEReference(urNmodelElementEClass, UR_NMODEL_ELEMENT__TO_LINKS);
 		createEAttribute(urNmodelElementEClass, UR_NMODEL_ELEMENT__ID);
-		createEAttribute(urNmodelElementEClass, UR_NMODEL_ELEMENT__NAME);
 		createEAttribute(urNmodelElementEClass, UR_NMODEL_ELEMENT__DESCRIPTION);
 		createEReference(urNmodelElementEClass, UR_NMODEL_ELEMENT__METADATA);
 		createEReference(urNmodelElementEClass, UR_NMODEL_ELEMENT__INCONCERN);
@@ -1526,6 +1516,7 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
 		nodeLabelEClass.getESuperTypes().add(this.getLabel());
 		componentLabelEClass.getESuperTypes().add(this.getLabel());
 		conditionEClass.getESuperTypes().add(this.getLabel());
+		urNmodelElementEClass.getESuperTypes().add(theCorePackage.getCORENamedElement());
 		concernEClass.getESuperTypes().add(this.getURNmodelElement());
 		connectionLabelEClass.getESuperTypes().add(this.getLabel());
 
@@ -1601,7 +1592,6 @@ public class UrncorePackageImpl extends EPackageImpl implements UrncorePackage {
 		initEReference(getURNmodelElement_FromLinks(), theUrnPackage.getURNlink(), theUrnPackage.getURNlink_FromElem(), "fromLinks", null, 0, -1, URNmodelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getURNmodelElement_ToLinks(), theUrnPackage.getURNlink(), theUrnPackage.getURNlink_ToElem(), "toLinks", null, 0, -1, URNmodelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getURNmodelElement_Id(), ecorePackage.getEString(), "id", null, 0, 1, URNmodelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getURNmodelElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, URNmodelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getURNmodelElement_Description(), ecorePackage.getEString(), "description", null, 0, 1, URNmodelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getURNmodelElement_Metadata(), this.getMetadata(), null, "metadata", null, 0, -1, URNmodelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getURNmodelElement_Inconcern(), this.getConcern(), this.getConcern_Elements(), "inconcern", null, 0, 1, URNmodelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

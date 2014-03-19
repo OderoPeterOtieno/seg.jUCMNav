@@ -550,10 +550,6 @@ public class UCMmapImpl extends UCMmodelElementImpl implements UCMmap {
 				getReuses().clear();
 				getReuses().addAll((Collection)newValue);
 				return;
-			case MapPackage.UC_MMAP__MODEL_ELEMENTS:
-				getModelElements().clear();
-				getModelElements().addAll((Collection)newValue);
-				return;
 			case MapPackage.UC_MMAP__REALIZES:
 				getRealizes().clear();
 				getRealizes().addAll((Collection)newValue);
@@ -596,9 +592,6 @@ public class UCMmapImpl extends UCMmodelElementImpl implements UCMmap {
 				return;
 			case MapPackage.UC_MMAP__REUSES:
 				getReuses().clear();
-				return;
-			case MapPackage.UC_MMAP__MODEL_ELEMENTS:
-				getModelElements().clear();
 				return;
 			case MapPackage.UC_MMAP__REALIZES:
 				getRealizes().clear();
@@ -663,11 +656,6 @@ public class UCMmapImpl extends UCMmodelElementImpl implements UCMmap {
 				default: return -1;
 			}
 		}
-		if (baseClass == CORENamedElement.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == COREModel.class) {
 			switch (derivedFeatureID) {
 				case MapPackage.UC_MMAP__REUSES: return CorePackage.CORE_MODEL__REUSES;
@@ -693,11 +681,6 @@ public class UCMmapImpl extends UCMmodelElementImpl implements UCMmap {
 				case UrncorePackage.IURN_DIAGRAM__CONNECTIONS: return MapPackage.UC_MMAP__CONNECTIONS;
 				case UrncorePackage.IURN_DIAGRAM__CONCERN: return MapPackage.UC_MMAP__CONCERN;
 				case UrncorePackage.IURN_DIAGRAM__COMMENTS: return MapPackage.UC_MMAP__COMMENTS;
-				default: return -1;
-			}
-		}
-		if (baseClass == CORENamedElement.class) {
-			switch (baseFeatureID) {
 				default: return -1;
 			}
 		}

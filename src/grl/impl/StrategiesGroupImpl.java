@@ -286,11 +286,6 @@ public class StrategiesGroupImpl extends GRLmodelElementImpl implements Strategi
 	 * @generated
 	 */
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
-		if (baseClass == CORENamedElement.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == COREStrategy.class) {
 			switch (derivedFeatureID) {
 				case GrlPackage.STRATEGIES_GROUP__CONFIGURATIONS: return CorePackage.CORE_STRATEGY__CONFIGURATIONS;
@@ -306,11 +301,6 @@ public class StrategiesGroupImpl extends GRLmodelElementImpl implements Strategi
 	 * @generated
 	 */
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
-		if (baseClass == CORENamedElement.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == COREStrategy.class) {
 			switch (baseFeatureID) {
 				case CorePackage.CORE_STRATEGY__CONFIGURATIONS: return GrlPackage.STRATEGIES_GROUP__CONFIGURATIONS;

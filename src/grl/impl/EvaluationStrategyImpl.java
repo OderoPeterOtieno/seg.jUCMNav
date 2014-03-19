@@ -570,11 +570,6 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 	 * @generated
 	 */
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
-		if (baseClass == CORENamedElement.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == COREConfiguration.class) {
 			switch (derivedFeatureID) {
 				case GrlPackage.EVALUATION_STRATEGY__REUSED_CONCERN: return CorePackage.CORE_CONFIGURATION__REUSED_CONCERN;
@@ -591,11 +586,6 @@ public class EvaluationStrategyImpl extends GRLmodelElementImpl implements Evalu
 	 * @generated
 	 */
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
-		if (baseClass == CORENamedElement.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == COREConfiguration.class) {
 			switch (baseFeatureID) {
 				case CorePackage.CORE_CONFIGURATION__REUSED_CONCERN: return GrlPackage.EVALUATION_STRATEGY__REUSED_CONCERN;

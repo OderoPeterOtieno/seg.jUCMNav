@@ -479,10 +479,6 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 				getReuses().clear();
 				getReuses().addAll((Collection)newValue);
 				return;
-			case GrlPackage.GRL_GRAPH__MODEL_ELEMENTS:
-				getModelElements().clear();
-				getModelElements().addAll((Collection)newValue);
-				return;
 			case GrlPackage.GRL_GRAPH__REALIZES:
 				getRealizes().clear();
 				getRealizes().addAll((Collection)newValue);
@@ -518,9 +514,6 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 				return;
 			case GrlPackage.GRL_GRAPH__REUSES:
 				getReuses().clear();
-				return;
-			case GrlPackage.GRL_GRAPH__MODEL_ELEMENTS:
-				getModelElements().clear();
 				return;
 			case GrlPackage.GRL_GRAPH__REALIZES:
 				getRealizes().clear();
@@ -575,11 +568,6 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 				default: return -1;
 			}
 		}
-		if (baseClass == CORENamedElement.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == COREModel.class) {
 			switch (derivedFeatureID) {
 				case GrlPackage.GRL_GRAPH__REUSES: return CorePackage.CORE_MODEL__REUSES;
@@ -610,11 +598,6 @@ public class GRLGraphImpl extends GRLmodelElementImpl implements GRLGraph {
 				case UrncorePackage.IURN_DIAGRAM__CONNECTIONS: return GrlPackage.GRL_GRAPH__CONNECTIONS;
 				case UrncorePackage.IURN_DIAGRAM__CONCERN: return GrlPackage.GRL_GRAPH__CONCERN;
 				case UrncorePackage.IURN_DIAGRAM__COMMENTS: return GrlPackage.GRL_GRAPH__COMMENTS;
-				default: return -1;
-			}
-		}
-		if (baseClass == CORENamedElement.class) {
-			switch (baseFeatureID) {
 				default: return -1;
 			}
 		}

@@ -52,7 +52,7 @@ public interface COREReuse extends EObject {
 	void setReusedConcern(COREConcern value);
 
 	/**
-	 * Returns the value of the '<em><b>Compositions</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Compositions</b></em>' reference list.
 	 * The list contents are of type {@link core.CORECompositionSpecification}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -60,9 +60,9 @@ public interface COREReuse extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Compositions</em>' containment reference list.
+	 * @return the value of the '<em>Compositions</em>' reference list.
 	 * @see core.CorePackage#getCOREReuse_Compositions()
-	 * @model type="core.CORECompositionSpecification" containment="true"
+	 * @model type="core.CORECompositionSpecification"
 	 * @generated
 	 */
 	EList getCompositions();

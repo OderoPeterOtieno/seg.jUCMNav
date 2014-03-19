@@ -43,7 +43,7 @@ public interface COREInterface extends EObject {
 	EList getSelectable();
 
 	/**
-	 * Returns the value of the '<em><b>Customizable</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Customizable</b></em>' reference list.
 	 * The list contents are of type {@link core.COREModelElement}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -51,9 +51,9 @@ public interface COREInterface extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Customizable</em>' containment reference list.
+	 * @return the value of the '<em>Customizable</em>' reference list.
 	 * @see core.CorePackage#getCOREInterface_Customizable()
-	 * @model type="core.COREModelElement" containment="true"
+	 * @model type="core.COREModelElement"
 	 * @generated
 	 */
 	EList getCustomizable();

@@ -2,6 +2,7 @@
  */
 package core;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -55,14 +56,23 @@ public interface CorePackage extends EPackage {
 	CorePackage eINSTANCE = core.impl.CorePackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link core.CORENamedElement <em>CORE Named Element</em>}' class.
+	 * The meta object id for the '{@link core.impl.CORENamedElementImpl <em>CORE Named Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see core.CORENamedElement
+	 * @see core.impl.CORENamedElementImpl
 	 * @see core.impl.CorePackageImpl#getCORENamedElement()
 	 * @generated
 	 */
 	int CORE_NAMED_ELEMENT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORE_NAMED_ELEMENT__NAME = 0;
 
 	/**
 	 * The number of structural features of the '<em>CORE Named Element</em>' class.
@@ -71,7 +81,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CORE_NAMED_ELEMENT_FEATURE_COUNT = 0;
+	int CORE_NAMED_ELEMENT_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link core.impl.COREModelImpl <em>CORE Model</em>}' class.
@@ -82,6 +92,15 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	int CORE_MODEL = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORE_MODEL__NAME = CORE_NAMED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Reuses</b></em>' containment reference list.
@@ -130,6 +149,15 @@ public interface CorePackage extends EPackage {
 	int CORE_IMPACT_MODEL = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORE_IMPACT_MODEL__NAME = CORE_MODEL__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Reuses</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -176,6 +204,15 @@ public interface CorePackage extends EPackage {
 	int CORE_CONCERN = 2;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORE_CONCERN__NAME = CORE_NAMED_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Models</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -213,6 +250,15 @@ public interface CorePackage extends EPackage {
 	int CORE_MODEL_ELEMENT = 5;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORE_MODEL_ELEMENT__NAME = CORE_NAMED_ELEMENT__NAME;
+
+	/**
 	 * The number of structural features of the '<em>CORE Model Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -230,6 +276,15 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	int CORE_FEATURE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORE_FEATURE__NAME = CORE_MODEL_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Realized By</b></em>' reference list.
@@ -380,6 +435,15 @@ public interface CorePackage extends EPackage {
 	int CORE_STRATEGY = 9;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORE_STRATEGY__NAME = CORE_NAMED_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Configurations</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -417,7 +481,7 @@ public interface CorePackage extends EPackage {
 	int CORE_INTERFACE__SELECTABLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Customizable</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Customizable</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -472,7 +536,7 @@ public interface CorePackage extends EPackage {
 	int CORE_REUSE__REUSED_CONCERN = 0;
 
 	/**
-	 * The feature id for the '<em><b>Compositions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Compositions</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -537,6 +601,15 @@ public interface CorePackage extends EPackage {
 	int CORE_IMPACT_MODEL_ELEMENT = 13;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORE_IMPACT_MODEL_ELEMENT__NAME = CORE_MODEL_ELEMENT__NAME;
+
+	/**
 	 * The number of structural features of the '<em>CORE Impact Model Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -554,6 +627,15 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	int CORE_CONFIGURATION = 14;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORE_CONFIGURATION__NAME = CORE_NAMED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Reused Concern</b></em>' reference list.
@@ -591,6 +673,15 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	int CORE_FEATURE_MODEL = 15;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORE_FEATURE_MODEL__NAME = CORE_MODEL__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Reuses</b></em>' containment reference list.
@@ -852,6 +943,17 @@ public interface CorePackage extends EPackage {
 	EClass getCORENamedElement();
 
 	/**
+	 * Returns the meta object for the attribute '{@link core.CORENamedElement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see core.CORENamedElement#getName()
+	 * @see #getCORENamedElement()
+	 * @generated
+	 */
+	EAttribute getCORENamedElement_Name();
+
+	/**
 	 * Returns the meta object for class '{@link core.COREStrategy <em>CORE Strategy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -894,10 +996,10 @@ public interface CorePackage extends EPackage {
 	EReference getCOREInterface_Selectable();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link core.COREInterface#getCustomizable <em>Customizable</em>}'.
+	 * Returns the meta object for the reference list '{@link core.COREInterface#getCustomizable <em>Customizable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Customizable</em>'.
+	 * @return the meta object for the reference list '<em>Customizable</em>'.
 	 * @see core.COREInterface#getCustomizable()
 	 * @see #getCOREInterface()
 	 * @generated
@@ -948,10 +1050,10 @@ public interface CorePackage extends EPackage {
 	EReference getCOREReuse_ReusedConcern();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link core.COREReuse#getCompositions <em>Compositions</em>}'.
+	 * Returns the meta object for the reference list '{@link core.COREReuse#getCompositions <em>Compositions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Compositions</em>'.
+	 * @return the meta object for the reference list '<em>Compositions</em>'.
 	 * @see core.COREReuse#getCompositions()
 	 * @see #getCOREReuse()
 	 * @generated
@@ -1230,14 +1332,22 @@ public interface CorePackage extends EPackage {
 		EReference CORE_MAPPING__MAPPED_FROM = eINSTANCE.getCOREMapping_MappedFrom();
 
 		/**
-		 * The meta object literal for the '{@link core.CORENamedElement <em>CORE Named Element</em>}' class.
+		 * The meta object literal for the '{@link core.impl.CORENamedElementImpl <em>CORE Named Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see core.CORENamedElement
+		 * @see core.impl.CORENamedElementImpl
 		 * @see core.impl.CorePackageImpl#getCORENamedElement()
 		 * @generated
 		 */
 		EClass CORE_NAMED_ELEMENT = eINSTANCE.getCORENamedElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CORE_NAMED_ELEMENT__NAME = eINSTANCE.getCORENamedElement_Name();
 
 		/**
 		 * The meta object literal for the '{@link core.impl.COREStrategyImpl <em>CORE Strategy</em>}' class.
@@ -1276,7 +1386,7 @@ public interface CorePackage extends EPackage {
 		EReference CORE_INTERFACE__SELECTABLE = eINSTANCE.getCOREInterface_Selectable();
 
 		/**
-		 * The meta object literal for the '<em><b>Customizable</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Customizable</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1318,7 +1428,7 @@ public interface CorePackage extends EPackage {
 		EReference CORE_REUSE__REUSED_CONCERN = eINSTANCE.getCOREReuse_ReusedConcern();
 
 		/**
-		 * The meta object literal for the '<em><b>Compositions</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Compositions</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

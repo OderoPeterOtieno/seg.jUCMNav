@@ -163,6 +163,9 @@ public class GrlAdapterFactory extends AdapterFactoryImpl {
 			public Object caseFeature(Feature object) {
 				return createFeatureAdapter();
 			}
+			public Object caseCORENamedElement(CORENamedElement object) {
+				return createCORENamedElementAdapter();
+			}
 			public Object caseURNmodelElement(URNmodelElement object) {
 				return createURNmodelElementAdapter();
 			}
@@ -177,9 +180,6 @@ public class GrlAdapterFactory extends AdapterFactoryImpl {
 			}
 			public Object caseIURNDiagram(IURNDiagram object) {
 				return createIURNDiagramAdapter();
-			}
-			public Object caseCORENamedElement(CORENamedElement object) {
-				return createCORENamedElementAdapter();
 			}
 			public Object caseCOREModel(COREModel object) {
 				return createCOREModelAdapter();

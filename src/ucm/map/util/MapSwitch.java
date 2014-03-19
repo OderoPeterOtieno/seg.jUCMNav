@@ -127,6 +127,7 @@ public class MapSwitch {
 				if (result == null) result = caseUCMmodelElement(andJoin);
 				if (result == null) result = caseIURNNode(andJoin);
 				if (result == null) result = caseURNmodelElement(andJoin);
+				if (result == null) result = caseCORENamedElement(andJoin);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -149,6 +150,7 @@ public class MapSwitch {
 				if (result == null) result = caseUCMmodelElement(respRef);
 				if (result == null) result = caseIURNNode(respRef);
 				if (result == null) result = caseURNmodelElement(respRef);
+				if (result == null) result = caseCORENamedElement(respRef);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -159,6 +161,7 @@ public class MapSwitch {
 				if (result == null) result = caseUCMmodelElement(orJoin);
 				if (result == null) result = caseIURNNode(orJoin);
 				if (result == null) result = caseURNmodelElement(orJoin);
+				if (result == null) result = caseCORENamedElement(orJoin);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -169,6 +172,7 @@ public class MapSwitch {
 				if (result == null) result = caseUCMmodelElement(orFork);
 				if (result == null) result = caseIURNNode(orFork);
 				if (result == null) result = caseURNmodelElement(orFork);
+				if (result == null) result = caseCORENamedElement(orFork);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -179,6 +183,7 @@ public class MapSwitch {
 				if (result == null) result = caseUCMmodelElement(connect);
 				if (result == null) result = caseIURNNode(connect);
 				if (result == null) result = caseURNmodelElement(connect);
+				if (result == null) result = caseCORENamedElement(connect);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -196,6 +201,7 @@ public class MapSwitch {
 				if (result == null) result = caseUCMmodelElement(waitingPlace);
 				if (result == null) result = caseIURNNode(waitingPlace);
 				if (result == null) result = caseURNmodelElement(waitingPlace);
+				if (result == null) result = caseCORENamedElement(waitingPlace);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -206,6 +212,7 @@ public class MapSwitch {
 				if (result == null) result = caseUCMmodelElement(stub);
 				if (result == null) result = caseIURNNode(stub);
 				if (result == null) result = caseURNmodelElement(stub);
+				if (result == null) result = caseCORENamedElement(stub);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -215,6 +222,7 @@ public class MapSwitch {
 				if (result == null) result = caseUCMmodelElement(pathNode);
 				if (result == null) result = caseIURNNode(pathNode);
 				if (result == null) result = caseURNmodelElement(pathNode);
+				if (result == null) result = caseCORENamedElement(pathNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -225,6 +233,7 @@ public class MapSwitch {
 				if (result == null) result = caseUCMmodelElement(endPoint);
 				if (result == null) result = caseIURNNode(endPoint);
 				if (result == null) result = caseURNmodelElement(endPoint);
+				if (result == null) result = caseCORENamedElement(endPoint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -235,6 +244,7 @@ public class MapSwitch {
 				if (result == null) result = caseUCMmodelElement(startPoint);
 				if (result == null) result = caseIURNNode(startPoint);
 				if (result == null) result = caseURNmodelElement(startPoint);
+				if (result == null) result = caseCORENamedElement(startPoint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -261,6 +271,7 @@ public class MapSwitch {
 				if (result == null) result = caseUCMmodelElement(componentRef);
 				if (result == null) result = caseIURNContainerRef(componentRef);
 				if (result == null) result = caseURNmodelElement(componentRef);
+				if (result == null) result = caseCORENamedElement(componentRef);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -272,6 +283,7 @@ public class MapSwitch {
 				if (result == null) result = caseUCMmodelElement(timer);
 				if (result == null) result = caseIURNNode(timer);
 				if (result == null) result = caseURNmodelElement(timer);
+				if (result == null) result = caseCORENamedElement(timer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -282,6 +294,7 @@ public class MapSwitch {
 				if (result == null) result = caseUCMmodelElement(andFork);
 				if (result == null) result = caseIURNNode(andFork);
 				if (result == null) result = caseURNmodelElement(andFork);
+				if (result == null) result = caseCORENamedElement(andFork);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -292,6 +305,7 @@ public class MapSwitch {
 				if (result == null) result = caseUCMmodelElement(emptyPoint);
 				if (result == null) result = caseIURNNode(emptyPoint);
 				if (result == null) result = caseURNmodelElement(emptyPoint);
+				if (result == null) result = caseCORENamedElement(emptyPoint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -302,6 +316,7 @@ public class MapSwitch {
 				if (result == null) result = caseUCMmodelElement(directionArrow);
 				if (result == null) result = caseIURNNode(directionArrow);
 				if (result == null) result = caseURNmodelElement(directionArrow);
+				if (result == null) result = caseCORENamedElement(directionArrow);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -318,6 +333,7 @@ public class MapSwitch {
 				if (result == null) result = caseUCMmodelElement(anything);
 				if (result == null) result = caseIURNNode(anything);
 				if (result == null) result = caseURNmodelElement(anything);
+				if (result == null) result = caseCORENamedElement(anything);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -328,6 +344,7 @@ public class MapSwitch {
 				if (result == null) result = caseUCMmodelElement(failurePoint);
 				if (result == null) result = caseIURNNode(failurePoint);
 				if (result == null) result = caseURNmodelElement(failurePoint);
+				if (result == null) result = caseCORENamedElement(failurePoint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

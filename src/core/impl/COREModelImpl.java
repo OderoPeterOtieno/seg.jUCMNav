@@ -39,7 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class COREModelImpl extends EObjectImpl implements COREModel {
+public abstract class COREModelImpl extends CORENamedElementImpl implements COREModel {
 	/**
 	 * The cached value of the '{@link #getReuses() <em>Reuses</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -129,28 +129,6 @@ public abstract class COREModelImpl extends EObjectImpl implements COREModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String value) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case CorePackage.CORE_MODEL__REALIZES:
@@ -202,10 +180,6 @@ public abstract class COREModelImpl extends EObjectImpl implements COREModel {
 				getReuses().clear();
 				getReuses().addAll((Collection)newValue);
 				return;
-			case CorePackage.CORE_MODEL__MODEL_ELEMENTS:
-				getModelElements().clear();
-				getModelElements().addAll((Collection)newValue);
-				return;
 			case CorePackage.CORE_MODEL__REALIZES:
 				getRealizes().clear();
 				getRealizes().addAll((Collection)newValue);
@@ -223,9 +197,6 @@ public abstract class COREModelImpl extends EObjectImpl implements COREModel {
 		switch (featureID) {
 			case CorePackage.CORE_MODEL__REUSES:
 				getReuses().clear();
-				return;
-			case CorePackage.CORE_MODEL__MODEL_ELEMENTS:
-				getModelElements().clear();
 				return;
 			case CorePackage.CORE_MODEL__REALIZES:
 				getRealizes().clear();

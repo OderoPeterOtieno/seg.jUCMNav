@@ -8,7 +8,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="reuses" upperBound="-1"
         eType="#//COREReuse" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modelElements" upperBound="-1"
-        eType="#//COREModelElement" derived="true"/>
+        eType="#//COREModelElement" changeable="false" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="realizes" upperBound="-1"
         eType="#//COREFeature" eOpposite="#//COREFeature/realizedBy"/>
   </eClassifiers>
@@ -42,11 +42,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="mappedFrom" lowerBound="1"
         eType="#//COREModelElement"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CORENamedElement" abstract="true" interface="true">
-    <eOperations name="getName" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eOperations name="setName" lowerBound="1">
-      <eParameters name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eOperations>
+  <eClassifiers xsi:type="ecore:EClass" name="CORENamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="COREStrategy" abstract="true" eSuperTypes="#//CORENamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="configurations" upperBound="-1"
@@ -56,7 +53,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="selectable" upperBound="-1"
         eType="#//COREFeature"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="customizable" upperBound="-1"
-        eType="#//COREModelElement" containment="true"/>
+        eType="#//COREModelElement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="usable" upperBound="-1"
         eType="#//COREModelElement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="impacted" upperBound="-1"
@@ -66,7 +63,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="reusedConcern" lowerBound="1"
         eType="#//COREConcern"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="compositions" upperBound="-1"
-        eType="#//CORECompositionSpecification" containment="true"/>
+        eType="#//CORECompositionSpecification"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selected" lowerBound="1"
         upperBound="-1" eType="#//COREFeature"/>
   </eClassifiers>

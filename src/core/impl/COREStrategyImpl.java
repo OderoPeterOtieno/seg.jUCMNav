@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public abstract class COREStrategyImpl extends EObjectImpl implements COREStrategy {
+public abstract class COREStrategyImpl extends CORENamedElementImpl implements COREStrategy {
 	/**
 	 * The cached value of the '{@link #getConfigurations() <em>Configurations</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -68,28 +68,6 @@ public abstract class COREStrategyImpl extends EObjectImpl implements COREStrate
 			configurations = new EObjectResolvingEList(COREConfiguration.class, this, CorePackage.CORE_STRATEGY__CONFIGURATIONS);
 		}
 		return configurations;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String value) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**

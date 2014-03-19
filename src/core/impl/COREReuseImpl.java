@@ -52,7 +52,7 @@ public class COREReuseImpl extends EObjectImpl implements COREReuse {
 	protected COREConcern reusedConcern;
 
 	/**
-	 * The cached value of the '{@link #getCompositions() <em>Compositions</em>}' containment reference list.
+	 * The cached value of the '{@link #getCompositions() <em>Compositions</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCompositions()
@@ -134,7 +134,7 @@ public class COREReuseImpl extends EObjectImpl implements COREReuse {
 	 */
 	public EList getCompositions() {
 		if (compositions == null) {
-			compositions = new EObjectContainmentEList(CORECompositionSpecification.class, this, CorePackage.CORE_REUSE__COMPOSITIONS);
+			compositions = new EObjectResolvingEList(CORECompositionSpecification.class, this, CorePackage.CORE_REUSE__COMPOSITIONS);
 		}
 		return compositions;
 	}
@@ -149,19 +149,6 @@ public class COREReuseImpl extends EObjectImpl implements COREReuse {
 			selected = new EObjectResolvingEList(COREFeature.class, this, CorePackage.CORE_REUSE__SELECTED);
 		}
 		return selected;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case CorePackage.CORE_REUSE__COMPOSITIONS:
-				return ((InternalEList)getCompositions()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

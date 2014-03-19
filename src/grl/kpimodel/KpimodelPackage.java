@@ -70,6 +70,15 @@ public interface KpimodelPackage extends EPackage {
 	int INDICATOR_GROUP = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDICATOR_GROUP__NAME = UrncorePackage.GR_LMODEL_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>From Links</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -95,15 +104,6 @@ public interface KpimodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int INDICATOR_GROUP__ID = UrncorePackage.GR_LMODEL_ELEMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INDICATOR_GROUP__NAME = UrncorePackage.GR_LMODEL_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -179,6 +179,15 @@ public interface KpimodelPackage extends EPackage {
 	int INDICATOR = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDICATOR__NAME = GrlPackage.INTENTIONAL_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>From Links</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -204,15 +213,6 @@ public interface KpimodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int INDICATOR__ID = GrlPackage.INTENTIONAL_ELEMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INDICATOR__NAME = GrlPackage.INTENTIONAL_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -378,6 +378,15 @@ public interface KpimodelPackage extends EPackage {
 	int KPI_INFORMATION_ELEMENT = 2;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KPI_INFORMATION_ELEMENT__NAME = UrncorePackage.GR_LMODEL_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>From Links</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -403,15 +412,6 @@ public interface KpimodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int KPI_INFORMATION_ELEMENT__ID = UrncorePackage.GR_LMODEL_ELEMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KPI_INFORMATION_ELEMENT__NAME = UrncorePackage.GR_LMODEL_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -487,6 +487,15 @@ public interface KpimodelPackage extends EPackage {
 	int KPI_INFORMATION_ELEMENT_REF = 3;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KPI_INFORMATION_ELEMENT_REF__NAME = GrlPackage.GRL_NODE__NAME;
+
+	/**
 	 * The feature id for the '<em><b>From Links</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -512,15 +521,6 @@ public interface KpimodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int KPI_INFORMATION_ELEMENT_REF__ID = GrlPackage.GRL_NODE__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KPI_INFORMATION_ELEMENT_REF__NAME = GrlPackage.GRL_NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -641,6 +641,15 @@ public interface KpimodelPackage extends EPackage {
 	int KPI_MODEL_LINK = 4;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KPI_MODEL_LINK__NAME = UrncorePackage.GR_LMODEL_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>From Links</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -666,15 +675,6 @@ public interface KpimodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int KPI_MODEL_LINK__ID = UrncorePackage.GR_LMODEL_ELEMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KPI_MODEL_LINK__NAME = UrncorePackage.GR_LMODEL_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1006,6 +1006,15 @@ public interface KpimodelPackage extends EPackage {
 	int KPI_CONVERSION = 9;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KPI_CONVERSION__NAME = UrncorePackage.GR_LMODEL_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>From Links</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1031,15 +1040,6 @@ public interface KpimodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int KPI_CONVERSION__ID = UrncorePackage.GR_LMODEL_ELEMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KPI_CONVERSION__NAME = UrncorePackage.GR_LMODEL_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1106,6 +1106,15 @@ public interface KpimodelPackage extends EPackage {
 	int QUALITATIVE_MAPPINGS = 10;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUALITATIVE_MAPPINGS__NAME = KPI_CONVERSION__NAME;
+
+	/**
 	 * The feature id for the '<em><b>From Links</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1131,15 +1140,6 @@ public interface KpimodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int QUALITATIVE_MAPPINGS__ID = KPI_CONVERSION__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUALITATIVE_MAPPINGS__NAME = KPI_CONVERSION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.

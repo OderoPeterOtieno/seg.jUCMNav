@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public abstract class COREConfigurationImpl extends EObjectImpl implements COREConfiguration {
+public abstract class COREConfigurationImpl extends CORENamedElementImpl implements COREConfiguration {
 	/**
 	 * The cached value of the '{@link #getReusedConcern() <em>Reused Concern</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -92,28 +92,6 @@ public abstract class COREConfigurationImpl extends EObjectImpl implements COREC
 			selected = new EObjectResolvingEList(COREFeature.class, this, CorePackage.CORE_CONFIGURATION__SELECTED);
 		}
 		return selected;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String value) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**

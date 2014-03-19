@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public abstract class COREModelElementImpl extends EObjectImpl implements COREModelElement {
+public abstract class COREModelElementImpl extends CORENamedElementImpl implements COREModelElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -35,28 +35,6 @@ public abstract class COREModelElementImpl extends EObjectImpl implements COREMo
 	 */
 	protected EClass eStaticClass() {
 		return CorePackage.Literals.CORE_MODEL_ELEMENT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String value) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 } //COREModelElementImpl

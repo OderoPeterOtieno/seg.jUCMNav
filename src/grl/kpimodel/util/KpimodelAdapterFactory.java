@@ -2,6 +2,7 @@
  */
 package grl.kpimodel.util;
 
+import core.CORENamedElement;
 import grl.GRLLinkableElement;
 import grl.GRLNode;
 import grl.IntentionalElement;
@@ -110,6 +111,9 @@ public class KpimodelAdapterFactory extends AdapterFactoryImpl {
 			}
 			public Object caseQualitativeMapping(QualitativeMapping object) {
 				return createQualitativeMappingAdapter();
+			}
+			public Object caseCORENamedElement(CORENamedElement object) {
+				return createCORENamedElementAdapter();
 			}
 			public Object caseURNmodelElement(URNmodelElement object) {
 				return createURNmodelElementAdapter();
@@ -315,6 +319,20 @@ public class KpimodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createQualitativeMappingAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link core.CORENamedElement <em>CORE Named Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see core.CORENamedElement
+	 * @generated
+	 */
+	public Adapter createCORENamedElementAdapter() {
 		return null;
 	}
 

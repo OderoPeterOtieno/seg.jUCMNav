@@ -38,7 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class COREConcernImpl extends EObjectImpl implements COREConcern {
+public class COREConcernImpl extends CORENamedElementImpl implements COREConcern {
 	/**
 	 * The cached value of the '{@link #getModels() <em>Models</em>}' reference list.
 	 * <!-- begin-user-doc -->

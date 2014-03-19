@@ -173,6 +173,9 @@ public class MapAdapterFactory extends AdapterFactoryImpl {
 			public Object caseResponsibilityBinding(ResponsibilityBinding object) {
 				return createResponsibilityBindingAdapter();
 			}
+			public Object caseCORENamedElement(CORENamedElement object) {
+				return createCORENamedElementAdapter();
+			}
 			public Object caseURNmodelElement(URNmodelElement object) {
 				return createURNmodelElementAdapter();
 			}
@@ -187,9 +190,6 @@ public class MapAdapterFactory extends AdapterFactoryImpl {
 			}
 			public Object caseIURNDiagram(IURNDiagram object) {
 				return createIURNDiagramAdapter();
-			}
-			public Object caseCORENamedElement(CORENamedElement object) {
-				return createCORENamedElementAdapter();
 			}
 			public Object caseCOREModel(COREModel object) {
 				return createCOREModelAdapter();

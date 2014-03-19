@@ -51,7 +51,7 @@ public class COREInterfaceImpl extends EObjectImpl implements COREInterface {
 	protected EList selectable;
 
 	/**
-	 * The cached value of the '{@link #getCustomizable() <em>Customizable</em>}' containment reference list.
+	 * The cached value of the '{@link #getCustomizable() <em>Customizable</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCustomizable()
@@ -117,7 +117,7 @@ public class COREInterfaceImpl extends EObjectImpl implements COREInterface {
 	 */
 	public EList getCustomizable() {
 		if (customizable == null) {
-			customizable = new EObjectContainmentEList(COREModelElement.class, this, CorePackage.CORE_INTERFACE__CUSTOMIZABLE);
+			customizable = new EObjectResolvingEList(COREModelElement.class, this, CorePackage.CORE_INTERFACE__CUSTOMIZABLE);
 		}
 		return customizable;
 	}
@@ -144,19 +144,6 @@ public class COREInterfaceImpl extends EObjectImpl implements COREInterface {
 			impacted = new EObjectResolvingEList(COREImpactModelElement.class, this, CorePackage.CORE_INTERFACE__IMPACTED);
 		}
 		return impacted;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case CorePackage.CORE_INTERFACE__CUSTOMIZABLE:
-				return ((InternalEList)getCustomizable()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

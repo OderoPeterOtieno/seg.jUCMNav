@@ -29,6 +29,7 @@ import grl.kpimodel.KpimodelPackage;
 
 import grl.kpimodel.impl.KpimodelPackageImpl;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -460,6 +461,15 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getCORENamedElement_Name() {
+		return (EAttribute)coreNamedElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCOREStrategy() {
 		return coreStrategyEClass;
 	}
@@ -665,6 +675,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		createEReference(coreMappingEClass, CORE_MAPPING__MAPPED_FROM);
 
 		coreNamedElementEClass = createEClass(CORE_NAMED_ELEMENT);
+		createEAttribute(coreNamedElementEClass, CORE_NAMED_ELEMENT__NAME);
 
 		coreStrategyEClass = createEClass(CORE_STRATEGY);
 		createEReference(coreStrategyEClass, CORE_STRATEGY__CONFIGURATIONS);
@@ -730,7 +741,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		// Initialize classes and features; add operations and parameters
 		initEClass(coreModelEClass, COREModel.class, "COREModel", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCOREModel_Reuses(), this.getCOREReuse(), null, "reuses", null, 0, -1, COREModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCOREModel_ModelElements(), this.getCOREModelElement(), null, "modelElements", null, 0, -1, COREModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getCOREModel_ModelElements(), this.getCOREModelElement(), null, "modelElements", null, 0, -1, COREModel.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getCOREModel_Realizes(), this.getCOREFeature(), this.getCOREFeature_RealizedBy(), "realizes", null, 0, -1, COREModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(coreImpactModelEClass, COREImpactModel.class, "COREImpactModel", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -756,25 +767,21 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		initEReference(getCOREMapping_MappedTo(), this.getCOREModelElement(), null, "mappedTo", null, 1, 1, COREMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCOREMapping_MappedFrom(), this.getCOREModelElement(), null, "mappedFrom", null, 1, 1, COREMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(coreNamedElementEClass, CORENamedElement.class, "CORENamedElement", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		addEOperation(coreNamedElementEClass, ecorePackage.getEString(), "getName", 1, 1);
-
-		EOperation op = addEOperation(coreNamedElementEClass, null, "setName");
-		addEParameter(op, ecorePackage.getEString(), "value", 0, 1);
+		initEClass(coreNamedElementEClass, CORENamedElement.class, "CORENamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCORENamedElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, CORENamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(coreStrategyEClass, COREStrategy.class, "COREStrategy", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCOREStrategy_Configurations(), this.getCOREConfiguration(), null, "configurations", null, 0, -1, COREStrategy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(coreInterfaceEClass, COREInterface.class, "COREInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCOREInterface_Selectable(), this.getCOREFeature(), null, "selectable", null, 0, -1, COREInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCOREInterface_Customizable(), this.getCOREModelElement(), null, "customizable", null, 0, -1, COREInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCOREInterface_Customizable(), this.getCOREModelElement(), null, "customizable", null, 0, -1, COREInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCOREInterface_Usable(), this.getCOREModelElement(), null, "usable", null, 0, -1, COREInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCOREInterface_Impacted(), this.getCOREImpactModelElement(), null, "impacted", null, 0, -1, COREInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(coreReuseEClass, COREReuse.class, "COREReuse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCOREReuse_ReusedConcern(), this.getCOREConcern(), null, "reusedConcern", null, 1, 1, COREReuse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCOREReuse_Compositions(), this.getCORECompositionSpecification(), null, "compositions", null, 0, -1, COREReuse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCOREReuse_Compositions(), this.getCORECompositionSpecification(), null, "compositions", null, 0, -1, COREReuse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCOREReuse_Selected(), this.getCOREFeature(), null, "selected", null, 1, -1, COREReuse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(corePatternEClass, COREPattern.class, "COREPattern", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -293,11 +293,6 @@ public class FeatureImpl extends IntentionalElementImpl implements Feature {
 	 * @generated
 	 */
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class baseClass) {
-		if (baseClass == CORENamedElement.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == COREModelElement.class) {
 			switch (derivedFeatureID) {
 				default: return -1;
@@ -320,11 +315,6 @@ public class FeatureImpl extends IntentionalElementImpl implements Feature {
 	 * @generated
 	 */
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class baseClass) {
-		if (baseClass == CORENamedElement.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == COREModelElement.class) {
 			switch (baseFeatureID) {
 				default: return -1;

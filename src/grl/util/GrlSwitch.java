@@ -112,6 +112,7 @@ public class GrlSwitch {
 				if (result == null) result = caseGRLmodelElement(belief);
 				if (result == null) result = caseIURNNode(belief);
 				if (result == null) result = caseURNmodelElement(belief);
+				if (result == null) result = caseCORENamedElement(belief);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -121,6 +122,7 @@ public class GrlSwitch {
 				if (result == null) result = caseGRLLinkableElement(intentionalElement);
 				if (result == null) result = caseGRLmodelElement(intentionalElement);
 				if (result == null) result = caseURNmodelElement(intentionalElement);
+				if (result == null) result = caseCORENamedElement(intentionalElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -131,6 +133,7 @@ public class GrlSwitch {
 				if (result == null) result = caseIURNContainer(actor);
 				if (result == null) result = caseGRLmodelElement(actor);
 				if (result == null) result = caseURNmodelElement(actor);
+				if (result == null) result = caseCORENamedElement(actor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -152,6 +155,7 @@ public class GrlSwitch {
 				if (result == null) result = caseGRLmodelElement(actorRef);
 				if (result == null) result = caseIURNContainerRef(actorRef);
 				if (result == null) result = caseURNmodelElement(actorRef);
+				if (result == null) result = caseCORENamedElement(actorRef);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -162,6 +166,7 @@ public class GrlSwitch {
 				if (result == null) result = caseGRLmodelElement(intentionalElementRef);
 				if (result == null) result = caseIURNNode(intentionalElementRef);
 				if (result == null) result = caseURNmodelElement(intentionalElementRef);
+				if (result == null) result = caseCORENamedElement(intentionalElementRef);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -171,6 +176,7 @@ public class GrlSwitch {
 				if (result == null) result = caseElementLink(contribution);
 				if (result == null) result = caseGRLmodelElement(contribution);
 				if (result == null) result = caseURNmodelElement(contribution);
+				if (result == null) result = caseCORENamedElement(contribution);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -186,6 +192,7 @@ public class GrlSwitch {
 				Object result = caseElementLink(elementLink);
 				if (result == null) result = caseGRLmodelElement(elementLink);
 				if (result == null) result = caseURNmodelElement(elementLink);
+				if (result == null) result = caseCORENamedElement(elementLink);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -195,6 +202,7 @@ public class GrlSwitch {
 				if (result == null) result = caseElementLink(decomposition);
 				if (result == null) result = caseGRLmodelElement(decomposition);
 				if (result == null) result = caseURNmodelElement(decomposition);
+				if (result == null) result = caseCORENamedElement(decomposition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -204,6 +212,7 @@ public class GrlSwitch {
 				if (result == null) result = caseElementLink(dependency);
 				if (result == null) result = caseGRLmodelElement(dependency);
 				if (result == null) result = caseURNmodelElement(dependency);
+				if (result == null) result = caseCORENamedElement(dependency);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -229,6 +238,7 @@ public class GrlSwitch {
 				if (result == null) result = caseGRLmodelElement(grlNode);
 				if (result == null) result = caseIURNNode(grlNode);
 				if (result == null) result = caseURNmodelElement(grlNode);
+				if (result == null) result = caseCORENamedElement(grlNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -260,6 +270,7 @@ public class GrlSwitch {
 				Object result = caseContributionContextGroup(contributionContextGroup);
 				if (result == null) result = caseGRLmodelElement(contributionContextGroup);
 				if (result == null) result = caseURNmodelElement(contributionContextGroup);
+				if (result == null) result = caseCORENamedElement(contributionContextGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -268,6 +279,7 @@ public class GrlSwitch {
 				Object result = caseContributionContext(contributionContext);
 				if (result == null) result = caseGRLmodelElement(contributionContext);
 				if (result == null) result = caseURNmodelElement(contributionContext);
+				if (result == null) result = caseCORENamedElement(contributionContext);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -282,6 +294,7 @@ public class GrlSwitch {
 				Object result = caseGRLLinkableElement(grlLinkableElement);
 				if (result == null) result = caseGRLmodelElement(grlLinkableElement);
 				if (result == null) result = caseURNmodelElement(grlLinkableElement);
+				if (result == null) result = caseCORENamedElement(grlLinkableElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -292,6 +305,7 @@ public class GrlSwitch {
 				if (result == null) result = caseGRLmodelElement(collapsedActorRef);
 				if (result == null) result = caseIURNNode(collapsedActorRef);
 				if (result == null) result = caseURNmodelElement(collapsedActorRef);
+				if (result == null) result = caseCORENamedElement(collapsedActorRef);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -329,8 +343,8 @@ public class GrlSwitch {
 				if (result == null) result = caseGRLLinkableElement(feature);
 				if (result == null) result = caseCOREModelElement(feature);
 				if (result == null) result = caseGRLmodelElement(feature);
-				if (result == null) result = caseCORENamedElement(feature);
 				if (result == null) result = caseURNmodelElement(feature);
+				if (result == null) result = caseCORENamedElement(feature);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
