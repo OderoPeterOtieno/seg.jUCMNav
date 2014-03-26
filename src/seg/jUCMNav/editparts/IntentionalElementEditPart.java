@@ -428,6 +428,8 @@ public class IntentionalElementEditPart extends GrlNodeEditPart implements NodeE
                                 // Highlight in a different color, dark red.
                             	// there is an exception case which is in FMD, when self num value is 100, and all children links are optional
                             	boolean isException = (evalType == IGRLStrategyAlgorithm.EVAL_FEATURE_MODEL) && (elem instanceof Feature) && IntentionalElementUtil.containsOnlyOptionalDestLink(elem) && IntentionalElementUtil.hasNumericalValue(elem, 100);
+                            	isException = isException || ((evaluation.getIntElement() instanceof Feature) && 
+                            			                       (MetadataHelper.getMetaDataObj(evaluation.getIntElement(), "user_set_evaluation_warning") == null));
                             	if (!isException) {
                                 	lineColor = "160,0,0"; //$NON-NLS-1$
                                 }

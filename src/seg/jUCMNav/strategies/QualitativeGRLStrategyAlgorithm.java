@@ -69,6 +69,7 @@ public class QualitativeGRLStrategyAlgorithm implements IGRLStrategyAlgorithm {
     };
 
     Vector evalReady;
+    HashMap evalReadyUserSet;
     HashMap evaluationCalculation;
     HashMap evaluations;
 
@@ -79,10 +80,11 @@ public class QualitativeGRLStrategyAlgorithm implements IGRLStrategyAlgorithm {
      */
     public void init(EvaluationStrategy strategy, HashMap evaluations) {
         evalReady = new Vector();
+        evalReadyUserSet = new HashMap();
         evaluationCalculation = new HashMap();
         this.evaluations = evaluations;
 
-        StrategyAlgorithmImplementationHelper.defaultInit(strategy, evaluations, evalReady, evaluationCalculation);
+        StrategyAlgorithmImplementationHelper.defaultInit(strategy, evaluations, evalReady, evalReadyUserSet, evaluationCalculation);
     }
 
     /*
@@ -91,7 +93,7 @@ public class QualitativeGRLStrategyAlgorithm implements IGRLStrategyAlgorithm {
      * @see seg.jUCMNav.extensionpoints.IGRLStrategiesAlgorithm#hasNextNode()
      */
     public boolean hasNextNode() {
-        if (evalReady.size() > 0) {
+        if ((evalReady.size() > 0) || (evalReadyUserSet.size() > 0)) {
             return true;
         }
         return false;
@@ -103,8 +105,13 @@ public class QualitativeGRLStrategyAlgorithm implements IGRLStrategyAlgorithm {
      * @see seg.jUCMNav.extensionpoints.IGRLStrategiesAlgorithm#nextNode()
      */
     public IntentionalElement nextNode() {
-        IntentionalElement intElem = (IntentionalElement) evalReady.remove(0);
-
+        IntentionalElement intElem = null;
+        if (evalReady.size() > 0) {
+        	intElem = (IntentionalElement) evalReady.remove(0);
+        } else if (evalReadyUserSet.size() > 0) {
+        	Iterator it = evalReadyUserSet.keySet().iterator();
+        	intElem = ((EvaluationCalculation) evalReadyUserSet.remove(it.next())).element;
+        }
         for (Iterator j = intElem.getLinksSrc().iterator(); j.hasNext();) {
             // TODO Need to make sure this GRLLinkableElement is really an IntentionalElement
             IntentionalElement temp = (IntentionalElement) ((ElementLink) j.next()).getDest();
@@ -113,6 +120,14 @@ public class QualitativeGRLStrategyAlgorithm implements IGRLStrategyAlgorithm {
                 calc.linkCalc += 1;
                 if (calc.linkCalc >= calc.totalLinkDest) {
                     evaluationCalculation.remove(temp);
+                    evalReady.add(calc.element);
+                }
+            }
+            if (evalReadyUserSet.containsKey(temp)) {
+                EvaluationCalculation calc = (EvaluationCalculation) evalReadyUserSet.get(temp);
+                calc.linkCalc += 1;
+                if (calc.linkCalc >= calc.totalLinkDest) {
+                	evalReadyUserSet.remove(temp);
                     evalReady.add(calc.element);
                 }
             }
