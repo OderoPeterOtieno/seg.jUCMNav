@@ -259,6 +259,13 @@ public class ModelCreationFactory implements CreationFactory {
     	return featureModelOptionalLinkMetadata;
     }
     
+    public static Metadata getUserSetEvalWarningMetadata() {
+    	Metadata userSetEvalWarningMetadata;
+    	userSetEvalWarningMetadata = UrncoreFactory.eINSTANCE.createMetadata();
+    	userSetEvalWarningMetadata.setName("user_set_evaluation_warning");
+    	return userSetEvalWarningMetadata;
+    }
+    
     /**
      * check if the metadata Elist contains a specific metadata
      * @param metadataList the metadata list

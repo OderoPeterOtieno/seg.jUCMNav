@@ -108,158 +108,179 @@ public class FeatureModelStrategyAlgorithm extends FormulaBasedGRLStrategyAlgori
      * @see seg.jUCMNav.extensionpoints.IGRLStrategiesAlgorithm#getEvaluation(grl.IntentionalElement)
      */
     public int getEvaluation(IntentionalElement element) {
-        Evaluation eval = (Evaluation) evaluations.get(element);
-        if ((element.getLinksDest().size() == 0) || (eval.getIntElement() != null)) {
-            return eval.getEvaluation();
-        }
         int result = 0;
-        int decompositionValue = -10000;
-        int dependencyValue = 10000;
-        int[] contributionValues = new int[100];
-        /* evaluation values of the nodes connected to this node via contribution links */
-        int[] evaluationValues = new int[100];
-        /* contribution value of the contribution links connected to the node */
-        int[] contributionLinksValues = new int[100];
-        /* used to keep a reference to the contribution links to be able to add metadata later on if required */
-        ElementLink[] contributionLinks = new ElementLink[100];
-        /* used to keep the contribution values that have to be ignored due to unsatisfied dependency */
-        int[] ignoredContributionValue = new int[100];
-        int contribArrayIt = 0;
-        int ignoredContribArrayIt = 0;
-        int consideredContribArrayIt = 0;
-        int sumConsideredContributionLinks = 0;
-        /* The following 3 variables will be used when the diagram is a feature model*/
-        int mandatoryLinksIndex = 0;
-        boolean onlyOptionalLinks = true;
+        Evaluation eval = (Evaluation) evaluations.get(element);
+        if (element.getLinksDest().size() == 0) {
+            result = eval.getEvaluation();
+        } else {
+        	int decompositionValue = -10000;
+        	int dependencyValue = 10000;
+            int[] contributionValues = new int[100];
+            /* evaluation values of the nodes connected to this node via contribution links */
+            int[] evaluationValues = new int[100];
+            /* contribution value of the contribution links connected to the node */
+            int[] contributionLinksValues = new int[100];
+            /* used to keep a reference to the contribution links to be able to add metadata later on if required */
+            ElementLink[] contributionLinks = new ElementLink[100];
+            /* used to keep the contribution values that have to be ignored due to unsatisfied dependency */
+            int[] ignoredContributionValue = new int[100];
+            int contribArrayIt = 0;
+            int ignoredContribArrayIt = 0;
+            int consideredContribArrayIt = 0;
+            int sumConsideredContributionLinks = 0;
+            /* The following 3 variables will be used when the diagram is a feature model*/
+            int mandatoryLinksIndex = 0;
+            boolean onlyOptionalLinks = true;
 
-        if(element instanceof Feature)
-        {
-            mandatoryLinksIndex = IntentionalElementUtil.getNumberOfMandatoryDestLinks(element);
-        	onlyOptionalLinks = IntentionalElementUtil.containsOnlyOptionalDestLink(element);
-        }
+            if(element instanceof Feature)
+            {
+                mandatoryLinksIndex = IntentionalElementUtil.getNumberOfMandatoryDestLinks(element);
+            	onlyOptionalLinks = IntentionalElementUtil.containsOnlyOptionalDestLink(element);
+            }
 
-        Iterator it = element.getLinksDest().iterator(); // Return the list of elementlink
-        int remainingContributionFMD = 100; // remaining contribution is currently 100
-        while (it.hasNext()) {
-            ElementLink link = (ElementLink) it.next();
-            if (link instanceof Decomposition) {
-                decompositionValue = evaluateDecomposition(element, decompositionValue, it, link);
-            } else if (link instanceof Dependency) {
-                dependencyValue = evaluateDependency(dependencyValue, link);
+            Iterator it = element.getLinksDest().iterator(); // Return the list of elementlink
+            int remainingContributionFMD = 100; // remaining contribution is currently 100
+            while (it.hasNext()) {
+                ElementLink link = (ElementLink) it.next();
+                if (link instanceof Decomposition) {
+                    decompositionValue = evaluateDecomposition(element, decompositionValue, it, link);
+                } else if (link instanceof Dependency) {
+                    dependencyValue = evaluateDependency(dependencyValue, link);
 
-                IntentionalElement src = (IntentionalElement) link.getSrc();
-                if (src.getType().getName().equals("Ressource")) { //$NON-NLS-1$
+                    IntentionalElement src = (IntentionalElement) link.getSrc();
+                    if (src.getType().getName().equals("Ressource")) { //$NON-NLS-1$
+                        boolean ignoreSrc = false;
+                        ignoreSrc = checkIgnoreElement(src);
+                        URNspec urnSpec = element.getGrlspec().getUrnspec();
+                        if (dependencyValue == 0 && !ignoreSrc) {
+                            MetadataHelper.addMetaData(urnSpec, element, Messages.getString("ConditionalGRLStrategyAlgorithm_IgnoreNode"), ""); //$NON-NLS-1$ //$NON-NLS-2$ $NON-NLS-2$
+                        }
+                        if (ignoreSrc) {
+                            MetadataHelper.addMetaData(urnSpec, src, Messages.getString("ConditionalGRLStrategyAlgorithm_IgnoreNode"), ""); //$NON-NLS-1$ //$NON-NLS-2$ $NON-NLS-2$
+                            dependencyValue = 10000;
+                        }
+                    }
+                } else if (link instanceof Contribution) {
+                    Contribution contrib = (Contribution) link;
+
                     boolean ignoreSrc = false;
-                    ignoreSrc = checkIgnoreElement(src);
-                    URNspec urnSpec = element.getGrlspec().getUrnspec();
-                    if (dependencyValue == 0 && !ignoreSrc) {
-                        MetadataHelper.addMetaData(urnSpec, element, Messages.getString("ConditionalGRLStrategyAlgorithm_IgnoreNode"), ""); //$NON-NLS-1$ //$NON-NLS-2$ $NON-NLS-2$
+                    ignoreSrc = checkIgnoreElement(link.getSrc());
+
+                    int quantitativeContrib = EvaluationStrategyManager.getInstance().getActiveQuantitativeContribution(contrib);
+                    // if Feature Model Diagram
+                    if(element instanceof Feature)
+                    {
+                    	if(onlyOptionalLinks)
+                    		//The case that the element contains only optional links
+                    		quantitativeContrib = 100;
+                    	else
+                    	{
+                    		//Mixed case or only mandatory links
+                    		if(ModelCreationFactory.containsMetadata(link.getMetadata(), ModelCreationFactory.getFeatureModelMandatoryLinkMetadata()))
+                    		{
+                    			//Last Link case
+                    			if(mandatoryLinksIndex == 1)                			
+                    				quantitativeContrib = remainingContributionFMD;
+                    			else {
+                    				quantitativeContrib = remainingContributionFMD/mandatoryLinksIndex;
+                    				remainingContributionFMD -= quantitativeContrib;
+                    			}
+                    			mandatoryLinksIndex--;
+                    		}else
+                    			//The link is an optional link
+                    			quantitativeContrib = 0;                		
+                    	}
+                    	contrib.setQuantitativeContribution(quantitativeContrib);
+
                     }
+
                     if (ignoreSrc) {
-                        MetadataHelper.addMetaData(urnSpec, src, Messages.getString("ConditionalGRLStrategyAlgorithm_IgnoreNode"), ""); //$NON-NLS-1$ //$NON-NLS-2$ $NON-NLS-2$
-                        dependencyValue = 10000;
+                        ignoredContributionValue[ignoredContribArrayIt] = quantitativeContrib;
+                        ignoredContribArrayIt++;
+                        URNspec urnSpec = element.getGrlspec().getUrnspec();
+                        MetadataHelper.addMetaData(urnSpec, link.getSrc(), Messages.getString("ConditionalGRLStrategyAlgorithm_IgnoreNode"), ""); //$NON-NLS-1$ //$NON-NLS-2$ $NON-NLS-2$
+                    } else {
+                        contributionLinksValues[consideredContribArrayIt] = quantitativeContrib;
+                        contributionLinks[consideredContribArrayIt] = link;
+                        int srcNodeEvaluationValue = ((Evaluation) evaluations.get(link.getSrc())).getEvaluation();
+                        evaluationValues[consideredContribArrayIt] = srcNodeEvaluationValue;
+
+                        sumConsideredContributionLinks = sumConsideredContributionLinks + contributionLinksValues[consideredContribArrayIt];
+
+                        consideredContribArrayIt++;
+
+                        double resultContrib = super.computeContributionResult(link, contrib);
+
+                        if (resultContrib != 0) {
+                            contributionValues[contribArrayIt] = (new Double(Math.round(resultContrib))).intValue();
+                            contribArrayIt++;
+                        }
                     }
                 }
-            } else if (link instanceof Contribution) {
-                Contribution contrib = (Contribution) link;
+            }
 
-                boolean ignoreSrc = false;
-                ignoreSrc = checkIgnoreElement(link.getSrc());
-
-                int quantitativeContrib = EvaluationStrategyManager.getInstance().getActiveQuantitativeContribution(contrib);
-                // if Feature Model Diagram
-                if(element instanceof Feature)
-                {
-                	if(onlyOptionalLinks)
-                		//The case that the element contains only optional links
-                		quantitativeContrib = 100;
-                	else
-                	{
-                		//Mixed case or only mandatory links
-                		if(ModelCreationFactory.containsMetadata(link.getMetadata(), ModelCreationFactory.getFeatureModelMandatoryLinkMetadata()))
-                		{
-                			//Last Link case
-                			if(mandatoryLinksIndex == 1)                			
-                				quantitativeContrib = remainingContributionFMD;
-                			else {
-                				quantitativeContrib = remainingContributionFMD/mandatoryLinksIndex;
-                				remainingContributionFMD -= quantitativeContrib;
-                			}
-                			mandatoryLinksIndex--;
-                		}else
-                			//The link is an optional link
-                			quantitativeContrib = 0;                		
-                	}
-                	contrib.setQuantitativeContribution(quantitativeContrib);
-
+            if (ignoredContribArrayIt > 0 && consideredContribArrayIt > 0 && sumConsideredContributionLinks > 0) {
+                int totalIgnoredContributionValue = 0;
+                for (int i = 0; i < ignoredContribArrayIt; i++) {
+                    totalIgnoredContributionValue = totalIgnoredContributionValue + ignoredContributionValue[i];
                 }
 
-                if (ignoreSrc) {
-                    ignoredContributionValue[ignoredContribArrayIt] = quantitativeContrib;
-                    ignoredContribArrayIt++;
+                int additionalContributionToRemainingNodes = totalIgnoredContributionValue;
+
+                contributionValues = new int[100];
+                contribArrayIt = 0;
+                for (int j = 0; j < consideredContribArrayIt; j++) {
+
+                    contributionLinksValues[j] = contributionLinksValues[j]
+                            + (additionalContributionToRemainingNodes * contributionLinksValues[j] / sumConsideredContributionLinks);
+
+                    if (contributionLinksValues[j] > 100) {
+                        contributionLinksValues[j] = 100;
+                    } else if (contributionLinksValues[j] < -100) {
+                        contributionLinksValues[j] = -100;
+                    }
+
                     URNspec urnSpec = element.getGrlspec().getUrnspec();
-                    MetadataHelper.addMetaData(urnSpec, link.getSrc(), Messages.getString("ConditionalGRLStrategyAlgorithm_IgnoreNode"), ""); //$NON-NLS-1$ //$NON-NLS-2$ $NON-NLS-2$
-                } else {
-                    contributionLinksValues[consideredContribArrayIt] = quantitativeContrib;
-                    contributionLinks[consideredContribArrayIt] = link;
-                    int srcNodeEvaluationValue = ((Evaluation) evaluations.get(link.getSrc())).getEvaluation();
-                    evaluationValues[consideredContribArrayIt] = srcNodeEvaluationValue;
+                    MetadataHelper.addMetaData(urnSpec, contributionLinks[j], Messages.getString("ConditionalGRLStrategyAlgorithm_RuntimeContribution"), //$NON-NLS-1$
+                            Integer.toString(contributionLinksValues[j]));
 
-                    sumConsideredContributionLinks = sumConsideredContributionLinks + contributionLinksValues[consideredContribArrayIt];
+                    double resultContrib;
 
-                    consideredContribArrayIt++;
-
-                    double resultContrib = super.computeContributionResult(link, contrib);
+                    resultContrib = (contributionLinksValues[j] * evaluationValues[j]) / 100;
 
                     if (resultContrib != 0) {
+
                         contributionValues[contribArrayIt] = (new Double(Math.round(resultContrib))).intValue();
+
                         contribArrayIt++;
                     }
                 }
+
             }
+            result = ensureEvaluationWithinRange(result, decompositionValue, dependencyValue, contributionValues, contribArrayIt);
         }
-
-        if (ignoredContribArrayIt > 0 && consideredContribArrayIt > 0 && sumConsideredContributionLinks > 0) {
-            int totalIgnoredContributionValue = 0;
-            for (int i = 0; i < ignoredContribArrayIt; i++) {
-                totalIgnoredContributionValue = totalIgnoredContributionValue + ignoredContributionValue[i];
-            }
-
-            int additionalContributionToRemainingNodes = totalIgnoredContributionValue;
-
-            contributionValues = new int[100];
-            contribArrayIt = 0;
-            for (int j = 0; j < consideredContribArrayIt; j++) {
-
-                contributionLinksValues[j] = contributionLinksValues[j]
-                        + (additionalContributionToRemainingNodes * contributionLinksValues[j] / sumConsideredContributionLinks);
-
-                if (contributionLinksValues[j] > 100) {
-                    contributionLinksValues[j] = 100;
-                } else if (contributionLinksValues[j] < -100) {
-                    contributionLinksValues[j] = -100;
-                }
-
-                URNspec urnSpec = element.getGrlspec().getUrnspec();
-                MetadataHelper.addMetaData(urnSpec, contributionLinks[j], Messages.getString("ConditionalGRLStrategyAlgorithm_RuntimeContribution"), //$NON-NLS-1$
-                        Integer.toString(contributionLinksValues[j]));
-
-                double resultContrib;
-
-                resultContrib = (contributionLinksValues[j] * evaluationValues[j]) / 100;
-
-                if (resultContrib != 0) {
-
-                    contributionValues[contribArrayIt] = (new Double(Math.round(resultContrib))).intValue();
-
-                    contribArrayIt++;
-                }
-            }
-
+        if (eval.getIntElement() != null) {
+        	if (result != eval.getEvaluation()) {
+        		Metadata warning = MetadataHelper.getMetaDataObj(element, "user_set_evaluation_warning");
+        		if (warning == null) {
+        			warning = ModelCreationFactory.getUserSetEvalWarningMetadata();
+        			element.getMetadata().add(warning);
+        		}
+    			warning.setValue(Integer.toString(eval.getEvaluation()) + " != " + Integer.toString(result));
+        	} else {
+        		//user set evaluation is equal to evaluated value
+        		Metadata warning = MetadataHelper.getMetaDataObj(element, "user_set_evaluation_warning");
+        		if (warning != null) {
+        			element.getMetadata().remove(warning);
+        		}
+        	}
+        	result = eval.getEvaluation();
+        } else {
+    		Metadata warning = MetadataHelper.getMetaDataObj(element, "user_set_evaluation_warning");
+    		if (warning != null) {
+    			element.getMetadata().remove(warning);
+    		}
         }
-
-        result = ensureEvaluationWithinRange(result, decompositionValue, dependencyValue, contributionValues, contribArrayIt);
-
         return result;
     }
 
