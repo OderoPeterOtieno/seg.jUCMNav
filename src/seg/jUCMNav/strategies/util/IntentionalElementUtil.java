@@ -82,6 +82,9 @@ public class IntentionalElementUtil {
         }
         while (it.hasNext()) {
             ElementLink link = (ElementLink) it.next();
+            if (MetadataHelper.getMetaDataObj(link, "FeatureModel") == null) {
+            	continue;
+            }
             if (link instanceof Contribution) {
             	// if contribution link but not optional
                 if (!ModelCreationFactory.containsMetadata(link.getMetadata(), ModelCreationFactory.getFeatureModelOptionalLinkMetadata())) {
