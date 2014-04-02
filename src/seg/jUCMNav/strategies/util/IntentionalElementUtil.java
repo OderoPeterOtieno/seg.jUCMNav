@@ -225,9 +225,10 @@ public class IntentionalElementUtil {
      */
 	public static boolean isAutoSelectable(IntentionalElement elem) {
 		if (!(elem instanceof Feature)) return false;
-		if (hasNumericalValue(elem, IGRLStrategyAlgorithm.FEATURE_SELECTED)) {
-			return false;
-		}
+		Metadata autoSelected = MetadataHelper.getMetaDataObj(elem, ModelCreationFactory.AUTO_SELECTED_FEATURE_METADATA_STRING);
+//		if (hasNumericalValue(elem, IGRLStrategyAlgorithm.FEATURE_SELECTED) && (autoSelected == null)) {
+//			return false;
+//		}
 		if (isRootFeature(elem)) {
 			return false;
 		}
