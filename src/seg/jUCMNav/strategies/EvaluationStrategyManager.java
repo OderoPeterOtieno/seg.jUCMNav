@@ -313,19 +313,16 @@ public class EvaluationStrategyManager {
         
         // if auto selection is set, execute auto selection
         if (algo instanceof FeatureModelStrategyAlgorithm && StrategyEvaluationPreferences.getAutoSelectMandatoryFeatures()) {
-        	System.out.println("DEBUG1: Now we are re-initializing the diagram");
         	algo.initTopDown(strategy, evaluations);
         	while(algo.hasNextNode()) {
         		IntentionalElement rootElement = algo.nextNode();
-        		System.out.println("DEBUG2: sub-tree examined for auto-selection: " + rootElement.getName());
         		if (rootElement instanceof Feature) {
         			autoSelectFeatures(rootElement);
         		}
         	}
-        	System.out.println("DEBUG3: now we completed the auto-selection");
         	// then evaluate again
-//        	algo.init(strategy, evaluations);
-//        	evaluateElement(algo);
+        	algo.init(strategy, evaluations);
+        	evaluateDiagram(algo);
         } else {
         	// remove auto select metadata tag for all features
         	algo.initTopDown(strategy, evaluations);
@@ -359,7 +356,7 @@ public class EvaluationStrategyManager {
     			rootFeature.getMetadata().add(autoSelected);
     		}
 		} else {
-			// if this is auto-selectable, and has auto_select_feature metadata from previous operations, remove it
+			// if this is not auto-selectable, and has auto_select_feature metadata from previous selection values, remove it
 			Metadata autoSelected = MetadataHelper.getMetaDataObj(rootFeature, ModelCreationFactory.AUTO_SELECTED_FEATURE_METADATA_STRING);
 	    	if (autoSelected != null) {
 	    		rootFeature.getMetadata().remove(autoSelected);
@@ -372,9 +369,10 @@ public class EvaluationStrategyManager {
 		while (it.hasNext()) {
 			ElementLink link = (ElementLink) it.next();
 			IntentionalElement childElem = (IntentionalElement) link.getSrc();
-			this.autoSelectFeatures(childElem);
+			if (childElem instanceof Feature) {
+				this.autoSelectFeatures(childElem);
+			}
 		}
-		System.out.println("DEBUG: SYSTEM BREAKPOINT 1");
 	}
 
     private void removeAutoSelectMetadataTags(IntentionalElement rootFeature) {
@@ -616,6 +614,15 @@ public class EvaluationStrategyManager {
             if (eval != null)
                 evaluations.put(element, eval);
             calculateEvaluation();
+        }
+
+    }
+    
+    public synchronized void setEvaluationForElementNoRecalc(IntentionalElement element, Evaluation eval) {
+        if (strategy != null) {
+            evaluations.remove(element);
+            if (eval != null)
+                evaluations.put(element, eval);
         }
 
     }
@@ -931,18 +938,27 @@ public class EvaluationStrategyManager {
                 syncIntentionalElementQualitativeEvaluation(eval, value);
                 setEvaluationMetadata(element, eval);
             }
-            if (!delete) {
-                // If it is a new Evaluation entered by the user, link it with the strategy and intentionalElement
-                AddEvaluationCommand cmd = new AddEvaluationCommand(eval, element, strategy);
-                execute(cmd);
-            } else {
-                DeleteEvaluationCommand cmd = new DeleteEvaluationCommand(eval);
-                execute(cmd);
-            }
-            
-            // if needs recalculation, then do it
             if (recalc) {
+	            if (!delete) {
+	                // If it is a new Evaluation entered by the user, link it with the strategy and intentionalElement
+	                AddEvaluationCommand cmd = new AddEvaluationCommand(eval, element, strategy);
+	                execute(cmd);
+	            } else {
+	                DeleteEvaluationCommand cmd = new DeleteEvaluationCommand(eval);
+	                execute(cmd);
+	            }
             	calculateEvaluation();
+            } else {
+            	if (!delete) {
+	                // If it is a new Evaluation entered by the user, link it with the strategy and intentionalElement
+	                AddEvaluationCommand cmd = new AddEvaluationCommand(eval, element, strategy);
+	                execute(cmd);
+	            } else {
+	            	DeleteEvaluationCommand cmd = new DeleteEvaluationCommand(eval);
+	            	if (cmd.canExecute()) {
+	            		cmd.executeNoRecalc();
+	            	}
+	            }
             }
         }
     }

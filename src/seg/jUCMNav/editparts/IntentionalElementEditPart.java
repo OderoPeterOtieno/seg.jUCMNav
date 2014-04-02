@@ -463,6 +463,12 @@ public class IntentionalElementEditPart extends GrlNodeEditPart implements NodeE
                     }
 
                     String text = (evaluation.getStrategies() != null ? "(*)" : ""); //$NON-NLS-1$ //$NON-NLS-2$
+                    if (elem instanceof Feature) {
+	                    Metadata autoSelected = MetadataHelper.getMetaDataObj(elem, ModelCreationFactory.AUTO_SELECTED_FEATURE_METADATA_STRING);
+	                    if (autoSelected != null) {
+	                    	text = "(A)";
+	                    }
+                    }
 
                     if (algo instanceof QuantitativeGRLStrategyAlgorithm || evalType == IGRLStrategyAlgorithm.EVAL_CONSTRAINT_SOLVER) {
                         int val = evaluation.getEvaluation();

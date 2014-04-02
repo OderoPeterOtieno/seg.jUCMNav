@@ -134,6 +134,14 @@ public class QualitativeGRLStrategyAlgorithm implements IGRLStrategyAlgorithm {
 	                    evalReady.add(calc.getElement());
 	                }
 	            }
+	            if (evalReadyUserSet.containsKey(temp)) {
+	                EvaluationCalculation calc = (EvaluationCalculation) evalReadyUserSet.get(temp);
+	                calc.incrementLinkCalc();
+	                if (calc.hasExceededTotalLink()) {
+	                	evalReadyUserSet.remove(temp);
+	                	evalReady.add(calc.getElement());
+	                }
+	            }
 	        }
         } else {
         	for (Iterator j = intElem.getLinksDest().iterator(); j.hasNext();) {
@@ -145,6 +153,14 @@ public class QualitativeGRLStrategyAlgorithm implements IGRLStrategyAlgorithm {
 	                if (calc.hasExceededTotalLink()) {
 	                    evaluationCalculation.remove(temp);
 	                    evalReady.add(calc.getElement());
+	                }
+	            }
+	            if (evalReadyUserSet.containsKey(temp)) {
+	                EvaluationCalculation calc = (EvaluationCalculation) evalReadyUserSet.get(temp);
+	                calc.incrementLinkCalc();
+	                if (calc.hasExceededTotalLink()) {
+	                	evalReadyUserSet.remove(temp);
+	                	evalReady.add(calc.getElement());
 	                }
 	            }
 	        }

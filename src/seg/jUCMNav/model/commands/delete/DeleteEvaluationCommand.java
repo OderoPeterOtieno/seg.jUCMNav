@@ -42,7 +42,26 @@ public class DeleteEvaluationCommand extends Command implements JUCMNavCommand {
         intentional = evaluation.getIntElement();
         redo();
     }
+    
+    public void executeNoRecalc() {
+    	strategy = evaluation.getStrategies();
+        intentional = evaluation.getIntElement();
+        redoNoReCalc();
+    }
 
+    private void redoNoReCalc() {
+        testPreConditions();
+
+        // Remove the evaluation object from the EvaluationManager to calculate the new value
+        EvaluationStrategyManager.getInstance().setEvaluationForElementNoRecalc(intentional,
+                (Evaluation) ModelCreationFactory.getNewObject(strategy.getGrlspec().getUrnspec(), Evaluation.class));
+
+        evaluation.setStrategies(null);
+        evaluation.setIntElement(null);
+
+        testPostConditions();
+    }
+    
     /**
      * @see org.eclipse.gef.commands.Command#redo()
      */
