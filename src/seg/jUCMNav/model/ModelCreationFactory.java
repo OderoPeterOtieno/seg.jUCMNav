@@ -146,6 +146,8 @@ public class ModelCreationFactory implements CreationFactory {
     public static final int FEATURE_MODEL_MANDATORY_TYPE = -1;
     public static final int FEATURE_MODEL_OPTIONAL_TYPE = -2;
     public static final int FEATURE_MODEL_DECOMPOSTION_TYPE = -3;
+    
+    public static final String AUTO_SELECTED_FEATURE_METADATA_STRING = "auto_selected_feature";
 
     private Object preDefinedDefinition;
 
@@ -264,6 +266,13 @@ public class ModelCreationFactory implements CreationFactory {
     	userSetEvalWarningMetadata = UrncoreFactory.eINSTANCE.createMetadata();
     	userSetEvalWarningMetadata.setName("user_set_evaluation_warning");
     	return userSetEvalWarningMetadata;
+    }
+    
+    public static Metadata getAutoSelectedMetadata() {
+    	Metadata autoSelectedMetadata;
+    	autoSelectedMetadata = UrncoreFactory.eINSTANCE.createMetadata();
+    	autoSelectedMetadata.setName(AUTO_SELECTED_FEATURE_METADATA_STRING);
+    	return autoSelectedMetadata;
     }
     
     /**

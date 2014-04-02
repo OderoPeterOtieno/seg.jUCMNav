@@ -5,17 +5,47 @@ import grl.IntentionalElement;
 /**
  * Data container object used by the propagation mechanism.
  * 
- * @author Jean-François Roy
+ * @author Jean-Francois Roy, Yanji Liu
  * 
  */
 public class EvaluationCalculation {
-    public IntentionalElement element;
-    public int linkCalc;
-    public int totalLinkDest;
+    private IntentionalElement element;
+    private int linkCalc;
+    private int totalLinkDest;
+    private int totalLinkSrc;
+    private boolean linkSrc;
 
     public EvaluationCalculation(IntentionalElement element, int totalLink) {
-        this.element = element;
-        this.totalLinkDest = totalLink;
-        linkCalc = 0;
+        this(element, totalLink, false);
     }
+    
+    public EvaluationCalculation(IntentionalElement element, int totalLink, boolean linkSrc) {
+    	this.element = element;
+    	this.linkCalc = 0;
+    	this.linkSrc = linkSrc;
+    	if (linkSrc) {
+            this.totalLinkSrc = totalLink;
+    	} else {
+            this.totalLinkDest = totalLink;
+    	}
+    }
+    
+    public boolean hasExceededTotalLink() {
+    	if (linkSrc)
+    		return this.linkCalc <= this.totalLinkSrc;
+    	else 
+    		return this.linkCalc >= this.totalLinkDest;
+    }
+    
+    public void incrementLinkCalc() {
+    	this.linkCalc++;
+    }
+
+	public IntentionalElement getElement() {
+		return this.element;
+	}
+	
+	public boolean isLinkSrc() {
+		return this.linkSrc;
+	}
 }

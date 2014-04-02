@@ -73,6 +73,13 @@ public class Hao2011Algorithm implements IGRLStrategyAlgorithm {
         initializeConstraintVariables(strategy);
         analyseElementAndLinks(strategy);
     }
+    
+    /**
+     * This init method in this specific algorithm does not behave differently than the init() method
+     */
+    public void initTopDown(EvaluationStrategy strategy, HashMap evaluations) {
+        this.init(strategy, evaluations);
+    }
 
     private void reInitializeEvaluations() {
         for (Entry<IntentionalElement, Evaluation> anEntry : getEvaluations().entrySet()) {
