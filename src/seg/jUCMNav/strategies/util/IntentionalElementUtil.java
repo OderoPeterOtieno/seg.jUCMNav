@@ -59,6 +59,10 @@ public class IntentionalElementUtil {
         }
         while (it.hasNext()) {
             ElementLink link = (ElementLink) it.next();
+            if (!(link.getDest() instanceof Feature))
+            {
+            	continue;
+            }
             if (link instanceof Contribution) {
                 if (!ModelCreationFactory.containsMetadata(link.getMetadata(), ModelCreationFactory.getFeatureModelOptionalLinkMetadata())) {
                     return false;
@@ -180,7 +184,7 @@ public class IntentionalElementUtil {
                 // for each source
                 IntentionalElement srcElem = (IntentionalElement)link.getDest();
                 // if decomposition type is XOR
-                if (srcElem != null) {
+                if ((srcElem != null) && (srcElem instanceof Feature)) {
                     if (srcElem.getDecompositionType() == DecompositionType.OR_LITERAL || srcElem.getDecompositionType() == DecompositionType.XOR_LITERAL) {
                         Iterator srcIt = srcElem.getLinksDest().iterator();
                         while (srcIt.hasNext()) {
