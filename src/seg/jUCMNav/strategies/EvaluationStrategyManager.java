@@ -313,7 +313,7 @@ public class EvaluationStrategyManager {
         
         // if auto selection is set, execute auto selection
         if (algo instanceof FeatureModelStrategyAlgorithm && StrategyEvaluationPreferences.getAutoSelectMandatoryFeatures()) {
-        	algo.initTopDown(strategy, evaluations);
+        	((FeatureModelStrategyAlgorithm)algo).initTopDownFeature(strategy, evaluations);
         	while(algo.hasNextNode()) {
         		IntentionalElement rootElement = algo.nextNode();
         		if (rootElement instanceof Feature) {
@@ -325,7 +325,7 @@ public class EvaluationStrategyManager {
         	evaluateDiagram(algo);
         } else {
         	// remove auto select metadata tag for all features
-        	algo.initTopDown(strategy, evaluations);
+        	((FeatureModelStrategyAlgorithm)algo).initTopDownFeature(strategy, evaluations);
         	while(algo.hasNextNode()) {
         		IntentionalElement rootElement = algo.nextNode();
         		if (rootElement instanceof Feature) {

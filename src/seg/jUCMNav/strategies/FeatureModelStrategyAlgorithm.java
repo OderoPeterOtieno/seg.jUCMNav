@@ -13,12 +13,15 @@ import grl.IntentionalElement;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
+import java.util.Vector;
 
 import seg.jUCMNav.Messages;
 import seg.jUCMNav.extensionpoints.IGRLStrategyAlgorithm;
 import seg.jUCMNav.featureModel.util.DetermineSelectableFeatureCommand;
 import seg.jUCMNav.model.ModelCreationFactory;
 import seg.jUCMNav.model.util.MetadataHelper;
+import seg.jUCMNav.model.util.StrategyEvaluationRangeHelper;
 import seg.jUCMNav.strategies.util.IntentionalElementUtil;
 import urn.URNspec;
 import urncore.Metadata;
@@ -52,6 +55,48 @@ public class FeatureModelStrategyAlgorithm extends FormulaBasedGRLStrategyAlgori
         }
         
         super.init(strategy, evaluations);
+    }
+    /**
+     * Define the strategy to calculate the evaluation. Note that EvaluationStrategy are associated only to Evaluation defined by the user. To access the list
+     * of IntentionalElement, use GRLspec (get from the strategy)
+     * 
+     * This method will init with the root elements only for feature model graph, instead of leaf elements like the init() method.
+     * This method in that class will behave the same as init().
+     * 
+     * @param strategy
+     *            EvaluationStrategy used for the calculation
+     * @param evaluations
+     *            HashMap containing the pair of IntentionalElement->Evaluation defined in this strategy.
+     */
+    public void initTopDownFeature(EvaluationStrategy strategy, HashMap evaluations) {
+    	evalReady = new Vector();
+    	evalReadyUserSet = new HashMap();
+    	evaluationCalculation = new HashMap();
+    	this.evaluations = evaluations;
+    	// determines whether -100 or 0 should be used as a minimum scale.
+    	minRange = -100 * (StrategyEvaluationRangeHelper.getCurrentRange(strategy.getGrlspec().getUrnspec()) ? 0 : 1);
+		ListIterator it = strategy.getGrlspec().getIntElements().listIterator(strategy.getGrlspec().getIntElements().size());
+		while (it.hasPrevious()) {
+			IntentionalElement element = (IntentionalElement) it.previous();
+			int srcLinkNum = 0;
+			Iterator linkIt = element.getLinksSrc().iterator();
+			while (linkIt.hasNext())
+			{
+				ElementLink link = (ElementLink) linkIt.next();
+				if (link.getDest() instanceof Feature) {
+					srcLinkNum++;
+				}			
+			}
+			if (srcLinkNum == 0) {
+					evalReady.add(element);
+			} else if (((Evaluation) evaluations.get(element)).getStrategies() != null) {
+					EvaluationCalculation calculation = new EvaluationCalculation(element, element.getLinksSrc().size());
+					evalReadyUserSet.put(element, calculation);
+			} else {
+					EvaluationCalculation calculation = new EvaluationCalculation(element, element.getLinksSrc().size());
+					evaluationCalculation.put(element, calculation);
+			}
+		}
     }
 
     /*
