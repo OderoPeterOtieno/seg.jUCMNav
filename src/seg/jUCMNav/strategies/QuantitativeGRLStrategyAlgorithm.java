@@ -51,6 +51,22 @@ public class QuantitativeGRLStrategyAlgorithm implements IGRLStrategyAlgorithm {
 
         StrategyAlgorithmImplementationHelper.defaultInit(strategy, evaluations, evalReady, evalReadyUserSet, evaluationCalculation);
     }
+    
+    /*
+     * (non-Javadoc)
+     * 
+     * @see seg.jUCMNav.extensionpoints.IGRLStrategiesAlgorithm#initTopDown(java.util.Vector)
+     */
+    public void initTopDown(EvaluationStrategy strategy, HashMap evaluations) {
+    	 evalReady = new Vector();
+         evalReadyUserSet = new HashMap();
+         evaluationCalculation = new HashMap();
+         this.evaluations = evaluations;
+         // determines whether -100 or 0 should be used as a minimum scale.
+         minRange = -100 * (StrategyEvaluationRangeHelper.getCurrentRange(strategy.getGrlspec().getUrnspec()) ? 0 : 1);
+
+         StrategyAlgorithmImplementationHelper.initTopDown(strategy, evaluations, evalReady, evalReadyUserSet, evaluationCalculation);
+    }
 
     /*
      * (non-Javadoc)
@@ -75,28 +91,51 @@ public class QuantitativeGRLStrategyAlgorithm implements IGRLStrategyAlgorithm {
         	intElem = (IntentionalElement) evalReady.remove(0);
         } else if (evalReadyUserSet.size() > 0) {
         	Iterator it = evalReadyUserSet.keySet().iterator();
-        	intElem = ((EvaluationCalculation) evalReadyUserSet.remove(it.next())).element;
+        	intElem = ((EvaluationCalculation) evalReadyUserSet.remove(it.next())).getElement();
         }
 
-        for (Iterator j = intElem.getLinksSrc().iterator(); j.hasNext();) {
-            // TODO Need to make sure this GRLLinkableElement is really an IntentionalElement
-            IntentionalElement temp = (IntentionalElement) ((ElementLink) j.next()).getDest();
-            if (evaluationCalculation.containsKey(temp)) {
-                EvaluationCalculation calc = (EvaluationCalculation) evaluationCalculation.get(temp);
-                calc.linkCalc += 1;
-                if (calc.linkCalc >= calc.totalLinkDest) {
-                    evaluationCalculation.remove(temp);
-                    evalReady.add(calc.element);
-                }
-            }
-            if (evalReadyUserSet.containsKey(temp)) {
-                EvaluationCalculation calc = (EvaluationCalculation) evalReadyUserSet.get(temp);
-                calc.linkCalc += 1;
-                if (calc.linkCalc >= calc.totalLinkDest) {
-                	evalReadyUserSet.remove(temp);
-                    evalReady.add(calc.element);
-                }
-            }
+        if (intElem.getLinksSrc() != null) {
+	        for (Iterator j = intElem.getLinksSrc().iterator(); j.hasNext();) {
+	            // TODO Need to make sure this GRLLinkableElement is really an IntentionalElement
+	            IntentionalElement temp = (IntentionalElement) ((ElementLink) j.next()).getDest();
+	            if (evaluationCalculation.containsKey(temp)) {
+	                EvaluationCalculation calc = (EvaluationCalculation) evaluationCalculation.get(temp);
+	                calc.incrementLinkCalc();
+	                if (calc.hasExceededTotalLink()) {
+	                    evaluationCalculation.remove(temp);
+	                    evalReady.add(calc.getElement());
+	                }
+	            }
+	            if (evalReadyUserSet.containsKey(temp)) {
+	                EvaluationCalculation calc = (EvaluationCalculation) evalReadyUserSet.get(temp);
+	                calc.incrementLinkCalc();
+	                if (calc.hasExceededTotalLink()) {
+	                	evalReadyUserSet.remove(temp);
+	                	evalReady.add(calc.getElement());
+	                }
+	            }
+	        }
+        } else {
+        	for (Iterator j = intElem.getLinksDest().iterator(); j.hasNext();) {
+	            // TODO Need to make sure this GRLLinkableElement is really an IntentionalElement
+	            IntentionalElement temp = (IntentionalElement) ((ElementLink) j.next()).getSrc();
+	            if (evaluationCalculation.containsKey(temp)) {
+	                EvaluationCalculation calc = (EvaluationCalculation) evaluationCalculation.get(temp);
+	                calc.incrementLinkCalc();
+	                if (calc.hasExceededTotalLink()) {
+	                    evaluationCalculation.remove(temp);
+	                    evalReady.add(calc.getElement());
+	                }
+	            }
+	            if (evalReadyUserSet.containsKey(temp)) {
+	                EvaluationCalculation calc = (EvaluationCalculation) evalReadyUserSet.get(temp);
+	                calc.incrementLinkCalc();
+	                if (calc.hasExceededTotalLink()) {
+	                	evalReadyUserSet.remove(temp);
+	                	evalReady.add(calc.getElement());
+	                }
+	            }
+	        }
         }
         return intElem;
     }

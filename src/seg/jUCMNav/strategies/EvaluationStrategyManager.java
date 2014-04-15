@@ -11,6 +11,7 @@ import grl.ElementLink;
 import grl.Evaluation;
 import grl.EvaluationRange;
 import grl.EvaluationStrategy;
+import grl.Feature;
 import grl.GRLspec;
 import grl.ImportanceType;
 import grl.IntentionalElement;
@@ -52,6 +53,7 @@ import seg.jUCMNav.model.commands.create.AddKPIInformationConfigCommand;
 import seg.jUCMNav.model.commands.delete.DeleteEvaluationCommand;
 import seg.jUCMNav.model.util.MetadataHelper;
 import seg.jUCMNav.model.util.StrategyEvaluationRangeHelper;
+import seg.jUCMNav.strategies.util.IntentionalElementUtil;
 import seg.jUCMNav.views.preferences.StrategyEvaluationPreferences;
 import seg.jUCMNav.views.property.LinkRefPropertySource;
 import seg.jUCMNav.views.strategies.StrategiesView;
@@ -306,18 +308,88 @@ public class EvaluationStrategyManager {
     }
 
     private void processNonConstraintSolverAlgorithm() {
-        while (algo.hasNextNode()) {
-            IntentionalElement element = algo.nextNode();
-            String elementName = element.getName();
-            Evaluation eval = (Evaluation) evaluations.get(element);
-            int val = algo.getEvaluation(element);
-            eval.setEvaluation(val);
-            syncIntentionalElementQualitativeEvaluation(eval, val);
-            setEvaluationMetadata(element, eval);
+        // evaluate for the first time
+        evaluateDiagram(algo);
+        
+        // if auto selection is set, execute auto selection
+        if (algo instanceof FeatureModelStrategyAlgorithm && StrategyEvaluationPreferences.getAutoSelectMandatoryFeatures()) {
+        	((FeatureModelStrategyAlgorithm)algo).initTopDownFeature(strategy, evaluations);
+        	while(algo.hasNextNode()) {
+        		IntentionalElement rootElement = algo.nextNode();
+        		if (rootElement instanceof Feature) {
+        			autoSelectFeatures(rootElement);
+        		}
+        	}
+        	// then evaluate again
+        	algo.init(strategy, evaluations);
+        	evaluateDiagram(algo);
+        } else {
+        	// remove auto select metadata tag for all features
+        	((FeatureModelStrategyAlgorithm)algo).initTopDownFeature(strategy, evaluations);
+        	while(algo.hasNextNode()) {
+        		IntentionalElement rootElement = algo.nextNode();
+        		if (rootElement instanceof Feature) {
+        			removeAutoSelectMetadataTags(rootElement);
+        		}
+        	}
         }
     }
 
-    private void processConstraintSolverAlgorithm() {
+	private void evaluateDiagram(IGRLStrategyAlgorithm algo) {
+    	while(algo.hasNextNode()) {
+	    	IntentionalElement leafElement = algo.nextNode();
+	    	Evaluation eval = (Evaluation) evaluations.get(leafElement);
+	        int val = algo.getEvaluation(leafElement);
+	        eval.setEvaluation(val);
+	        syncIntentionalElementQualitativeEvaluation(eval, val);
+	        setEvaluationMetadata(leafElement, eval);
+    	}
+	}
+
+	private void autoSelectFeatures(IntentionalElement rootFeature) {
+		if (IntentionalElementUtil.isAutoSelectable(rootFeature)) {
+			setIntentionalElementEvaluation(rootFeature, IGRLStrategyAlgorithm.FEATURE_SELECTED, false, false);
+			// add metadata tag to this element
+			Metadata autoSelected = MetadataHelper.getMetaDataObj(rootFeature, ModelCreationFactory.AUTO_SELECTED_FEATURE_METADATA_STRING);
+    		if (autoSelected == null) {
+    			autoSelected = ModelCreationFactory.getAutoSelectedMetadata();
+    			rootFeature.getMetadata().add(autoSelected);
+    		}
+		} else {
+			// if this is not auto-selectable, and has auto_select_feature metadata from previous selection values, remove it
+			Metadata autoSelected = MetadataHelper.getMetaDataObj(rootFeature, ModelCreationFactory.AUTO_SELECTED_FEATURE_METADATA_STRING);
+	    	if (autoSelected != null) {
+	    		rootFeature.getMetadata().remove(autoSelected);
+	    		if (IntentionalElementUtil.hasNumericalValue(rootFeature, IGRLStrategyAlgorithm.FEATURE_SELECTED)) {
+		    		setIntentionalElementEvaluation(rootFeature, IGRLStrategyAlgorithm.FEATURE_SELECTED, true, false);
+		    	}
+			}
+		}
+		Iterator it = rootFeature.getLinksDest().iterator();
+		while (it.hasNext()) {
+			ElementLink link = (ElementLink) it.next();
+			IntentionalElement childElem = (IntentionalElement) link.getSrc();
+			if (childElem instanceof Feature) {
+				this.autoSelectFeatures(childElem);
+			}
+		}
+	}
+
+    private void removeAutoSelectMetadataTags(IntentionalElement rootFeature) {
+    	// FIXME: remove auto selection value
+    	Metadata autoSelected = MetadataHelper.getMetaDataObj(rootFeature, ModelCreationFactory.AUTO_SELECTED_FEATURE_METADATA_STRING);
+    	if (autoSelected != null) {
+    		rootFeature.getMetadata().remove(autoSelected);
+		}
+		Iterator it = rootFeature.getLinksDest().iterator();
+		while (it.hasNext()) {
+			ElementLink link = (ElementLink) it.next();
+			IntentionalElement childElem = (IntentionalElement) link.getSrc();
+			this.removeAutoSelectMetadataTags(childElem);
+		}
+	}
+	
+	private void processConstraintSolverAlgorithm() {
         Hao2011Algorithm hao2011Algorithm = (Hao2011Algorithm) algo;
         hao2011Algorithm.calculate();
         while (hao2011Algorithm.hasNextNode()) {
@@ -542,6 +614,15 @@ public class EvaluationStrategyManager {
             if (eval != null)
                 evaluations.put(element, eval);
             calculateEvaluation();
+        }
+
+    }
+    
+    public synchronized void setEvaluationForElementNoRecalc(IntentionalElement element, Evaluation eval) {
+        if (strategy != null) {
+            evaluations.remove(element);
+            if (eval != null)
+                evaluations.put(element, eval);
         }
 
     }
@@ -843,9 +924,11 @@ public class EvaluationStrategyManager {
      *            the new quantitative evaluation value
      * @param delete
      *            Are we removing this evaluation or adding it?
+     * @param recalc
+     * 			  Do we need recalculation?
      * 
      */
-    protected synchronized void setIntentionalElementEvaluation(IntentionalElement element, int value, boolean delete) {
+    protected synchronized void setIntentionalElementEvaluation(IntentionalElement element, int value, boolean delete, boolean recalc) {
         // The evaluation could only be between 100 and minRange (0 or -100, depending on the scale). Do nothing if it is not the case
         if (value <= IGRLStrategyAlgorithm.SATISFICED && value >= IGRLStrategyAlgorithm.UNDECIDED) {
             Evaluation eval = (Evaluation) evaluations.get(element);
@@ -855,16 +938,28 @@ public class EvaluationStrategyManager {
                 syncIntentionalElementQualitativeEvaluation(eval, value);
                 setEvaluationMetadata(element, eval);
             }
-            if (!delete) {
-                // If it is a new Evaluation entered by the user, link it with the strategy and intentionalElement
-                AddEvaluationCommand cmd = new AddEvaluationCommand(eval, element, strategy);
-                execute(cmd);
+            if (recalc) {
+	            if (!delete) {
+	                // If it is a new Evaluation entered by the user, link it with the strategy and intentionalElement
+	                AddEvaluationCommand cmd = new AddEvaluationCommand(eval, element, strategy);
+	                execute(cmd);
+	            } else {
+	                DeleteEvaluationCommand cmd = new DeleteEvaluationCommand(eval);
+	                execute(cmd);
+	            }
+            	calculateEvaluation();
             } else {
-                DeleteEvaluationCommand cmd = new DeleteEvaluationCommand(eval);
-                execute(cmd);
+            	if (!delete) {
+	                // If it is a new Evaluation entered by the user, link it with the strategy and intentionalElement
+	                AddEvaluationCommand cmd = new AddEvaluationCommand(eval, element, strategy);
+	                execute(cmd);
+	            } else {
+	            	DeleteEvaluationCommand cmd = new DeleteEvaluationCommand(eval);
+	            	if (cmd.canExecute()) {
+	            		cmd.executeNoRecalc();
+	            	}
+	            }
             }
-
-            calculateEvaluation();
         }
     }
 
@@ -877,7 +972,7 @@ public class EvaluationStrategyManager {
      *            the new quantitative evaluation value
      */
     public synchronized void setIntentionalElementEvaluation(IntentionalElement element, int value) {
-        setIntentionalElementEvaluation(element, value, false);
+        setIntentionalElementEvaluation(element, value, false, true);
     }
 
     /**
@@ -889,7 +984,7 @@ public class EvaluationStrategyManager {
      *            the value that was there before
      */
     public synchronized void removeIntentionalElementEvaluation(IntentionalElement element, int oldValue) {
-        setIntentionalElementEvaluation(element, oldValue, true);
+        setIntentionalElementEvaluation(element, oldValue, true, true);
     }
 
     private void execute(Command cmd) {

@@ -33,6 +33,9 @@ public interface IGRLStrategyAlgorithm {
     public final static int UNDECIDED_0 = -102;
     public final static int NONE_0 = 50;
 
+    // Minimal numerical values for numerical values, on a 0..100 scale
+    public final static int FEATURE_SELECTED = 100;
+    
     // Values for the various GRL strategy algorithms
     public final static int EVAL_QUALITATIVE = 1;
     public final static int EVAL_QUANTITATIVE = 2;
@@ -54,6 +57,20 @@ public interface IGRLStrategyAlgorithm {
      */
     public void init(EvaluationStrategy strategy, HashMap evaluations);
 
+    /**
+     * Define the strategy to calculate the evaluation. Note that EvaluationStrategy are associated only to Evaluation defined by the user. To access the list
+     * of IntentionalElement, use GRLspec (get from the strategy)
+     * 
+     * This method will init with the root elements, instead of leaf elements like the init() method above, but does not affect Hao2011Algorithm. 
+     * This method in that class will behave the same as init().
+     * 
+     * @param strategy
+     *            EvaluationStrategy used for the calculation
+     * @param evaluations
+     *            HashMap containing the pair of IntentionalElement->Evaluation defined in this strategy.
+     */
+    public void initTopDown(EvaluationStrategy strategy, HashMap evaluations);
+    
     /**
      * @return true if there is a next node available for calculation
      */

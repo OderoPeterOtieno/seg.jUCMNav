@@ -77,6 +77,13 @@ public class StrategyEvaluationPreferences {
     }
 
     /**
+     * @return should we auto select mandatory features for FMD?
+     */
+    public static boolean getAutoSelectMandatoryFeatures() {
+    	return getPreferenceStore().getBoolean(PREF_AUTOSELECTMANDATORYFEATURES);
+    }
+    
+    /**
      * 
      * @return should we visualize -100 to 100 as a positive range (0 to 100)?
      */

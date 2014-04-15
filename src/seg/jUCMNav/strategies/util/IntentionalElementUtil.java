@@ -9,6 +9,7 @@ import grl.IntentionalElement;
 
 import java.util.Iterator;
 
+import seg.jUCMNav.extensionpoints.IGRLStrategyAlgorithm;
 import seg.jUCMNav.model.ModelCreationFactory;
 import seg.jUCMNav.model.util.MetadataHelper;
 import seg.jUCMNav.strategies.EvaluationStrategyManager;
@@ -219,4 +220,66 @@ public class IntentionalElementUtil {
         valueStr = Integer.toString(value);
         return metaDataStr.equals(valueStr);
     }
+
+    /**
+     * Returns true if this feature is auto selectable
+     * autoselectable criteria is if it has a src link of mandatory/AND, and that linked parent feature is selected/parent feature is root
+     * @param element
+     * @return
+     */
+	public static boolean isAutoSelectable(IntentionalElement elem) {
+		if (!(elem instanceof Feature)) return false;
+		Metadata autoSelected = MetadataHelper.getMetaDataObj(elem, ModelCreationFactory.AUTO_SELECTED_FEATURE_METADATA_STRING);
+//		if (hasNumericalValue(elem, IGRLStrategyAlgorithm.FEATURE_SELECTED) && (autoSelected == null)) {
+//			return false;
+//		}
+		if (isRootFeature(elem)) {
+			return false;
+		}
+		Iterator it = elem.getLinksSrc().iterator();
+
+        while (it.hasNext()) {
+            ElementLink link = (ElementLink) it.next();
+            if (link instanceof Contribution) {
+            	// if has mandatory source link
+                if (ModelCreationFactory.containsMetadata(link.getMetadata(), ModelCreationFactory.getFeatureModelMandatoryLinkMetadata())) {
+                	IntentionalElement srcElem = (IntentionalElement)link.getDest();
+                	if (srcElem != null && (srcElem instanceof Feature)) {
+                		if ((hasNumericalValue(srcElem, IGRLStrategyAlgorithm.FEATURE_SELECTED)) || isRootFeature(srcElem)){
+                    		return true;
+                    	}
+                	}
+                }
+            } else if (link instanceof Decomposition) {
+                // for each source
+                IntentionalElement srcElem = (IntentionalElement)link.getDest();
+                // if has AND source link
+                if (srcElem != null) {
+                    if (srcElem.getDecompositionType() == DecompositionType.AND_LITERAL && (srcElem instanceof Feature)) {
+                    	if ((hasNumericalValue(srcElem, IGRLStrategyAlgorithm.FEATURE_SELECTED)) || isRootFeature(srcElem)){
+                    		return true;
+                    	}
+                    }
+                }
+            }
+        }
+		return false;
+	}
+	
+	/**
+	 * check if an intentional element is a root feature or not
+	 * @param elem
+	 * @return true, is a root feature, otherwise (not a feature or not a root) false
+	 */
+	public static boolean isRootFeature(IntentionalElement elem) {
+		if (!(elem instanceof Feature)) return false;
+		Iterator it = elem.getLinksSrc().iterator();
+		while (it.hasNext()) {
+			ElementLink srcLink = (ElementLink) it.next();
+			if (srcLink.getDest() instanceof Feature) {
+				return false;
+			}
+		}
+		return true;
+	}
 }

@@ -10,6 +10,7 @@ import grl.IntentionalElementRef;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.ListIterator;
 import java.util.Vector;
 
 import seg.jUCMNav.model.util.MetadataHelper;
@@ -34,6 +35,23 @@ public class StrategyAlgorithmImplementationHelper {
                 evaluationCalculation.put(element, calculation);
             }
         }
+    }
+ 
+    public static void initTopDown(EvaluationStrategy strategy, HashMap evaluations, Vector evalReady, 
+            						HashMap evalReadyUserSet, HashMap evaluationCalculation) {
+		ListIterator it = strategy.getGrlspec().getIntElements().listIterator(strategy.getGrlspec().getIntElements().size());
+		while (it.hasPrevious()) {
+			IntentionalElement element = (IntentionalElement) it.previous();
+			if (element.getLinksSrc().size() == 0) {
+					evalReady.add(element);
+			} else if (((Evaluation) evaluations.get(element)).getStrategies() != null) {
+					EvaluationCalculation calculation = new EvaluationCalculation(element, element.getLinksSrc().size());
+					evalReadyUserSet.put(element, calculation);
+			} else {
+					EvaluationCalculation calculation = new EvaluationCalculation(element, element.getLinksSrc().size());
+					evaluationCalculation.put(element, calculation);
+			}
+		}
     }
     
 
@@ -89,4 +107,5 @@ public class StrategyAlgorithmImplementationHelper {
 
         return sumImportance;
     }
+
 }
